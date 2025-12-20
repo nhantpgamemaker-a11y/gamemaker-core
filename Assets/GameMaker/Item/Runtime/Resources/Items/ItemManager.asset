@@ -42,7 +42,7 @@ MonoBehaviour:
       data:
         id: 2b8d284a-a369-4342-bbcf-a95bcb71b43d
         name: HP
-        title: 
+        title: HP
         icon: {fileID: 21300000, guid: d2885473202b2cb4c812119fe103b349, type: 3}
         description: 
         _defaultValue: 0
@@ -51,7 +51,7 @@ MonoBehaviour:
       data:
         id: 5e7b03ec-dc7d-4bc5-a3a6-0e2acca25dda
         name: MP
-        title: 
+        title: MP
         icon: {fileID: 21300000, guid: d2885473202b2cb4c812119fe103b349, type: 3}
         description: 
         _defaultValue: 0
@@ -60,7 +60,7 @@ MonoBehaviour:
       data:
         id: 2ddbfede-5ad2-47e1-ae1c-61123ef979c0
         name: ATK
-        title: 
+        title: ATK
         icon: {fileID: 21300000, guid: d2885473202b2cb4c812119fe103b349, type: 3}
         description: 
         _defaultValue: 0
@@ -69,7 +69,7 @@ MonoBehaviour:
       data:
         id: fbc368e8-e876-42c7-96d9-e5c2faefcd3b
         name: MATK
-        title: 
+        title: MATK
         icon: {fileID: 21300000, guid: d2885473202b2cb4c812119fe103b349, type: 3}
         description: 
         _defaultValue: 0
@@ -78,7 +78,7 @@ MonoBehaviour:
       data:
         id: 10947335-f02e-42f5-ae39-590786c4aa93
         name: DEF
-        title: 
+        title: DEF
         icon: {fileID: 21300000, guid: d2885473202b2cb4c812119fe103b349, type: 3}
         description: 
         _defaultValue: 0
@@ -87,7 +87,7 @@ MonoBehaviour:
       data:
         id: 7c46f4ae-4c46-470a-a14b-8a05bf0b5b9b
         name: MDEF
-        title: 
+        title: MDEF
         icon: {fileID: 21300000, guid: d2885473202b2cb4c812119fe103b349, type: 3}
         description: 
         _defaultValue: 0
@@ -96,7 +96,7 @@ MonoBehaviour:
       data:
         id: 060e7a20-e314-4027-b1ac-5eba80ef5e93
         name: Speed
-        title: 
+        title: Speed
         icon: {fileID: 21300000, guid: d2885473202b2cb4c812119fe103b349, type: 3}
         description: 
         _defaultValue: 0
@@ -119,4 +119,24 @@ MonoBehaviour:
         icon: {fileID: 0}
         description: 
         _itemStatManager:
-          definitions: []
+          definitions:
+          - rid: 335725335868342643
+          - rid: 335725335868342644
+    - rid: 335725335868342643
+      type: {class: ItemStatDefinition, ns: GameMaker.Item.Runtime, asm: GameMaker.Item.Runtime}
+      data:
+        id: e4fa89bf-791d-4822-ba9e-8abe7d4206a7
+        name: 
+        title: 
+        icon: {fileID: 0}
+        description: 
+        _defaultValue: 0
+    - rid: 335725335868342644
+      type: {class: ItemStatDefinition, ns: GameMaker.Item.Runtime, asm: GameMaker.Item.Runtime}
+      data:
+        id: 82d681ce-fb87-405e-a229-9dd4d611877a
+        name: 
+        title: 
+        icon: {fileID: 0}
+        description: 
+        _defaultValue: 0

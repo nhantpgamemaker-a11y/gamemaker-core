@@ -18,10 +18,11 @@ namespace GameMaker.Item.Runtime
         private float _value;
 
         public float Value { get => _value; set => _value = value; }
-        public ItemStatDefinitionRef(string refId, float value)
+        public ItemStatDefinitionRef(string refId,string name, float value)
         {
             _id = refId;
             _value = value;
+            _name = name;
         }
 
         public string GetID()
@@ -41,7 +42,7 @@ namespace GameMaker.Item.Runtime
 
         public object Clone()
         {
-            return new ItemStatDefinitionRef(_id, _value);
+            return new ItemStatDefinitionRef(_id,_name, _value);
         }
 
         public void SetID(string id)
@@ -64,12 +65,21 @@ namespace GameMaker.Item.Runtime
         private List<ItemStatDefinitionRef> _itemStatDefinitionRefs = new();
         public IReadOnlyList<ItemStatDefinitionRef> ItemStatDefinitionRefs { get => _itemStatDefinitionRefs; }
         public string ItemDefinitionId => _itemDefinitionId;
-        public ItemDetailDefinition():base(){}
-        public ItemDetailDefinition(string id, string name, string title,string itemDefinitionId,List<ItemStatDefinitionRef> itemStatDefinitionRefs): base(id, name, title)
+        public ItemDetailDefinition() : base() { }
+        public ItemDetailDefinition(ItemDefinition itemDefinition) : base()
+        {
+            _itemDefinitionId = itemDefinition.GetID();
+            itemDefinition.GetItemStatDefinitions().ForEach(s =>
+            {
+                _itemStatDefinitionRefs.Add(new ItemStatDefinitionRef(s.GetID(), s.GetName(), s.DefaultValue));
+            });
+        }
+        public ItemDetailDefinition(string id, string name, string title, string itemDefinitionId, List<ItemStatDefinitionRef> itemStatDefinitionRefs) : base(id, name, title)
         {
             _itemDefinitionId = itemDefinitionId;
             _itemStatDefinitionRefs = itemStatDefinitionRefs;
         }
+        
         public void AddItemStatDefinitionRef(ItemStatDefinitionRef itemStatDefinitionRef)
         {
             _itemStatDefinitionRefs.Add(itemStatDefinitionRef);
@@ -84,10 +94,26 @@ namespace GameMaker.Item.Runtime
         {
             _itemStatDefinitionRefs.Remove(itemStatDefinitionRef);
         }
-        
+
         public ItemDefinition GetItemDefinition()
         {
             return ItemManager.Instance.GetDefinition(_itemDefinitionId);
+        }
+
+        public void ValidItem(ItemDefinition itemDefinition)
+        {
+            foreach(var stat in itemDefinition.GetItemStatDefinitions())
+            {
+                var statRef = _itemStatDefinitionRefs.FirstOrDefault(statRef => statRef.GetID() == stat.GetID());
+                if (statRef == null)
+                {
+                    _itemStatDefinitionRefs.Add(new ItemStatDefinitionRef(stat.GetID(),stat.GetName(), stat.DefaultValue));
+                }
+                else
+                {
+                    statRef.SetName(stat.GetName());
+                }
+            }
         }
     }
 }

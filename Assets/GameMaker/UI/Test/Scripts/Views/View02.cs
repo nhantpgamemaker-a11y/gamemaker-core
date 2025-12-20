@@ -5,9 +5,9 @@ namespace GameMaker.UI.Test
 {
     public class View02 : BaseView
     {
-        public static async UniTask ShowViewAsync()
+        public static async UniTask ShowViewAsync(UIController uIController)
         {
-            await UIManager.Instance.ViewManager.ShowAsync("View02",ViewShowType.After);
+            await uIController.ViewController.ShowAsync("View02",ViewShowType.After);
         }
     }
 }

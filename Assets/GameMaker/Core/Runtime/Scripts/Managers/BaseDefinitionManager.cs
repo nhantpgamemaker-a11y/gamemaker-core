@@ -78,7 +78,6 @@ namespace GameMaker.Core.Runtime
             _definitionCache.TryGetValue(id, out var def);
             return def;
         }
-
         public object Clone()
         {
             return new BaseDefinitionManager<M>(definitions.Select(d=> (M)d.Clone()).ToList());

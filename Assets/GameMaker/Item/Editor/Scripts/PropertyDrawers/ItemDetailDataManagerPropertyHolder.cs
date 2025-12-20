@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using GameMaker.Core.Editor;
 using GameMaker.Core.Runtime;
@@ -52,6 +53,28 @@ namespace GameMaker.Item.Editor
             templateContainer.style.height = StyleKeyword.Auto;
             templateContainer.style.flexGrow = 1;
             return new ItemDetailDefinitionHolder(asset.CloneTree());
+        }
+        protected override void OnAddButtonClicked()
+        {
+            List<ActionData> actionDatas = new();
+            EditorWindow window = null;
+            foreach(var item in ItemManager.Instance.GetDefinitions())
+            {
+                var actionData = new ActionData(item.GetName(), () =>
+                {
+                    var itemDetail = new ItemDetailDefinition(item);
+                    int newIndex = definitionProperty.arraySize;
+                    definitionProperty.InsertArrayElementAtIndex(newIndex);
+                    var newElement = definitionProperty.GetArrayElementAtIndex(newIndex);
+                    newElement.managedReferenceValue = itemDetail;
+                    MakeItemSource(GetItemSource());
+                    definitionProperty.serializedObject.ApplyModifiedProperties();
+                    definitionProperty.serializedObject.Update();
+                    itemListView.RefreshItems();
+                });
+                actionDatas.Add(actionData);
+            }
+            window = ButtonActionWindowEditor.ShowWindow(GetTitle(),actionDatas);
         }
     }
 }

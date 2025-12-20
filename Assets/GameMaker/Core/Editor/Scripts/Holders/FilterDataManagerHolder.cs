@@ -12,7 +12,6 @@ namespace GameMaker.Core.Editor
     public abstract class FilterDataManagerHolder<M> : BaseDataManagerHolder<M> where M : IDefinition
     {
         protected List<BaseFilterHolder> filters;
-        private List<SerializedProperty> _sourceItems;
         private VisualElement _filterContainerVisualElement;
         public FilterDataManagerHolder(VisualElement root, List<BaseFilterHolder> filters) : base(root)
         {
@@ -42,20 +41,25 @@ namespace GameMaker.Core.Editor
         public override void Bind(SerializedProperty elementProperty)
         {
             this.definitionProperty = elementProperty.FindPropertyRelative("definitions");
-            _sourceItems = new List<SerializedProperty>();
-            for (int i = 0; i < definitionProperty.arraySize; i++)
-            {
-                _sourceItems.Add(definitionProperty.GetArrayElementAtIndex(i));
-            }
+            
             base.Bind(elementProperty);
             foreach(var filter in filters)
             {
                 filter.Bind(elementProperty);
             }
         }
-        protected override IList GetItemSource()
+        protected override List<SerializedProperty> GetItemSource()
         {
-            return _sourceItems.Where(x => filters.All(f => f.BaseFilter.Compare(x))).ToList();
+            var sourceItems = new List<SerializedProperty>();
+            for (int i = 0; i < definitionProperty.arraySize; i++)
+            {
+                var element = definitionProperty.GetArrayElementAtIndex(i);
+                if(filters.All(f => f.BaseFilter.Compare(element)))
+                {
+                    sourceItems.Add(element);
+                }
+            }
+            return sourceItems;
         }
     }
     public abstract class BaseFilterHolder : BaseHolder

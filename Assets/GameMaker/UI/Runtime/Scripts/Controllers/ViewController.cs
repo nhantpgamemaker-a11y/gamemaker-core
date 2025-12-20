@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
-using UnityEngine.ResourceManagement.AsyncOperations;
 
 
 namespace GameMaker.UI.Runtime
@@ -15,12 +14,22 @@ namespace GameMaker.UI.Runtime
         Before,
         After
     }
-    public class ViewManager : MonoBehaviour
+    public class ViewController : MonoBehaviour
     {
         [SerializeField] private Canvas _canvas;
         private BaseView _currentView;
         private Dictionary<string, BaseView> _viewCacheDict = new();
         public BaseView CurrentView => _currentView;
+
+        private UIController _uiController;
+
+        public UIController UIController => _uiController;
+
+        internal void OnInit(UIController uIController)
+        {
+            _uiController = uIController;
+        }
+    
         public async UniTask ShowAsync(string viewName,ViewShowType viewShowType = ViewShowType.Parallel, object data = null)
         {
             var newView = await GetViewAsync(viewName);
@@ -67,6 +76,7 @@ namespace GameMaker.UI.Runtime
             var baseViewPrefab = viewObjectPrefab.GetComponent<BaseView>();
             await UniTask.SwitchToMainThread();
             baseView = Instantiate(baseViewPrefab, _canvas.transform);
+            baseView.OnInit(this);
             _viewCacheDict[viewName] = baseView;
             return baseView;
         }

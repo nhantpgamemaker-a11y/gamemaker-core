@@ -8,9 +8,8 @@ namespace GameMaker.UI.Runtime
     {
         [SerializeField] protected RectTransform overlay;
         [SerializeField] protected RectTransform container;
-        [SerializeField] private UIAnimation _uiAnimation;
+        [SerializeField] private BaseUIAnimation _uiAnimation;
         protected object data = null;
-
         public void SetData(object data)
         {
             this.data = data;

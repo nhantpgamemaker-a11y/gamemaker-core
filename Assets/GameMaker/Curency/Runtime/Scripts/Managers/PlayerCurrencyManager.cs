@@ -36,13 +36,11 @@ namespace GameMaker.Currency.Runtime
             }
             return status;
         }
-
         public void AddRuntimeCurrency(string referenceId, float value, IExtendData extendData)
         {
             var playerCurrency = GetPlayerCurrency(referenceId);
             playerCurrency.AddValue(value);
             RuntimeActionManager.Instance.NotifyAction(CurrencyActionDefinition.ADD_CURRENCY_ACTION_DEFINITION_ID, new CurrencyActionData(referenceId, value, extendData));
-            
         }
     }
 }

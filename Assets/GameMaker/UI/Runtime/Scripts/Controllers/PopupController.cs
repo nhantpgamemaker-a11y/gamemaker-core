@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
@@ -14,7 +13,7 @@ namespace GameMaker.UI.Runtime
         Sequence
     }
 
-    public class PopupManager : MonoBehaviour
+    public class PopupController : MonoBehaviour
     {
         [SerializeField] private Canvas _canvas;
 
@@ -24,10 +23,20 @@ namespace GameMaker.UI.Runtime
 
         private List<BasePopup> _instancePopupList = new();
 
+        private UIController _uiController;
+
+        public UIController UIController => _uiController;
+
+        internal void OnInit(UIController uIController)
+        {
+            _uiController = uIController;
+        }
+
         public async UniTask<T> ShowAsync<T>(string popupName,object data = null, PopupShowType showType = PopupShowType.Parallel) where T: BasePopup
         {
             var (basePopupPrefab, loadAsyncOperationHandle) = await GetPopupAsync(popupName);
             var popup = Instantiate(basePopupPrefab, _canvas.transform);
+            popup.OnInit(this);
             _popupLockup[popup] = loadAsyncOperationHandle;
             popup.SetData(data);
             if (showType == PopupShowType.Sequence)
@@ -42,7 +51,6 @@ namespace GameMaker.UI.Runtime
             }
             return popup as T;
         }
-
         public async UniTask HideAsync(BasePopup basePopup)
         {
             await basePopup.HideAsync();
@@ -80,6 +88,5 @@ namespace GameMaker.UI.Runtime
             }
         }
         #endregion
-    
     }
 }

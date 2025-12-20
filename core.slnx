@@ -49,6 +49,7 @@
   <Project Path="UniTask.Linq.csproj" />
   <Project Path="Kamgam.UVEditor.csproj" />
   <Project Path="Unity.TextMeshPro.Editor.csproj" />
+  <Project Path="GameMaker.UI.Runtime.csproj" />
   <Project Path="Unity.Burst.Editor.csproj" />
   <Project Path="Unity.Rider.Editor.csproj" />
   <Project Path="Unity.VisualScripting.State.csproj" />
@@ -79,7 +80,6 @@
   <Project Path="GameMaker.Core.Editor.csproj" />
   <Project Path="Unity.Profiling.Core.csproj" />
   <Project Path="LitMotion.Editor.csproj" />
-  <Project Path="GameMaker.UI.Runtime.csproj" />
   <Project Path="GameMaker.Item.Runtime.csproj" />
   <Project Path="LitMotion.Animation.Editor.csproj" />
   <Project Path="Unity.RenderPipeline.Universal.ShaderLibrary.csproj" />

@@ -34,7 +34,7 @@ namespace GameMaker.Item.Runtime
             _playerDetailItems.Add(new ItemDetailModel(
                 playerDetailItem.GetID(),
                 playerDetailItem.GetName(),
-                playerDetailItem.ItemStatDefinitionRefs.Select(x => new ItemStatDefinitionRefModel(x.GetID(), x.Value)).ToList()
+                playerDetailItem.ItemStatDefinitionRefs.Select(x => new ItemStatDefinitionRefModel(x.GetID(),x.GetName() ,x.Value)).ToList()
             ));
         }
         
@@ -95,14 +95,15 @@ namespace GameMaker.Item.Runtime
         private float _value;
     
         public float Value { get => _value; set => _value = value; }
-        public ItemStatDefinitionRefModel(string refId, float value)
+        public ItemStatDefinitionRefModel(string refId, string name, float value)
         {
             _id = refId;
             _value = value;
+            _name = name;
         }
         public ItemStatDefinitionRef ToItemStatDefinitionRef()
         {
-            return new ItemStatDefinitionRef(_id, _value);
+            return new ItemStatDefinitionRef(_id,_name, _value);
         }
 
         public string GetID()

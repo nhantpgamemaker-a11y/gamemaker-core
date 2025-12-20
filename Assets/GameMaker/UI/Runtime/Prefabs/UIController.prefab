@@ -334,7 +334,7 @@ GameObject:
   - component: {fileID: 907854076790919597}
   - component: {fileID: 3410392039124321199}
   m_Layer: 0
-  m_Name: UIManger
+  m_Name: UIController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

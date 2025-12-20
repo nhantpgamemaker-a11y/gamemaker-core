@@ -12,7 +12,7 @@ namespace GameMaker.Core.Editor
     {
         protected SerializedProperty serializedProperty;
         protected SerializedProperty definitionProperty;
-        private System.Collections.IList _items;
+        private List<SerializedProperty> _items;
         private Button _addButton;
         private Button _removeButton;
         protected ListView itemListView;
@@ -26,7 +26,7 @@ namespace GameMaker.Core.Editor
         }
         public BaseDataManagerHolder(VisualElement root) : base(root)
         {
-            _items = new List<object>();
+            _items =new  List<SerializedProperty>();
         }
         public override void Bind(SerializedProperty elementProperty)
         {
@@ -56,7 +56,7 @@ namespace GameMaker.Core.Editor
             _addButton.clicked += OnAddButtonClicked;
             _removeButton.clicked += OnRemoveButtonClicked;
         }
-        protected void MakeItemSource(System.Collections.IList itemSource)
+        protected void MakeItemSource(List<SerializedProperty> itemSource)
         {
             _items.Clear();
             foreach(var item in itemSource)
@@ -64,11 +64,11 @@ namespace GameMaker.Core.Editor
                 _items.Add(item);
             }
         }
-        protected virtual System.Collections.IList GetItemSource()
+        protected virtual List<SerializedProperty> GetItemSource()
         {
-            var items = new List<object>();
+            var items = new List<SerializedProperty>();
             for (var i = 0; i < definitionProperty.arraySize; i++)
-                items.Add(definitionProperty.GetArrayElementAtIndex(i).objectReferenceValue);
+                items.Add(definitionProperty.GetArrayElementAtIndex(i));
             return items;
         }
         protected virtual void ItemIndexChanged(int oldIndex, int newIndex)
@@ -99,13 +99,6 @@ namespace GameMaker.Core.Editor
             "Are you sure you want to delete there item?",
             () =>
             {
-                var ids = selectedIndices.Select(x => _items[x]).ToList();
-                foreach (var id in ids)
-                {
-                    _items.Remove(id);
-                }
-                itemListView.RefreshItems();
-
                 var indices = selectedIndices
                 .OrderByDescending(i => i)
                 .ToList();
@@ -114,6 +107,8 @@ namespace GameMaker.Core.Editor
                     definitionProperty.DeleteArrayElementAtIndex(index);
                 }
                 serializedProperty.serializedObject.ApplyModifiedProperties();
+                MakeItemSource(GetItemSource());
+                itemListView.RefreshItems();
             },
             () =>
             {
@@ -141,7 +136,7 @@ namespace GameMaker.Core.Editor
                     definitionProperty.InsertArrayElementAtIndex(newIndex);
                     var newElement = definitionProperty.GetArrayElementAtIndex(newIndex);
                     newElement.managedReferenceValue = item;
-                    _items.Add(item.GetName());
+                    MakeItemSource(GetItemSource());
                     definitionProperty.serializedObject.ApplyModifiedProperties();
                     definitionProperty.serializedObject.Update();
                     itemListView.RefreshItems();

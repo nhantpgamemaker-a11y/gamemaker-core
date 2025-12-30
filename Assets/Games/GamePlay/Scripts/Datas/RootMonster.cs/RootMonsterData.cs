@@ -7,7 +7,10 @@ namespace GamePlay.Game
     {
         [UnityEngine.SerializeField]
         private RootAnimationData _rootAnimationData;
+        [UnityEngine.SerializeField]
+        private LayerMask _playerLayerMask;
         public RootAnimationData RootAnimationData => _rootAnimationData;
+        public LayerMask PlayerLayerMask => _playerLayerMask;
         public void OnInit()
         {
             _rootAnimationData.OnInit();

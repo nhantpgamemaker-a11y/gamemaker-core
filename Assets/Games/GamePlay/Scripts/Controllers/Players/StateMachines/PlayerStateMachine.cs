@@ -26,6 +26,7 @@ namespace Game.GamePlay
         [SerializeField] private Rigidbody2D _rigidbody;
         [SerializeField] private Collider2D _collider2D;
         [SerializeField] private Collider2D _groundCheckCollider;
+        [SerializeField] private Collider2D _attackRangeCheckCollider;
         [SerializeField] private Animator _animator;
         [SerializeField] private PlayerData _playerData;
         [SerializeField] private PlayerReusableData _playerReusableData;
@@ -47,6 +48,7 @@ namespace Game.GamePlay
         public Rigidbody2D Rigidbody { get => _rigidbody; }
         public Collider2D Collider2D { get => _collider2D; }
         public Collider2D GroundCheckCollider { get => _groundCheckCollider; }
+        public Collider2D AttackRangeCheckCollider { get => _attackRangeCheckCollider; }
         public Animator Animator { get => _animator; }
         public PlayerData PlayerData { get => _playerData; }
         public PlayerReusableData PlayerReusableData { get => _playerReusableData; }

@@ -1,9 +1,10 @@
 using System;
+using GamePlay.Game;
 using UnityEngine;
 
 namespace Game.GamePlay
 {
-    public class MonsterRootController: MonoBehaviour
+    public class MonsterRootController: MonoBehaviour, ITakeDame
     {
         [SerializeField] private MonsterRootStateMachine _monsterStateMachine;
          
@@ -11,7 +12,10 @@ namespace Game.GamePlay
         {
             OnInitState();
         }
-
+        public void FixedUpdate()
+        {
+            _monsterStateMachine.OnPhysicUpdate();
+        }
         private void OnInitState()
         {
             _monsterStateMachine.BindController(this);
@@ -29,6 +33,11 @@ namespace Game.GamePlay
         public void OnAnimationEndEvent()
         {
             _monsterStateMachine.OnAnimationEndEventHandle();
+        }
+
+        public void TakeDame(float amount)
+        {
+            _monsterStateMachine.ChangeState(MonsterRootStateType.TakeDame);
         }
         #endregion
     }

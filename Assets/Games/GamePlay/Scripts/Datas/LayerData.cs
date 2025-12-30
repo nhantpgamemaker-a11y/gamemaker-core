@@ -6,5 +6,9 @@ namespace Game.GamePlay
         [UnityEngine.SerializeField]
         private UnityEngine.LayerMask _groundLayer;
         public UnityEngine.LayerMask GroundLayer => _groundLayer;
+
+         [UnityEngine.SerializeField]
+        private UnityEngine.LayerMask _monsterLayer;
+        public UnityEngine.LayerMask MonsterLayer => _monsterLayer;
     }
 }

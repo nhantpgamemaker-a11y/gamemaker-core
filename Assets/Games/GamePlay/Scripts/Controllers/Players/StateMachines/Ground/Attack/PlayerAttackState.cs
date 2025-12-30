@@ -1,5 +1,6 @@
 using System;
 using GameMaker.Core.Runtime;
+using GamePlay.Game;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -21,6 +22,27 @@ namespace Game.GamePlay
             _onTransition = false;
             base.OnExitState();
             StopAnimation(playerStateMachine.PlayerData.AnimationData.AttackAnimationHash);
+        }
+        internal override void OnAnimationStartEventHandle()
+        {
+            base.OnAnimationStartEventHandle();
+            ContactFilter2D filter = new ContactFilter2D();
+            filter.useLayerMask = true;
+            filter.layerMask = playerStateMachine.PlayerData.LayerData.MonsterLayer;
+
+            Collider2D[] contactColliders = new Collider2D[1];
+            int contactAmount = Physics2D.OverlapCollider(playerStateMachine.AttackRangeCheckCollider, filter, contactColliders);
+            if (contactAmount != 0)
+            {
+                foreach(var collider in contactColliders)
+                {
+                    var takeDame = collider.transform.root.GetComponent<ITakeDame>();
+                    if (takeDame != null)
+                    {
+                        takeDame.TakeDame(5f);
+                    }
+                }
+            }
         }
         internal override void OnAnimationTransitionEventHandle()
         {

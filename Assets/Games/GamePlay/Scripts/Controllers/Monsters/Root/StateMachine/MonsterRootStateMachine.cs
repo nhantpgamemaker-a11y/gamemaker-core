@@ -11,16 +11,21 @@ namespace Game.GamePlay
     {
         Idling,
         RightAttack,
-        LeftAttack
+        LeftAttack,
+        TakeDame
     }
     [System.Serializable]
     public class MonsterRootStateMachine : BaseStateMachine<MonsterRootStateType>
     {
         [SerializeField] private Animator _animator;
         [SerializeField] private RootMonsterData _rootMonsterData;
-        protected BaseMonsterRootState CurrentState;
+        [SerializeField] private Collider2D _leftAttackColliderRange;
+        [SerializeField] private Collider2D _rightAttackColliderRange;
+        protected BaseMonsterRootState CurrentState => currentState as BaseMonsterRootState;
         private MonsterRootController _monsterRootController;
         public RootMonsterData RootMonsterData => _rootMonsterData;
+        public Collider2D LeftAttackColliderRange => _leftAttackColliderRange;
+        public Collider2D RightAttackColliderRange => _rightAttackColliderRange;
         public void OnInit()
         {
             var states = _monsterRootController.gameObject.GetComponents<BaseMonsterRootState>().ToList();
@@ -31,6 +36,10 @@ namespace Game.GamePlay
             base.OnInit(states);
             _rootMonsterData.OnInit();
             ChangeState(MonsterRootStateType.Idling);
+        }
+        public virtual void OnPhysicUpdate()
+        {
+            CurrentState?.OnPhysicUpdate();
         }
 
         internal void BindController(MonsterRootController monsterRootController)

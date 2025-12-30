@@ -52,6 +52,7 @@
   <Project Path="Unity.TextMeshPro.Editor.csproj" />
   <Project Path="GameMaker.UI.Runtime.csproj" />
   <Project Path="Unity.Burst.Editor.csproj" />
+  <Project Path="Assembly-CSharp-Editor.csproj" />
   <Project Path="Unity.Rider.Editor.csproj" />
   <Project Path="Unity.VisualScripting.State.csproj" />
   <Project Path="Unity.AI.Navigation.Updater.csproj" />
@@ -61,7 +62,6 @@
   <Project Path="Unity.2D.Sprite.Editor.csproj" />
   <Project Path="LitMotion.Animation.csproj" />
   <Project Path="Unity.AI.Navigation.Editor.csproj" />
-  <Project Path="Assembly-CSharp-Editor.csproj" />
   <Project Path="Unity.Recorder.csproj" />
   <Project Path="GameMaker.UI.Test.csproj" />
   <Project Path="Kamgam.UVEditor.Editor.csproj" />

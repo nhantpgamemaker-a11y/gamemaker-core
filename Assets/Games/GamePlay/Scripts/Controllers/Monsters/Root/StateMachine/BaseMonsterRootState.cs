@@ -11,6 +11,10 @@ namespace Game.GamePlay
 
         public virtual void OnEnterState(BaseStateData baseStateData = null)
         {
+
+        }
+        public virtual void OnPhysicUpdate()
+        {
             
         }
 

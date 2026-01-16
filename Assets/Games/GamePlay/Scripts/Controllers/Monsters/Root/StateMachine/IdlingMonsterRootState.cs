@@ -5,6 +5,7 @@ namespace Game.GamePlay
 {
     public class IdlingMonsterRootState : BaseMonsterRootState
     {
+        private float _counter;
         public override MonsterRootStateType GetStateType()
         {
             return MonsterRootStateType.Idling;
@@ -12,10 +13,13 @@ namespace Game.GamePlay
         public override void OnEnterState(BaseStateData baseStateData = null)
         {
             base.OnEnterState(baseStateData);
+            _counter = Time.time;
             StartAnimation(monsterRootStateMachine.RootMonsterData.RootAnimationData.IdlingAnimationHash);
         }
         public override void OnPhysicUpdate()
         {
+            if (Time.time <= _counter + 0.5f) return;
+            
             ContactFilter2D filter = new ContactFilter2D();
             filter.useLayerMask = true;
             filter.layerMask = monsterRootStateMachine.RootMonsterData.PlayerLayerMask;
@@ -38,5 +42,6 @@ namespace Game.GamePlay
             base.OnExitState();
             StopAnimation(monsterRootStateMachine.RootMonsterData.RootAnimationData.IdlingAnimationHash);
         }
+
     }
 }

@@ -1,0 +1,1744 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abded54402f57c742b55df600916c570, type: 3}
+  m_Name: Boss
+  m_EditorClassIdentifier: 
+  _id: Nightmare
+  _displayName: Nightmare
+  _playerSpawnPoint: {x: -33.2, y: -3.7, z: 0}
+  _victoryPoint: {x: 0, y: 0, z: 0}
+  _environmentLayers:
+  - _scale: {x: 1, y: 1, z: 1}
+    _zIndex: 20
+    _sortingOrder: -20
+  - _scale: {x: 1, y: 1, z: 1}
+    _zIndex: 16
+    _sortingOrder: -16
+  - _scale: {x: 1, y: 1, z: 1}
+    _zIndex: -0.1
+    _sortingOrder: -2
+  - _scale: {x: 1, y: 1, z: 1}
+    _zIndex: 0
+    _sortingOrder: 0
+  _environmentPositionDatas:
+  - rid: 4388470074669531245
+  - rid: 4388470074669531246
+  - rid: 4388470074669531247
+  - rid: 4388470074669531248
+  - rid: 4388470074669531249
+  - rid: 4388470074669531250
+  - rid: 4388470074669531251
+  - rid: 4388470074669531252
+  - rid: 4388470074669531253
+  - rid: 4388470074669531254
+  _monsterPositionDatas: []
+  _cameraData:
+    _position: {x: 0, y: 0, z: -10}
+    _pathPoints:
+    - _index: 0
+      _pathPoints:
+      - {x: -5.673484, y: -4.6228952}
+      - {x: -5.700944, y: 6.315304}
+      - {x: -40.74729, y: 6.398266}
+      - {x: -40.82938, y: -4.574687}
+  _victoryData:
+    _position: {x: 0, y: 0, z: 0}
+    _pathPoints:
+    - _index: 0
+      _pathPoints:
+      - {x: 268.76483, y: 6.2504907}
+      - {x: 251.78087, y: 6.2754807}
+      - {x: 251.88298, y: -4.5225954}
+      - {x: 268.8191, y: -4.52721}
+    - _index: 0
+      _pathPoints:
+      - {x: 280.72937, y: 6.310918}
+      - {x: -19.060247, y: 6.31568}
+      - {x: -19.143017, y: -4.496274}
+      - {x: 280.7232, y: -4.52721}
+    - _index: 0
+      _pathPoints:
+      - {x: 280.72937, y: 6.310918}
+      - {x: -19.060247, y: 6.31568}
+      - {x: -19.143017, y: -4.496274}
+      - {x: 280.7232, y: -4.52721}
+    - _index: 0
+      _pathPoints:
+      - {x: 280.72937, y: 6.310918}
+      - {x: -19.060247, y: 6.31568}
+      - {x: -19.143017, y: -4.496274}
+      - {x: 280.7232, y: -4.52721}
+    - _index: 0
+      _pathPoints:
+      - {x: 143.5468, y: 6.2987127}
+      - {x: 130.08661, y: 6.1688914}
+      - {x: 130.02692, y: -4.469018}
+      - {x: 143.65077, y: -4.395818}
+    - _index: 0
+      _pathPoints:
+      - {x: 143.5468, y: 6.2987127}
+      - {x: 130.08661, y: 6.1688914}
+      - {x: 130.02692, y: -4.469018}
+      - {x: 143.65077, y: -4.395818}
+    - _index: 0
+      _pathPoints:
+      - {x: 143.5468, y: 6.2987127}
+      - {x: 130.08661, y: 6.1688914}
+      - {x: 130.02692, y: -4.469018}
+      - {x: 143.65077, y: -4.395818}
+    - _index: 0
+      _pathPoints:
+      - {x: 143.5468, y: 6.2987127}
+      - {x: 130.08661, y: 6.1688914}
+      - {x: 130.02692, y: -4.469018}
+      - {x: 143.65077, y: -4.395818}
+    - _index: 0
+      _pathPoints:
+      - {x: 143.5468, y: 6.2987127}
+      - {x: 130.08661, y: 6.1688914}
+      - {x: 130.02692, y: -4.469018}
+      - {x: 143.65077, y: -4.395818}
+    - _index: 0
+      _pathPoints:
+      - {x: 59.36207, y: 8.855211}
+      - {x: 53.820213, y: 8.856146}
+      - {x: 53.734688, y: -1.5371225}
+      - {x: 59.03001, y: -1.7391374}
+    - _index: 0
+      _pathPoints:
+      - {x: 59.36207, y: 8.855211}
+      - {x: 53.820213, y: 8.856146}
+      - {x: 53.734688, y: -1.5371225}
+      - {x: 59.03001, y: -1.7391374}
+    - _index: 1
+      _pathPoints: []
+    - _index: 2
+      _pathPoints: []
+    - _index: 3
+      _pathPoints: []
+    - _index: 4
+      _pathPoints: []
+    - _index: 5
+      _pathPoints: []
+    - _index: 6
+      _pathPoints: []
+    - _index: 7
+      _pathPoints: []
+    - _index: 8
+      _pathPoints: []
+    - _index: 9
+      _pathPoints: []
+    - _index: 0
+      _pathPoints:
+      - {x: 59.36207, y: 8.855211}
+      - {x: 53.820213, y: 8.856146}
+      - {x: 53.734688, y: -1.5371225}
+      - {x: 59.03001, y: -1.7391374}
+    - _index: 0
+      _pathPoints:
+      - {x: 59.36207, y: 8.855211}
+      - {x: 53.820213, y: 8.856146}
+      - {x: 53.734688, y: -1.5371225}
+      - {x: 59.03001, y: -1.7391374}
+    - _index: 0
+      _pathPoints:
+      - {x: 59.36207, y: 8.855211}
+      - {x: 53.820213, y: 8.856146}
+      - {x: 53.734688, y: -1.5371225}
+      - {x: 59.03001, y: -1.7391374}
+    - _index: 0
+      _pathPoints:
+      - {x: 59.36207, y: 8.855211}
+      - {x: 53.820213, y: 8.856146}
+      - {x: 53.734688, y: -1.5371225}
+      - {x: 59.03001, y: -1.7391374}
+    - _index: 1
+      _pathPoints: []
+    - _index: 2
+      _pathPoints: []
+    - _index: 3
+      _pathPoints: []
+    - _index: 4
+      _pathPoints: []
+    - _index: 5
+      _pathPoints: []
+    - _index: 6
+      _pathPoints: []
+    - _index: 7
+      _pathPoints: []
+    - _index: 8
+      _pathPoints: []
+    - _index: 9
+      _pathPoints: []
+    - _index: 10
+      _pathPoints: []
+    - _index: 11
+      _pathPoints: []
+    - _index: 12
+      _pathPoints: []
+    - _index: 13
+      _pathPoints: []
+    - _index: 14
+      _pathPoints: []
+    - _index: 15
+      _pathPoints: []
+    - _index: 16
+      _pathPoints: []
+    - _index: 17
+      _pathPoints: []
+    - _index: 18
+      _pathPoints: []
+    - _index: 19
+      _pathPoints: []
+    - _index: 20
+      _pathPoints: []
+    - _index: 21
+      _pathPoints: []
+    - _index: 22
+      _pathPoints: []
+    - _index: 0
+      _pathPoints:
+      - {x: 59.36207, y: 8.855211}
+      - {x: 53.820213, y: 8.856146}
+      - {x: 53.734688, y: -1.5371225}
+      - {x: 59.03001, y: -1.7391374}
+    - _index: 1
+      _pathPoints: []
+    - _index: 2
+      _pathPoints: []
+    - _index: 3
+      _pathPoints: []
+    - _index: 4
+      _pathPoints: []
+    - _index: 5
+      _pathPoints: []
+    - _index: 6
+      _pathPoints: []
+    - _index: 7
+      _pathPoints: []
+    - _index: 8
+      _pathPoints: []
+    - _index: 9
+      _pathPoints: []
+    - _index: 10
+      _pathPoints: []
+    - _index: 11
+      _pathPoints: []
+    - _index: 12
+      _pathPoints: []
+    - _index: 13
+      _pathPoints: []
+    - _index: 14
+      _pathPoints: []
+    - _index: 15
+      _pathPoints: []
+    - _index: 16
+      _pathPoints: []
+    - _index: 17
+      _pathPoints: []
+    - _index: 18
+      _pathPoints: []
+    - _index: 19
+      _pathPoints: []
+    - _index: 20
+      _pathPoints: []
+    - _index: 21
+      _pathPoints: []
+    - _index: 22
+      _pathPoints: []
+    - _index: 23
+      _pathPoints: []
+    - _index: 24
+      _pathPoints: []
+    - _index: 25
+      _pathPoints: []
+    - _index: 26
+      _pathPoints: []
+    - _index: 27
+      _pathPoints: []
+    - _index: 28
+      _pathPoints: []
+    - _index: 29
+      _pathPoints: []
+    - _index: 30
+      _pathPoints: []
+    - _index: 31
+      _pathPoints: []
+    - _index: 32
+      _pathPoints: []
+    - _index: 33
+      _pathPoints: []
+    - _index: 34
+      _pathPoints: []
+    - _index: 35
+      _pathPoints: []
+    - _index: 36
+      _pathPoints: []
+    - _index: 37
+      _pathPoints: []
+    - _index: 38
+      _pathPoints: []
+    - _index: 39
+      _pathPoints: []
+    - _index: 40
+      _pathPoints: []
+    - _index: 41
+      _pathPoints: []
+    - _index: 42
+      _pathPoints: []
+    - _index: 43
+      _pathPoints: []
+    - _index: 44
+      _pathPoints: []
+    - _index: 45
+      _pathPoints: []
+    - _index: 0
+      _pathPoints:
+      - {x: 53.352226, y: 8.425938}
+      - {x: 45.95018, y: 9.14233}
+      - {x: 45.578472, y: -2.3956716}
+      - {x: 53.592537, y: -3.026979}
+    - _index: 0
+      _pathPoints:
+      - {x: 53.352226, y: 8.425938}
+      - {x: 46.12424, y: 8.446064}
+      - {x: 44.708145, y: -9.358277}
+      - {x: 54.37583, y: -9.554417}
+    - _index: 0
+      _pathPoints:
+      - {x: 53.352226, y: 8.425938}
+      - {x: 46.12424, y: 8.446064}
+      - {x: 44.708145, y: -9.358277}
+      - {x: 54.37583, y: -9.554417}
+    - _index: 1
+      _pathPoints: []
+    - _index: 2
+      _pathPoints: []
+    - _index: 3
+      _pathPoints: []
+    - _index: 4
+      _pathPoints: []
+    - _index: 5
+      _pathPoints: []
+    - _index: 6
+      _pathPoints: []
+    - _index: 7
+      _pathPoints: []
+    - _index: 8
+      _pathPoints: []
+    - _index: 9
+      _pathPoints: []
+    - _index: 10
+      _pathPoints: []
+    - _index: 11
+      _pathPoints: []
+    - _index: 12
+      _pathPoints: []
+    - _index: 13
+      _pathPoints: []
+    - _index: 14
+      _pathPoints: []
+    - _index: 15
+      _pathPoints: []
+    - _index: 16
+      _pathPoints: []
+    - _index: 17
+      _pathPoints: []
+    - _index: 18
+      _pathPoints: []
+    - _index: 19
+      _pathPoints: []
+    - _index: 20
+      _pathPoints: []
+    - _index: 21
+      _pathPoints: []
+    - _index: 22
+      _pathPoints: []
+    - _index: 23
+      _pathPoints: []
+    - _index: 24
+      _pathPoints: []
+    - _index: 25
+      _pathPoints: []
+    - _index: 26
+      _pathPoints: []
+    - _index: 27
+      _pathPoints: []
+    - _index: 28
+      _pathPoints: []
+    - _index: 29
+      _pathPoints: []
+    - _index: 30
+      _pathPoints: []
+    - _index: 31
+      _pathPoints: []
+    - _index: 32
+      _pathPoints: []
+    - _index: 33
+      _pathPoints: []
+    - _index: 34
+      _pathPoints: []
+    - _index: 35
+      _pathPoints: []
+    - _index: 36
+      _pathPoints: []
+    - _index: 37
+      _pathPoints: []
+    - _index: 38
+      _pathPoints: []
+    - _index: 39
+      _pathPoints: []
+    - _index: 40
+      _pathPoints: []
+    - _index: 41
+      _pathPoints: []
+    - _index: 42
+      _pathPoints: []
+    - _index: 43
+      _pathPoints: []
+    - _index: 44
+      _pathPoints: []
+    - _index: 45
+      _pathPoints: []
+    - _index: 46
+      _pathPoints: []
+    - _index: 47
+      _pathPoints: []
+    - _index: 48
+      _pathPoints: []
+    - _index: 49
+      _pathPoints: []
+    - _index: 50
+      _pathPoints: []
+    - _index: 51
+      _pathPoints: []
+    - _index: 52
+      _pathPoints: []
+    - _index: 53
+      _pathPoints: []
+    - _index: 54
+      _pathPoints: []
+    - _index: 55
+      _pathPoints: []
+    - _index: 56
+      _pathPoints: []
+    - _index: 57
+      _pathPoints: []
+    - _index: 58
+      _pathPoints: []
+    - _index: 59
+      _pathPoints: []
+    - _index: 60
+      _pathPoints: []
+    - _index: 61
+      _pathPoints: []
+    - _index: 62
+      _pathPoints: []
+    - _index: 63
+      _pathPoints: []
+    - _index: 64
+      _pathPoints: []
+    - _index: 65
+      _pathPoints: []
+    - _index: 66
+      _pathPoints: []
+    - _index: 67
+      _pathPoints: []
+    - _index: 68
+      _pathPoints: []
+    - _index: 69
+      _pathPoints: []
+    - _index: 70
+      _pathPoints: []
+    - _index: 71
+      _pathPoints: []
+    - _index: 72
+      _pathPoints: []
+    - _index: 73
+      _pathPoints: []
+    - _index: 74
+      _pathPoints: []
+    - _index: 75
+      _pathPoints: []
+    - _index: 76
+      _pathPoints: []
+    - _index: 77
+      _pathPoints: []
+    - _index: 78
+      _pathPoints: []
+    - _index: 79
+      _pathPoints: []
+    - _index: 80
+      _pathPoints: []
+    - _index: 81
+      _pathPoints: []
+    - _index: 82
+      _pathPoints: []
+    - _index: 83
+      _pathPoints: []
+    - _index: 84
+      _pathPoints: []
+    - _index: 85
+      _pathPoints: []
+    - _index: 86
+      _pathPoints: []
+    - _index: 87
+      _pathPoints: []
+    - _index: 88
+      _pathPoints: []
+    - _index: 89
+      _pathPoints: []
+    - _index: 90
+      _pathPoints: []
+    - _index: 91
+      _pathPoints: []
+    - _index: 92
+      _pathPoints: []
+    - _index: 93
+      _pathPoints: []
+    - _index: 0
+      _pathPoints:
+      - {x: 53.352226, y: 8.425938}
+      - {x: 46.12424, y: 8.446064}
+      - {x: 44.708145, y: -9.358277}
+      - {x: 54.37583, y: -9.554417}
+    - _index: 1
+      _pathPoints: []
+    - _index: 2
+      _pathPoints: []
+    - _index: 3
+      _pathPoints: []
+    - _index: 4
+      _pathPoints: []
+    - _index: 5
+      _pathPoints: []
+    - _index: 6
+      _pathPoints: []
+    - _index: 7
+      _pathPoints: []
+    - _index: 8
+      _pathPoints: []
+    - _index: 9
+      _pathPoints: []
+    - _index: 10
+      _pathPoints: []
+    - _index: 11
+      _pathPoints: []
+    - _index: 12
+      _pathPoints: []
+    - _index: 13
+      _pathPoints: []
+    - _index: 14
+      _pathPoints: []
+    - _index: 15
+      _pathPoints: []
+    - _index: 16
+      _pathPoints: []
+    - _index: 17
+      _pathPoints: []
+    - _index: 18
+      _pathPoints: []
+    - _index: 19
+      _pathPoints: []
+    - _index: 20
+      _pathPoints: []
+    - _index: 21
+      _pathPoints: []
+    - _index: 22
+      _pathPoints: []
+    - _index: 23
+      _pathPoints: []
+    - _index: 24
+      _pathPoints: []
+    - _index: 25
+      _pathPoints: []
+    - _index: 26
+      _pathPoints: []
+    - _index: 27
+      _pathPoints: []
+    - _index: 28
+      _pathPoints: []
+    - _index: 29
+      _pathPoints: []
+    - _index: 30
+      _pathPoints: []
+    - _index: 31
+      _pathPoints: []
+    - _index: 32
+      _pathPoints: []
+    - _index: 33
+      _pathPoints: []
+    - _index: 34
+      _pathPoints: []
+    - _index: 35
+      _pathPoints: []
+    - _index: 36
+      _pathPoints: []
+    - _index: 37
+      _pathPoints: []
+    - _index: 38
+      _pathPoints: []
+    - _index: 39
+      _pathPoints: []
+    - _index: 40
+      _pathPoints: []
+    - _index: 41
+      _pathPoints: []
+    - _index: 42
+      _pathPoints: []
+    - _index: 43
+      _pathPoints: []
+    - _index: 44
+      _pathPoints: []
+    - _index: 45
+      _pathPoints: []
+    - _index: 46
+      _pathPoints: []
+    - _index: 47
+      _pathPoints: []
+    - _index: 48
+      _pathPoints: []
+    - _index: 49
+      _pathPoints: []
+    - _index: 50
+      _pathPoints: []
+    - _index: 51
+      _pathPoints: []
+    - _index: 52
+      _pathPoints: []
+    - _index: 53
+      _pathPoints: []
+    - _index: 54
+      _pathPoints: []
+    - _index: 55
+      _pathPoints: []
+    - _index: 56
+      _pathPoints: []
+    - _index: 57
+      _pathPoints: []
+    - _index: 58
+      _pathPoints: []
+    - _index: 59
+      _pathPoints: []
+    - _index: 60
+      _pathPoints: []
+    - _index: 61
+      _pathPoints: []
+    - _index: 62
+      _pathPoints: []
+    - _index: 63
+      _pathPoints: []
+    - _index: 64
+      _pathPoints: []
+    - _index: 65
+      _pathPoints: []
+    - _index: 66
+      _pathPoints: []
+    - _index: 67
+      _pathPoints: []
+    - _index: 68
+      _pathPoints: []
+    - _index: 69
+      _pathPoints: []
+    - _index: 70
+      _pathPoints: []
+    - _index: 71
+      _pathPoints: []
+    - _index: 72
+      _pathPoints: []
+    - _index: 73
+      _pathPoints: []
+    - _index: 74
+      _pathPoints: []
+    - _index: 75
+      _pathPoints: []
+    - _index: 76
+      _pathPoints: []
+    - _index: 77
+      _pathPoints: []
+    - _index: 78
+      _pathPoints: []
+    - _index: 79
+      _pathPoints: []
+    - _index: 80
+      _pathPoints: []
+    - _index: 81
+      _pathPoints: []
+    - _index: 82
+      _pathPoints: []
+    - _index: 83
+      _pathPoints: []
+    - _index: 84
+      _pathPoints: []
+    - _index: 85
+      _pathPoints: []
+    - _index: 86
+      _pathPoints: []
+    - _index: 87
+      _pathPoints: []
+    - _index: 88
+      _pathPoints: []
+    - _index: 89
+      _pathPoints: []
+    - _index: 90
+      _pathPoints: []
+    - _index: 91
+      _pathPoints: []
+    - _index: 92
+      _pathPoints: []
+    - _index: 93
+      _pathPoints: []
+    - _index: 94
+      _pathPoints: []
+    - _index: 95
+      _pathPoints: []
+    - _index: 96
+      _pathPoints: []
+    - _index: 97
+      _pathPoints: []
+    - _index: 98
+      _pathPoints: []
+    - _index: 99
+      _pathPoints: []
+    - _index: 100
+      _pathPoints: []
+    - _index: 101
+      _pathPoints: []
+    - _index: 102
+      _pathPoints: []
+    - _index: 103
+      _pathPoints: []
+    - _index: 104
+      _pathPoints: []
+    - _index: 105
+      _pathPoints: []
+    - _index: 106
+      _pathPoints: []
+    - _index: 107
+      _pathPoints: []
+    - _index: 108
+      _pathPoints: []
+    - _index: 109
+      _pathPoints: []
+    - _index: 110
+      _pathPoints: []
+    - _index: 111
+      _pathPoints: []
+    - _index: 112
+      _pathPoints: []
+    - _index: 113
+      _pathPoints: []
+    - _index: 114
+      _pathPoints: []
+    - _index: 115
+      _pathPoints: []
+    - _index: 116
+      _pathPoints: []
+    - _index: 117
+      _pathPoints: []
+    - _index: 118
+      _pathPoints: []
+    - _index: 119
+      _pathPoints: []
+    - _index: 120
+      _pathPoints: []
+    - _index: 121
+      _pathPoints: []
+    - _index: 122
+      _pathPoints: []
+    - _index: 123
+      _pathPoints: []
+    - _index: 124
+      _pathPoints: []
+    - _index: 125
+      _pathPoints: []
+    - _index: 126
+      _pathPoints: []
+    - _index: 127
+      _pathPoints: []
+    - _index: 128
+      _pathPoints: []
+    - _index: 129
+      _pathPoints: []
+    - _index: 130
+      _pathPoints: []
+    - _index: 131
+      _pathPoints: []
+    - _index: 132
+      _pathPoints: []
+    - _index: 133
+      _pathPoints: []
+    - _index: 134
+      _pathPoints: []
+    - _index: 135
+      _pathPoints: []
+    - _index: 136
+      _pathPoints: []
+    - _index: 137
+      _pathPoints: []
+    - _index: 138
+      _pathPoints: []
+    - _index: 139
+      _pathPoints: []
+    - _index: 140
+      _pathPoints: []
+    - _index: 141
+      _pathPoints: []
+    - _index: 142
+      _pathPoints: []
+    - _index: 143
+      _pathPoints: []
+    - _index: 144
+      _pathPoints: []
+    - _index: 145
+      _pathPoints: []
+    - _index: 146
+      _pathPoints: []
+    - _index: 147
+      _pathPoints: []
+    - _index: 148
+      _pathPoints: []
+    - _index: 149
+      _pathPoints: []
+    - _index: 150
+      _pathPoints: []
+    - _index: 151
+      _pathPoints: []
+    - _index: 152
+      _pathPoints: []
+    - _index: 153
+      _pathPoints: []
+    - _index: 154
+      _pathPoints: []
+    - _index: 155
+      _pathPoints: []
+    - _index: 156
+      _pathPoints: []
+    - _index: 157
+      _pathPoints: []
+    - _index: 158
+      _pathPoints: []
+    - _index: 159
+      _pathPoints: []
+    - _index: 160
+      _pathPoints: []
+    - _index: 161
+      _pathPoints: []
+    - _index: 162
+      _pathPoints: []
+    - _index: 163
+      _pathPoints: []
+    - _index: 164
+      _pathPoints: []
+    - _index: 165
+      _pathPoints: []
+    - _index: 166
+      _pathPoints: []
+    - _index: 167
+      _pathPoints: []
+    - _index: 168
+      _pathPoints: []
+    - _index: 169
+      _pathPoints: []
+    - _index: 170
+      _pathPoints: []
+    - _index: 171
+      _pathPoints: []
+    - _index: 172
+      _pathPoints: []
+    - _index: 173
+      _pathPoints: []
+    - _index: 174
+      _pathPoints: []
+    - _index: 175
+      _pathPoints: []
+    - _index: 176
+      _pathPoints: []
+    - _index: 177
+      _pathPoints: []
+    - _index: 178
+      _pathPoints: []
+    - _index: 179
+      _pathPoints: []
+    - _index: 180
+      _pathPoints: []
+    - _index: 181
+      _pathPoints: []
+    - _index: 182
+      _pathPoints: []
+    - _index: 183
+      _pathPoints: []
+    - _index: 184
+      _pathPoints: []
+    - _index: 185
+      _pathPoints: []
+    - _index: 186
+      _pathPoints: []
+    - _index: 187
+      _pathPoints: []
+    - _index: 0
+      _pathPoints:
+      - {x: 53.352226, y: 8.425938}
+      - {x: 46.12424, y: 8.446064}
+      - {x: 44.708145, y: -9.358277}
+      - {x: 54.37583, y: -9.554417}
+    - _index: 0
+      _pathPoints:
+      - {x: 53.352226, y: 8.425938}
+      - {x: 46.12424, y: 8.446064}
+      - {x: 44.708145, y: -9.358277}
+      - {x: 54.37583, y: -9.554417}
+    - _index: 0
+      _pathPoints:
+      - {x: 53.352226, y: 8.425938}
+      - {x: 46.12424, y: 8.446064}
+      - {x: 44.708145, y: -9.358277}
+      - {x: 54.37583, y: -9.554417}
+    - _index: 1
+      _pathPoints: []
+    - _index: 2
+      _pathPoints: []
+    - _index: 3
+      _pathPoints: []
+    - _index: 4
+      _pathPoints: []
+    - _index: 5
+      _pathPoints: []
+    - _index: 6
+      _pathPoints: []
+    - _index: 7
+      _pathPoints: []
+    - _index: 8
+      _pathPoints: []
+    - _index: 9
+      _pathPoints: []
+    - _index: 10
+      _pathPoints: []
+    - _index: 11
+      _pathPoints: []
+    - _index: 12
+      _pathPoints: []
+    - _index: 13
+      _pathPoints: []
+    - _index: 14
+      _pathPoints: []
+    - _index: 15
+      _pathPoints: []
+    - _index: 16
+      _pathPoints: []
+    - _index: 17
+      _pathPoints: []
+    - _index: 18
+      _pathPoints: []
+    - _index: 19
+      _pathPoints: []
+    - _index: 20
+      _pathPoints: []
+    - _index: 21
+      _pathPoints: []
+    - _index: 22
+      _pathPoints: []
+    - _index: 23
+      _pathPoints: []
+    - _index: 24
+      _pathPoints: []
+    - _index: 25
+      _pathPoints: []
+    - _index: 26
+      _pathPoints: []
+    - _index: 27
+      _pathPoints: []
+    - _index: 28
+      _pathPoints: []
+    - _index: 29
+      _pathPoints: []
+    - _index: 30
+      _pathPoints: []
+    - _index: 31
+      _pathPoints: []
+    - _index: 32
+      _pathPoints: []
+    - _index: 33
+      _pathPoints: []
+    - _index: 34
+      _pathPoints: []
+    - _index: 35
+      _pathPoints: []
+    - _index: 36
+      _pathPoints: []
+    - _index: 37
+      _pathPoints: []
+    - _index: 38
+      _pathPoints: []
+    - _index: 39
+      _pathPoints: []
+    - _index: 40
+      _pathPoints: []
+    - _index: 41
+      _pathPoints: []
+    - _index: 42
+      _pathPoints: []
+    - _index: 43
+      _pathPoints: []
+    - _index: 44
+      _pathPoints: []
+    - _index: 45
+      _pathPoints: []
+    - _index: 46
+      _pathPoints: []
+    - _index: 47
+      _pathPoints: []
+    - _index: 48
+      _pathPoints: []
+    - _index: 49
+      _pathPoints: []
+    - _index: 50
+      _pathPoints: []
+    - _index: 51
+      _pathPoints: []
+    - _index: 52
+      _pathPoints: []
+    - _index: 53
+      _pathPoints: []
+    - _index: 54
+      _pathPoints: []
+    - _index: 55
+      _pathPoints: []
+    - _index: 56
+      _pathPoints: []
+    - _index: 57
+      _pathPoints: []
+    - _index: 58
+      _pathPoints: []
+    - _index: 59
+      _pathPoints: []
+    - _index: 60
+      _pathPoints: []
+    - _index: 61
+      _pathPoints: []
+    - _index: 62
+      _pathPoints: []
+    - _index: 63
+      _pathPoints: []
+    - _index: 64
+      _pathPoints: []
+    - _index: 65
+      _pathPoints: []
+    - _index: 66
+      _pathPoints: []
+    - _index: 67
+      _pathPoints: []
+    - _index: 68
+      _pathPoints: []
+    - _index: 69
+      _pathPoints: []
+    - _index: 70
+      _pathPoints: []
+    - _index: 71
+      _pathPoints: []
+    - _index: 72
+      _pathPoints: []
+    - _index: 73
+      _pathPoints: []
+    - _index: 74
+      _pathPoints: []
+    - _index: 75
+      _pathPoints: []
+    - _index: 76
+      _pathPoints: []
+    - _index: 77
+      _pathPoints: []
+    - _index: 78
+      _pathPoints: []
+    - _index: 79
+      _pathPoints: []
+    - _index: 80
+      _pathPoints: []
+    - _index: 81
+      _pathPoints: []
+    - _index: 82
+      _pathPoints: []
+    - _index: 83
+      _pathPoints: []
+    - _index: 84
+      _pathPoints: []
+    - _index: 85
+      _pathPoints: []
+    - _index: 86
+      _pathPoints: []
+    - _index: 87
+      _pathPoints: []
+    - _index: 88
+      _pathPoints: []
+    - _index: 89
+      _pathPoints: []
+    - _index: 90
+      _pathPoints: []
+    - _index: 91
+      _pathPoints: []
+    - _index: 92
+      _pathPoints: []
+    - _index: 93
+      _pathPoints: []
+    - _index: 94
+      _pathPoints: []
+    - _index: 95
+      _pathPoints: []
+    - _index: 96
+      _pathPoints: []
+    - _index: 97
+      _pathPoints: []
+    - _index: 98
+      _pathPoints: []
+    - _index: 99
+      _pathPoints: []
+    - _index: 100
+      _pathPoints: []
+    - _index: 101
+      _pathPoints: []
+    - _index: 102
+      _pathPoints: []
+    - _index: 103
+      _pathPoints: []
+    - _index: 104
+      _pathPoints: []
+    - _index: 105
+      _pathPoints: []
+    - _index: 106
+      _pathPoints: []
+    - _index: 107
+      _pathPoints: []
+    - _index: 108
+      _pathPoints: []
+    - _index: 109
+      _pathPoints: []
+    - _index: 110
+      _pathPoints: []
+    - _index: 111
+      _pathPoints: []
+    - _index: 112
+      _pathPoints: []
+    - _index: 113
+      _pathPoints: []
+    - _index: 114
+      _pathPoints: []
+    - _index: 115
+      _pathPoints: []
+    - _index: 116
+      _pathPoints: []
+    - _index: 117
+      _pathPoints: []
+    - _index: 118
+      _pathPoints: []
+    - _index: 119
+      _pathPoints: []
+    - _index: 120
+      _pathPoints: []
+    - _index: 121
+      _pathPoints: []
+    - _index: 122
+      _pathPoints: []
+    - _index: 123
+      _pathPoints: []
+    - _index: 124
+      _pathPoints: []
+    - _index: 125
+      _pathPoints: []
+    - _index: 126
+      _pathPoints: []
+    - _index: 127
+      _pathPoints: []
+    - _index: 128
+      _pathPoints: []
+    - _index: 129
+      _pathPoints: []
+    - _index: 130
+      _pathPoints: []
+    - _index: 131
+      _pathPoints: []
+    - _index: 132
+      _pathPoints: []
+    - _index: 133
+      _pathPoints: []
+    - _index: 134
+      _pathPoints: []
+    - _index: 135
+      _pathPoints: []
+    - _index: 136
+      _pathPoints: []
+    - _index: 137
+      _pathPoints: []
+    - _index: 138
+      _pathPoints: []
+    - _index: 139
+      _pathPoints: []
+    - _index: 140
+      _pathPoints: []
+    - _index: 141
+      _pathPoints: []
+    - _index: 142
+      _pathPoints: []
+    - _index: 143
+      _pathPoints: []
+    - _index: 144
+      _pathPoints: []
+    - _index: 145
+      _pathPoints: []
+    - _index: 146
+      _pathPoints: []
+    - _index: 147
+      _pathPoints: []
+    - _index: 148
+      _pathPoints: []
+    - _index: 149
+      _pathPoints: []
+    - _index: 150
+      _pathPoints: []
+    - _index: 151
+      _pathPoints: []
+    - _index: 152
+      _pathPoints: []
+    - _index: 153
+      _pathPoints: []
+    - _index: 154
+      _pathPoints: []
+    - _index: 155
+      _pathPoints: []
+    - _index: 156
+      _pathPoints: []
+    - _index: 157
+      _pathPoints: []
+    - _index: 158
+      _pathPoints: []
+    - _index: 159
+      _pathPoints: []
+    - _index: 160
+      _pathPoints: []
+    - _index: 161
+      _pathPoints: []
+    - _index: 162
+      _pathPoints: []
+    - _index: 163
+      _pathPoints: []
+    - _index: 164
+      _pathPoints: []
+    - _index: 165
+      _pathPoints: []
+    - _index: 166
+      _pathPoints: []
+    - _index: 167
+      _pathPoints: []
+    - _index: 168
+      _pathPoints: []
+    - _index: 169
+      _pathPoints: []
+    - _index: 170
+      _pathPoints: []
+    - _index: 171
+      _pathPoints: []
+    - _index: 172
+      _pathPoints: []
+    - _index: 173
+      _pathPoints: []
+    - _index: 174
+      _pathPoints: []
+    - _index: 175
+      _pathPoints: []
+    - _index: 176
+      _pathPoints: []
+    - _index: 177
+      _pathPoints: []
+    - _index: 178
+      _pathPoints: []
+    - _index: 179
+      _pathPoints: []
+    - _index: 180
+      _pathPoints: []
+    - _index: 181
+      _pathPoints: []
+    - _index: 182
+      _pathPoints: []
+    - _index: 183
+      _pathPoints: []
+    - _index: 184
+      _pathPoints: []
+    - _index: 185
+      _pathPoints: []
+    - _index: 186
+      _pathPoints: []
+    - _index: 187
+      _pathPoints: []
+    - _index: 188
+      _pathPoints: []
+    - _index: 189
+      _pathPoints: []
+    - _index: 190
+      _pathPoints: []
+    - _index: 191
+      _pathPoints: []
+    - _index: 192
+      _pathPoints: []
+    - _index: 193
+      _pathPoints: []
+    - _index: 194
+      _pathPoints: []
+    - _index: 195
+      _pathPoints: []
+    - _index: 196
+      _pathPoints: []
+    - _index: 197
+      _pathPoints: []
+    - _index: 198
+      _pathPoints: []
+    - _index: 199
+      _pathPoints: []
+    - _index: 200
+      _pathPoints: []
+    - _index: 201
+      _pathPoints: []
+    - _index: 202
+      _pathPoints: []
+    - _index: 203
+      _pathPoints: []
+    - _index: 204
+      _pathPoints: []
+    - _index: 205
+      _pathPoints: []
+    - _index: 206
+      _pathPoints: []
+    - _index: 207
+      _pathPoints: []
+    - _index: 208
+      _pathPoints: []
+    - _index: 209
+      _pathPoints: []
+    - _index: 210
+      _pathPoints: []
+    - _index: 211
+      _pathPoints: []
+    - _index: 212
+      _pathPoints: []
+    - _index: 213
+      _pathPoints: []
+    - _index: 214
+      _pathPoints: []
+    - _index: 215
+      _pathPoints: []
+    - _index: 216
+      _pathPoints: []
+    - _index: 217
+      _pathPoints: []
+    - _index: 218
+      _pathPoints: []
+    - _index: 219
+      _pathPoints: []
+    - _index: 220
+      _pathPoints: []
+    - _index: 221
+      _pathPoints: []
+    - _index: 222
+      _pathPoints: []
+    - _index: 223
+      _pathPoints: []
+    - _index: 224
+      _pathPoints: []
+    - _index: 225
+      _pathPoints: []
+    - _index: 226
+      _pathPoints: []
+    - _index: 227
+      _pathPoints: []
+    - _index: 228
+      _pathPoints: []
+    - _index: 229
+      _pathPoints: []
+    - _index: 230
+      _pathPoints: []
+    - _index: 231
+      _pathPoints: []
+    - _index: 232
+      _pathPoints: []
+    - _index: 233
+      _pathPoints: []
+    - _index: 234
+      _pathPoints: []
+    - _index: 235
+      _pathPoints: []
+    - _index: 236
+      _pathPoints: []
+    - _index: 237
+      _pathPoints: []
+    - _index: 238
+      _pathPoints: []
+    - _index: 239
+      _pathPoints: []
+    - _index: 240
+      _pathPoints: []
+    - _index: 241
+      _pathPoints: []
+    - _index: 242
+      _pathPoints: []
+    - _index: 243
+      _pathPoints: []
+    - _index: 244
+      _pathPoints: []
+    - _index: 245
+      _pathPoints: []
+    - _index: 246
+      _pathPoints: []
+    - _index: 247
+      _pathPoints: []
+    - _index: 248
+      _pathPoints: []
+    - _index: 249
+      _pathPoints: []
+    - _index: 250
+      _pathPoints: []
+    - _index: 251
+      _pathPoints: []
+    - _index: 252
+      _pathPoints: []
+    - _index: 253
+      _pathPoints: []
+    - _index: 254
+      _pathPoints: []
+    - _index: 255
+      _pathPoints: []
+    - _index: 256
+      _pathPoints: []
+    - _index: 257
+      _pathPoints: []
+    - _index: 258
+      _pathPoints: []
+    - _index: 259
+      _pathPoints: []
+    - _index: 260
+      _pathPoints: []
+    - _index: 261
+      _pathPoints: []
+    - _index: 262
+      _pathPoints: []
+    - _index: 263
+      _pathPoints: []
+    - _index: 264
+      _pathPoints: []
+    - _index: 265
+      _pathPoints: []
+    - _index: 266
+      _pathPoints: []
+    - _index: 267
+      _pathPoints: []
+    - _index: 268
+      _pathPoints: []
+    - _index: 269
+      _pathPoints: []
+    - _index: 270
+      _pathPoints: []
+    - _index: 271
+      _pathPoints: []
+    - _index: 272
+      _pathPoints: []
+    - _index: 273
+      _pathPoints: []
+    - _index: 274
+      _pathPoints: []
+    - _index: 275
+      _pathPoints: []
+    - _index: 276
+      _pathPoints: []
+    - _index: 277
+      _pathPoints: []
+    - _index: 278
+      _pathPoints: []
+    - _index: 279
+      _pathPoints: []
+    - _index: 280
+      _pathPoints: []
+    - _index: 281
+      _pathPoints: []
+    - _index: 282
+      _pathPoints: []
+    - _index: 283
+      _pathPoints: []
+    - _index: 284
+      _pathPoints: []
+    - _index: 285
+      _pathPoints: []
+    - _index: 286
+      _pathPoints: []
+    - _index: 287
+      _pathPoints: []
+    - _index: 288
+      _pathPoints: []
+    - _index: 289
+      _pathPoints: []
+    - _index: 290
+      _pathPoints: []
+    - _index: 291
+      _pathPoints: []
+    - _index: 292
+      _pathPoints: []
+    - _index: 293
+      _pathPoints: []
+    - _index: 294
+      _pathPoints: []
+    - _index: 295
+      _pathPoints: []
+    - _index: 296
+      _pathPoints: []
+    - _index: 297
+      _pathPoints: []
+    - _index: 298
+      _pathPoints: []
+    - _index: 299
+      _pathPoints: []
+    - _index: 300
+      _pathPoints: []
+    - _index: 301
+      _pathPoints: []
+    - _index: 302
+      _pathPoints: []
+    - _index: 303
+      _pathPoints: []
+    - _index: 304
+      _pathPoints: []
+    - _index: 305
+      _pathPoints: []
+    - _index: 306
+      _pathPoints: []
+    - _index: 307
+      _pathPoints: []
+    - _index: 308
+      _pathPoints: []
+    - _index: 309
+      _pathPoints: []
+    - _index: 310
+      _pathPoints: []
+    - _index: 311
+      _pathPoints: []
+    - _index: 312
+      _pathPoints: []
+    - _index: 313
+      _pathPoints: []
+    - _index: 314
+      _pathPoints: []
+    - _index: 315
+      _pathPoints: []
+    - _index: 316
+      _pathPoints: []
+    - _index: 317
+      _pathPoints: []
+    - _index: 318
+      _pathPoints: []
+    - _index: 319
+      _pathPoints: []
+    - _index: 320
+      _pathPoints: []
+    - _index: 321
+      _pathPoints: []
+    - _index: 322
+      _pathPoints: []
+    - _index: 323
+      _pathPoints: []
+    - _index: 324
+      _pathPoints: []
+    - _index: 325
+      _pathPoints: []
+    - _index: 326
+      _pathPoints: []
+    - _index: 327
+      _pathPoints: []
+    - _index: 328
+      _pathPoints: []
+    - _index: 329
+      _pathPoints: []
+    - _index: 330
+      _pathPoints: []
+    - _index: 331
+      _pathPoints: []
+    - _index: 332
+      _pathPoints: []
+    - _index: 333
+      _pathPoints: []
+    - _index: 334
+      _pathPoints: []
+    - _index: 335
+      _pathPoints: []
+    - _index: 336
+      _pathPoints: []
+    - _index: 337
+      _pathPoints: []
+    - _index: 338
+      _pathPoints: []
+    - _index: 339
+      _pathPoints: []
+    - _index: 340
+      _pathPoints: []
+    - _index: 341
+      _pathPoints: []
+    - _index: 342
+      _pathPoints: []
+    - _index: 343
+      _pathPoints: []
+    - _index: 344
+      _pathPoints: []
+    - _index: 345
+      _pathPoints: []
+    - _index: 346
+      _pathPoints: []
+    - _index: 347
+      _pathPoints: []
+    - _index: 348
+      _pathPoints: []
+    - _index: 349
+      _pathPoints: []
+    - _index: 350
+      _pathPoints: []
+    - _index: 351
+      _pathPoints: []
+    - _index: 352
+      _pathPoints: []
+    - _index: 353
+      _pathPoints: []
+    - _index: 354
+      _pathPoints: []
+    - _index: 355
+      _pathPoints: []
+    - _index: 356
+      _pathPoints: []
+    - _index: 357
+      _pathPoints: []
+    - _index: 358
+      _pathPoints: []
+    - _index: 359
+      _pathPoints: []
+    - _index: 360
+      _pathPoints: []
+    - _index: 361
+      _pathPoints: []
+    - _index: 362
+      _pathPoints: []
+    - _index: 363
+      _pathPoints: []
+    - _index: 364
+      _pathPoints: []
+    - _index: 365
+      _pathPoints: []
+    - _index: 366
+      _pathPoints: []
+    - _index: 367
+      _pathPoints: []
+    - _index: 368
+      _pathPoints: []
+    - _index: 369
+      _pathPoints: []
+    - _index: 370
+      _pathPoints: []
+    - _index: 371
+      _pathPoints: []
+    - _index: 372
+      _pathPoints: []
+    - _index: 373
+      _pathPoints: []
+    - _index: 374
+      _pathPoints: []
+    - _index: 375
+      _pathPoints: []
+    - _index: 376
+      _pathPoints: []
+    - _index: 377
+      _pathPoints: []
+    - _index: 0
+      _pathPoints:
+      - {x: 53.352226, y: 8.425938}
+      - {x: 46.12424, y: 8.446064}
+      - {x: 44.708145, y: -9.358277}
+      - {x: 54.37583, y: -9.554417}
+    - _index: 0
+      _pathPoints:
+      - {x: 53.352226, y: 8.425938}
+      - {x: 46.12424, y: 8.446064}
+      - {x: 44.708145, y: -9.358277}
+      - {x: 54.37583, y: -9.554417}
+  references:
+    version: 2
+    RefIds:
+    - rid: 4388470074669531245
+      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
+      data:
+        _position: {x: -22.1, y: 0}
+        _scale: {x: 4.4, y: 4.4, z: 1.1}
+        _referenceID: Boss_Background_02
+        _layerIndex: 20
+    - rid: 4388470074669531246
+      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
+      data:
+        _position: {x: -23.1, y: 1}
+        _scale: {x: 4.5, y: 4.5, z: 1}
+        _referenceID: Boss_Background_03
+        _layerIndex: 16
+    - rid: 4388470074669531247
+      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
+      data:
+        _position: {x: -6.2400007, y: 7.6000004}
+        _scale: {x: 4.5, y: 4.5, z: 1}
+        _referenceID: Boss_Background_01
+        _layerIndex: 16
+    - rid: 4388470074669531248
+      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
+      data:
+        _position: {x: -41.14, y: 7.6000004}
+        _scale: {x: -4.5, y: 4.5, z: 1}
+        _referenceID: Boss_Background_01
+        _layerIndex: 16
+    - rid: 4388470074669531249
+      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
+      data:
+        _position: {x: -8.9, y: 2.9}
+        _scale: {x: 2, y: 2, z: 1}
+        _referenceID: Boss_Background_04
+        _layerIndex: -0.1
+    - rid: 4388470074669531250
+      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
+      data:
+        _position: {x: -38.1, y: 2.9}
+        _scale: {x: -2, y: 2, z: 1}
+        _referenceID: Boss_Background_04
+        _layerIndex: -0.1
+    - rid: 4388470074669531251
+      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
+      data:
+        _position: {x: -22.5, y: -2}
+        _scale: {x: 2, y: 2, z: 1}
+        _referenceID: Boss_Background_05
+        _layerIndex: -0.1
+    - rid: 4388470074669531252
+      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
+      data:
+        _position: {x: -22.7, y: -6.6}
+        _scale: {x: 3, y: 3, z: 1}
+        _referenceID: Boss_Background_06
+        _layerIndex: 0
+    - rid: 4388470074669531253
+      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
+      data:
+        _position: {x: -51.2, y: 3.1}
+        _scale: {x: 1, y: 28.7, z: 1}
+        _referenceID: Collider
+        _layerIndex: 0
+    - rid: 4388470074669531254
+      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
+      data:
+        _position: {x: 5.4, y: 3.1}
+        _scale: {x: 1, y: 28.7, z: 1}
+        _referenceID: Collider
+        _layerIndex: 0

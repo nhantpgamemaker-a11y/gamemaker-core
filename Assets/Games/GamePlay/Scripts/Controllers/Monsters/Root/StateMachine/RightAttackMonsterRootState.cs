@@ -1,10 +1,16 @@
 using Game.GamePlay;
 using GameMaker.Core.Runtime;
+using UnityEngine;
 
 namespace GamePlay.Game
 {
-    public class RightAttackMonsterRootState : BaseMonsterRootState
+    public class RightAttackMonsterRootState : AttackMonsterRootState
     {
+        public override Collider2D GetCollider2D()
+        {
+            return monsterRootStateMachine.RightAttackColliderRange;
+        }
+
         public override MonsterRootStateType GetStateType()
         {
             return MonsterRootStateType.RightAttack;

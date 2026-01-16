@@ -35,9 +35,10 @@ namespace Game.GamePlay
             _monsterStateMachine.OnAnimationEndEventHandle();
         }
 
-        public void TakeDame(float amount)
+        public void TakeDame(float amount, Vector3 direction, Vector3 position)
         {
-            _monsterStateMachine.ChangeState(MonsterRootStateType.TakeDame);
+            if (_monsterStateMachine.MonsterReusableData.Hp < 0) return;
+            _monsterStateMachine.ChangeState(MonsterRootStateType.TakeDame, new DameStateData(amount, direction, position));
         }
         #endregion
     }

@@ -8,6 +8,7 @@ namespace Game.GamePlay
 {
     public abstract class PlayerAttackState : PlayerGroundState
     {
+        [SerializeField] protected AudioClip _slatSfx;
         protected bool _onTransition = false;
         public override void OnEnterState(BaseStateData baseStateData = null)
         {
@@ -15,7 +16,7 @@ namespace Game.GamePlay
             base.OnEnterState(baseStateData);
             StartAnimation(playerStateMachine.PlayerData.AnimationData.AttackAnimationHash);
             ResetVelocity();
-
+            playerStateMachine.AudioSource.PlayOneShot(_slatSfx);
         }
         public override void OnExitState()
         {
@@ -36,10 +37,14 @@ namespace Game.GamePlay
             {
                 foreach(var collider in contactColliders)
                 {
-                    var takeDame = collider.transform.root.GetComponent<ITakeDame>();
+                    var takeDame = collider.transform.GetComponentInParent<ITakeDame>();
                     if (takeDame != null)
                     {
-                        takeDame.TakeDame(5f);
+                        var center = collider.bounds.center;
+                        Vector3 direction = center - this.transform.position;
+                        direction.y = 0f;
+                        direction.z = 0f;
+                        takeDame.TakeDame(30f,direction, center);
                     }
                 }
             }

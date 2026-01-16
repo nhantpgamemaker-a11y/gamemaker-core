@@ -18,11 +18,13 @@ namespace Game.GamePlay
         Landing,
         Attacking_1,
         Attacking_2,
-        Attacking_3 
+        Attacking_3,
+        TakeDame
     }
     [System.Serializable]
     public class PlayerStateMachine : BaseStateMachine<PlayerStateType>
     {
+        [SerializeField] private AudioSource _audioSource;
         [SerializeField] private Rigidbody2D _rigidbody;
         [SerializeField] private Collider2D _collider2D;
         [SerializeField] private Collider2D _groundCheckCollider;
@@ -52,6 +54,7 @@ namespace Game.GamePlay
         public Animator Animator { get => _animator; }
         public PlayerData PlayerData { get => _playerData; }
         public PlayerReusableData PlayerReusableData { get => _playerReusableData; }
+        public AudioSource AudioSource => _audioSource;
         public virtual void OnEnable()
         {
             PlayerInputAction.Enable();

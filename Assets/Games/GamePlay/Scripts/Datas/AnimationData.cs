@@ -1,4 +1,3 @@
-using Codice.Utils;
 using UnityEngine;
 
 namespace Game.GamePlay
@@ -32,6 +31,8 @@ namespace Game.GamePlay
         private string _attack2AnimationName = "Attack_2";
         [SerializeField]
         private string _attack3AnimationName = "Attack_3";
+        [SerializeField]
+        private string _takeDameAnimationName = "TakeDame";
 
         public int IdlingAnimationHash { get; private set; }
         public int RunningAnimationHash { get; private set; }
@@ -47,6 +48,7 @@ namespace Game.GamePlay
         public int Attack1AnimationHash { get; private set; }
         public int Attack2AnimationHash { get; private set; }
         public int Attack3AnimationHash { get; private set; }
+        public int TakeDameAnimationHash { get; private set; }
         
 
         public void OnInit()
@@ -64,6 +66,7 @@ namespace Game.GamePlay
             Attack1AnimationHash = Animator.StringToHash(_attack1AnimationName);
             Attack2AnimationHash = Animator.StringToHash(_attack2AnimationName);
             Attack3AnimationHash = Animator.StringToHash(_attack3AnimationName);
+            TakeDameAnimationHash = Animator.StringToHash(_takeDameAnimationName);
         }
     }
 }

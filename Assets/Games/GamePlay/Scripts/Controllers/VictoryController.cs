@@ -4,6 +4,7 @@ namespace Game.GamePlay
 {
     public class VictoryController : MonoBehaviour
     {
+        [UnityEngine.SerializeField]
         private GameManager _gameManager;
         public void Initialize(GameManager gameManager)
         {
@@ -11,7 +12,8 @@ namespace Game.GamePlay
         }
         void OnTriggerEnter2D(Collider2D collision)
         {
-            if (collision.TryGetComponent<PlayerController>(out var playerController))
+            var playerController = collision.GetComponentInParent<PlayerController>();
+            if (playerController != null)
             {
                 _gameManager.HandleVictory();
             }

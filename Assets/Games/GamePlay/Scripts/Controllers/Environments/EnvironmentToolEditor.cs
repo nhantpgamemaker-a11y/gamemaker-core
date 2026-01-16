@@ -13,6 +13,7 @@ namespace Game.GamePlay
         [SerializeField] private LayerControllerEditor _layerControllerEditorPrefab;
         [SerializeField] private Transform _startSpawnPoint;
         [SerializeField] private PolygonCollider2D _cameraBoundsCollider;
+        [SerializeField] private PolygonCollider2D _victoryCollider;
         [SerializeField] private Transform _monsterTransform;
 
         [ContextMenu("Load Map Data")]
@@ -59,6 +60,15 @@ namespace Game.GamePlay
             {
                 _cameraBoundsCollider.SetPath(cameraPath.Index, cameraPath.PathPoints.ToArray());
             }
+
+            _victoryCollider.transform.position = _mapData.VictoryData.Position;
+            _victoryCollider.pathCount = _mapData.VictoryData.CameraPaths.Count;
+            foreach (var cameraPath in _mapData.VictoryData.CameraPaths)
+            {
+                _victoryCollider.SetPath(cameraPath.Index, cameraPath.PathPoints.ToArray());
+            }
+
+
             foreach (var monster  in _mapData.MonsterPositionData)
             {
                 var monsterPrefab = System.Array.Find(_monsterEditorPrefabs,
@@ -92,12 +102,18 @@ namespace Game.GamePlay
             _mapData.EnvironmentPositionDatas = environmentDataList;
             _mapData.PlayerSpawnPoint = _startSpawnPoint.position;
             _mapData.CameraData.Position = _cameraBoundsCollider.transform.position;
-            _mapData.CameraData.CameraPaths = new List<CameraPath>();
+            _mapData.CameraData.CameraPaths = new List<PathPoint>();
             for (int i = 0; i < _cameraBoundsCollider.pathCount; i++)
             {
                 var pathPoints = new List<Vector2>(_cameraBoundsCollider.GetPath(i));
-                var cameraPath = new CameraPath(i, pathPoints);
+                var cameraPath = new PathPoint(i, pathPoints);
                 _mapData.CameraData.CameraPaths.Add(cameraPath);
+            }
+            for (int i = 0; i < _victoryCollider.pathCount; i++)
+            {
+                var pathPoints = new List<Vector2>(_victoryCollider.GetPath(i));
+                var cameraPath = new PathPoint(i, pathPoints);
+                _mapData.VictoryData.CameraPaths.Add(cameraPath);
             }
             var monsters = new List<MonsterPositionData>();
             var monsterEnvironmentControllerEditors = _monsterTransform.GetComponentsInChildren<EnvironmentControllerEditor>();

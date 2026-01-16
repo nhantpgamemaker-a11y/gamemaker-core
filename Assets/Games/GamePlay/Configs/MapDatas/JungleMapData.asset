@@ -14,1898 +14,900 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _id: Jungle
   _displayName: Jungle
-  _playerSpawnPoint: {x: -15.35, y: 1.58, z: 0}
+  _playerSpawnPoint: {x: -19.9, y: 1.58, z: 0}
   _victoryPoint: {x: 0, y: 0, z: 0}
   _environmentLayers:
-  - _scale: {x: 6, y: 6, z: 1}
-    _zIndex: 31
-    _sortingOrder: -31
-  - _scale: {x: 6, y: 6, z: 1}
-    _zIndex: 30
-    _sortingOrder: -30
-  - _scale: {x: 4.45, y: 4.45, z: 1}
-    _zIndex: 20
-    _sortingOrder: -20
-  - _scale: {x: 2.9, y: 2.9, z: 1}
+  - _scale: {x: 3, y: 3, z: 1}
+    _zIndex: 10
+    _sortingOrder: -10
+  - _scale: {x: 3, y: 3, z: 1}
+    _zIndex: 7
+    _sortingOrder: -7
+  - _scale: {x: 3, y: 3, z: 1}
+    _zIndex: 6
+    _sortingOrder: -6
+  - _scale: {x: 3, y: 3, z: 1}
     _zIndex: 5
     _sortingOrder: -5
-  - _scale: {x: 2.2, y: 2.2, z: 2.2}
-    _zIndex: 0
+  - _scale: {x: 3, y: 3, z: 1}
+    _zIndex: 3
+    _sortingOrder: -3
+  - _scale: {x: 1, y: 1, z: 1}
+    _zIndex: 0.5
+    _sortingOrder: -2
+  - _scale: {x: 1, y: 1, z: 1}
+    _zIndex: 0.1
     _sortingOrder: -1
-  - _scale: {x: 2.2, y: 2.2, z: 2.2}
+  - _scale: {x: 1, y: 1, z: 1}
     _zIndex: 0
     _sortingOrder: 0
-  - _scale: {x: 1, y: 1, z: 1}
-    _zIndex: -9
-    _sortingOrder: 9
-  - _scale: {x: 1, y: 1, z: 1}
-    _zIndex: -10
-    _sortingOrder: 10
   - _scale: {x: 1, y: 1, z: 1}
     _zIndex: -10
     _sortingOrder: 10
   _environmentPositionDatas:
-  - rid: 335725525521662263
-  - rid: 335725525521662264
-  - rid: 335725525521662265
-  - rid: 335725525521662266
-  - rid: 335725525521662267
-  - rid: 335725525521662268
-  - rid: 335725525521662269
-  - rid: 335725525521662270
-  - rid: 335725525521662271
-  - rid: 335725525521662272
-  - rid: 335725525521662273
-  - rid: 335725525521662274
-  - rid: 335725525521662275
-  - rid: 335725525521662276
-  - rid: 335725525521662277
-  - rid: 335725525521662278
-  - rid: 335725525521662279
-  - rid: 335725525521662280
-  - rid: 335725525521662281
-  - rid: 335725525521662282
-  - rid: 335725525521662283
-  - rid: 335725525521662284
-  - rid: 335725525521662285
-  - rid: 335725525521662286
-  - rid: 335725525521662287
-  - rid: 335725525521662288
-  - rid: 335725525521662289
-  - rid: 335725525521662290
-  - rid: 335725525521662291
-  - rid: 335725525521662292
-  - rid: 335725525521662293
-  - rid: 335725525521662294
-  - rid: 335725525521662295
-  - rid: 335725525521662296
-  - rid: 335725525521662297
-  - rid: 335725525521662298
-  - rid: 335725525521662299
-  - rid: 335725525521662300
-  - rid: 335725525521662301
-  - rid: 335725525521662302
-  - rid: 335725525521662303
-  - rid: 335725525521662304
-  - rid: 335725525521662305
-  - rid: 335725525521662306
-  - rid: 335725525521662307
-  - rid: 335725525521662308
-  - rid: 335725525521662309
-  - rid: 335725525521662310
-  - rid: 335725525521662311
-  - rid: 335725525521662312
-  - rid: 335725525521662313
-  - rid: 335725525521662314
-  - rid: 335725525521662315
-  - rid: 335725525521662316
-  - rid: 335725525521662317
-  - rid: 335725525521662318
-  - rid: 335725525521662319
-  - rid: 335725525521662320
-  - rid: 335725525521662321
-  - rid: 335725525521662322
-  - rid: 335725525521662323
-  - rid: 335725525521662324
-  - rid: 335725525521662325
-  - rid: 335725525521662326
-  - rid: 335725525521662327
-  - rid: 335725525521662328
-  - rid: 335725525521662329
-  - rid: 335725525521662330
-  - rid: 335725525521662331
-  - rid: 335725525521662332
-  - rid: 335725525521662333
-  - rid: 335725525521662334
-  - rid: 335725525521662335
-  - rid: 335725525521662336
-  - rid: 335725525521662337
-  - rid: 335725525521662338
-  - rid: 335725525521662339
-  - rid: 335725525521662340
-  - rid: 335725525521662341
-  - rid: 335725525521662342
-  - rid: 335725525521662343
-  - rid: 335725525521662344
-  - rid: 335725525521662345
-  - rid: 335725525521662346
-  - rid: 335725525521662347
-  - rid: 335725525521662348
-  - rid: 335725525521662349
-  - rid: 335725525521662350
-  - rid: 335725525521662351
-  - rid: 335725525521662352
-  - rid: 335725525521662353
-  - rid: 335725525521662354
-  - rid: 335725525521662355
-  - rid: 335725525521662356
-  - rid: 335725525521662357
-  - rid: 335725525521662358
-  - rid: 335725525521662359
-  - rid: 335725525521662360
-  - rid: 335725525521662361
-  - rid: 335725525521662362
-  - rid: 335725525521662363
-  - rid: 335725525521662364
-  - rid: 335725525521662365
-  - rid: 335725525521662366
-  - rid: 335725525521662367
-  - rid: 335725525521662368
-  - rid: 335725525521662369
-  - rid: 335725525521662370
-  - rid: 335725525521662371
-  - rid: 335725525521662372
-  - rid: 335725525521662373
-  - rid: 335725525521662374
-  - rid: 335725525521662375
-  - rid: 335725525521662376
-  - rid: 335725525521662377
-  - rid: 335725525521662378
-  - rid: 335725525521662379
-  - rid: 335725525521662380
-  - rid: 335725525521662381
-  - rid: 335725525521662382
-  - rid: 335725525521662383
-  - rid: 335725525521662384
-  - rid: 335725525521662385
-  - rid: 335725525521662386
-  - rid: 335725525521662387
-  - rid: 335725525521662388
-  - rid: 335725525521662389
-  - rid: 335725525521662390
-  - rid: 335725525521662391
-  - rid: 335725525521662392
-  - rid: 335725525521662393
-  - rid: 335725525521662394
-  - rid: 335725525521662395
-  - rid: 335725525521662396
-  - rid: 335725525521662397
-  - rid: 335725525521662398
-  - rid: 335725525521662399
-  - rid: 335725525521662400
-  - rid: 335725525521662401
-  - rid: 335725525521662402
-  - rid: 335725525521662403
-  - rid: 335725525521662404
-  - rid: 335725525521662405
-  - rid: 335725525521662406
-  - rid: 335725525521662407
-  - rid: 335725525521662408
-  - rid: 335725525521662409
-  - rid: 335725525521662410
-  - rid: 335725525521662411
-  - rid: 335725525521662412
-  - rid: 335725525521662413
-  - rid: 335725525521662414
-  - rid: 335725525521662415
-  - rid: 335725525521662416
-  - rid: 335725525521662417
-  - rid: 335725525521662418
-  - rid: 335725525521662419
-  - rid: 335725525521662420
-  - rid: 335725525521662421
-  - rid: 335725525521662422
-  - rid: 335725525521662423
-  - rid: 335725525521662424
-  - rid: 335725525521662425
-  - rid: 335725525521662426
-  - rid: 335725525521662427
-  - rid: 335725525521662428
-  - rid: 335725525521662429
-  - rid: 335725525521662430
-  - rid: 335725525521662431
-  - rid: 335725525521662432
-  - rid: 335725525521662433
-  - rid: 335725525521662434
-  - rid: 335725525521662435
-  - rid: 335725525521662436
-  - rid: 335725525521662437
-  - rid: 335725525521662438
-  - rid: 335725525521662439
-  - rid: 335725525521662440
-  - rid: 335725525521662441
-  - rid: 335725525521662442
-  - rid: 335725525521662443
-  - rid: 335725525521662444
-  - rid: 335725525521662445
-  - rid: 335725525521662446
-  - rid: 335725525521662447
-  - rid: 335725525521662448
-  - rid: 335725525521662449
-  - rid: 335725525521662450
-  - rid: 335725525521662451
-  - rid: 335725525521662452
-  - rid: 335725525521662453
-  - rid: 335725525521662454
-  - rid: 335725525521662455
-  - rid: 335725525521662456
-  - rid: 335725525521662457
-  - rid: 335725525521662458
-  - rid: 335725525521662459
-  - rid: 335725525521662460
-  - rid: 335725525521662461
-  - rid: 335725525521662462
-  - rid: 335725525521662463
-  - rid: 335725525521662464
-  - rid: 335725525521662465
-  - rid: 335725525521662466
-  - rid: 335725525521662467
-  - rid: 335725525521662468
-  - rid: 335725525521662469
-  - rid: 335725525521662470
-  - rid: 335725525521662471
-  - rid: 335725525521662472
-  - rid: 335725525521662473
-  - rid: 335725525521662474
-  - rid: 335725525521662475
-  - rid: 335725525521662476
-  - rid: 335725525521662477
-  - rid: 335725525521662478
-  - rid: 335725525521662479
-  - rid: 335725525521662480
-  - rid: 335725525521662481
-  - rid: 335725525521662482
-  - rid: 335725525521662483
-  - rid: 335725525521662484
-  - rid: 335725525521662485
-  - rid: 335725525521662486
-  - rid: 335725525521662487
-  - rid: 335725525521662488
-  - rid: 335725525521662489
+  - rid: 4388469913330123449
+  - rid: 4388469913330123450
+  - rid: 4388469913330123451
+  - rid: 4388469913330123452
+  - rid: 4388469913330123453
+  - rid: 4388469913330123454
+  - rid: 4388469913330123455
+  - rid: 4388469913330123456
+  - rid: 4388469913330123457
+  - rid: 4388469913330123458
+  - rid: 4388469913330123459
+  - rid: 4388469913330123460
+  - rid: 4388469913330123461
+  - rid: 4388469913330123462
+  - rid: 4388469913330123463
+  - rid: 4388469913330123464
+  - rid: 4388469913330123465
+  - rid: 4388469913330123466
+  - rid: 4388469913330123467
+  - rid: 4388469913330123468
+  - rid: 4388469913330123469
+  - rid: 4388469913330123470
+  - rid: 4388469913330123471
+  - rid: 4388469913330123472
+  - rid: 4388469913330123473
+  - rid: 4388469913330123474
+  - rid: 4388469913330123475
+  - rid: 4388469913330123476
+  - rid: 4388469913330123477
+  - rid: 4388469913330123478
+  - rid: 4388469913330123479
+  - rid: 4388469913330123480
+  - rid: 4388469913330123481
+  - rid: 4388469913330123482
+  - rid: 4388469913330123483
+  - rid: 4388469913330123484
+  - rid: 4388469913330123485
+  - rid: 4388469913330123486
+  - rid: 4388469913330123487
+  - rid: 4388469913330123488
+  - rid: 4388469913330123489
+  - rid: 4388469913330123490
+  - rid: 4388469913330123491
+  - rid: 4388469913330123492
+  - rid: 4388469913330123493
+  - rid: 4388469913330123494
+  - rid: 4388469913330123495
+  - rid: 4388469913330123496
+  - rid: 4388469913330123497
+  - rid: 4388469913330123498
+  - rid: 4388469913330123499
+  - rid: 4388469913330123500
+  - rid: 4388469913330123501
+  - rid: 4388469913330123502
+  - rid: 4388469913330123503
+  - rid: 4388469913330123504
+  - rid: 4388469913330123505
+  - rid: 4388469913330123506
+  - rid: 4388469913330123507
+  - rid: 4388469913330123508
+  - rid: 4388469913330123509
+  - rid: 4388469913330123510
+  - rid: 4388469913330123511
+  - rid: 4388469913330123512
+  - rid: 4388469913330123513
+  - rid: 4388469913330123514
+  - rid: 4388469913330123515
+  - rid: 4388469913330123516
+  - rid: 4388469913330123517
+  - rid: 4388469913330123518
+  - rid: 4388469913330123519
+  - rid: 4388469913330123520
+  - rid: 4388469913330123521
+  - rid: 4388469913330123522
+  - rid: 4388469913330123523
+  - rid: 4388469913330123524
+  - rid: 4388469913330123525
+  - rid: 4388469913330123526
+  - rid: 4388469913330123527
+  - rid: 4388469913330123528
+  - rid: 4388469913330123529
+  - rid: 4388469913330123530
+  - rid: 4388469913330123531
+  - rid: 4388469913330123532
+  - rid: 4388469913330123533
+  - rid: 4388469913330123534
+  - rid: 4388469913330123535
+  - rid: 4388469913330123536
+  - rid: 4388469913330123537
+  - rid: 4388469913330123538
+  - rid: 4388469913330123539
+  - rid: 4388469913330123540
+  - rid: 4388469913330123541
+  - rid: 4388469913330123542
+  - rid: 4388469913330123543
+  - rid: 4388469913330123544
+  - rid: 4388469913330123545
+  - rid: 4388469913330123546
+  - rid: 4388469913330123547
   _monsterPositionDatas:
-  - rid: 335725525521662490
-  - rid: 335725525521662491
-  - rid: 335725525521662492
-  - rid: 335725525521662493
-  - rid: 335725525521662494
+  - rid: 4388469913330123548
+  - rid: 4388469913330123549
+  - rid: 4388469913330123550
+  - rid: 4388469913330123551
   _cameraData:
     _position: {x: 0, y: 0, z: -10}
-    _cameraPaths:
+    _pathPoints:
+    - _index: 0
+      _pathPoints:
+      - {x: 152.02527, y: 6.373086}
+      - {x: -28.183077, y: 6.353928}
+      - {x: -28.315296, y: -4.3964434}
+      - {x: 151.98051, y: -4.470196}
+  _victoryData:
+    _position: {x: 0, y: 0, z: 0}
+    _pathPoints:
+    - _index: 0
+      _pathPoints:
+      - {x: 268.76483, y: 6.2504907}
+      - {x: 251.78087, y: 6.2754807}
+      - {x: 251.88298, y: -4.5225954}
+      - {x: 268.8191, y: -4.52721}
     - _index: 0
       _pathPoints:
       - {x: 280.72937, y: 6.310918}
       - {x: -19.060247, y: 6.31568}
       - {x: -19.143017, y: -4.496274}
       - {x: 280.7232, y: -4.52721}
+    - _index: 0
+      _pathPoints:
+      - {x: 144.97945, y: 6.3258657}
+      - {x: 137.40071, y: 6.285685}
+      - {x: 137.34207, y: -4.575003}
+      - {x: 144.78864, y: -4.515918}
+    - _index: 0
+      _pathPoints:
+      - {x: 143.5468, y: 6.2987127}
+      - {x: 130.08661, y: 6.1688914}
+      - {x: 130.02692, y: -4.469018}
+      - {x: 143.65077, y: -4.395818}
+    - _index: 0
+      _pathPoints:
+      - {x: 143.5468, y: 6.2987127}
+      - {x: 130.08661, y: 6.1688914}
+      - {x: 130.02692, y: -4.469018}
+      - {x: 143.65077, y: -4.395818}
   references:
     version: 2
     RefIds:
-    - rid: 335725525521662263
+    - rid: 4388469913330123449
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: -119.756035, y: 0}
+        _position: {x: 19.8, y: 1.4399999}
         _scale: {x: 1, y: 1, z: 1}
         _referenceID: Jungle_Vine_04
-        _layerIndex: 31
-    - rid: 335725525521662264
+        _layerIndex: 10
+    - rid: 4388469913330123450
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: 110.58, y: 0}
+        _position: {x: 135.29999, y: 1.44}
         _scale: {x: -1, y: 1, z: 1}
         _referenceID: Jungle_Vine_04
-        _layerIndex: 31
-    - rid: 335725525521662265
+        _layerIndex: 10
+    - rid: 4388469913330123451
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: 340.8, y: 0}
+        _position: {x: 68.100006, y: -14.099999}
         _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Vine_04
-        _layerIndex: 31
-    - rid: 335725525521662266
+        _referenceID: Jungle_Tree_10
+        _layerIndex: 7
+    - rid: 4388469913330123452
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: -27.060001, y: -19.56}
+        _position: {x: -24, y: -16.2}
+        _scale: {x: 1, y: 1, z: 1}
+        _referenceID: Jungle_Tree_11
+        _layerIndex: 7
+    - rid: 4388469913330123453
+      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
+      data:
+        _position: {x: 29.723082, y: -16.2}
+        _scale: {x: 1, y: 1, z: 1}
+        _referenceID: Jungle_Tree_12
+        _layerIndex: 7
+    - rid: 4388469913330123454
+      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
+      data:
+        _position: {x: 107.10001, y: -16.5}
+        _scale: {x: 1, y: 1, z: 1}
+        _referenceID: Jungle_Tree_13
+        _layerIndex: 7
+    - rid: 4388469913330123455
+      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
+      data:
+        _position: {x: 29.310001, y: -10.049999}
         _scale: {x: 1, y: 1, z: 1}
         _referenceID: Jungle_Brambles_01
-        _layerIndex: 30
-    - rid: 335725525521662267
+        _layerIndex: 6
+    - rid: 4388469913330123456
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: 91.2, y: -30.599998}
-        _scale: {x: -1, y: 1, z: 1}
-        _referenceID: Jungle_Tree_03
-        _layerIndex: 30
-    - rid: 335725525521662268
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 188.64, y: -30.599998}
-        _scale: {x: -1, y: 1, z: 1}
-        _referenceID: Jungle_Tree_03
-        _layerIndex: 30
-    - rid: 335725525521662269
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 256.68, y: -30.48}
+        _position: {x: 4.92, y: -10.049999}
         _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Tree_03
-        _layerIndex: 30
-    - rid: 335725525521662270
+        _referenceID: Jungle_Brambles_01
+        _layerIndex: 6
+    - rid: 4388469913330123457
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: -22.694998, y: -21.760498}
+        _position: {x: -11.25, y: -10.049999}
         _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Tree_03
-        _layerIndex: 20
-    - rid: 335725525521662271
+        _referenceID: Jungle_Brambles_01
+        _layerIndex: 6
+    - rid: 4388469913330123458
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: 76.22849, y: -21.760498}
-        _scale: {x: 1, y: 1.2, z: 1}
-        _referenceID: Jungle_Tree_03
-        _layerIndex: 20
-    - rid: 335725525521662272
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 152.67955, y: -21.760498}
-        _scale: {x: -1, y: 1.3, z: 1}
-        _referenceID: Jungle_Tree_03
-        _layerIndex: 20
-    - rid: 335725525521662273
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 222.18852, y: -21.760498}
-        _scale: {x: -1, y: 1, z: 1}
-        _referenceID: Jungle_Tree_03
-        _layerIndex: 20
-    - rid: 335725525521662274
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 43.164997, y: -24.5195}
-        _scale: {x: 1, y: 1.2, z: 1}
-        _referenceID: Jungle_Tree_04
-        _layerIndex: 20
-    - rid: 335725525521662275
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 7.120002, y: -22.0275}
-        _scale: {x: 1, y: 1.1, z: 1}
-        _referenceID: Jungle_Tree_04
-        _layerIndex: 20
-    - rid: 335725525521662276
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 113.02999, y: -36.04501}
-        _scale: {x: -1, y: 1.53, z: 1}
-        _referenceID: Jungle_Tree_04
-        _layerIndex: 20
-    - rid: 335725525521662277
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 189.53976, y: -17.355001}
+        _position: {x: 58.379997, y: -6.93}
         _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Tree_05
-        _layerIndex: 20
-    - rid: 335725525521662278
+        _referenceID: Jungle_Brambles_01
+        _layerIndex: 6
+    - rid: 4388469913330123459
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: 253.20506, y: -20.629839}
+        _position: {x: 66.75, y: -8.67}
         _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Tree_05
-        _layerIndex: 20
-    - rid: 335725525521662279
+        _referenceID: Jungle_Brambles_01
+        _layerIndex: 6
+    - rid: 4388469913330123460
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: 289.2501, y: -20.629839}
-        _scale: {x: -1, y: 1, z: 1}
-        _referenceID: Jungle_Tree_05
-        _layerIndex: 20
-    - rid: 335725525521662280
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: -52.954994, y: -20.629839}
-        _scale: {x: -1, y: 1, z: 1}
-        _referenceID: Jungle_Tree_05
-        _layerIndex: 20
-    - rid: 335725525521662281
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: -15.130004, y: -15.130004}
+        _position: {x: 76.56, y: -9.839999}
         _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Stone_02
-        _layerIndex: 20
-    - rid: 335725525521662282
+        _referenceID: Jungle_Brambles_01
+        _layerIndex: 6
+    - rid: 4388469913330123461
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: 55.135498, y: -15.130004}
+        _position: {x: 102.930016, y: -13.079999}
+        _scale: {x: 2, y: 2, z: 1}
+        _referenceID: Jungle_Brambles_01
+        _layerIndex: 6
+    - rid: 4388469913330123462
+      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
+      data:
+        _position: {x: 105.450005, y: -8.219999}
         _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Stone_02
-        _layerIndex: 20
-    - rid: 335725525521662283
+        _referenceID: Jungle_Brambles_01
+        _layerIndex: 6
+    - rid: 4388469913330123463
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: 66.12701, y: -14.952}
-        _scale: {x: -1, y: 1, z: 1}
-        _referenceID: Jungle_Stone_02
-        _layerIndex: 20
-    - rid: 335725525521662284
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 117.92502, y: -16.553999}
+        _position: {x: 0, y: -13.74}
         _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Stone_03
-        _layerIndex: 20
-    - rid: 335725525521662285
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 244.934, y: -15.863}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Big_Tree_00
+        _referenceID: Jungle_Tree_06
         _layerIndex: 5
-    - rid: 335725525521662286
+    - rid: 4388469913330123464
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: 0, y: -4.62}
-        _scale: {x: 0.13636364, y: 0.13636364, z: 0.13636364}
-        _referenceID: Jungle_Mushroom_00
-        _layerIndex: 0
-    - rid: 335725525521662287
+        _position: {x: 33.9, y: -17.039999}
+        _scale: {x: 1, y: 1, z: 1}
+        _referenceID: Jungle_Tree_08
+        _layerIndex: 5
+    - rid: 4388469913330123465
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: 3.7700002, y: -5.0401998}
-        _scale: {x: 0.2590909, y: 0.2590909, z: 0.45454547}
-        _referenceID: Jungle_Mushroom_00
-        _layerIndex: 0
-    - rid: 335725525521662288
+        _position: {x: 64.2, y: -18.3}
+        _scale: {x: 1, y: 1, z: 1}
+        _referenceID: Jungle_Tree_09
+        _layerIndex: 5
+    - rid: 4388469913330123466
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: 44.799995, y: -6.9300003}
-        _scale: {x: 0.18181819, y: 0.18181819, z: 0.45454547}
-        _referenceID: Jungle_Mushroom_00
-        _layerIndex: 0
-    - rid: 335725525521662289
+        _position: {x: 91.2, y: -11.700001}
+        _scale: {x: 1, y: 1, z: 1}
+        _referenceID: Jungle_Tree_07
+        _layerIndex: 5
+    - rid: 4388469913330123467
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: 35.170002, y: -7.1280003}
-        _scale: {x: 0.18181819, y: 0.18181819, z: 0.45454547}
-        _referenceID: Jungle_Mushroom_00
-        _layerIndex: 0
-    - rid: 335725525521662290
+        _position: {x: -27, y: -12.599999}
+        _scale: {x: 1, y: 1, z: 1}
+        _referenceID: Jungle_Tree_00
+        _layerIndex: 3
+    - rid: 4388469913330123468
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: 55.550003, y: -7.524}
-        _scale: {x: 0.3181818, y: 0.3181818, z: 0.45454547}
-        _referenceID: Jungle_Mushroom_00
-        _layerIndex: 0
-    - rid: 335725525521662291
+        _position: {x: 15.599999, y: -12.299999}
+        _scale: {x: 1, y: 1, z: 1}
+        _referenceID: Jungle_Tree_01
+        _layerIndex: 3
+    - rid: 4388469913330123469
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: 72.8, y: -10.076}
+        _position: {x: 38.699997, y: -15.599999}
+        _scale: {x: 1.54, y: 1, z: 1}
+        _referenceID: Jungle_Tree_02
+        _layerIndex: 3
+    - rid: 4388469913330123470
+      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
+      data:
+        _position: {x: 75.299995, y: -16.8}
+        _scale: {x: 1, y: 1, z: 1}
+        _referenceID: Jungle_Tree_00
+        _layerIndex: 3
+    - rid: 4388469913330123471
+      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
+      data:
+        _position: {x: 101.700005, y: -15.599999}
+        _scale: {x: 1, y: 1, z: 1}
+        _referenceID: Jungle_Tree_02
+        _layerIndex: 3
+    - rid: 4388469913330123472
+      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
+      data:
+        _position: {x: 123.299995, y: -23.400002}
+        _scale: {x: 1.2, y: 1.2, z: 1}
+        _referenceID: Jungle_Big_Tree_00
+        _layerIndex: 3
+    - rid: 4388469913330123473
+      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
+      data:
+        _position: {x: 27, y: -7.3}
+        _scale: {x: 1, y: 1, z: 1}
+        _referenceID: Jungle_Flora_00
+        _layerIndex: 0.5
+    - rid: 4388469913330123474
+      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
+      data:
+        _position: {x: -15.2, y: -7.3}
+        _scale: {x: 1, y: 1, z: 1}
+        _referenceID: Jungle_Flora_00
+        _layerIndex: 0.5
+    - rid: 4388469913330123475
+      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
+      data:
+        _position: {x: 74.5, y: -7.3}
+        _scale: {x: 1, y: 1, z: 1}
+        _referenceID: Jungle_Flora_00
+        _layerIndex: 0.5
+    - rid: 4388469913330123476
+      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
+      data:
+        _position: {x: 113, y: -7.3}
+        _scale: {x: 1, y: 1, z: 1}
+        _referenceID: Jungle_Flora_00
+        _layerIndex: 0.5
+    - rid: 4388469913330123477
+      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
+      data:
+        _position: {x: -18.8, y: -7.3}
+        _scale: {x: 1, y: 1, z: 1}
+        _referenceID: Jungle_Flora_00
+        _layerIndex: 0.5
+    - rid: 4388469913330123478
+      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
+      data:
+        _position: {x: 54.53426, y: -5.6}
         _scale: {x: 1, y: 1, z: 1}
         _referenceID: Jungle_Mushroom_00
-        _layerIndex: 0
-    - rid: 335725525521662292
+        _layerIndex: 0.5
+    - rid: 4388469913330123479
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: 93.49999, y: -7.5460005}
-        _scale: {x: 0.3, y: 0.3, z: 0.3}
+        _position: {x: 105.1, y: -8.5}
+        _scale: {x: 1, y: 1, z: 1}
         _referenceID: Jungle_Mushroom_00
-        _layerIndex: 0
-    - rid: 335725525521662293
+        _layerIndex: 0.5
+    - rid: 4388469913330123480
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: 68.81601, y: -10.538}
+        _position: {x: 144, y: -8.3}
         _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Root_00
-        _layerIndex: 0
-    - rid: 335725525521662294
+        _referenceID: Jungle_Mushroom_00
+        _layerIndex: 0.5
+    - rid: 4388469913330123481
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: 111.716034, y: -10.538}
+        _position: {x: 0.5, y: -8.33}
         _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Root_00
-        _layerIndex: 0
-    - rid: 335725525521662295
+        _referenceID: Jungle_Mushroom_00
+        _layerIndex: 0.5
+    - rid: 4388469913330123482
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: 192.89607, y: -10.538}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Root_00
-        _layerIndex: 0
-    - rid: 335725525521662296
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 150.084, y: -10.296}
-        _scale: {x: 1, y: 1, z: 1}
+        _position: {x: 91, y: -10.5}
+        _scale: {x: 2, y: 2, z: 1}
         _referenceID: 'Jungle_Stone_00 '
-        _layerIndex: 0
-    - rid: 335725525521662297
+        _layerIndex: 0.5
+    - rid: 4388469913330123483
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: 60.28, y: -10.340004}
-        _scale: {x: 1, y: 1, z: 1}
+        _position: {x: 122.1, y: -9.7}
+        _scale: {x: 2, y: 2, z: 1}
         _referenceID: 'Jungle_Stone_00 '
-        _layerIndex: 0
-    - rid: 335725525521662298
+        _layerIndex: 0.5
+    - rid: 4388469913330123484
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: -21.34, y: 0}
-        _scale: {x: 2, y: 10, z: 1}
-        _referenceID: Collider
-        _layerIndex: 0
-    - rid: 335725525521662299
+        _position: {x: 10.9, y: -9.62}
+        _scale: {x: 2, y: 2, z: 1}
+        _referenceID: 'Jungle_Stone_00 '
+        _layerIndex: 0.5
+    - rid: 4388469913330123485
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: 277.86002, y: 0}
-        _scale: {x: 2, y: 10, z: 1}
-        _referenceID: Collider
-        _layerIndex: 0
-    - rid: 335725525521662300
+        _position: {x: 85.44788, y: -9.52}
+        _scale: {x: 2, y: 2, z: 1}
+        _referenceID: Jungle_Stone_01
+        _layerIndex: 0.5
+    - rid: 4388469913330123486
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: -55.044014, y: -12.100003}
-        _scale: {x: 1, y: 1, z: 1}
+        _position: {x: -7.6, y: -9.52}
+        _scale: {x: 2, y: 2, z: 1}
+        _referenceID: Jungle_Stone_01
+        _layerIndex: 0.5
+    - rid: 4388469913330123487
+      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
+      data:
+        _position: {x: 46.1, y: -10}
+        _scale: {x: 2.5, y: 2.5, z: 1}
+        _referenceID: Jungle_Stone_01
+        _layerIndex: 0.5
+    - rid: 4388469913330123488
+      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
+      data:
+        _position: {x: 133.1, y: -9.4}
+        _scale: {x: 1.5, y: 1.5, z: 1}
+        _referenceID: Jungle_Root_00
+        _layerIndex: 0.5
+    - rid: 4388469913330123489
+      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
+      data:
+        _position: {x: 19.74, y: -15.09}
+        _scale: {x: 2, y: 2, z: 1}
+        _referenceID: Jungle_Brambles_00
+        _layerIndex: 0.1
+    - rid: 4388469913330123490
+      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
+      data:
+        _position: {x: 38.2, y: -11.8}
+        _scale: {x: 2, y: 2, z: 1}
         _referenceID: Jungle_Ground_00
         _layerIndex: 0
-    - rid: 335725525521662301
+    - rid: 4388469913330123491
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: -46.57401, y: -12.100003}
-        _scale: {x: 1, y: 1, z: 1}
+        _position: {x: 1.3, y: -11.8}
+        _scale: {x: 2, y: 2, z: 1}
         _referenceID: Jungle_Ground_00
         _layerIndex: 0
-    - rid: 335725525521662302
+    - rid: 4388469913330123492
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: -38.478004, y: -12.100003}
-        _scale: {x: 1, y: 1, z: 1}
+        _position: {x: 5.199997, y: -11.8}
+        _scale: {x: 2, y: 2, z: 1}
         _referenceID: Jungle_Ground_00
         _layerIndex: 0
-    - rid: 335725525521662303
+    - rid: 4388469913330123493
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: -29.832, y: -12.100003}
-        _scale: {x: 1, y: 1, z: 1}
+        _position: {x: 8.799999, y: -11.8}
+        _scale: {x: 2, y: 2, z: 1}
         _referenceID: Jungle_Ground_00
         _layerIndex: 0
-    - rid: 335725525521662304
+    - rid: 4388469913330123494
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: -21.274, y: -12.100003}
-        _scale: {x: 1, y: 1, z: 1}
+        _position: {x: 12.199997, y: -11.8}
+        _scale: {x: 2, y: 2, z: 1}
         _referenceID: Jungle_Ground_00
         _layerIndex: 0
-    - rid: 335725525521662305
+    - rid: 4388469913330123495
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: -12.804005, y: -12.100003}
-        _scale: {x: 1, y: 1, z: 1}
+        _position: {x: 19.77, y: -14.79}
+        _scale: {x: 2, y: 2, z: 1}
         _referenceID: Jungle_Ground_00
         _layerIndex: 0
-    - rid: 335725525521662306
+    - rid: 4388469913330123496
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: -4.3780003, y: -9.944001}
-        _scale: {x: 1, y: 1, z: 1}
+        _position: {x: 27.100002, y: -11.8}
+        _scale: {x: 2, y: 2, z: 1}
         _referenceID: Jungle_Ground_00
         _layerIndex: 0
-    - rid: 335725525521662307
+    - rid: 4388469913330123497
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: 4.026, y: -9.944001}
-        _scale: {x: 1, y: 1, z: 1}
+        _position: {x: 30.5, y: -11.8}
+        _scale: {x: 2, y: 2, z: 1}
         _referenceID: Jungle_Ground_00
         _layerIndex: 0
-    - rid: 335725525521662308
+    - rid: 4388469913330123498
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: 11.264001, y: -12.298}
-        _scale: {x: 1, y: 1, z: 1}
+        _position: {x: 42.1, y: -11.8}
+        _scale: {x: 2, y: 2, z: 1}
         _referenceID: Jungle_Ground_00
         _layerIndex: 0
-    - rid: 335725525521662309
+    - rid: 4388469913330123499
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: 19.844006, y: -12.298}
-        _scale: {x: 1, y: 1, z: 1}
+        _position: {x: 45.7, y: -11.8}
+        _scale: {x: 2, y: 2, z: 1}
         _referenceID: Jungle_Ground_00
         _layerIndex: 0
-    - rid: 335725525521662310
+    - rid: 4388469913330123500
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: 28.556005, y: -12.298}
-        _scale: {x: 1, y: 1, z: 1}
+        _position: {x: 49.1, y: -11.8}
+        _scale: {x: 2, y: 2, z: 1}
         _referenceID: Jungle_Ground_00
         _layerIndex: 0
-    - rid: 335725525521662311
+    - rid: 4388469913330123501
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: 36.718006, y: -12.298}
-        _scale: {x: 1, y: 1, z: 1}
+        _position: {x: -15.799999, y: -11.8}
+        _scale: {x: 2, y: 2, z: 1}
         _referenceID: Jungle_Ground_00
         _layerIndex: 0
-    - rid: 335725525521662312
+    - rid: 4388469913330123502
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: 61.97402, y: -12.298}
-        _scale: {x: 1, y: 1, z: 1}
+        _position: {x: -34.399998, y: -11.8}
+        _scale: {x: 2, y: 2, z: 1}
         _referenceID: Jungle_Ground_00
         _layerIndex: 0
-    - rid: 335725525521662313
+    - rid: 4388469913330123503
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: 87.164024, y: -12.298}
-        _scale: {x: 1, y: 1, z: 1}
+        _position: {x: -30.5, y: -11.8}
+        _scale: {x: 2, y: 2, z: 1}
         _referenceID: Jungle_Ground_00
         _layerIndex: 0
-    - rid: 335725525521662314
+    - rid: 4388469913330123504
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: 95.546036, y: -12.298}
-        _scale: {x: 1, y: 1, z: 1}
+        _position: {x: -52.7, y: -11.8}
+        _scale: {x: 2, y: 2, z: 1}
         _referenceID: Jungle_Ground_00
         _layerIndex: 0
-    - rid: 335725525521662315
+    - rid: 4388469913330123505
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: 104.25803, y: -12.298}
-        _scale: {x: 1, y: 1, z: 1}
+        _position: {x: -48.800003, y: -11.8}
+        _scale: {x: 2, y: 2, z: 1}
         _referenceID: Jungle_Ground_00
         _layerIndex: 0
-    - rid: 335725525521662316
+    - rid: 4388469913330123506
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: 112.46399, y: -12.298}
-        _scale: {x: 1, y: 1, z: 1}
+        _position: {x: -45.2, y: -11.8}
+        _scale: {x: 2, y: 2, z: 1}
         _referenceID: Jungle_Ground_00
         _layerIndex: 0
-    - rid: 335725525521662317
+    - rid: 4388469913330123507
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: 120.846, y: -12.298}
-        _scale: {x: 1, y: 1, z: 1}
+        _position: {x: -41.800003, y: -11.8}
+        _scale: {x: 2, y: 2, z: 1}
         _referenceID: Jungle_Ground_00
         _layerIndex: 0
-    - rid: 335725525521662318
+    - rid: 4388469913330123508
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: 137.808, y: -12.298}
-        _scale: {x: 1, y: 1, z: 1}
+        _position: {x: -26.899998, y: -11.8}
+        _scale: {x: 2, y: 2, z: 1}
         _referenceID: Jungle_Ground_00
         _layerIndex: 0
-    - rid: 335725525521662319
+    - rid: 4388469913330123509
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: 146.19006, y: -12.298}
-        _scale: {x: 1, y: 1, z: 1}
+        _position: {x: -23.5, y: -11.8}
+        _scale: {x: 2, y: 2, z: 1}
         _referenceID: Jungle_Ground_00
         _layerIndex: 0
-    - rid: 335725525521662320
+    - rid: 4388469913330123510
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: 154.90201, y: -12.298}
-        _scale: {x: 1, y: 1, z: 1}
+        _position: {x: -11.9, y: -11.8}
+        _scale: {x: 2, y: 2, z: 1}
         _referenceID: Jungle_Ground_00
         _layerIndex: 0
-    - rid: 335725525521662321
+    - rid: 4388469913330123511
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: 163.152, y: -12.298}
-        _scale: {x: 1, y: 1, z: 1}
+        _position: {x: -8.299999, y: -11.8}
+        _scale: {x: 2, y: 2, z: 1}
         _referenceID: Jungle_Ground_00
         _layerIndex: 0
-    - rid: 335725525521662322
+    - rid: 4388469913330123512
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: 171.53407, y: -12.298}
-        _scale: {x: 1, y: 1, z: 1}
+        _position: {x: -4.9000015, y: -11.8}
+        _scale: {x: 2, y: 2, z: 1}
         _referenceID: Jungle_Ground_00
         _layerIndex: 0
-    - rid: 335725525521662323
+    - rid: 4388469913330123513
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: 188.40805, y: -12.298}
-        _scale: {x: 1, y: 1, z: 1}
+        _position: {x: 146.6, y: -11.8}
+        _scale: {x: 2, y: 2, z: 1}
         _referenceID: Jungle_Ground_00
         _layerIndex: 0
-    - rid: 335725525521662324
+    - rid: 4388469913330123514
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: 196.79001, y: -12.298}
-        _scale: {x: 1, y: 1, z: 1}
+        _position: {x: 128, y: -11.8}
+        _scale: {x: 2, y: 2, z: 1}
         _referenceID: Jungle_Ground_00
         _layerIndex: 0
-    - rid: 335725525521662325
+    - rid: 4388469913330123515
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: 205.50206, y: -12.298}
-        _scale: {x: 1, y: 1, z: 1}
+        _position: {x: 131.9, y: -11.8}
+        _scale: {x: 2, y: 2, z: 1}
         _referenceID: Jungle_Ground_00
         _layerIndex: 0
-    - rid: 335725525521662326
+    - rid: 4388469913330123516
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: 213.75206, y: -12.298}
-        _scale: {x: 1, y: 1, z: 1}
+        _position: {x: 109.700005, y: -11.8}
+        _scale: {x: 2, y: 2, z: 1}
         _referenceID: Jungle_Ground_00
         _layerIndex: 0
-    - rid: 335725525521662327
+    - rid: 4388469913330123517
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: 239.00807, y: -12.298}
-        _scale: {x: 1, y: 1, z: 1}
+        _position: {x: 113.6, y: -11.8}
+        _scale: {x: 2, y: 2, z: 1}
         _referenceID: Jungle_Ground_00
         _layerIndex: 0
-    - rid: 335725525521662328
+    - rid: 4388469913330123518
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: 247.39006, y: -12.298}
-        _scale: {x: 1, y: 1, z: 1}
+        _position: {x: 117.2, y: -11.8}
+        _scale: {x: 2, y: 2, z: 1}
         _referenceID: Jungle_Ground_00
         _layerIndex: 0
-    - rid: 335725525521662329
+    - rid: 4388469913330123519
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: 256.10202, y: -12.298}
-        _scale: {x: 1, y: 1, z: 1}
+        _position: {x: 120.6, y: -11.8}
+        _scale: {x: 2, y: 2, z: 1}
         _referenceID: Jungle_Ground_00
         _layerIndex: 0
-    - rid: 335725525521662330
+    - rid: 4388469913330123520
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: 264.352, y: -12.298}
-        _scale: {x: 1, y: 1, z: 1}
+        _position: {x: 135.5, y: -11.8}
+        _scale: {x: 2, y: 2, z: 1}
         _referenceID: Jungle_Ground_00
         _layerIndex: 0
-    - rid: 335725525521662331
+    - rid: 4388469913330123521
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: 272.73407, y: -12.298}
-        _scale: {x: 1, y: 1, z: 1}
+        _position: {x: 138.9, y: -11.8}
+        _scale: {x: 2, y: 2, z: 1}
         _referenceID: Jungle_Ground_00
         _layerIndex: 0
-    - rid: 335725525521662332
+    - rid: 4388469913330123522
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: 281.446, y: -12.298}
-        _scale: {x: 1, y: 1, z: 1}
+        _position: {x: 150.5, y: -11.8}
+        _scale: {x: 2, y: 2, z: 1}
         _referenceID: Jungle_Ground_00
         _layerIndex: 0
-    - rid: 335725525521662333
+    - rid: 4388469913330123523
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: 289.87213, y: -12.298}
-        _scale: {x: 1, y: 1, z: 1}
+        _position: {x: 154.1, y: -11.8}
+        _scale: {x: 2, y: 2, z: 1}
         _referenceID: Jungle_Ground_00
         _layerIndex: 0
-    - rid: 335725525521662334
+    - rid: 4388469913330123524
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: 298.2541, y: -12.298}
-        _scale: {x: 1, y: 1, z: 1}
+        _position: {x: 157.5, y: -11.8}
+        _scale: {x: 2, y: 2, z: 1}
         _referenceID: Jungle_Ground_00
         _layerIndex: 0
-    - rid: 335725525521662335
+    - rid: 4388469913330123525
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: 306.966, y: -12.298}
-        _scale: {x: 1, y: 1, z: 1}
+        _position: {x: 92.600006, y: -11.8}
+        _scale: {x: 2, y: 2, z: 1}
         _referenceID: Jungle_Ground_00
         _layerIndex: 0
-    - rid: 335725525521662336
+    - rid: 4388469913330123526
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: 222.13402, y: -12.298}
-        _scale: {x: 1, y: 1, z: 1}
+        _position: {x: 74, y: -11.8}
+        _scale: {x: 2, y: 2, z: 1}
         _referenceID: Jungle_Ground_00
         _layerIndex: 0
-    - rid: 335725525521662337
+    - rid: 4388469913330123527
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: 230.84608, y: -12.298}
-        _scale: {x: 1, y: 1, z: 1}
+        _position: {x: 77.9, y: -11.8}
+        _scale: {x: 2, y: 2, z: 1}
         _referenceID: Jungle_Ground_00
         _layerIndex: 0
-    - rid: 335725525521662338
+    - rid: 4388469913330123528
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: 180.246, y: -12.298}
-        _scale: {x: 1, y: 1, z: 1}
+        _position: {x: 55.7, y: -12.9}
+        _scale: {x: 2, y: 3.5, z: 1}
         _referenceID: Jungle_Ground_00
         _layerIndex: 0
-    - rid: 335725525521662339
+    - rid: 4388469913330123529
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: 129.558, y: -12.298}
-        _scale: {x: 1, y: 1, z: 1}
+        _position: {x: 62.4, y: -11.7}
+        _scale: {x: 2, y: 3, z: 1}
         _referenceID: Jungle_Ground_00
         _layerIndex: 0
-    - rid: 335725525521662340
+    - rid: 4388469913330123530
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: 70.35601, y: -12.298}
-        _scale: {x: 1, y: 1, z: 1}
+        _position: {x: 66.6, y: -10.72}
+        _scale: {x: 2, y: 2, z: 1}
         _referenceID: Jungle_Ground_00
         _layerIndex: 0
-    - rid: 335725525521662341
+    - rid: 4388469913330123531
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: 79.06802, y: -12.298}
-        _scale: {x: 1, y: 1, z: 1}
+        _position: {x: 81.5, y: -11.8}
+        _scale: {x: 2, y: 2, z: 1}
         _referenceID: Jungle_Ground_00
         _layerIndex: 0
-    - rid: 335725525521662342
+    - rid: 4388469913330123532
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: 45.10002, y: -12.298}
-        _scale: {x: 1, y: 1, z: 1}
+        _position: {x: 84.9, y: -11.8}
+        _scale: {x: 2, y: 2, z: 1}
         _referenceID: Jungle_Ground_00
         _layerIndex: 0
-    - rid: 335725525521662343
+    - rid: 4388469913330123533
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: 53.81202, y: -12.298}
-        _scale: {x: 1, y: 1, z: 1}
+        _position: {x: 96.5, y: -11.8}
+        _scale: {x: 2, y: 2, z: 1}
         _referenceID: Jungle_Ground_00
         _layerIndex: 0
-    - rid: 335725525521662344
+    - rid: 4388469913330123534
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: 0, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662345
+        _position: {x: 100.100006, y: -11.8}
+        _scale: {x: 2, y: 2, z: 1}
+        _referenceID: Jungle_Ground_00
+        _layerIndex: 0
+    - rid: 4388469913330123535
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: 37.6, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662346
+        _position: {x: 103.5, y: -11.8}
+        _scale: {x: 2, y: 2, z: 1}
+        _referenceID: Jungle_Ground_00
+        _layerIndex: 0
+    - rid: 4388469913330123536
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: 74.700005, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662347
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 112.3, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662348
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 149.2, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662349
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 224.00002, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662350
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 261.6, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662351
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 186.79999, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662352
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 0, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662353
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 37.6, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662354
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 74.700005, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662355
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 112.3, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662356
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 149.2, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662357
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 224.00002, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662358
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 261.6, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662359
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 186.79999, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662360
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 0, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662361
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 37.6, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662362
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 74.700005, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662363
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 112.3, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662364
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 149.2, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662365
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 224.00002, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662366
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 261.6, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662367
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 186.79999, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662368
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 0, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662369
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 37.6, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662370
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 74.700005, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662371
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 112.3, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662372
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 149.2, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662373
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 224.00002, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662374
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 261.6, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662375
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 186.79999, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662376
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 0, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662377
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 37.6, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662378
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 74.700005, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662379
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 112.3, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662380
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 149.2, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662381
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 224.00002, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662382
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 261.6, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662383
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 186.79999, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662384
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 0, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662385
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 37.6, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662386
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 74.700005, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662387
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 112.3, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662388
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 149.2, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662389
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 224.00002, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662390
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 261.6, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662391
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 186.79999, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662392
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 0, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662393
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 37.6, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662394
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 74.700005, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662395
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 112.3, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662396
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 149.2, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662397
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 224.00002, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662398
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 261.6, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662399
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 186.79999, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662400
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 0, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662401
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 37.6, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662402
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 74.700005, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662403
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 112.3, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662404
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 149.2, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662405
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 224.00002, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662406
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 261.6, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662407
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 186.79999, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662408
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 0, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662409
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 37.6, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662410
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 74.700005, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662411
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 112.3, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662412
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 149.2, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662413
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 224.00002, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662414
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 261.6, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662415
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 186.79999, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662416
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 0, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662417
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 37.6, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662418
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 74.700005, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662419
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 112.3, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662420
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 149.2, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662421
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 224.00002, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662422
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 261.6, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662423
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 186.79999, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662424
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 0, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662425
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 37.6, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662426
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 74.700005, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662427
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 112.3, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662428
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 149.2, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662429
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 224.00002, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662430
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 261.6, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662431
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 186.79999, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662432
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 0, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662433
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 37.6, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662434
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 74.700005, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662435
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 112.3, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662436
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 149.2, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662437
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 224.00002, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662438
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 261.6, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662439
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 186.79999, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662440
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 0, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662441
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 37.6, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662442
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 74.700005, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662443
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 112.3, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662444
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 149.2, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662445
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 224.00002, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662446
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 261.6, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662447
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 186.79999, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662448
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 0, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662449
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 37.6, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662450
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 74.700005, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662451
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 112.3, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662452
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 149.2, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662453
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 224.00002, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662454
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 261.6, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662455
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 186.79999, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662456
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 0, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662457
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 37.6, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662458
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 74.700005, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662459
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 112.3, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662460
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 149.2, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662461
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 224.00002, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662462
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 261.6, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662463
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 186.79999, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662464
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 0, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662465
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 37.6, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662466
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 74.700005, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662467
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 112.3, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662468
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 149.2, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662469
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 224.00002, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662470
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 261.6, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662471
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 186.79999, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Overlay_00
-        _layerIndex: -10
-    - rid: 335725525521662472
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 39.1, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Lightting_00
-        _layerIndex: -10
-    - rid: 335725525521662473
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 80.3, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Lightting_00
-        _layerIndex: -10
-    - rid: 335725525521662474
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 121.4, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Lightting_00
-        _layerIndex: -10
-    - rid: 335725525521662475
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 162.5, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Lightting_00
-        _layerIndex: -10
-    - rid: 335725525521662476
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 203.4, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Lightting_00
-        _layerIndex: -10
-    - rid: 335725525521662477
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 245, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Lightting_00
-        _layerIndex: -10
-    - rid: 335725525521662478
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 282.5, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Lightting_00
-        _layerIndex: -10
-    - rid: 335725525521662479
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: -1.3, y: -4.5}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Jungle_Lightting_00
-        _layerIndex: -10
-    - rid: 335725525521662480
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 0, y: 0}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Wind_01
-        _layerIndex: -10
-    - rid: 335725525521662481
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 78.7, y: 0}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Wind_01
-        _layerIndex: -10
-    - rid: 335725525521662482
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 161.1, y: 0}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Wind_01
-        _layerIndex: -10
-    - rid: 335725525521662483
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 246.2, y: 0}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Wind_01
-        _layerIndex: -10
-    - rid: 335725525521662484
-      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 0, y: 0}
+        _position: {x: -25.36, y: 0.77}
         _scale: {x: 1, y: 1, z: 1}
         _referenceID: Leaf_01
-        _layerIndex: -10
-    - rid: 335725525521662485
+        _layerIndex: 0
+    - rid: 4388469913330123537
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: 54.2, y: 0}
+        _position: {x: -0.2, y: 0.77}
         _scale: {x: 1, y: 1, z: 1}
         _referenceID: Leaf_01
-        _layerIndex: -10
-    - rid: 335725525521662486
+        _layerIndex: 0
+    - rid: 4388469913330123538
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: 99.1, y: 0}
+        _position: {x: 33.4, y: 0.77}
         _scale: {x: 1, y: 1, z: 1}
         _referenceID: Leaf_01
-        _layerIndex: -10
-    - rid: 335725525521662487
+        _layerIndex: 0
+    - rid: 4388469913330123539
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: 152.7, y: 0}
+        _position: {x: 64.2, y: 0.77}
         _scale: {x: 1, y: 1, z: 1}
         _referenceID: Leaf_01
-        _layerIndex: -10
-    - rid: 335725525521662488
+        _layerIndex: 0
+    - rid: 4388469913330123540
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: 197.9, y: 0}
+        _position: {x: 91.5, y: 0.77}
         _scale: {x: 1, y: 1, z: 1}
         _referenceID: Leaf_01
-        _layerIndex: -10
-    - rid: 335725525521662489
+        _layerIndex: 0
+    - rid: 4388469913330123541
       type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: 252.1, y: 0}
+        _position: {x: 122.3, y: 0.77}
         _scale: {x: 1, y: 1, z: 1}
         _referenceID: Leaf_01
+        _layerIndex: 0
+    - rid: 4388469913330123542
+      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
+      data:
+        _position: {x: 155.1, y: 0.77}
+        _scale: {x: 1, y: 1, z: 1}
+        _referenceID: Leaf_01
+        _layerIndex: 0
+    - rid: 4388469913330123543
+      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
+      data:
+        _position: {x: -15.1, y: -4.5}
+        _scale: {x: 1, y: 1, z: 1}
+        _referenceID: Jungle_Overlay_00
         _layerIndex: -10
-    - rid: 335725525521662490
+    - rid: 4388469913330123544
+      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
+      data:
+        _position: {x: 22.5, y: -4.5}
+        _scale: {x: 1, y: 1, z: 1}
+        _referenceID: Jungle_Overlay_00
+        _layerIndex: -10
+    - rid: 4388469913330123545
+      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
+      data:
+        _position: {x: 58.8, y: -4.5}
+        _scale: {x: 1, y: 1, z: 1}
+        _referenceID: Jungle_Overlay_00
+        _layerIndex: -10
+    - rid: 4388469913330123546
+      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
+      data:
+        _position: {x: 96, y: -4.5}
+        _scale: {x: 1, y: 1, z: 1}
+        _referenceID: Jungle_Overlay_00
+        _layerIndex: -10
+    - rid: 4388469913330123547
+      type: {class: EnvironmentPositionData, ns: GamePlay, asm: Game.GamePlay}
+      data:
+        _position: {x: 133, y: -4.5}
+        _scale: {x: 1, y: 1, z: 1}
+        _referenceID: Jungle_Overlay_00
+        _layerIndex: -10
+    - rid: 4388469913330123548
       type: {class: MonsterPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
         _position: {x: 44.7, y: -7}
         _scale: {x: 1, y: 1, z: 1}
         _referenceID: Root
-    - rid: 335725525521662491
+    - rid: 4388469913330123549
       type: {class: MonsterPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
         _position: {x: 86.7, y: -7}
         _scale: {x: 1, y: 1, z: 1}
         _referenceID: Root
-    - rid: 335725525521662492
+    - rid: 4388469913330123550
       type: {class: MonsterPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: 13.8, y: -7}
+        _position: {x: 39.7, y: -7}
         _scale: {x: 1, y: 1, z: 1}
         _referenceID: Root
-    - rid: 335725525521662493
+    - rid: 4388469913330123551
       type: {class: MonsterPositionData, ns: GamePlay, asm: Game.GamePlay}
       data:
-        _position: {x: 133.3, y: -7}
-        _scale: {x: 1, y: 1, z: 1}
-        _referenceID: Root
-    - rid: 335725525521662494
-      type: {class: MonsterPositionData, ns: GamePlay, asm: Game.GamePlay}
-      data:
-        _position: {x: 180.4, y: -7}
+        _position: {x: 109.9, y: -7}
         _scale: {x: 1, y: 1, z: 1}
         _referenceID: Root

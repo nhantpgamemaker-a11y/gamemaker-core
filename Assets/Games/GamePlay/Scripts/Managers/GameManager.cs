@@ -12,6 +12,7 @@ namespace Game.GamePlay
     {
         [SerializeField] private PlayerController _playerControllerPrefab;
         [SerializeField] private PolygonCollider2D _cameraBoundsCollider;
+        [SerializeField] private PolygonCollider2D _victoryCollider;
         [SerializeField] private float _cameraPositionY = 0.48f;
         [SerializeField] private Vector2 _scenePosition = Vector2.zero;
         [SerializeField] private CinemachineCamera _cinemachineCamera;
@@ -19,9 +20,14 @@ namespace Game.GamePlay
         [SerializeField] private DefinitionId[] _environmentControllerEditorPrefab;
         [SerializeField] private DefinitionId[] _monsterControllerEditorPrefabs;
         [SerializeField] private LayerControllerEditor _layerControllerEditorPrefab;
+        [SerializeField] private Transform _monsterLayers;
         [SerializeField] private Transform _mapContainer;
         private MapData _currentMap;
         private PlayerController _playerControllerInstance;
+        public void Start()
+        {
+            LoadLevel();
+        }
         public void LoadMap(string mapID)
         {
             MapData mapData = _maps.Find(map => map.Id == mapID);
@@ -56,7 +62,7 @@ namespace Game.GamePlay
                 {
                     var environmentPrefab = System.Array.Find(_monsterControllerEditorPrefabs,
                             prefab => prefab.Id == monster.ReferenceID);
-                    var go = Instantiate(environmentPrefab.gameObject, monster.Position, Quaternion.identity);
+                    var go = Instantiate(environmentPrefab.gameObject, monster.Position, Quaternion.identity,_monsterLayers);
                 }
             }
             else
@@ -79,6 +85,11 @@ namespace Game.GamePlay
             {
                 Destroy(tran.gameObject);
             }
+            var monsters = _monsterLayers.GetComponentsInChildren<DefinitionId>();
+            foreach(var monster in monsters)
+            {
+                Destroy(monster.gameObject);
+            }
 
         }
         [ContextMenu("Load Level 1")]
@@ -87,6 +98,7 @@ namespace Game.GamePlay
             LoadMap(_maps[0].Id);
             LoadPlayer(_maps[0].PlayerSpawnPoint);
             SetupCamera();
+            SetupVictoryCollider();
         }
 
         public void LoadPlayer(Vector3 position)
@@ -116,11 +128,18 @@ namespace Game.GamePlay
                 confiner2D.InvalidateBoundingShapeCache();
             }
         }
+        public void SetupVictoryCollider()
+        {
+            _victoryCollider.gameObject.SetActive(_currentMap.VictoryData.CameraPaths.Count > 0);
+            foreach (var cameraPath in _currentMap.VictoryData.CameraPaths)
+            {
+                _victoryCollider.SetPath(cameraPath.Index, cameraPath.PathPoints.ToArray());
+            }
+        }
         public void ClearCamera()
         {
             _cinemachineCamera.Follow = null;
         }
-
         public void HandleVictory()
         {
             ClearPlayer();
@@ -129,7 +148,6 @@ namespace Game.GamePlay
             LoadNextMap();
             LoadPlayer(_currentMap.PlayerSpawnPoint);
             SetupCamera();
-            
         }
     }
 }

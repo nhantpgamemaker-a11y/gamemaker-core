@@ -5,7 +5,7 @@ using UnityEngine;
 namespace GamePlay
 {
     [System.Serializable]
-    public class CameraPath
+    public class PathPoint
     {
         [UnityEngine.SerializeField]
         private int _index;
@@ -13,27 +13,27 @@ namespace GamePlay
         private List<Vector2> _pathPoints;
         public int Index { get => _index; set => _index = value; }
         public List<Vector2> PathPoints { get => _pathPoints; set => _pathPoints = value; }
-        public CameraPath(int index, List<Vector2> pathPoints)
+        public PathPoint(int index, List<Vector2> pathPoints)
         {
             _index = index;
             _pathPoints = pathPoints;
         }
     }
     [System.Serializable]
-    public class CameraData
+    public class PathData
     {
         [UnityEngine.SerializeField]
         private Vector3 _position;
         [UnityEngine.SerializeField]
-        private List<CameraPath> _cameraPaths;
+        private List<PathPoint> _pathPoints;
 
         public Vector3 Position { get => _position; set => _position = value; }
-        public List<CameraPath> CameraPaths { get => _cameraPaths; set => _cameraPaths = value; }
+        public List<PathPoint> CameraPaths { get => _pathPoints; set => _pathPoints = value; }
 
-        public CameraData(Vector3 position, List<CameraPath> cameraPaths)
+        public PathData(Vector3 position, List<PathPoint> pathPoints)
         {
             this._position = position;
-            this._cameraPaths = cameraPaths;
+            this._pathPoints = pathPoints;
         }
 
     }
@@ -57,13 +57,16 @@ namespace GamePlay
         [UnityEngine.SerializeReference]
         private List<MonsterPositionData> _monsterPositionDatas = new();
         [UnityEngine.SerializeField]
-        private CameraData _cameraData;
+        private PathData _cameraData;
+        [UnityEngine.SerializeField]
+        private PathData _victoryData;
         public string Id { get => _id; set => _id = value; }
         public string DisplayName { get => _displayName; set => _displayName = value; }
         public List<EnvironmentLayerData> EnvironmentLayers { get => _environmentLayers; set => _environmentLayers = value; }
         public Vector3 PlayerSpawnPoint { get => _playerSpawnPoint; set => _playerSpawnPoint = value; }
         public List<EnvironmentPositionData> EnvironmentPositionDatas { get => _environmentPositionDatas; set => _environmentPositionDatas = value; }
         public List<MonsterPositionData> MonsterPositionData { get => _monsterPositionDatas; set => _monsterPositionDatas = value; }
-        public CameraData CameraData { get => _cameraData; set => _cameraData = value; }
+        public PathData CameraData { get => _cameraData; set => _cameraData = value; }
+        public PathData VictoryData { get => _victoryData; set => _victoryData = value; }
     }
 }

@@ -1,11 +1,12 @@
 using System.Linq;
 using GameMaker.Core.Runtime;
+using GamePlay.Game;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 namespace Game.GamePlay
 {
-    public class PlayerController : MonoBehaviour
+    public class PlayerController : MonoBehaviour,ITakeDame
     {
         [SerializeField] private PlayerStateMachine _playerStateMachine;
 
@@ -50,6 +51,11 @@ namespace Game.GamePlay
         public void OnAnimationEndEvent()
         {
             _playerStateMachine.OnAnimationEndEventHandle();
+        }
+
+        public void TakeDame(float amount, Vector3 direction, Vector3 position)
+        {
+            _playerStateMachine.ChangeState(PlayerStateType.TakeDame, new DameStateData(amount, direction, position));
         }
         #endregion
 

@@ -1,0 +1,14 @@
+using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
+namespace GameMaker.Core.Runtime
+{
+    [CreateAssetMenu(fileName = "BaseTemplate", menuName = "GameMaker/Item/Templates/BaseCreateItemTemplate", order = 0)]
+    public class BaseCreateItemTemplate : ScriptableObject
+    {
+        public virtual List<ItemStatDefinitionRef> GetItemStatDefinitionRefs(List<ItemStatDefinitionRef> itemStatDefinitionRefs)
+        {
+            return itemStatDefinitionRefs.Select(x => x.Clone() as ItemStatDefinitionRef).ToList();
+        }
+    }
+}

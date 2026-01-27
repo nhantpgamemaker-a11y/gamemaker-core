@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 60ae05ad587854136b4cf842c30cd76d
+timeCreated: 1461437591
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.0.4
+  assetPath: Assets/GuiPackAnimalWorld/Demo/Resources/Popups/Universal/Star Rewards.prefab
+  uploadId: 671652

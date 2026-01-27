@@ -1,0 +1,193 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95a2de66e63ca36409f3f68f9709736d, type: 3}
+  m_Name: ItemDetailManager
+  m_EditorClassIdentifier: GameMaker.Item.Runtime::GameMaker.Item.Runtime.ItemDetailManager
+  dataManager:
+    _definitions:
+    - rid: 4388470189476021047
+    - rid: 4388470189476021048
+    - rid: 4388470189476021053
+    - rid: 4388470189476021054
+  references:
+    version: 2
+    RefIds:
+    - rid: 4388470189476021047
+      type: {class: ItemDetailDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: Sword_Wood
+        _name: Wood Sword
+        _title: Wood Sword
+        _icon: {fileID: 0}
+        _description: 
+        _metaData: {fileID: 0}
+        _itemDefinitionId: Weapon
+        _itemStatDefinitionRefs:
+        - _id: HP
+          _name: HP
+          _value: 0
+        - _id: MP
+          _name: MP
+          _value: 0
+        - _id: ATK
+          _name: ATK
+          _value: 10
+        - _id: MATK
+          _name: MATK
+          _value: 0
+        - _id: DEF
+          _name: DEF
+          _value: 0
+        - _id: MDEF
+          _name: MDEF
+          _value: 0
+        - _id: CriticalRate
+          _name: Critical Rate (%)
+          _value: 0
+        - _id: MagicCriticalRate
+          _name: Magic Critical Rate (%)
+          _value: 0
+        - _id: CriticalDamage
+          _name: Critical Damage (%)
+          _value: 0
+        - _id: MagicCriticalDamage
+          _name: Magic Critical Damage (%)
+          _value: 0
+        - _id: Stability
+          _name: Stability (%)
+          _value: 90
+        - _id: MagicStability
+          _name: Magic Stability (%)
+          _value: 0
+        - _id: PhysicalPierce
+          _name: Physical Pierce (%)
+          _value: 0
+        - _id: MagicPierce
+          _name: Magic Pierce (%)
+          _value: 0
+        - _id: AttackMPRecovery
+          _name: Attack MP Recovery
+          _value: 0
+        - _id: SubHandATK
+          _name: Sub-Hand ATK
+          _value: 0
+        - _id: SubHandStability
+          _name: Sub-Hand Stability (%)
+          _value: 0
+        - _id: ASPD
+          _name: ASPD
+          _value: 0
+        - _id: CSPD
+          _name: CSPD
+          _value: 0
+        - _id: MotionSpeed
+          _name: Motion Speed (%)
+          _value: 0
+    - rid: 4388470189476021048
+      type: {class: ItemDetailDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: Sword_Iron
+        _name: Iron Sword
+        _title: Iron Sword
+        _icon: {fileID: 0}
+        _description: 
+        _metaData: {fileID: 0}
+        _itemDefinitionId: Weapon
+        _itemStatDefinitionRefs:
+        - _id: HP
+          _name: HP
+          _value: 0
+        - _id: MP
+          _name: MP
+          _value: 0
+        - _id: ATK
+          _name: ATK
+          _value: 15
+        - _id: MATK
+          _name: MATK
+          _value: 0
+        - _id: DEF
+          _name: DEF
+          _value: 0
+        - _id: MDEF
+          _name: MDEF
+          _value: 0
+        - _id: CriticalRate
+          _name: Critical Rate (%)
+          _value: 0
+        - _id: MagicCriticalRate
+          _name: Magic Critical Rate (%)
+          _value: 0
+        - _id: CriticalDamage
+          _name: Critical Damage (%)
+          _value: 0
+        - _id: MagicCriticalDamage
+          _name: Magic Critical Damage (%)
+          _value: 0
+        - _id: Stability
+          _name: Stability (%)
+          _value: 90
+        - _id: MagicStability
+          _name: Magic Stability (%)
+          _value: 0
+        - _id: PhysicalPierce
+          _name: Physical Pierce (%)
+          _value: 0
+        - _id: MagicPierce
+          _name: Magic Pierce (%)
+          _value: 0
+        - _id: AttackMPRecovery
+          _name: Attack MP Recovery
+          _value: 0
+        - _id: SubHandATK
+          _name: Sub-Hand ATK
+          _value: 0
+        - _id: SubHandStability
+          _name: Sub-Hand Stability (%)
+          _value: 0
+        - _id: ASPD
+          _name: ASPD
+          _value: 0
+        - _id: CSPD
+          _name: CSPD
+          _value: 0
+        - _id: MotionSpeed
+          _name: Motion Speed (%)
+          _value: 0
+    - rid: 4388470189476021053
+      type: {class: ItemDetailDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: MiniHPPoision
+        _name: Mini HP Poision
+        _title: Mini Poision
+        _icon: {fileID: 0}
+        _description: 
+        _metaData: {fileID: 0}
+        _itemDefinitionId: HPPosion
+        _itemStatDefinitionRefs:
+        - _id: HPRecovery
+          _name: HP Recovery
+          _value: 100
+    - rid: 4388470189476021054
+      type: {class: ItemDetailDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: LargeHPPoision
+        _name: Large HP Poision
+        _title: Large Poision
+        _icon: {fileID: 0}
+        _description: 
+        _metaData: {fileID: 0}
+        _itemDefinitionId: MPPoision
+        _itemStatDefinitionRefs:
+        - _id: MPRecovery
+          _name: MP Recovery
+          _value: 200

@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:GroupBox name="BaseDefinitionElement" usage-hints="None" focusable="false" text="" style="border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; background-color: rgb(58, 58, 58); padding-right: 3px;">
+        <ui:Foldout text="DefinitionFallout" name="DefinitionFoldout" usage-hints="DynamicTransform" value="true" style="left: auto; align-self: auto; align-content: flex-start; margin-left: 10px;">
+            <ui:TextField label="ID" placeholder-text="" enabled="true" max-length="-1" hide-placeholder-on-focus="false" readonly="false" name="IDTextField" binding-path="id" style="-unity-font-style: bold;">
+                <ui:Button text="Copy" name="CopyIDButton" style="flex-shrink: 1; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; flex-grow: 0; padding-left: 6px; padding-right: 6px; margin-left: 1px; margin-right: 0; margin-bottom: 0; margin-top: 0; border-top-left-radius: 6px; border-top-right-radius: 6px; border-bottom-right-radius: 6px; border-bottom-left-radius: 6px; border-left-color: rgb(0, 100, 0); border-right-color: rgb(0, 100, 0); border-top-color: rgb(0, 100, 0); border-bottom-color: rgb(0, 100, 0); background-color: rgb(49, 106, 0);"/>
+            </ui:TextField>
+            <ui:TextField label="Name" placeholder-text="" enabled="true" max-length="-1" hide-placeholder-on-focus="false" readonly="false" name="NameTextField" binding-path="name" style="-unity-font-style: bold;"/>
+            <ui:VisualElement style="flex-grow: 0; flex-direction: row; justify-content: space-between; margin-top: 0; margin-right: 0; margin-bottom: 5px; margin-left: 0; white-space: normal; transform-origin: left; flex-wrap: nowrap; flex-shrink: 0;"/>
+        </ui:Foldout>
+    </ui:GroupBox>
+</ui:UXML>

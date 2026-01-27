@@ -1,0 +1,202 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed79bb79d9d70ec458d3846251ec1d6b, type: 3}
+  m_Name: ItemManager
+  m_EditorClassIdentifier: GameMaker.Item.Runtime::GameMaker.Item.Runtime.ItemManager
+  dataManager:
+    _definitions:
+    - rid: 4388470189476020954
+    - rid: 4388470189476021049
+    - rid: 4388470189476021051
+  references:
+    version: 2
+    RefIds:
+    - rid: 4388470189476020954
+      type: {class: ItemDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: Weapon
+        _name: Weapon
+        _title: Weapon
+        _icon: {fileID: 0}
+        _description: Weapon
+        _metaData: {fileID: 0}
+        _itemStatManager:
+          _definitions:
+          - rid: 4388470189476020955
+          - rid: 4388470189476021028
+          - rid: 4388470189476021029
+          - rid: 4388470189476021030
+          - rid: 4388470189476021031
+          - rid: 4388470189476021032
+          - rid: 4388470189476021033
+          - rid: 4388470189476021035
+          - rid: 4388470189476021034
+          - rid: 4388470189476021036
+          - rid: 4388470189476021037
+          - rid: 4388470189476021040
+          - rid: 4388470189476021038
+          - rid: 4388470189476021039
+          - rid: 4388470189476021041
+          - rid: 4388470189476021042
+          - rid: 4388470189476021044
+          - rid: 4388470189476021045
+          - rid: 4388470189476021046
+    - rid: 4388470189476020955
+      type: {class: ItemStatDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: HP
+        _name: HP
+        _defaultValue: 0
+    - rid: 4388470189476021028
+      type: {class: ItemStatDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: MP
+        _name: MP
+        _defaultValue: 0
+    - rid: 4388470189476021029
+      type: {class: ItemStatDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: ATK
+        _name: ATK
+        _defaultValue: 0
+    - rid: 4388470189476021030
+      type: {class: ItemStatDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: MATK
+        _name: MATK
+        _defaultValue: 0
+    - rid: 4388470189476021031
+      type: {class: ItemStatDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: DEF
+        _name: DEF
+        _defaultValue: 0
+    - rid: 4388470189476021032
+      type: {class: ItemStatDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: MDEF
+        _name: MDEF
+        _defaultValue: 0
+    - rid: 4388470189476021033
+      type: {class: ItemStatDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: CriticalRate
+        _name: Critical Rate (%)
+        _defaultValue: 0
+    - rid: 4388470189476021034
+      type: {class: ItemStatDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: CriticalDamage
+        _name: Critical Damage (%)
+        _defaultValue: 0
+    - rid: 4388470189476021035
+      type: {class: ItemStatDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: MagicCriticalRate
+        _name: Magic Critical Rate (%)
+        _defaultValue: 0
+    - rid: 4388470189476021036
+      type: {class: ItemStatDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: MagicCriticalDamage
+        _name: Magic Critical Damage (%)
+        _defaultValue: 0
+    - rid: 4388470189476021037
+      type: {class: ItemStatDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: Stability
+        _name: Stability (%)
+        _defaultValue: 0
+    - rid: 4388470189476021038
+      type: {class: ItemStatDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: PhysicalPierce
+        _name: Physical Pierce (%)
+        _defaultValue: 0
+    - rid: 4388470189476021039
+      type: {class: ItemStatDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: MagicPierce
+        _name: Magic Pierce (%)
+        _defaultValue: 0
+    - rid: 4388470189476021040
+      type: {class: ItemStatDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: MagicStability
+        _name: Magic Stability (%)
+        _defaultValue: 0
+    - rid: 4388470189476021041
+      type: {class: ItemStatDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: AttackMPRecovery
+        _name: Attack MP Recovery
+        _defaultValue: 0
+    - rid: 4388470189476021042
+      type: {class: ItemStatDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: SubHandATK
+        _name: Sub-Hand ATK
+        _defaultValue: 0
+    - rid: 4388470189476021044
+      type: {class: ItemStatDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: ASPD
+        _name: ASPD
+        _defaultValue: 0
+    - rid: 4388470189476021045
+      type: {class: ItemStatDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: CSPD
+        _name: CSPD
+        _defaultValue: 0
+    - rid: 4388470189476021046
+      type: {class: ItemStatDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: MotionSpeed
+        _name: Motion Speed (%)
+        _defaultValue: 0
+    - rid: 4388470189476021049
+      type: {class: ItemDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: HPPosion
+        _name: HP Posion
+        _title: Posion
+        _icon: {fileID: 0}
+        _description: 
+        _metaData: {fileID: 0}
+        _itemStatManager:
+          _definitions:
+          - rid: 4388470189476021050
+    - rid: 4388470189476021050
+      type: {class: ItemStatDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: HPRecovery
+        _name: HP Recovery
+        _defaultValue: 0
+    - rid: 4388470189476021051
+      type: {class: ItemDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: MPPoision
+        _name: MP Poision
+        _title: Poision
+        _icon: {fileID: 0}
+        _description: 
+        _metaData: {fileID: 0}
+        _itemStatManager:
+          _definitions:
+          - rid: 4388470189476021052
+    - rid: 4388470189476021052
+      type: {class: ItemStatDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: MPRecovery
+        _name: MP Recovery
+        _defaultValue: 0

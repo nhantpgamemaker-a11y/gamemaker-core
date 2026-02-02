@@ -8,7 +8,7 @@ namespace GameMaker.Core.Runtime
     {
         private float _value;
         public float Value { get => _value; }
-        public StatActionData(string propertyId,float value, object data = null) : base(propertyId, data)
+        public StatActionData(string propertyId,float value, IExtendData extendData) : base(propertyId,extendData)
         {
             _value = value;
         }

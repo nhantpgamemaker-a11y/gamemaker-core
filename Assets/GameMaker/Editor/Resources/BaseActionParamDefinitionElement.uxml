@@ -1,0 +1,11 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:Template name="DefinitionElement" src="project://database/Assets/GameMaker/Editor/Resources/DefinitionElement.uxml?fileID=9197481963319205126&amp;guid=efda37ffd841f7d49a6672f007ebb1e3&amp;type=3#DefinitionElement"/>
+    <ui:Foldout text="Foldout" name="ActionParamFoldout">
+        <ui:Instance template="DefinitionElement">
+            <AttributeOverrides element-name="DefinitionFoldout" value="false"/>
+        </ui:Instance>
+        <ui:GroupBox style="border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0);">
+            <ui:TextField label="Binding" placeholder-text="" name="BindingTextField" style="margin-right: 5px;"/>
+        </ui:GroupBox>
+    </ui:Foldout>
+</ui:UXML>

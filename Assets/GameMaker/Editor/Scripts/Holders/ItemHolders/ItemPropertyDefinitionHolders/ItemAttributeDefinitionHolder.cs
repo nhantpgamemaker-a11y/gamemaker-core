@@ -30,7 +30,7 @@ namespace GameMaker.Item.Editor
         {
             return Resources.Load<VisualTreeAsset>("ItemAttributeDefinitionElement");
         }
-         public override string GetNameFoldout()
+        public override string GetNameFoldout()
         {
             var baseName = base.GetNameFoldout();
             return $"<<<ATTRIBUTE>>>  {baseName} : {_defaultValueTextField.value}";

@@ -1,23 +1,19 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace GameMaker.Core.Runtime
 {
     [System.Serializable]
-    public abstract class BaseActionData : IObserverData, IReferenceDefinition
+    public abstract class BaseActionData : IObserverData
     {
-        private object _data;
-        public object Data => _data;
-        
-        public BaseActionData(object data = null)
+        public BaseActionData(IExtendData extendData)
         {
-            _data = data;
         }
-        public abstract IDefinition GetDefinition();
 
-        public string GetReferenceID()
+        public virtual List<ActionDefinition> GetGenerateActionDefinitions()
         {
-            return GetDefinition().GetID();
+            return new();
         }
     }
 }

@@ -33,5 +33,10 @@ namespace GameMaker.Sound.Runtime
             var volume = _soundLocalSaveData.GetMusicVolume();
             return UniTask.FromResult((true, volume));
         }
+
+        public void Dispose()
+        {
+            
+        }
     }
 }

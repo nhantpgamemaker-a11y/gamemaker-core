@@ -19,7 +19,6 @@ namespace GameMaker.Core.Editor
         }
         public override void Bind(SerializedProperty elementProperty)
         {
-            
             _nameField = Root.Q<TextField>("NameTextField");
             _propertyFoldout = Root.Q<Foldout>("PropertyFoldout");
             base.Bind(elementProperty);

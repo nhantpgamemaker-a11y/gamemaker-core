@@ -46,8 +46,8 @@ namespace GameMaker.Core.Runtime
                 }
             }
         }
-    
-        public void NotifyAction(string actionDefinitionID,BaseActionData baseActionData)
+
+        public void NotifyAction(string actionDefinitionID, BaseActionData baseActionData)
         {
             NotifyObserver(baseActionData, actionDefinitionID);
         }

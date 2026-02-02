@@ -12,5 +12,6 @@ namespace GameMaker.Core.Runtime
         public abstract UniTask<bool> AddPlayerItemDetailAsync(PlayerDetailItem playerDetailItem);
         public abstract UniTask<bool> RemovePlayerItemDetailAsync(PlayerDetailItem playerDetailItem);
         public abstract UniTask<(bool, List<PlayerDetailItem>)> GetPlayerItemDetails();
+        public virtual void Dispose(){}
     }
 }

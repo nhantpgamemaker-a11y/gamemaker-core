@@ -8,7 +8,7 @@ namespace GameMaker.Core.Runtime
     {
         private string _value;
         public string Value { get => _value; }
-        public AttributeActionData(string propertyId,string value, object data = null) : base(propertyId, data)
+        public AttributeActionData(string propertyId,string value, IExtendData extendData) : base(propertyId,extendData)
         {
             _value = value;
         }

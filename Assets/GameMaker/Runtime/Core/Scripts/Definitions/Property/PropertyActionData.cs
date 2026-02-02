@@ -8,13 +8,9 @@ namespace GameMaker.Core.Runtime
     {
         private string _propertyId;
         public string PropertyId { get => _propertyId; }
-        public PropertyActionData(string propertyId , object data = null): base(data)
+        public PropertyActionData(string propertyId, IExtendData extendData) : base(extendData)
         {
             _propertyId = propertyId;
-        }
-        public override IDefinition GetDefinition()
-        {
-            return PropertyManager.Instance.GetDefinition(_propertyId);
         }
     }
 }

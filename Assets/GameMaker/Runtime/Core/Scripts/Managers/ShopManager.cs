@@ -6,5 +6,6 @@ namespace GameMaker.Core.Runtime
     [CreateAssetMenu(fileName = "PropertyManager", menuName = "GameMaker/Property")]
     public class ShopManager : BaseScriptableObjectDataManager<ShopManager, BaseShopDefinition>
     {
+        
     }
 }

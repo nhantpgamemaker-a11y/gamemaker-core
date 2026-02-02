@@ -49,8 +49,8 @@ namespace GameMaker.Core.Runtime
             _playerDetailItems.Add(playerDetailItem);
             var itemDetailDefinition = playerDetailItem.GetDefinition() as ItemDetailDefinition;
             var itemDefinition = itemDetailDefinition.GetItemDefinition();
-            RuntimeActionManager.Instance.NotifyAction(ItemActionDefinition.ADD_ITEM_ACTION_DEFINITION_ID, new ItemActionData(itemDefinition.GetID(),extendData));
-            RuntimeActionManager.Instance.NotifyAction(ItemDetailActionDefinition.ADD_ITEM_DETAIL_ACTION_DEFINITION_ID, new ItemDetailActionData(itemDetailDefinition.GetID(),extendData));
+            //RuntimeActionManager.Instance.NotifyAction(ItemActionDefinition.ADD_ITEM_ACTION_DEFINITION_ID, new ItemActionData(itemDefinition.GetID(),extendData));
+            //RuntimeActionManager.Instance.NotifyAction(ItemDetailActionDefinition.ADD_ITEM_DETAIL_ACTION_DEFINITION_ID, new ItemDetailActionData(itemDetailDefinition.GetID(),extendData));
         }
         public void RemovePlayerItem(PlayerDetailItem playerDetailItem,IExtendData extendData)
         {
@@ -58,8 +58,8 @@ namespace GameMaker.Core.Runtime
             _playerDetailItems.Remove(playerDetailItem);
             var itemDetailDefinition = playerDetailItem.GetDefinition() as ItemDetailDefinition;
             var itemDefinition = itemDetailDefinition.GetItemDefinition();
-            RuntimeActionManager.Instance.NotifyAction(ItemActionDefinition.REMOVE_ITEM_ACTION_DEFINITION_ID, new ItemActionData(itemDefinition.GetID()));
-            RuntimeActionManager.Instance.NotifyAction(ItemDetailActionDefinition.REMOVE_ITEM_DETAIL_ACTION_DEFINITION_ID, new ItemDetailActionData(itemDetailDefinition.GetID()));
+            //RuntimeActionManager.Instance.NotifyAction(ItemActionDefinition.REMOVE_ITEM_ACTION_DEFINITION_ID, new ItemActionData(itemDefinition.GetID(),extendData));
+            //RuntimeActionManager.Instance.NotifyAction(ItemDetailActionDefinition.REMOVE_ITEM_DETAIL_ACTION_DEFINITION_ID, new ItemDetailActionData(itemDetailDefinition.GetID(),extendData));
         }
         private void OnCollectionChanged(object sender, NotifyCollectionChangedEventArgs notifyCollectionChangedEventArgs)
         {

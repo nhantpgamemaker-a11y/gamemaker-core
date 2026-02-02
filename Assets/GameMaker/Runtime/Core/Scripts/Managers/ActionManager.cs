@@ -7,31 +7,10 @@ namespace GameMaker.Core.Runtime
 {
     [ScriptableObjectSingletonPathAttribute("Assets/Resources")]
     [CreateAssetMenu(fileName ="ActionManager",menuName = "GameMaker/Core/ActionManager")]
-    public class ActionManager : BaseScriptableObjectDataManager<ActionManager, BaseActionDefinition>
+    public class ActionManager : BaseScriptableObjectDataManager<ActionManager, ActionDefinition>
     {
         protected override void OnLoad()
         {
-            var actionDefinitionTypes = TypeUtils.GetAllDerivedNonAbstractTypes(typeof(BaseActionDefinition));
-            List<BaseActionDefinition> defaultActionDefinitions = new();
-            foreach (var actionDefinitionType in actionDefinitionTypes)
-            {
-                var baseDefinition = Activator.CreateInstance(actionDefinitionType) as BaseActionDefinition;
-                defaultActionDefinitions.AddRange(baseDefinition.GetCoreActionDefinition());
-            }
-
-            foreach (var defaultActionDefinition in defaultActionDefinitions)
-            {
-                if (GetDefinition(defaultActionDefinition.GetID()) == null)
-                {
-                    AddDefinition(defaultActionDefinition);
-                }
-            }
-        }
-        [ContextMenu("On Load")]
-        private void OnLoadEditor()
-        {
-            OnLoad();
-            UnityEditor.EditorUtility.SetDirty(this);
         }
     }
 }

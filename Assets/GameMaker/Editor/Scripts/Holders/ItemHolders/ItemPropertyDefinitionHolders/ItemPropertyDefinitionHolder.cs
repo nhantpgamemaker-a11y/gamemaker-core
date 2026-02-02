@@ -13,7 +13,6 @@ namespace GameMaker.Core.Editor
             var asset = GetVisualTreeAsset();
             templateContainer = asset.CloneTree();
             root.Add(templateContainer);
-            
         }
         public abstract VisualTreeAsset GetVisualTreeAsset();
 

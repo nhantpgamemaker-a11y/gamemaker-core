@@ -14,86 +14,42 @@ MonoBehaviour:
   m_EditorClassIdentifier: GameMaker.Core.Runtime::GameMaker.Core.Runtime.ActionManager
   dataManager:
     _definitions:
-    - rid: 4388470460435660815
-    - rid: 4388470460435660816
-    - rid: 4388470460435660817
-    - rid: 4388470460435660818
-    - rid: 4388470460435660819
-    - rid: 4388470460435660820
-    - rid: 4388470460435660821
-    - rid: 4388470460435660822
+    - rid: 4388470479812821172
   references:
     version: 2
     RefIds:
-    - rid: 4388470460435660815
-      type: {class: CurrencyActionDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+    - rid: 4388470479812821172
+      type: {class: ActionDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
       data:
-        _id: CURRENCY_ADD
-        _name: ADD_CURRENCY_ACTION
-        _title: ADD_CURRENCY_ACTION
-        _icon: {fileID: 0}
-        _description: 
-        _metaData: {fileID: 0}
-    - rid: 4388470460435660816
-      type: {class: ItemActionDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+        _id: 
+        _name: 
+        _actionParamManager:
+          _definitions:
+          - rid: 4925654913321533734
+          - rid: 4925654913321533735
+          - rid: 4925654913321533749
+          - rid: 4925654913321533750
+    - rid: 4925654913321533734
+      type: {class: FloatActionParamDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
       data:
-        _id: ITEM_ADD
-        _name: ADD_ITEM_ACTION
-        _title: ADD_ITEM_ACTION
-        _icon: {fileID: 0}
-        _description: 
-        _metaData: {fileID: 0}
-    - rid: 4388470460435660817
-      type: {class: ItemActionDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+        _id: 
+        _name: 
+        _bindingName: 
+    - rid: 4925654913321533735
+      type: {class: FloatActionParamDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
       data:
-        _id: ITEM_REMOVE
-        _name: REMOVE_ITEM_ACTION
-        _title: REMOVE_ITEM_ACTION
-        _icon: {fileID: 0}
-        _description: 
-        _metaData: {fileID: 0}
-    - rid: 4388470460435660818
-      type: {class: ItemActionDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+        _id: 
+        _name: 
+        _bindingName: 
+    - rid: 4925654913321533749
+      type: {class: StatActionParamDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
       data:
-        _id: ITEM_DETAIL_ADD
-        _name: ADD_ITEM_DETAIL_ACTION
-        _title: ADD_ITEM_DETAIL_ACTION
-        _icon: {fileID: 0}
-        _description: 
-        _metaData: {fileID: 0}
-    - rid: 4388470460435660819
-      type: {class: ItemActionDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+        _id: 
+        _name: 
+        _bindingName: 
+    - rid: 4925654913321533750
+      type: {class: CurrencyActionParamDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
       data:
-        _id: ITEM_DETAIL_REMOVE
-        _name: REMOVE_ITEM_DETAIL_ACTION
-        _title: REMOVE_ITEM_DETAIL_ACTION
-        _icon: {fileID: 0}
-        _description: 
-        _metaData: {fileID: 0}
-    - rid: 4388470460435660820
-      type: {class: PropertyActionDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
-      data:
-        _id: STAT_ADD
-        _name: ADD_STAT_ACTION
-        _title: ADD_STAT_ACTION
-        _icon: {fileID: 0}
-        _description: 
-        _metaData: {fileID: 0}
-    - rid: 4388470460435660821
-      type: {class: PropertyActionDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
-      data:
-        _id: ATTRIBUTE_SET
-        _name: SET_ATTRIBUTE_ACTION
-        _title: SET_ATTRIBUTE_ACTION
-        _icon: {fileID: 0}
-        _description: 
-        _metaData: {fileID: 0}
-    - rid: 4388470460435660822
-      type: {class: PropertyActionDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
-      data:
-        _id: STAT_SET
-        _name: SET_STAT_ACTION
-        _title: SET_STAT_ACTION
-        _icon: {fileID: 0}
-        _description: 
-        _metaData: {fileID: 0}
+        _id: 
+        _name: 
+        _bindingName: 

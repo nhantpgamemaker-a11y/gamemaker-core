@@ -7,14 +7,10 @@ namespace GameMaker.Core.Runtime
     public class ItemActionData : BaseActionData
     {
         private string _itemId;
-        public  ItemActionData(string itemId, object data = null): base(data)
+        public string ItemID => _itemId;
+        public  ItemActionData(string itemId, IExtendData extendData) : base(extendData)
         {
             _itemId = itemId;
-        }
-
-        public override IDefinition GetDefinition()
-        {
-            return ItemManager.Instance.GetDefinition(_itemId);
         }
     }
 }

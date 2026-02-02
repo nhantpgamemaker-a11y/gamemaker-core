@@ -1,20 +1,25 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace GameMaker.Core.Runtime
 {
     [System.Serializable]
-    public abstract class BaseActionDefinition : BaseDefinition
+    public class ActionDefinition : Definition
     {
-        public BaseActionDefinition():base()
+        [UnityEngine.SerializeField]
+        private BaseDefinitionManager<BaseActionParamDefinition> _actionParamManager;
+        public ActionDefinition() : base()
         {
-            
+            _actionParamManager = new();
         }
-        public BaseActionDefinition(string id, string name, string title, string description, Sprite icon, BaseMetaData metaData):base(id, name, title,description, icon, metaData)
+        public ActionDefinition(string id, string name, BaseDefinitionManager<BaseActionParamDefinition> actionParamManager):base(id, name)
         {
-            
+            _actionParamManager = actionParamManager;
         }
-        public abstract List<IDefinition> GetDefinitions();
-        public abstract List<BaseActionDefinition> GetCoreActionDefinition();
+        public override object Clone()
+        {
+            return new ActionDefinition(GetID(), GetName(), _actionParamManager.Clone() as BaseDefinitionManager<BaseActionParamDefinition>);
+        }
     }
 }

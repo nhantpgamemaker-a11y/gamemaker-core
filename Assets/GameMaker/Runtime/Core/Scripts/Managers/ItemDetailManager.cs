@@ -12,8 +12,6 @@ namespace GameMaker.Core.Runtime
         protected override void OnLoad()
         {
             base.OnLoad();
-            ValidItemDetails();
-
         }
         public List<ItemDetailDefinition> GetItemDetailDefinitions(string itemDefinitionId)
         {
@@ -46,6 +44,5 @@ namespace GameMaker.Core.Runtime
             }
             UnityEditor.EditorUtility.SetDirty(Instance);
         }
-
     }
 }

@@ -16,7 +16,5 @@ namespace GameMaker.Core.Runtime
             _dataProviderTypes = dataProviderTypes;
             _dataManagers = dataManagers;
         }
-
-        
     }
 }

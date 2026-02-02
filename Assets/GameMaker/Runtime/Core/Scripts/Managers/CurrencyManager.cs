@@ -7,7 +7,6 @@ namespace GameMaker.Core.Runtime
     [CreateAssetMenu(fileName = "CurrencyManager", menuName = "GameMaker/Currency/CurrencyManager")]
     public class CurrencyManager : BaseScriptableObjectDataManager<CurrencyManager, CurrencyDefinition>
     {
-
 #if UNITY_EDITOR
         public string GetGenStringText()
         {

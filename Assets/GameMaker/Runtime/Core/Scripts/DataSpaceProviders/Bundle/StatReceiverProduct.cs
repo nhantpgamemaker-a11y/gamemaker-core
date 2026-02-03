@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+using System.Linq;
 
 namespace GameMaker.Core.Runtime
 {
@@ -7,20 +7,31 @@ namespace GameMaker.Core.Runtime
         Add= 0 ,
         Set = 1
     }
-    public class ItemReceiverProduct : BaseReceiverProduct
+    public class StatReceiverProduct : BaseReceiverProduct
     {
-        private string _name;
-        private List<ItemPropertyDefinitionRef> _itemPropertyDefinitionRefs = new();
-        public string Name { get => _name; }
-        public List<ItemPropertyDefinitionRef> ItemPropertyDefinitionRefs { get => _itemPropertyDefinitionRefs; }
-        public ItemReceiverProduct(string id, string name, List<ItemPropertyDefinitionRef> itemStatDefinitionRefs, string itemDetailDefinitionID) : base(itemDetailDefinitionID)
+        private long _value;
+        private ConsumeType _consumeType;
+        public long Value => _value;
+        public ConsumeType ConsumeType => _consumeType;
+        public StatReceiverProduct(string id, long value, ConsumeType consumeType) : base(id)
         {
-            _name = name;
-            _itemPropertyDefinitionRefs = itemStatDefinitionRefs;
+            _value = value;
+            _consumeType = consumeType;
         }
-        public ItemDetailDefinition GetItemDetailDefinition()
+        public override void Consume(PlayerDataManager[] playerDataManagers, IExtendData extendData)
         {
-            return ItemDetailManager.Instance.GetDefinition(ID);
+           var playerPropertyDataManager = playerDataManagers.FirstOrDefault(x => x.GetType() == typeof(PlayerPropertyManager)) as PlayerPropertyManager;
+            switch (ConsumeType)
+                {
+                    case ConsumeType.Add:
+                        playerPropertyDataManager.AddStat(ID,Value);
+                        RuntimeActionManager.Instance.NotifyAction(StatActionData.ADD_STAT_ACTION_DEFINITION, new StatActionData(ID,Value, extendData));
+                        break;
+                    case ConsumeType.Set:
+                        playerPropertyDataManager.SetStat(ID,Value);
+                        RuntimeActionManager.Instance.NotifyAction(StatActionData.SET_STAT_ACTION_DEFINITION, new StatActionData(ID,Value, extendData));
+                        break;
+                }
         }
     }
 }

@@ -6,7 +6,6 @@ using Cysharp.Threading.Tasks;
 
 namespace GameMaker.Core.Runtime
 {
-    [RuntimeDataManager(new Type[] { typeof(BaseCurrencyDataSpaceProvider) }, new Type[] { typeof(PlayerCurrencyManager) })]
     [System.Serializable]
     public class PlayerCurrencyRuntimeDataManager : BaseRuntimeDataManager
     {
@@ -14,7 +13,6 @@ namespace GameMaker.Core.Runtime
         [UnityEngine.SerializeField]
         private PlayerCurrencyManager _playerCurrencyManager;
         public PlayerCurrencyManager PlayerCurrencyManager => _playerCurrencyManager;
-
         private BaseCurrencyDataSpaceProvider _currencyDataSpaceProvider;
 
         public async override UniTask<bool> InitializeAsync(IDataSpaceProvider[] dataSpaceProviders, PlayerDataManager[] playerDataManagers)
@@ -27,6 +25,7 @@ namespace GameMaker.Core.Runtime
             CurrencyGateway.Initialize(this);
             return true;
         }
+
         public async UniTask<bool> AddPlayerCurrencyAsync(string id, float amount, IExtendData extendData)
         {
             bool status = await _currencyDataSpaceProvider.AddCurrencyAsync(id, amount);
@@ -37,11 +36,13 @@ namespace GameMaker.Core.Runtime
             }
             return status;
         }
-        public List<PlayerCurrency> GetPlayerCurrencies()
+
+        public List<BasePlayerCurrency> GetPlayerCurrencies()
         {
             return _playerCurrencyManager.GetPlayerCurrencies();
         }
-        public PlayerCurrency GetPlayerCurrency(string id)
+        
+        public BasePlayerCurrency GetPlayerCurrency(string id)
         {
             return _playerCurrencyManager.GetPlayerCurrency(id);
         }

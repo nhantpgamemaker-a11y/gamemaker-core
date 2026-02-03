@@ -16,7 +16,7 @@ namespace GameMaker.Core.Runtime
         {
             _localDataManager = new();
             await _localDataManager.InitAsync();
-            var providerTypes = TypeUtils.GetAllLeafDerivedTypes(typeof(IDataSpaceProvider))
+            var providerTypes = TypeUtils.GetAllConcreteDerivedTypes(typeof(IDataSpaceProvider))
             .Where(x => x.GetCustomAttribute<DataSpaceAttribute>().Name == nameof(DataSpaceAttribute.INIT_ANY)).ToList();
             foreach (var type in providerTypes)
             {
@@ -35,12 +35,10 @@ namespace GameMaker.Core.Runtime
         {
             _providers[type] = provider;
         }
-        
         public T GetProvider<T>()
         {
             return (T)_providers[typeof(T)];
         }
-
         public T GetProvider<T>(Type type)
         {
             return (T)_providers[type];

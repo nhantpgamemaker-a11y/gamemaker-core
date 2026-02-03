@@ -1,5 +1,7 @@
 using UnityEngine;
 using System.Linq;
+using System.Reflection;
+using System;
 
 namespace GameMaker.Core.Runtime
 {
@@ -12,68 +14,100 @@ namespace GameMaker.Core.Runtime
             {
                 if (_instance == null)
                 {
+                    var types = TypeUtils.GetAllConcreteAssignableTypes(typeof(T));
+
+                    var bestType = types
+                        .Select(t => new
+                        {
+                            Type = t,
+                            Priority = t.GetCustomAttribute<PriorityAttribute>()?.Value ?? int.MinValue
+                        })
+                        .OrderByDescending(x => x.Priority)
+                        .FirstOrDefault()?.Type
+                        ?? typeof(T);
 #if UNITY_EDITOR
-                    string[] guids =
-                        UnityEditor.AssetDatabase.FindAssets($"t:{typeof(T).FullName}");
-
-                    if (guids.Length > 1)
-                    {
-                        Debug.LogError(
-                            $"Multiple {typeof(T).Name} assets found!");
-                    }
-
-                    if (guids.Length > 0)
-                    {
-                        string path =
-                            UnityEditor.AssetDatabase.GUIDToAssetPath(guids[0]);
-                        _instance =
-                            UnityEditor.AssetDatabase.LoadAssetAtPath<T>(path);
-                    }
-                    else
-                    {
-                        _instance = CreateAndSaveAsset();
-                    }
-#else
-                    _instance = Resources.Load<T>(typeof(T).Name);
+                    Logger.Log($"[Resolver] Selected type: {bestType.FullName}");
 #endif
+                    _instance = Resources.Load<T>(bestType.Name);
+
+                    if (_instance == null)
+                    {
+#if UNITY_EDITOR
+                        Logger.LogWarning(
+                            $"[Resolver] Resource not found for {bestType.FullName}. Creating one in Editor...");
+
+                        _instance = CreateAndSaveAsset(bestType);
+
+                        if (_instance == null)
+                        {
+                            Logger.LogError(
+                                $"[Resolver] Failed to create ScriptableObject for {bestType.FullName}");
+                            return null;
+                        }
+#else
+                        Logger.LogError(
+                            $"[Resolver] Cannot load resource for type {bestType.FullName}");
+                        return null;
+#endif
+                    }
+                    _instance.OnLoad();
                 }
 
-            if (_instance != null)
+                return _instance;
+            }
+        }
+
+#if UNITY_EDITOR
+        private static T CreateAndSaveAsset(Type type)
+        {
+            // 1. Resolve path từ attribute
+            var attr = typeof(T)
+                .GetCustomAttribute<ScriptableObjectSingletonPathAttribute>();
+
+            string rootPath = attr?.Path ?? "Assets/Resources";
+
+            if (!rootPath.Contains("/Resources"))
             {
-                _instance.OnLoad();
+                Logger.LogError(
+                    $"[ScriptableObjectSingleton] Path must be under a Resources folder: {rootPath}");
+                return null;
             }
 
-            return _instance;
-        }
-    }
+            EnsureFolderExists(rootPath);
+            string assetPath = $"{rootPath}/{typeof(T).Name}.asset";
 
-        
-#if UNITY_EDITOR
-    private static T CreateAndSaveAsset()
+            var existing = UnityEditor.AssetDatabase.LoadAssetAtPath<T>(assetPath);
+            if (existing != null)
+            {
+                return existing;
+            }
+
+            var instance = (T)CreateInstance(type);
+            UnityEditor.AssetDatabase.CreateAsset(instance, assetPath);
+            UnityEditor.AssetDatabase.SaveAssets();
+            UnityEditor.AssetDatabase.Refresh();
+
+            Logger.Log($"✅ Created ScriptableObject singleton: {assetPath}");
+            return instance;
+        }
+
+private static void EnsureFolderExists(string fullPath)
+{
+    var parts = fullPath.Split('/');
+    string current = parts[0];
+
+    for (int i = 1; i < parts.Length; i++)
     {
-        var instance = CreateInstance<T>();
-
-        var attr = typeof(T)
-            .GetCustomAttributes(typeof(ScriptableObjectSingletonPathAttribute), true)
-            .FirstOrDefault() as ScriptableObjectSingletonPathAttribute;
-
-        string path = attr?.Path ?? "Assets/Resources";
-        if (!UnityEditor.AssetDatabase.IsValidFolder(path))
+        string next = $"{current}/{parts[i]}";
+        if (!UnityEditor.AssetDatabase.IsValidFolder(next))
         {
-            string parent = System.IO.Path.GetDirectoryName(path);
-            string folder = System.IO.Path.GetFileName(path);
-            UnityEditor.AssetDatabase.CreateFolder(parent, folder);
+            UnityEditor.AssetDatabase.CreateFolder(current, parts[i]);
         }
-
-        string assetPath = $"{path}/{typeof(T).Name}.asset";
-        UnityEditor.AssetDatabase.CreateAsset(instance, assetPath);
-        UnityEditor.AssetDatabase.SaveAssets();
-        UnityEditor.AssetDatabase.Refresh();
-
-        Logger.Log($"✅ Created {typeof(T).Name} at {assetPath}");
-        return instance;
+        current = next;
     }
+}
 #endif
+
         protected virtual void OnLoad()
         {
 

@@ -4,7 +4,7 @@ using System.Linq;
 using Cysharp.Threading.Tasks;
 namespace GameMaker.Core.Runtime
 {
-    [RuntimeDataManager(new Type[] { typeof(BaseItemDataSpaceProvider) }, new Type[] { typeof(PlayerItemDetailManager) })]
+    [RuntimeDataManager(new Type[] { typeof(BaseItemDataSpaceProvider) })]
     [System.Serializable]
     public class PlayerItemDetailRuntimeDataManager : BaseRuntimeDataManager
     {

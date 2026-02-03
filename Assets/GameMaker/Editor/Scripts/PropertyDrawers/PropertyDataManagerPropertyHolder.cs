@@ -65,16 +65,16 @@ namespace GameMaker.Core.Editor
             {
                 _cache = new();
                 var itemPropertyDefinitionHolderTypes =
-                TypeUtils.GetAllLeafDerivedTypes(typeof(PropertyDefinitionHolder))
+                TypeUtils.GetAllConcreteDerivedTypes(typeof(PropertyDefinitionHolder))
                 .Where(x =>
                 {
-                    return x.GetCustomAttribute<TypeHolderAttribute>() != null;
+                    return x.GetCustomAttribute<TypeContainAttribute>() != null;
                 });
 
                 foreach (var itemPropertyDefinitionHolderType in itemPropertyDefinitionHolderTypes)
                 {
                     var type = itemPropertyDefinitionHolderType
-                                .GetCustomAttribute<TypeHolderAttribute>().Type;
+                                .GetCustomAttribute<TypeContainAttribute>().Type;
                     _cache[type] = itemPropertyDefinitionHolderType;
                 }
             }

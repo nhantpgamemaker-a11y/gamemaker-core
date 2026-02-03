@@ -8,13 +8,10 @@ namespace GameMaker.Core.Runtime
     public class RuntimeDataManagerAttribute : Attribute
     {
         private Type[] _dataProviderTypes;
-        private Type[] _dataManagers;
         public Type[] DataProviderTypes { get => _dataProviderTypes; }
-        public Type[] DataManagers { get => _dataManagers; }
-        public RuntimeDataManagerAttribute(Type[] dataProviderTypes, Type[] dataManagers)
+        public RuntimeDataManagerAttribute(Type[] dataProviderTypes)
         {
             _dataProviderTypes = dataProviderTypes;
-            _dataManagers = dataManagers;
         }
     }
 }

@@ -1,14 +1,11 @@
 using System;
-using System.Globalization;
 using System.Linq;
-using System.Reflection;
 using Cysharp.Threading.Tasks;
-using GameMaker.Core.Runtime;
 
 namespace GameMaker.Core.Runtime
 {
     [System.Serializable]
-    [RuntimeDataManager(new Type[] { typeof(BasePropertyDataSpaceProvider)}, new Type[] { typeof(PlayerPropertyManager)})]
+    [RuntimeDataManager(new Type[] { typeof(BasePropertyDataSpaceProvider)})]
     public class PlayerPropertyRuntimeDataManager: BaseRuntimeDataManager
     {
         private string _id = "PlayerPropertyRuntimeDataManager";

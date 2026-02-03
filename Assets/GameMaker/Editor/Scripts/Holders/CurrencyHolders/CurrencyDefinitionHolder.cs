@@ -6,14 +6,10 @@ namespace GameMaker.Core.Editor
 {
     public class CurrencyDefinitionHolder : BaseDefinitionHolder
     {
-        private Toggle _gainToggle;
-        private VisualElement _gainContainer;
         private Foldout _currencyFoldout;
         private TextField _nameField;
         public CurrencyDefinitionHolder(VisualElement root) : base(root)
         {
-            _gainToggle = root.Q<Toggle>("IsGainToggle");
-            _gainContainer = root.Q<VisualElement>("GainContainerVisualElement");
             _currencyFoldout = root.Q<Foldout>("CurrencyFoldout");
             _nameField = root.Q<TextField>("NameTextField");
         }
@@ -21,11 +17,6 @@ namespace GameMaker.Core.Editor
         public override void Bind(SerializedProperty elementProperty)
         {
             base.Bind(elementProperty);
-            _gainToggle.RegisterValueChangedCallback(value =>
-            {
-                _gainContainer.SetEnabled(value.newValue);
-            });
-            _gainContainer.SetEnabled(_gainToggle.value);
             _currencyFoldout.name = serializedProperty.FindPropertyRelative("_name").stringValue;
             _nameField.RegisterValueChangedCallback(value =>
             {

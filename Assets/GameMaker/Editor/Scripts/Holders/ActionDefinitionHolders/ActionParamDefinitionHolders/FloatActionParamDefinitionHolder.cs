@@ -4,7 +4,7 @@ using UnityEngine.UIElements;
 
 namespace GameMaker.Core.Editor
 {
-    [TypeHolder(typeof(FloatActionParamDefinition))]
+    [TypeContain(typeof(FloatActionParamDefinition))]
     public class FloatActionParamDefinitionHolder : BaseActionParamDefinitionHolder
     {
         

@@ -6,7 +6,7 @@ using UnityEngine.UIElements;
 
 namespace GameMaker.Core.Editor
 {
-    [TypeHolder(typeof(AttributeDefinition))]
+    [TypeContain(typeof(AttributeDefinition))]
     public class AttributeDefinitionHolder : PropertyDefinitionHolder
     {
         private TextField _defaultValueTextField;

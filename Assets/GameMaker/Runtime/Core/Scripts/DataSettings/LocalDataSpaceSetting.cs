@@ -14,7 +14,7 @@ namespace GameMaker.Core.Runtime
         public override async UniTask<bool> InitAsync()
         {
            await base.InitAsync();
-            var providerTypes = TypeUtils.GetAllLeafDerivedTypes(typeof(IDataSpaceProvider))
+            var providerTypes = TypeUtils.GetAllConcreteDerivedTypes(typeof(IDataSpaceProvider))
             .Where(x => x.GetCustomAttribute<DataSpaceAttribute>().Name == nameof(LOCAL_SPACE)).ToList();
 
             foreach(var type in providerTypes)

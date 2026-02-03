@@ -6,10 +6,10 @@ using UnityEngine.UIElements;
 
 namespace GameMaker.Core.Editor
 {
-    [CustomPropertyDrawer(typeof(BaseDefinitionManager<CurrencyDefinition>))]
-    public class CurrencyDataManagerPropertyDrawer : Core.Editor.BaseDataManagerPropertyDrawer<CurrencyDefinition>
+    [CustomPropertyDrawer(typeof(BaseDefinitionManager<BaseCurrencyDefinition>))]
+    public class CurrencyDataManagerPropertyDrawer : Core.Editor.BaseDataManagerPropertyDrawer<BaseCurrencyDefinition>
     {
-        protected override BaseDataManagerHolder<CurrencyDefinition> CreateBaseDataManagerHolder()
+        protected override BaseDataManagerHolder<BaseCurrencyDefinition> CreateBaseDataManagerHolder()
         {
             var asset = UIToolkitLoaderUtils.LoadUXML("DataManagerElement");
             var templateContainer = asset.CloneTree();
@@ -19,7 +19,7 @@ namespace GameMaker.Core.Editor
             return new CurrencyDataManagerHolder(templateContainer);
         }
     }
-    public class CurrencyDataManagerHolder : BaseDataManagerHolder<CurrencyDefinition>
+    public class CurrencyDataManagerHolder : BaseDataManagerHolder<BaseCurrencyDefinition>
     {
         public CurrencyDataManagerHolder(VisualElement root) : base(root)
         {

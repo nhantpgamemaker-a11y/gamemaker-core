@@ -1,3 +1,5 @@
+using System;
+
 namespace GameMaker.Core.Runtime
 {
     public abstract class BaseReceiverProduct
@@ -7,6 +9,10 @@ namespace GameMaker.Core.Runtime
         public BaseReceiverProduct(string id)
         {
             _id = id;
+        }
+
+        public virtual void Consume(PlayerDataManager[] playerDataManager,IExtendData extendData)
+        {
         }
     }
 }

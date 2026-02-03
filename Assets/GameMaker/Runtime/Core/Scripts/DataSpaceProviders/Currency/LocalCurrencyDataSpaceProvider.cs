@@ -19,13 +19,13 @@ namespace GameMaker.Core.Runtime
             return true;
         }
 
-        public override async UniTask<(bool status,List<PlayerCurrency> playerCurrencies)> GetPlayerCurrenciesAsync()
+        public override async UniTask<(bool status,List<BasePlayerCurrency> playerCurrencies)> GetPlayerCurrenciesAsync()
         {
             var playerCurrencies = _localCurrencySaveData.GetPlayerCurrencies();
             return (true, playerCurrencies);
         }
 
-        public override async UniTask<(bool status, PlayerCurrency playerCurrency)> GetPlayerCurrencyAsync(string currencyDefinitionId)
+        public override async UniTask<(bool status, BasePlayerCurrency playerCurrency)> GetPlayerCurrencyAsync(string currencyDefinitionId)
         {
             var playerCurrency = _localCurrencySaveData.GetPlayerCurrency(currencyDefinitionId);
             return (true, playerCurrency);

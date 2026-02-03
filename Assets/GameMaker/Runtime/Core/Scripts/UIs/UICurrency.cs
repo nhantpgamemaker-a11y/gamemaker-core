@@ -23,13 +23,13 @@ namespace GameMaker.Core.Runtime
             currencyID.GetPlayerCurrency().RemoveObserver(this);
         }
 
-        protected virtual void InitUI(PlayerCurrency playerCurrency)
+        protected virtual void InitUI(BasePlayerCurrency playerCurrency)
         {
-            imgIcon.sprite = (currencyID.GetPlayerCurrency().GetDefinition() as CurrencyDefinition).GetIcon();
+            imgIcon.sprite = (currencyID.GetPlayerCurrency().GetDefinition() as BaseCurrencyDefinition).GetIcon();
             
             UpdateUI(playerCurrency);
         }
-        protected virtual void UpdateUI(PlayerCurrency playerCurrency)
+        protected virtual void UpdateUI(BasePlayerCurrency playerCurrency)
         {
             txtAmount.text = playerCurrency.Value.ToString();
         }
@@ -37,7 +37,7 @@ namespace GameMaker.Core.Runtime
         #region IObserver<BasePlayerData>
         public void OnNotify(ISubject<BasePlayerData> subject, BasePlayerData data)
         {
-            UpdateUI(data as PlayerCurrency);
+            UpdateUI(data as BasePlayerCurrency);
         }
         #endregion
     }

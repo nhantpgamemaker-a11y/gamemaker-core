@@ -8,7 +8,7 @@ using UnityEngine.Pool;
 
 namespace GameMaker.Sound.Runtime
 {
-    [RuntimeDataManager(new Type[] { typeof(SoundDataSpaceProvider) }, new Type[] {})]
+    [RuntimeDataManager(new Type[] { typeof(SoundDataSpaceProvider) })]
     [System.Serializable]    
     public class SoundRuntimeManager : BaseRuntimeDataManager
     {

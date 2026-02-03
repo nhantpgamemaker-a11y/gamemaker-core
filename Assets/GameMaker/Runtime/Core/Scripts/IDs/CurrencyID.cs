@@ -5,7 +5,7 @@ namespace GameMaker.Core.Runtime
     [System.Serializable]
     public class CurrencyID: BaseID
     {
-        public PlayerCurrency GetPlayerCurrency()
+        public BasePlayerCurrency GetPlayerCurrency()
         {
             return CurrencyGateway.Manager.GetPlayerCurrency(ID);
         }

@@ -13,7 +13,7 @@ namespace GameMaker.Item.Editor
     {
         private DropdownField _currencyDropdownField;
         private FloatField _amountFloatField;
-        private List<CurrencyDefinition> _currencyDefinitions;
+        private List<BaseCurrencyDefinition> _currencyDefinitions;
         public PriceHolder(VisualElement root) : base(root)
         {
             _currencyDropdownField = root.Q<DropdownField>("CurrencyDropdownField");

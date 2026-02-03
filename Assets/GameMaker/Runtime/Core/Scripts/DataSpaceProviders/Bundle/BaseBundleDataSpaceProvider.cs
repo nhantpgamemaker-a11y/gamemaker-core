@@ -10,7 +10,5 @@ namespace GameMaker.Core.Runtime
         {
         }
         public abstract UniTask<(bool, List<BaseReceiverProduct>)> ConsumeAsync(BundleDefinition bundleDefinition);
-
-        
     }
 }

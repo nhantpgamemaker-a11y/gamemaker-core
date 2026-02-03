@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb6d2a06e0ee13c4a9c19f3bee2f99f9, type: 3}
-  m_Name: PropertyDataManager
+  m_Name: PropertyManager
   m_EditorClassIdentifier: GameMaker.Property.Runtime::GameMaker.Property.Runtime.PropertyDataManager
   dataManager:
     _definitions:

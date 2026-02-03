@@ -6,21 +6,21 @@ namespace GameMaker.Core.Runtime
     [System.Serializable]
     public class PlayerCurrencyManager : PlayerDataManager
     {   
-        public void AddObserver(IObserverWithScope<PlayerCurrency, string> observer, string[] scopes)
+        public void AddObserver(IObserverWithScope<BasePlayerCurrency, string> observer, string[] scopes)
         {
             AddObserver((IObserverWithScope<BasePlayerData, string>)observer, scopes);
         }
-        public void RemoveObserver(IObserverWithScope<PlayerCurrency, string> observer, string[] scopes)
+        public void RemoveObserver(IObserverWithScope<BasePlayerCurrency, string> observer, string[] scopes)
         {
             RemoveObserver((IObserverWithScope<BasePlayerData, string>)observer, scopes);
         }
-        public PlayerCurrency GetPlayerCurrency(string referenceId)
+        public BasePlayerCurrency GetPlayerCurrency(string referenceId)
         {
-            return GetPlayerData(referenceId) as PlayerCurrency;
+            return GetPlayerData(referenceId) as BasePlayerCurrency;
         }
-        public List<PlayerCurrency> GetPlayerCurrencies()
+        public List<BasePlayerCurrency> GetPlayerCurrencies()
         {
-            return basePlayerDatas.Cast<PlayerCurrency>().ToList();
+            return basePlayerDatas.Cast<BasePlayerCurrency>().ToList();
         }
         public void AddPlayerCurrency(string id, float value)
         {

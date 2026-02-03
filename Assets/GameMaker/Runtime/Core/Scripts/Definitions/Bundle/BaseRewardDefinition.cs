@@ -7,7 +7,12 @@ namespace GameMaker.Core.Runtime
     [System.Serializable]
     public abstract class BaseRewardDefinition : BaseDefinition, IReferenceDefinition
     {   
-        public BaseRewardDefinition(string id, string name, string title, string description, Sprite icon, BaseMetaData metaData): base(id, name, title, description, icon, metaData)
+        public BaseRewardDefinition(string id,
+        string name,
+        string title,
+        string description,
+        Sprite icon,
+        BaseMetaData metaData) : base(id, name, title, description, icon, metaData)
         {
             
         }

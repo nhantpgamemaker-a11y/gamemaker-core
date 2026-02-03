@@ -1,12 +1,12 @@
 using System;
 
-namespace GameMaker.Core.Editor
+namespace GameMaker.Core.Runtime
 {
-    public class TypeHolderAttribute: Attribute
+    public class TypeContainAttribute: Attribute
     {
         private Type _type;
         public Type Type => _type;
-        public TypeHolderAttribute(Type type)
+        public TypeContainAttribute(Type type)
         {
             _type = type;
         }

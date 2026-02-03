@@ -21,7 +21,7 @@ namespace GameMaker.Core.Editor
         }
         public void CreateGUI()
         {
-            var tabContentHolders = TypeUtils.GetAllLeafDerivedTypes(typeof(BaseTabContentHolder))
+            var tabContentHolders = TypeUtils.GetAllConcreteDerivedTypes(typeof(BaseTabContentHolder))
             .Where(x => x.GetCustomAttribute<CoreTabContextAttribute>() != null)
             .Select(x => Activator.CreateInstance(x, rootVisualElement) as BaseTabContentHolder)
             .OrderBy(x => x.GetIndex())

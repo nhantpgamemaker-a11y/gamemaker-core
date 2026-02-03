@@ -96,6 +96,7 @@
   <Project Path="Unity.ShaderGraph.Utilities.csproj" />
   <Project Path="Unity.VisualScripting.Shared.Editor.csproj" />
   <Project Path="Unity.Profiling.Core.csproj" />
+  <Project Path="GameMaker.Feature.DailyReward.Editor.csproj" />
   <Project Path="Unity.Services.Core.Device.csproj" />
   <Project Path="Unity.Services.Core.Analytics.csproj" />
   <Project Path="LitMotion.Editor.csproj" />

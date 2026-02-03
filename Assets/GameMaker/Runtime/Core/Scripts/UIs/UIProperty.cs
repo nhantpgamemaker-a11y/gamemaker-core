@@ -25,7 +25,7 @@ namespace GameMaker.Core.Runtime
 
         protected virtual void InitUI(PlayerProperty playerProperty)
         {
-            imgIcon.sprite = (propertyID.GetPlayerProperty().GetDefinition() as CurrencyDefinition).GetIcon();
+            imgIcon.sprite = (propertyID.GetPlayerProperty().GetDefinition() as BaseCurrencyDefinition).GetIcon();
             
             UpdateUI(playerProperty);
         }

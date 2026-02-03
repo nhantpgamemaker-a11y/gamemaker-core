@@ -12,7 +12,7 @@ namespace GameMaker.Core.Runtime
          {
             public const string ID = "Coin";
 
-             public static CurrencyDefinition GetDefinition()
+             public static BaseCurrencyDefinition GetDefinition()
              {
                  return CurrencyManager.Instance.GetDefinition(ID);
              }
@@ -22,7 +22,7 @@ namespace GameMaker.Core.Runtime
          {
             public const string ID = "Gem";
 
-             public static CurrencyDefinition GetDefinition()
+             public static BaseCurrencyDefinition GetDefinition()
              {
                  return CurrencyManager.Instance.GetDefinition(ID);
              }
@@ -32,7 +32,7 @@ namespace GameMaker.Core.Runtime
          {
             public const string ID = "Cash";
 
-             public static CurrencyDefinition GetDefinition()
+             public static BaseCurrencyDefinition GetDefinition()
              {
                  return CurrencyManager.Instance.GetDefinition(ID);
              }

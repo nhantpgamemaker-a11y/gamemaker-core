@@ -15,14 +15,24 @@ namespace GameMaker.Core.Runtime
                             && !t.IsAbstract)
                 .ToArray();
         }
-        public static Type[] GetAllLeafDerivedTypes(Type baseType)
+         /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="baseType"></param>
+        /// <returns></returns> <summary>
+        /// 
+        /// </summary>
+        /// <param name="baseType"></param>
+        /// Not include param type
+        /// <returns></returns>
+        public static Type[] GetAllConcreteDerivedTypes(Type baseType)
         {
             var allTypes = AppDomain.CurrentDomain
                 .GetAssemblies()
                 .SelectMany(a =>
                 {
                     try { return a.GetTypes(); }
-                    catch { return Array.Empty<Type>(); } 
+                    catch { return Array.Empty<Type>(); }
                 })
                 .Where(t => baseType.IsAssignableFrom(t)
                             && t != baseType
@@ -30,6 +40,29 @@ namespace GameMaker.Core.Runtime
                 .ToArray();
 
             return allTypes;
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="baseType"></param>
+        /// <returns></returns> <summary>
+        /// 
+        /// </summary>
+        /// <param name="baseType"></param>
+        /// Include param type if not abstract
+        /// <returns></returns>
+        public static Type[] GetAllConcreteAssignableTypes(Type baseType)
+        {
+            return AppDomain.CurrentDomain
+                .GetAssemblies()
+                .SelectMany(a =>
+                {
+                    try { return a.GetTypes(); }
+                    catch { return Array.Empty<Type>(); }
+                })
+                .Where(t => baseType.IsAssignableFrom(t)
+                            && !t.IsAbstract)
+                .ToArray();
         }
     }
 }

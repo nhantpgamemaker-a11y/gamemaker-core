@@ -4,7 +4,7 @@ using UnityEngine.UIElements;
 
 namespace GameMaker.Core.Editor
 {
-    [TypeHolder(typeof(StringActionParamDefinition))]
+    [TypeContain(typeof(StringActionParamDefinition))]
     public class StringActionParamDefinitionHolder : BaseActionParamDefinitionHolder
     {
         public StringActionParamDefinitionHolder(VisualElement root) : base(root)

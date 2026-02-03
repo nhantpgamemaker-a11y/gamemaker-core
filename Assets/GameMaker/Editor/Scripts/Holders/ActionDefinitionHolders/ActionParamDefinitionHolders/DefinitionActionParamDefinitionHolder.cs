@@ -4,7 +4,7 @@ using UnityEngine.UIElements;
 
 namespace GameMaker.Core.Editor
 {
-    [TypeHolder(typeof(CurrencyActionParamDefinition))]
+    [TypeContain(typeof(CurrencyActionParamDefinition))]
     public class CurrencyDefinitionActionParamDefinitionHolder : BaseActionParamDefinitionHolder
     {
         public CurrencyDefinitionActionParamDefinitionHolder(VisualElement root) : base(root)
@@ -23,7 +23,7 @@ namespace GameMaker.Core.Editor
         }
     }
 
-    [TypeHolder(typeof(StatActionParamDefinition))]
+    [TypeContain(typeof(StatActionParamDefinition))]
     public class StatDefinitionActionParamDefinitionHolder : BaseActionParamDefinitionHolder
     {
         public StatDefinitionActionParamDefinitionHolder(VisualElement root) : base(root)
@@ -42,7 +42,7 @@ namespace GameMaker.Core.Editor
         }
     }
 
-    [TypeHolder(typeof(ItemActionParamDefinition))]
+    [TypeContain(typeof(ItemActionParamDefinition))]
     public class ItemDefinitionActionParamDefinitionHolder : BaseActionParamDefinitionHolder
     {
         public ItemDefinitionActionParamDefinitionHolder(VisualElement root) : base(root)
@@ -61,7 +61,7 @@ namespace GameMaker.Core.Editor
         }
     }
 
-    [TypeHolder(typeof(ItemDetailActionParamDefinition))]
+    [TypeContain(typeof(ItemDetailActionParamDefinition))]
     public class ItemDetailDefinitionActionParamDefinitionHolder : BaseActionParamDefinitionHolder
     {
         public ItemDetailDefinitionActionParamDefinitionHolder(VisualElement root) : base(root)

@@ -8,8 +8,8 @@
         <ui:GroupBox text="" name="ExtendElement" enabled="true" style="align-items: stretch; align-self: stretch; -unity-font-style: bold; border-top-width: 1px; border-left-width: 1px; border-bottom-width: 1px; border-right-width: 1px; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; padding-right: 3px; margin-bottom: 5px; background-color: rgb(58, 58, 58); display: flex;">
             <ui:FloatField label="Default Value" value="0" name="DefaultValueField" binding-path="defaultValue"/>
             <ui:FloatField label="Max Value" value="1000" name="MaxValueField" binding-path="maxValue"/>
-            <ui:Toggle label="Is Gain" name="IsGainToggle"/>
-            <ui:VisualElement name="GainContainerVisualElement" style="flex-grow: 1;">
+            <ui:Toggle label="Is Gain" name="IsGainToggle" style="visibility: visible; display: none;"/>
+            <ui:VisualElement name="GainContainerVisualElement" enabled="true" style="flex-grow: 1; visibility: visible; display: none;">
                 <ui:FloatField label="Per Gain Amount" value="0" name="PerGainAmountField" binding-path="perGainAmount"/>
                 <ui:FloatField label="Max Gain Value" value="0" name="MaxGainValueField" binding-path="maxGainValue"/>
                 <ui:FloatField label="Gain Time" value="0" name="GainTimeField" binding-path="gainTime"/>

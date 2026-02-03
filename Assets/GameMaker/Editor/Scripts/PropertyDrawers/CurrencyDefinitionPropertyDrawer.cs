@@ -7,7 +7,7 @@ using UnityEngine.UIElements;
 
 namespace GameMaker.Core.Editor
 {
-    [CustomPropertyDrawer(typeof(CurrencyDefinition))]
+    [CustomPropertyDrawer(typeof(BaseCurrencyDefinition))]
     public class CurrencyDefinitionPropertyDrawer : BaseDefinitionPropertyDrawer
     {
         protected override BaseDefinitionHolder GetBaseDefinitionHolder()

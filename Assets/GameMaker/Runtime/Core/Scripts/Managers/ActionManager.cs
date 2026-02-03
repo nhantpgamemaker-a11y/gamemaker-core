@@ -19,7 +19,7 @@ namespace GameMaker.Core.Runtime
         [ContextMenu("Reload")]
         private void LoadGenerateActionDefinition()
         {
-            var actionDefinitions = TypeUtils.GetAllLeafDerivedTypes(typeof(BaseActionData))
+            var actionDefinitions = TypeUtils.GetAllConcreteDerivedTypes(typeof(BaseActionData))
             .SelectMany(x => (Activator.CreateInstance(x) as BaseActionData).GetGenerateActionDefinitions());
             foreach (var actionDefinition in actionDefinitions)
             {

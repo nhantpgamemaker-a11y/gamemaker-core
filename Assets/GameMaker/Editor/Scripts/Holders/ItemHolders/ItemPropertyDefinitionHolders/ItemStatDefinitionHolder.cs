@@ -7,7 +7,7 @@ using UnityEngine.UIElements;
 
 namespace GameMaker.Core.Editor
 {
-    [TypeHolder(typeof(ItemStatDefinition))]
+    [TypeContain(typeof(ItemStatDefinition))]
     public class ItemStatDefinitionHolder : ItemPropertyDefinitionHolder
     {
         private FloatField _defaultValueFloatField;

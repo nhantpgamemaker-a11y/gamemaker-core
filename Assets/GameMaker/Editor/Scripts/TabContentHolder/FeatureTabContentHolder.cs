@@ -25,7 +25,7 @@ namespace GameMaker.Core.Editor
 
         public override VisualElement GetTabView()
         {
-            var tabContentHolders = TypeUtils.GetAllLeafDerivedTypes(typeof(BaseFeatureTabContentHolder))
+            var tabContentHolders = TypeUtils.GetAllConcreteDerivedTypes(typeof(BaseFeatureTabContentHolder))
             .Where(x => x.GetCustomAttribute<FeatureTabContentAttribute>() != null)
             .Select(x => Activator.CreateInstance(x, _templateContainer) as BaseFeatureTabContentHolder)
             .OrderBy(x => x.GetIndex())

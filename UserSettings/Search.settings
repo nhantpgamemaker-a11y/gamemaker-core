@@ -69,6 +69,7 @@ providers = {
 objectSelectors = {
 }
 recentSearches = [
+	"type: Audito"
 	"type: BaseCreateItemTemplate"
 	"type: GameMaker.Core.Runtime"
 	"type: Update"
@@ -88,7 +89,6 @@ recentSearches = [
 	"count{p:a:assets}"
 	"type:"
 	"type: Base"
-	"type: Sprite"
 ]
 searchItemFavorites = [
 ]

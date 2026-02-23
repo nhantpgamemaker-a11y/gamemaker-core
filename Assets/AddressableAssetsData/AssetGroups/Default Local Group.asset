@@ -14,7 +14,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
   m_GroupName: Default Local Group
   m_GUID: 32589be3c518cce42bc99fce8dc21522
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 020871b7a06944147b2bf2d9fde96781
+    m_Address: HomeView
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 10ca5cd7c6da0a94e8e305a399925f57
+    m_Address: PlayPopup
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3dca13861434e8747b6586c505341208
+    m_Address: GameView
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 48c163284aef75c4c897e0a31759581e
+    m_Address: BootView
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dd43427ef3d1a0542bfb1d5ad5bce157
+    m_Address: MapView
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fe51c66bcf7d4284eb4856417838111d
+    m_Address: LoadingPopup
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 7c07ab2fefb6e8a45aa3edbe8c2bff86, type: 2}
   m_SchemaSet:

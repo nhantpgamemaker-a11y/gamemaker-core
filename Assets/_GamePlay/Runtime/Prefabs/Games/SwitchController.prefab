@@ -1,0 +1,577 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &705262021546705600
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6353927094943457227}
+  m_Layer: 0
+  m_Name: Animation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6353927094943457227
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705262021546705600}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3103466467553950703}
+  - {fileID: 5393346720371611120}
+  m_Father: {fileID: 9126435763854336673}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4530757415162837861
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5393346720371611120}
+  - component: {fileID: 1231095689391167882}
+  m_Layer: 0
+  m_Name: ReleaseAnimation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5393346720371611120
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4530757415162837861}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6353927094943457227}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1231095689391167882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4530757415162837861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cc6819e64e4c44beb63ea2ef45e1a6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: LitMotion.Animation::LitMotion.Animation.LitMotionAnimation
+  playOnAwake: 0
+  animationMode: 0
+  components:
+  - rid: 4925655100169126028
+  - rid: 4925655100169126029
+  - rid: 4925655100169126030
+  references:
+    version: 2
+    RefIds:
+    - rid: 4925655100169126028
+      type: {class: TransformPositionAnimation, ns: LitMotion.Animation.Components, asm: LitMotion.Animation}
+      data:
+        displayName: Position
+        enabled: 1
+        target: {fileID: 3188182316667278048}
+        settings:
+          startValue: {x: 0, y: -0.1575, z: 0}
+          endValue: {x: 0, y: 0, z: 0}
+          duration: 0.3
+          ease: 0
+          customEaseCurve:
+            serializedVersion: 2
+            m_Curve:
+            - serializedVersion: 3
+              time: 0
+              value: 0
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            - serializedVersion: 3
+              time: 1
+              value: 1
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          delay: 0
+          delayType: 0
+          loops: 1
+          loopType: 0
+          cancelOnError: 0
+          skipValuesDuringDelay: 0
+          immediateBind: 0
+          schedulerType: 0
+          additionalSettings: 0
+        relative: 1
+        useWorldSpace: 0
+    - rid: 4925655100169126029
+      type: {class: TransformPositionAnimation, ns: LitMotion.Animation.Components, asm: LitMotion.Animation}
+      data:
+        displayName: Position
+        enabled: 1
+        target: {fileID: 3179673606803135528}
+        settings:
+          startValue: {x: 0, y: -0.1575, z: 0}
+          endValue: {x: 0, y: 0, z: 0}
+          duration: 0.3
+          ease: 0
+          customEaseCurve:
+            serializedVersion: 2
+            m_Curve:
+            - serializedVersion: 3
+              time: 0
+              value: 0
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            - serializedVersion: 3
+              time: 1
+              value: 1
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          delay: 0
+          delayType: 0
+          loops: 1
+          loopType: 0
+          cancelOnError: 0
+          skipValuesDuringDelay: 0
+          immediateBind: 0
+          schedulerType: 0
+          additionalSettings: 0
+        relative: 0
+        useWorldSpace: 0
+    - rid: 4925655100169126030
+      type: {class: TransformPositionAnimation, ns: LitMotion.Animation.Components, asm: LitMotion.Animation}
+      data:
+        displayName: Position
+        enabled: 1
+        target: {fileID: 3188449309392436774}
+        settings:
+          startValue: {x: 0, y: -0.1575, z: 0}
+          endValue: {x: 0, y: 0, z: 0}
+          duration: 0.3
+          ease: 0
+          customEaseCurve:
+            serializedVersion: 2
+            m_Curve:
+            - serializedVersion: 3
+              time: 0
+              value: 0
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            - serializedVersion: 3
+              time: 1
+              value: 1
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          delay: 0
+          delayType: 0
+          loops: 1
+          loopType: 0
+          cancelOnError: 0
+          skipValuesDuringDelay: 0
+          immediateBind: 0
+          schedulerType: 0
+          additionalSettings: 1
+        relative: 0
+        useWorldSpace: 0
+--- !u!1 &5120408927361191628
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9126435763854336673}
+  - component: {fileID: 1441616276562372159}
+  m_Layer: 0
+  m_Name: SwitchController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9126435763854336673
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5120408927361191628}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3180043112229417490}
+  - {fileID: 6353927094943457227}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1441616276562372159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5120408927361191628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7a58ffaef1261d4aa32fb0c9ad4f20a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: CatAdventure.GamePlay::CatAdventure.GamePlay.SwitchController
+--- !u!1 &7443305429642666124
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3103466467553950703}
+  - component: {fileID: 1573826736015581156}
+  m_Layer: 0
+  m_Name: PressAnimation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3103466467553950703
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7443305429642666124}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6353927094943457227}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1573826736015581156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7443305429642666124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cc6819e64e4c44beb63ea2ef45e1a6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: LitMotion.Animation::LitMotion.Animation.LitMotionAnimation
+  playOnAwake: 0
+  animationMode: 0
+  components:
+  - rid: 4925655100169126028
+  - rid: 4925655100169126029
+  - rid: 4925655100169126030
+  references:
+    version: 2
+    RefIds:
+    - rid: 4925655100169126028
+      type: {class: TransformPositionAnimation, ns: LitMotion.Animation.Components, asm: LitMotion.Animation}
+      data:
+        displayName: Position
+        enabled: 1
+        target: {fileID: 3188182316667278048}
+        settings:
+          startValue: {x: 0, y: 0, z: 0}
+          endValue: {x: 0, y: -0.1575, z: 0}
+          duration: 0.3
+          ease: 0
+          customEaseCurve:
+            serializedVersion: 2
+            m_Curve:
+            - serializedVersion: 3
+              time: 0
+              value: 0
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            - serializedVersion: 3
+              time: 1
+              value: 1
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          delay: 0
+          delayType: 0
+          loops: 1
+          loopType: 0
+          cancelOnError: 0
+          skipValuesDuringDelay: 0
+          immediateBind: 0
+          schedulerType: 0
+          additionalSettings: 0
+        relative: 1
+        useWorldSpace: 0
+    - rid: 4925655100169126029
+      type: {class: TransformPositionAnimation, ns: LitMotion.Animation.Components, asm: LitMotion.Animation}
+      data:
+        displayName: Position
+        enabled: 1
+        target: {fileID: 3179673606803135528}
+        settings:
+          startValue: {x: 0, y: 0, z: 0}
+          endValue: {x: 0, y: -0.1575, z: 0}
+          duration: 0.3
+          ease: 0
+          customEaseCurve:
+            serializedVersion: 2
+            m_Curve:
+            - serializedVersion: 3
+              time: 0
+              value: 0
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            - serializedVersion: 3
+              time: 1
+              value: 1
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          delay: 0
+          delayType: 0
+          loops: 1
+          loopType: 0
+          cancelOnError: 0
+          skipValuesDuringDelay: 0
+          immediateBind: 0
+          schedulerType: 0
+          additionalSettings: 0
+        relative: 0
+        useWorldSpace: 0
+    - rid: 4925655100169126030
+      type: {class: TransformPositionAnimation, ns: LitMotion.Animation.Components, asm: LitMotion.Animation}
+      data:
+        displayName: Position
+        enabled: 1
+        target: {fileID: 3188449309392436774}
+        settings:
+          startValue: {x: 0, y: 0, z: 0}
+          endValue: {x: 0, y: -0.1575, z: 0}
+          duration: 0.3
+          ease: 0
+          customEaseCurve:
+            serializedVersion: 2
+            m_Curve:
+            - serializedVersion: 3
+              time: 0
+              value: 0
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            - serializedVersion: 3
+              time: 1
+              value: 1
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          delay: 0
+          delayType: 0
+          loops: 1
+          loopType: 0
+          cancelOnError: 0
+          skipValuesDuringDelay: 0
+          immediateBind: 0
+          schedulerType: 0
+          additionalSettings: 1
+        relative: 0
+        useWorldSpace: 0
+--- !u!1001 &3183730712784595462
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 9126435763854336673}
+    m_Modifications:
+    - target: {fileID: 1281510541148024, guid: 28e1f3fc98e1f1748bd42821c6440ae4, type: 3}
+      propertyPath: m_Name
+      value: switch_floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 4110504610592302, guid: 28e1f3fc98e1f1748bd42821c6440ae4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4110504610592302, guid: 28e1f3fc98e1f1748bd42821c6440ae4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.19690281
+      objectReference: {fileID: 0}
+    - target: {fileID: 4268766902507540, guid: 28e1f3fc98e1f1748bd42821c6440ae4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4268766902507540, guid: 28e1f3fc98e1f1748bd42821c6440ae4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4268766902507540, guid: 28e1f3fc98e1f1748bd42821c6440ae4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4268766902507540, guid: 28e1f3fc98e1f1748bd42821c6440ae4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4268766902507540, guid: 28e1f3fc98e1f1748bd42821c6440ae4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4268766902507540, guid: 28e1f3fc98e1f1748bd42821c6440ae4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4268766902507540, guid: 28e1f3fc98e1f1748bd42821c6440ae4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4268766902507540, guid: 28e1f3fc98e1f1748bd42821c6440ae4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4268766902507540, guid: 28e1f3fc98e1f1748bd42821c6440ae4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4268766902507540, guid: 28e1f3fc98e1f1748bd42821c6440ae4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4592505251461350, guid: 28e1f3fc98e1f1748bd42821c6440ae4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.684342e-16
+      objectReference: {fileID: 0}
+    - target: {fileID: 4592505251461350, guid: 28e1f3fc98e1f1748bd42821c6440ae4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.19690281
+      objectReference: {fileID: 0}
+    - target: {fileID: 4864204589372448, guid: 28e1f3fc98e1f1748bd42821c6440ae4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.1368684e-15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4864204589372448, guid: 28e1f3fc98e1f1748bd42821c6440ae4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.19690281
+      objectReference: {fileID: 0}
+    - target: {fileID: 23145110828362114, guid: 28e1f3fc98e1f1748bd42821c6440ae4, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: a5b2f76421df0c04e9d2122160120ec6, type: 2}
+    - target: {fileID: 23166604477106198, guid: 28e1f3fc98e1f1748bd42821c6440ae4, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: a5b2f76421df0c04e9d2122160120ec6, type: 2}
+    - target: {fileID: 23985184681907796, guid: 28e1f3fc98e1f1748bd42821c6440ae4, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: a5b2f76421df0c04e9d2122160120ec6, type: 2}
+    m_RemovedComponents:
+    - {fileID: 95258061764593480, guid: 28e1f3fc98e1f1748bd42821c6440ae4, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 28e1f3fc98e1f1748bd42821c6440ae4, type: 3}
+--- !u!4 &3179673606803135528 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4110504610592302, guid: 28e1f3fc98e1f1748bd42821c6440ae4, type: 3}
+  m_PrefabInstance: {fileID: 3183730712784595462}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3180043112229417490 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4268766902507540, guid: 28e1f3fc98e1f1748bd42821c6440ae4, type: 3}
+  m_PrefabInstance: {fileID: 3183730712784595462}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3188182316667278048 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4592505251461350, guid: 28e1f3fc98e1f1748bd42821c6440ae4, type: 3}
+  m_PrefabInstance: {fileID: 3183730712784595462}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3188449309392436774 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4864204589372448, guid: 28e1f3fc98e1f1748bd42821c6440ae4, type: 3}
+  m_PrefabInstance: {fileID: 3183730712784595462}
+  m_PrefabAsset: {fileID: 0}

@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f1c76e938b4aa54e8b30beb46086377, type: 3}
+  m_Name: ConfigManager
+  m_EditorClassIdentifier: GameMaker.Core.Runtime::GameMaker.Core.Runtime.ConfigManager
+  dataManager:
+    _definitions:
+    - rid: 4388470458572341336
+    - rid: 4925655373323436203
+    - rid: 4925655373323436204
+    - rid: 4925655373323436205
+  references:
+    version: 2
+    RefIds:
+    - rid: 4388470458572341336
+      type: {class: ConfigDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: ContinueLevel
+        _name: Continue Level
+        _value: 15
+    - rid: 4925655373323436203
+      type: {class: ConfigDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: ContinueLevel
+        _name: Continue Level
+        _value: 15
+    - rid: 4925655373323436204
+      type: {class: ConfigDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: ContinueLevel
+        _name: Continue Level
+        _value: 15
+    - rid: 4925655373323436205
+      type: {class: ConfigDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: ContinueLevel
+        _name: Continue Level
+        _value: 15

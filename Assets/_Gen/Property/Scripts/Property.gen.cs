@@ -8,14 +8,35 @@ namespace GameMaker.Core.Runtime
 {
    public class Property
     {
-    public class Level
-    {
-        public const string ID = "Level";
+public class Level
+{
+    public const string ID = "Level";
+    public StatDefinition GetDefinition()
+     {
+        return PropertyManager.Instance.GetDefinition(ID) as StatDefinition;
+     }
 
-        public static StatDefinition GetDefinition()
-        {
-            return PropertyManager.Instance.GetDefinition(ID) as StatDefinition;
-        }
-    }
+     public PlayerStat GetPlayerStat()
+     {
+        return PropertyGateway.Manager.GetPlayerProperty("Level") as PlayerStat;
+     }
+}
+
+
+public class DefaultName
+{
+    public const string ID = "DefaultName";
+    public AttributeDefinition GetDefinition()
+     {
+        return PropertyManager.Instance.GetDefinition(ID) as AttributeDefinition;
+     }
+
+     public PlayerAttribute GetPlayerAttribute()
+     {
+        return PropertyGateway.Manager.GetPlayerProperty("DefaultName") as PlayerAttribute;
+     }
+}
+
+
     }
 }

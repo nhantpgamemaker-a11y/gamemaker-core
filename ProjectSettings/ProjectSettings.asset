@@ -8,7 +8,7 @@ PlayerSettings:
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
-  defaultScreenOrientation: 4
+  defaultScreenOrientation: 0
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
@@ -72,7 +72,7 @@ PlayerSettings:
   androidUseSwappy: 0
   androidDisplayOptions: 1
   androidBlitType: 0
-  androidResizeableActivity: 1
+  androidResizeableActivity: 0
   androidDefaultWindowWidth: 1920
   androidDefaultWindowHeight: 1080
   androidMinimumWindowWidth: 400
@@ -147,6 +147,7 @@ PlayerSettings:
   preloadedAssets:
   - {fileID: 11400000, guid: 792710c169af8c441977990a8a46a840, type: 2}
   - {fileID: 11400000, guid: 21facfb0972a13c44bcd6c5cb8f7f294, type: 2}
+  - {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -161,7 +162,7 @@ PlayerSettings:
   useHDRDisplay: 0
   hdrBitDepth: 0
   m_ColorGamuts: 00000000
-  targetPixelDensity: 30
+  targetPixelDensity: 100
   resolutionScalingMode: 0
   resetResolutionOnWindowResize: 0
   androidSupportedAspectRatio: 1
@@ -526,7 +527,10 @@ PlayerSettings:
       m_Height: 720
       m_Kind: 1
       m_SubKind: 
-  m_BuildTargetBatching: []
+  m_BuildTargetBatching:
+  - m_BuildTarget: Android
+    m_StaticBatching: 1
+    m_DynamicBatching: 0
   m_BuildTargetShaderSettings: []
   m_BuildTargetGraphicsJobs: []
   m_BuildTargetGraphicsJobMode: []
@@ -842,7 +846,7 @@ PlayerSettings:
     PS4: KAMGAM_UV_EDITOR
     PS5: KAMGAM_UV_EDITOR
     QNX: KAMGAM_UV_EDITOR
-    Standalone: ODIN_INSPECTOR;ODIN_INSPECTOR_3;ODIN_INSPECTOR_3_1;KAMGAM_UV_EDITOR
+    Standalone: ENABLE_DEBUG_LOG
     VisionOS: KAMGAM_UV_EDITOR
     WebGL: KAMGAM_UV_EDITOR
     XboxOne: KAMGAM_UV_EDITOR

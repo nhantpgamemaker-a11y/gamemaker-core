@@ -6,37 +6,67 @@ using GameMaker.Core.Runtime;
 
 namespace GameMaker.Core.Runtime
 {
-   public class Currency
-    {
-        public class Coin
-         {
-            public const string ID = "Coin";
+public class Currency
+{
+public class Coin
+{
+    public const string ID = "Coin";
+    public BaseCurrencyDefinition GetDefinition()
+     {
+        return CurrencyManager.Instance.GetDefinition(ID) as BaseCurrencyDefinition;
+     }
 
-             public static BaseCurrencyDefinition GetDefinition()
-             {
-                 return CurrencyManager.Instance.GetDefinition(ID);
-             }
-          }
+     public BasePlayerCurrency GetPlayerCurrency()
+     {
+        return CurrencyGateway.Manager.GetPlayerCurrency("Coin");
+     }
+}
 
-        public class Gem
-         {
-            public const string ID = "Gem";
 
-             public static BaseCurrencyDefinition GetDefinition()
-             {
-                 return CurrencyManager.Instance.GetDefinition(ID);
-             }
-          }
+public class Gem
+{
+    public const string ID = "Gem";
+    public BaseCurrencyDefinition GetDefinition()
+     {
+        return CurrencyManager.Instance.GetDefinition(ID) as BaseCurrencyDefinition;
+     }
 
-        public class Cash
-         {
-            public const string ID = "Cash";
+     public BasePlayerCurrency GetPlayerCurrency()
+     {
+        return CurrencyGateway.Manager.GetPlayerCurrency("Gem");
+     }
+}
 
-             public static BaseCurrencyDefinition GetDefinition()
-             {
-                 return CurrencyManager.Instance.GetDefinition(ID);
-             }
-          }
 
-    }
+public class Energy
+{
+    public const string ID = "Energy";
+    public BaseCurrencyDefinition GetDefinition()
+     {
+        return CurrencyManager.Instance.GetDefinition(ID) as BaseCurrencyDefinition;
+     }
+
+     public BasePlayerCurrency GetPlayerCurrency()
+     {
+        return CurrencyGateway.Manager.GetPlayerCurrency("Energy");
+     }
+}
+
+
+public class Star
+{
+    public const string ID = "Star";
+    public BaseCurrencyDefinition GetDefinition()
+     {
+        return CurrencyManager.Instance.GetDefinition(ID) as BaseCurrencyDefinition;
+     }
+
+     public BasePlayerCurrency GetPlayerCurrency()
+     {
+        return CurrencyGateway.Manager.GetPlayerCurrency("Star");
+     }
+}
+
+
+}
 }

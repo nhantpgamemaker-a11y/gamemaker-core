@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fa199d7e1e727a4baf4a47393cf8225, type: 3}
+  m_Name: TimedManager
+  m_EditorClassIdentifier: GameMaker.Core.Runtime::GameMaker.Core.Runtime.TimedManager
+  dataManager:
+    _definitions:
+    - rid: 4925655397300174998
+    - rid: 4925655397300174999
+  references:
+    version: 2
+    RefIds:
+    - rid: 4925655397300174998
+      type: {class: TimedDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: LifeUnlimitTime
+        _name: LifeUnlimitTime
+        _title: LifeUnlimitTime
+        _icon: {fileID: 0}
+        _description: LifeUnlimitTime
+        _metaData: {fileID: 0}
+        _defaultValue: 0
+    - rid: 4925655397300174999
+      type: {class: TimedDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: TimeFreezeUnlimitTime
+        _name: TimeFreezeUnlimitTime
+        _title: TimeFreezeUnlimitTime
+        _icon: {fileID: 0}
+        _description: TimeFreezeUnlimitTime
+        _metaData: {fileID: 0}
+        _defaultValue: 0

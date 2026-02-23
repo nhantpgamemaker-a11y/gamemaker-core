@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9aa9fc134ccc1834c9a7217ea280cf3a, type: 3}
+  m_Name: SoundManager
+  m_EditorClassIdentifier: GameMaker.Sound.Runtime::GameMaker.Sound.Runtime.SoundManager
+  dataManager:
+    _definitions:
+    - rid: 4925655027847266383
+    - rid: 4925655034076070039
+    - rid: 4925655028446789998
+    - rid: 4925655100169126031
+    - rid: 4925655034076070244
+  _audioMixed: {fileID: 24100000, guid: a2e71338db0c20649a51bd2711bce528, type: 2}
+  references:
+    version: 2
+    RefIds:
+    - rid: 4925655027847266383
+      type: {class: SoundDefinition, ns: GameMaker.Sound.Runtime, asm: GameMaker.Sound.Runtime}
+      data:
+        _id: UI_Button_Click
+        _name: UI_Button_Click
+        _title: UI_Button_Click
+        _icon: {fileID: 0}
+        _description: UI_Button_Click
+        _metaData: {fileID: 0}
+        _clip: {fileID: 8300000, guid: 27330e727b0797843b64f06a98da4acc, type: 3}
+        _mixerGroup: UIGroup
+        _volumeScale: 1
+    - rid: 4925655028446789998
+      type: {class: SoundDefinition, ns: GameMaker.Sound.Runtime, asm: GameMaker.Sound.Runtime}
+      data:
+        _id: UI_Coin_Collect
+        _name: UI_Coin_Collect
+        _title: UI_Coin_Collect
+        _icon: {fileID: 0}
+        _description: UI_Coin_Collect
+        _metaData: {fileID: 0}
+        _clip: {fileID: 8300000, guid: f62d45be59c25414688ecf5ecffc4a48, type: 3}
+        _mixerGroup: UIGroup
+        _volumeScale: 1
+    - rid: 4925655034076070039
+      type: {class: SoundDefinition, ns: GameMaker.Sound.Runtime, asm: GameMaker.Sound.Runtime}
+      data:
+        _id: Music_BG_Home
+        _name: Music_BG_Home
+        _title: Music_BG_Home
+        _icon: {fileID: 0}
+        _description: Music_BG_Home
+        _metaData: {fileID: 0}
+        _clip: {fileID: 8300000, guid: 4bf6f061831f34243ab982369659368d, type: 3}
+        _mixerGroup: MusicGroup
+        _volumeScale: 1
+    - rid: 4925655034076070244
+      type: {class: SoundDefinition, ns: GameMaker.Sound.Runtime, asm: GameMaker.Sound.Runtime}
+      data:
+        _id: Music_BG_Map
+        _name: Music_BG_Map
+        _title: Music_BG_Map
+        _icon: {fileID: 0}
+        _description: Music_BG_Map
+        _metaData: {fileID: 0}
+        _clip: {fileID: 8300000, guid: 4bf6f061831f34243ab982369659368d, type: 3}
+        _mixerGroup: MusicGroup
+        _volumeScale: 1
+    - rid: 4925655100169126031
+      type: {class: SoundDefinition, ns: GameMaker.Sound.Runtime, asm: GameMaker.Sound.Runtime}
+      data:
+        _id: SFX_Game_LightSwitch
+        _name: SFX_Game_LightSwitch
+        _title: SFX_Game_LightSwitch
+        _icon: {fileID: 0}
+        _description: SFX_Game_LightSwitch
+        _metaData: {fileID: 0}
+        _clip: {fileID: 8300000, guid: 15e125c476b108844b1edaf5ba604fa5, type: 3}
+        _mixerGroup: 
+        _volumeScale: 1

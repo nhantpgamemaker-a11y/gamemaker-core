@@ -28,5 +28,10 @@ namespace GameMaker.Core.Runtime
         {
             return new BigIntCurrencyDefinition(GetID(), GetName(), GetTitle(), GetDescription(), GetIcon(), GetMetaData(), _defaultValue, _maxValue);
         }
+
+        public override object GetDefaultValue()
+        {
+            return BigInteger.Parse(_defaultValue);
+        }
     }
 }

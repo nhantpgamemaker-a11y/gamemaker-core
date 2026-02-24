@@ -16,7 +16,8 @@ namespace GameMaker.Core.Runtime
 
         public override void AddValue(object value)
         {
-            _value += (long)value;
+            _value += (BigInteger)value;
+            NotifyObserver(this);
         }
 
         public override object Clone()
@@ -24,7 +25,7 @@ namespace GameMaker.Core.Runtime
             return new BigIntPlayerCurrency(GetID(), definition, _value);
         }
 
-        public BigInteger GetValue()
+        public override object GetValue()
         {
             return _value;
         }

@@ -12,5 +12,6 @@ namespace GameMaker.Core.Runtime
         }
 
         public abstract void AddValue(object value);
+        public abstract object GetValue();
     }
 }

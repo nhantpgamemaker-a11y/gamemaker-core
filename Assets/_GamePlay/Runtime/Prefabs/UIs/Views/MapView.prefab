@@ -2675,7 +2675,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6420097950864100306, guid: 0b7cadc54a42990459b43690d5b7374d, type: 3}
       propertyPath: m_Name
-      value: UICurrencyAnimation-Star
+      value: UILongCurrencyAnimation-Star
       objectReference: {fileID: 0}
     - target: {fileID: 8557012188340495604, guid: 0b7cadc54a42990459b43690d5b7374d, type: 3}
       propertyPath: currencyID._id
@@ -2804,7 +2804,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6420097950864100306, guid: c3609f60e799cf44f98bb31285777797, type: 3}
       propertyPath: m_Name
-      value: UICurrencyAnimation-Coin
+      value: UILongCurrencyAnimation-Coin
       objectReference: {fileID: 0}
     - target: {fileID: 6420097950864100306, guid: c3609f60e799cf44f98bb31285777797, type: 3}
       propertyPath: m_IsActive

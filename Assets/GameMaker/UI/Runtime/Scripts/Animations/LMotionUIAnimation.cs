@@ -20,6 +20,7 @@ namespace GameMaker.UI.Runtime
             showAnimation?.Stop();
             hideAnimation?.Play();
             await UniTask.WaitUntil(() => !hideAnimation.IsPlaying, cancellationToken: this.GetCancellationTokenOnDestroy());
+            hideAnimation?.Stop();
         }
     }
 }

@@ -8,61 +8,45 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 195603739043970968, guid: 83517afad859e734889cfebd15a78d31, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 415ab87e91acf4c348a9a60bfb589661, type: 3}
     - target: {fileID: 1063691166325534267, guid: 83517afad859e734889cfebd15a78d31, type: 3}
-      propertyPath: explosionDuration.x
+      propertyPath: explosionRadius.x
       value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 1063691166325534267, guid: 83517afad859e734889cfebd15a78d31, type: 3}
-      propertyPath: explosionEase.m_Curve.Array.size
-      value: 2
+      propertyPath: explosionRadius.y
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 1063691166325534267, guid: 83517afad859e734889cfebd15a78d31, type: 3}
       propertyPath: explosionEase.m_Curve.Array.data[1].time
-      value: 1
+      value: 0.54774463
       objectReference: {fileID: 0}
     - target: {fileID: 1063691166325534267, guid: 83517afad859e734889cfebd15a78d31, type: 3}
-      propertyPath: explosionEase.m_Curve.Array.data[1].value
-      value: 1
+      propertyPath: explosionEase.m_Curve.Array.data[2].time
+      value: 0.924827
+      objectReference: {fileID: 0}
+    - target: {fileID: 1063691166325534267, guid: 83517afad859e734889cfebd15a78d31, type: 3}
+      propertyPath: explosionEase.m_Curve.Array.data[2].value
+      value: 0.9859408
       objectReference: {fileID: 0}
     - target: {fileID: 1063691166325534267, guid: 83517afad859e734889cfebd15a78d31, type: 3}
       propertyPath: explosionEase.m_Curve.Array.data[0].inSlope
-      value: 2
+      value: 1.8630658
       objectReference: {fileID: 0}
     - target: {fileID: 1063691166325534267, guid: 83517afad859e734889cfebd15a78d31, type: 3}
-      propertyPath: explosionEase.m_Curve.Array.data[1].inSlope
-      value: 0
+      propertyPath: explosionEase.m_Curve.Array.data[3].inSlope
+      value: 0.18702435
       objectReference: {fileID: 0}
     - target: {fileID: 1063691166325534267, guid: 83517afad859e734889cfebd15a78d31, type: 3}
       propertyPath: explosionEase.m_Curve.Array.data[0].outSlope
-      value: 2
+      value: 1.8630658
       objectReference: {fileID: 0}
     - target: {fileID: 1063691166325534267, guid: 83517afad859e734889cfebd15a78d31, type: 3}
-      propertyPath: explosionEase.m_Curve.Array.data[1].inWeight
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1063691166325534267, guid: 83517afad859e734889cfebd15a78d31, type: 3}
-      propertyPath: explosionEase.m_Curve.Array.data[1].outSlope
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1063691166325534267, guid: 83517afad859e734889cfebd15a78d31, type: 3}
-      propertyPath: explosionEase.m_Curve.Array.data[0].outWeight
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1063691166325534267, guid: 83517afad859e734889cfebd15a78d31, type: 3}
-      propertyPath: explosionEase.m_Curve.Array.data[1].outWeight
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1063691166325534267, guid: 83517afad859e734889cfebd15a78d31, type: 3}
-      propertyPath: explosionEase.m_Curve.Array.data[0].tangentMode
-      value: 0
+      propertyPath: explosionEase.m_Curve.Array.data[3].outSlope
+      value: 0.18702435
       objectReference: {fileID: 0}
     - target: {fileID: 1449754411015585469, guid: 83517afad859e734889cfebd15a78d31, type: 3}
       propertyPath: m_Name
-      value: UICurrencyAnimation-Star
+      value: UILongCurrencyAnimation-Coin
       objectReference: {fileID: 0}
     - target: {fileID: 2299487879562916127, guid: 83517afad859e734889cfebd15a78d31, type: 3}
       propertyPath: m_Pivot.x
@@ -130,7 +114,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2299487879562916127, guid: 83517afad859e734889cfebd15a78d31, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -260.20007
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2299487879562916127, guid: 83517afad859e734889cfebd15a78d31, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -145,32 +129,28 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4307367420649886107, guid: 83517afad859e734889cfebd15a78d31, type: 3}
+      propertyPath: imgIcon
+      value: 
+      objectReference: {fileID: 5742272554494610167}
+    - target: {fileID: 4307367420649886107, guid: 83517afad859e734889cfebd15a78d31, type: 3}
       propertyPath: currencyID._id
-      value: Star
+      value: Coin
       objectReference: {fileID: 0}
-    - target: {fileID: 4505690789275816908, guid: 83517afad859e734889cfebd15a78d31, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 1
-      objectReference: {fileID: 0}
+    - target: {fileID: 4307367420649886107, guid: 83517afad859e734889cfebd15a78d31, type: 3}
+      propertyPath: _targetAnimationRect
+      value: 
+      objectReference: {fileID: 5583766958996382360}
+    - target: {fileID: 4307367420649886107, guid: 83517afad859e734889cfebd15a78d31, type: 3}
+      propertyPath: _collectionAnimationController
+      value: 
+      objectReference: {fileID: 4883229778629991252}
     - target: {fileID: 4505690789275816908, guid: 83517afad859e734889cfebd15a78d31, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 244.99997
+      value: -155.00003
       objectReference: {fileID: 0}
     - target: {fileID: 4505690789275816908, guid: 83517afad859e734889cfebd15a78d31, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -228.19994
-      objectReference: {fileID: 0}
-    - target: {fileID: 4505690789275816908, guid: 83517afad859e734889cfebd15a78d31, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -36.799927
-      objectReference: {fileID: 0}
-    - target: {fileID: 4520118247310004406, guid: 83517afad859e734889cfebd15a78d31, type: 3}
-      propertyPath: m_text
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 4520118247310004406, guid: 83517afad859e734889cfebd15a78d31, type: 3}
-      propertyPath: m_fontSize
-      value: 56.96
+      value: -42.500015
       objectReference: {fileID: 0}
     - target: {fileID: 4520118247310004406, guid: 83517afad859e734889cfebd15a78d31, type: 3}
       propertyPath: m_fontColor.b
@@ -181,28 +161,12 @@ PrefabInstance:
       value: 0.93725497
       objectReference: {fileID: 0}
     - target: {fileID: 4520118247310004406, guid: 83517afad859e734889cfebd15a78d31, type: 3}
-      propertyPath: m_fontSizeMax
-      value: 56.96
-      objectReference: {fileID: 0}
-    - target: {fileID: 4520118247310004406, guid: 83517afad859e734889cfebd15a78d31, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 2100000, guid: 57af47f95969e724aa4c19d0e6148902, type: 2}
-    - target: {fileID: 4520118247310004406, guid: 83517afad859e734889cfebd15a78d31, type: 3}
-      propertyPath: m_enableAutoSizing
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4520118247310004406, guid: 83517afad859e734889cfebd15a78d31, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4287688703
       objectReference: {fileID: 0}
     - target: {fileID: 4520118247310004406, guid: 83517afad859e734889cfebd15a78d31, type: 3}
       propertyPath: m_HorizontalAlignment
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4743074020171517258, guid: 83517afad859e734889cfebd15a78d31, type: 3}
-      propertyPath: m_IsActive
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5849908234433503086, guid: 83517afad859e734889cfebd15a78d31, type: 3}
       propertyPath: m_SizeDelta.x
@@ -212,12 +176,35 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6871597444811183122, guid: 83517afad859e734889cfebd15a78d31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83517afad859e734889cfebd15a78d31, type: 3}
+--- !u!114 &4883229778629991252 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1063691166325534267, guid: 83517afad859e734889cfebd15a78d31, type: 3}
+  m_PrefabInstance: {fileID: 5550205944905102703}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39e7af7985f2eb7488af3c42373ef43d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: GameMaker.Core.Runtime::GameMaker.Core.Runtime.ExplosionCollectionAnimationController
+--- !u!224 &5583766958996382360 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 34846347490138103, guid: 83517afad859e734889cfebd15a78d31, type: 3}
+  m_PrefabInstance: {fileID: 5550205944905102703}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5742272554494610167 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 195603739043970968, guid: 83517afad859e734889cfebd15a78d31, type: 3}
+  m_PrefabInstance: {fileID: 5550205944905102703}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image

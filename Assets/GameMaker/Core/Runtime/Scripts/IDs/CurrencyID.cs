@@ -5,7 +5,7 @@ using Cysharp.Threading.Tasks;
 namespace GameMaker.Core.Runtime
 {
     [System.Serializable]
-    public abstract class CurrencyID : BaseID
+    public class CurrencyID : BaseID
     {
         public BasePlayerCurrency GetPlayerCurrency()
         {
@@ -19,6 +19,9 @@ namespace GameMaker.Core.Runtime
         {
             return CurrencyManager.Instance.GetDefinition(ID);
         }
-        public abstract UniTask AddCurrencyAsync(object value, IExtendData extendData);
+        public async UniTask AddCurrencyAsync(object value, IExtendData extendData)
+        {
+            await CurrencyGateway.Manager.AddPlayerCurrencyAsync(ID, value, extendData);
+        }
     }
 }

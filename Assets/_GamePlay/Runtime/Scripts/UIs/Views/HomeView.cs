@@ -21,6 +21,7 @@ namespace CatAdventure.GamePlay
         [SerializeField] private TimedID _timedID;
         [SerializeField] private PropertyID _propertyID;
         [SerializeField] private ConfigID _configID;
+        [SerializeField] private ConditionID _conditionID;
         protected override void OnShow()
         {
             base.OnShow();
@@ -55,7 +56,12 @@ namespace CatAdventure.GamePlay
         [ContextMenu("Add PlayerCurrency")]
         private void AddPlayerCurrency()
         {
-            _currencyID.AddCurrencyAsync(100,null).Forget();
+            _currencyID.AddCurrencyAsync(100, null).Forget();
+        }
+        [ContextMenu("Add PlayerProperty")]
+        private void AddPlayerProperty()
+        {
+            _propertyID.SetPropertyAsync(((_propertyID.GetPlayerProperty() as PlayerStat).Value +1).ToString(), null).Forget();
         }
     }
 }

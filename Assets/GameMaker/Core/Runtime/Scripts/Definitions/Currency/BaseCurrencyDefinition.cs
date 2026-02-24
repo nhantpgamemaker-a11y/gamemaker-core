@@ -18,10 +18,11 @@ namespace GameMaker.Core.Runtime
         string title,
         string description,
         Sprite icon,
-        BaseMetaData metaData) : 
-        base(id, name, title,description, icon,metaData)
+        BaseMetaData metaData) :
+        base(id, name, title, description, icon, metaData)
         {
         }
+        public abstract object GetDefaultValue();
         
 #if UNITY_EDITOR
         public virtual string GetGenClassCode()

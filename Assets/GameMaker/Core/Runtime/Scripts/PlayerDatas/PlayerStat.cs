@@ -36,6 +36,7 @@ namespace GameMaker.Core.Runtime
         public override void Set(string value)
         {
             _value = float.Parse(value);
+            NotifyObserver(this);
         }
     }
 }

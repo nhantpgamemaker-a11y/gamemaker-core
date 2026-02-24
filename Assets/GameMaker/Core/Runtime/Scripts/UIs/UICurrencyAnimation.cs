@@ -4,28 +4,27 @@ using UnityEngine;
 
 namespace GameMaker.Core.Runtime
 {
-    public abstract class UICurrencyAnimation : UICurrency,IUICollection
+    public class UILongCurrencyAnimation : UICurrency,IUICollection
     {
         [UnityEngine.SerializeField] private BaseCollectionAnimationController _collectionAnimationController;
         [SerializeField] protected RectTransform _initAnimationRect;
         [SerializeField] protected RectTransform _targetAnimationRect;
-        private float _currentAmount;
-        private float _animationCurrencyAmount;
-        private float _currentActive = 0;
-        public float CurrentActive => _currentActive;
-        public float CurrentAmount { get => _currentAmount; }
-        public float AnimationCurrencyAmount { get => _animationCurrencyAmount; }
+        private long _currentAmount;
+        private long _animationCurrencyAmount;
+        private long _currentActive = 0;
+        public long CurrentActive => _currentActive;
+        public long CurrentAmount { get => _currentAmount; }
+        public long AnimationCurrencyAmount { get => _animationCurrencyAmount; }
 
         protected override void OnValidate()
         {
-            this.gameObject.name = $"UICurrencyAnimation-{currencyID.GetBaseCurrencyDefinition().GetName()}";
+            this.gameObject.name = $"UILongCurrencyAnimation-{currencyID.GetBaseCurrencyDefinition().GetName()}";
         }
         public override void Init()
         {
             base.Init();
             UICollectionAnimation.Instance.Add(currencyID.ID, this);
-            throw new System.NotImplementedException();
-            //_currentAmount = float.Parse(playerCurrency.Value);
+            _currentAmount = (long)playerCurrency.GetValue();
             _animationCurrencyAmount = _currentAmount;
             _currentActive = _currentAmount;
             UpdateUI(playerCurrency);
@@ -37,24 +36,24 @@ namespace GameMaker.Core.Runtime
         }
         public async UniTask PlayAnimationAsync(BasePlayerCurrency playerCurrency)
         {
-            throw new System.NotImplementedException();
-            // float gap = float.Parse(playerCurrency.Value) - _currentAmount;
-            // if (gap < 0)
-            // {
-            //     _animationCurrencyAmount -= gap;
-            //     UpdateUI(playerCurrency);
-            // }
-            // else
-            // {
-            //     _currentActive++;
-            //     _currentAmount = float.Parse(playerCurrency.Value);
-            //     var currencyDefinition = playerCurrency.GetDefinition() as BaseCurrencyDefinition;
-            //     var task = _collectionAnimationController.PlayAsync(currencyDefinition.GetIcon(), gap, _initAnimationRect.position, _targetAnimationRect, OnCollectionAction);
-            //     await task;
-            //     _currentActive--;
-            // }
+            
+            long gap = (long)playerCurrency.GetValue() - _currentAmount;
+            if (gap < 0)
+            {
+                _animationCurrencyAmount -= gap;
+                UpdateUI(playerCurrency);
+            }
+            else
+            {
+                _currentActive++;
+                _currentAmount = (long)playerCurrency.GetValue();
+                var currencyDefinition = playerCurrency.GetDefinition() as BaseCurrencyDefinition;
+                var task = _collectionAnimationController.PlayAsync(currencyDefinition.GetIcon(), gap, _initAnimationRect.position, _targetAnimationRect, OnCollectionAction);
+                await task;
+                _currentActive--;
+            }
         }
-        public void OnCollectionAction(float amount)
+        public void OnCollectionAction(long amount)
         {
             _animationCurrencyAmount += amount;
             UpdateUI(playerCurrency);
@@ -68,9 +67,8 @@ namespace GameMaker.Core.Runtime
         {
             if (!UICollectionAnimation.Instance.IsLast(currencyID.ID, this))
             {
-                throw new System.NotImplementedException();
-                // txtAmount.text = playerCurrency.Value.ToString();
-                // _animationCurrencyAmount = float.Parse(playerCurrency.Value);
+                txtAmount.text = playerCurrency.GetValue().ToString();
+                _animationCurrencyAmount = (long)playerCurrency.GetValue();
             }
             else
             {

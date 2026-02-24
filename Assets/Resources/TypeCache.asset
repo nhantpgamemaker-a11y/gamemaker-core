@@ -112,6 +112,13 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
     - GameMaker.Sound.Runtime.LocalSoundSaveData, GameMaker.Sound.Runtime, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  - _baseTypeName: GameMaker.Core.Runtime.BasePlayerCurrencyModel, GameMaker.Core.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    _derivedTypeNames:
+    - GameMaker.Core.Runtime.LongPlayerCurrencyModel, GameMaker.Core.Runtime, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    - GameMaker.Core.Runtime.BigIntPlayerCurrencyModel, GameMaker.Core.Runtime, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   - _baseTypeName: GameMaker.Core.Runtime.PlayerPropertyModel, GameMaker.Core.Runtime,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     _derivedTypeNames:
@@ -282,6 +289,13 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
     - GameMaker.Sound.Runtime.LocalSoundSaveData, GameMaker.Sound.Runtime, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  - _baseTypeName: GameMaker.Core.Runtime.BasePlayerCurrencyModel, GameMaker.Core.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    _derivedTypeNames:
+    - GameMaker.Core.Runtime.LongPlayerCurrencyModel, GameMaker.Core.Runtime, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    - GameMaker.Core.Runtime.BigIntPlayerCurrencyModel, GameMaker.Core.Runtime, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   - _baseTypeName: GameMaker.Core.Runtime.PlayerPropertyModel, GameMaker.Core.Runtime,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     _derivedTypeNames:
@@ -451,6 +465,13 @@ MonoBehaviour:
     - GameMaker.IAP.Runtime.LocalIAPSaveData, GameMaker.IAP.Runtime, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
     - GameMaker.Sound.Runtime.LocalSoundSaveData, GameMaker.Sound.Runtime, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - _baseTypeName: GameMaker.Core.Runtime.BasePlayerCurrencyModel, GameMaker.Core.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    _derivedTypeNames:
+    - GameMaker.Core.Runtime.LongPlayerCurrencyModel, GameMaker.Core.Runtime, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    - GameMaker.Core.Runtime.BigIntPlayerCurrencyModel, GameMaker.Core.Runtime, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   - _baseTypeName: GameMaker.Core.Runtime.PlayerPropertyModel, GameMaker.Core.Runtime,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null

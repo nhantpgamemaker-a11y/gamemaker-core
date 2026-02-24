@@ -10,6 +10,7 @@ namespace GameMaker.UI.Runtime
         internal void OnInit(PopupController popupController)
         {
             this.popupController = popupController;
+            SetUIController(popupController.UIController);
         }
     }
 }

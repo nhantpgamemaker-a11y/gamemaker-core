@@ -27,5 +27,10 @@ namespace GameMaker.Core.Runtime
         {
             return new LongCurrencyDefinition(GetID(), GetName(), GetTitle(), GetDescription(), GetIcon(), GetMetaData(), _defaultValue, _maxValue);
         }
+
+        public override object GetDefaultValue()
+        {
+            return _defaultValue;
+        }
     }
 }

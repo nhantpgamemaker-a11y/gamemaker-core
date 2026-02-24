@@ -15,17 +15,5 @@ namespace GameMaker.Core.Runtime
         {
             return await CurrencyGateway.Manager.AddPlayerCurrencyAsync(this.ID, amount, extendData);
         }
-
-        public override UniTask AddCurrencyAsync(object value, IExtendData extendData)
-        {
-            if (value is long longValue)
-            {
-                return AddCurrencyAsync(longValue, extendData);
-            }
-            else
-            {
-                throw new System.ArgumentException($"Value must be of type long. Provided value: {value}");
-            }
-        }
     }
 }

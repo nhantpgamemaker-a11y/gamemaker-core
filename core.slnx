@@ -116,6 +116,7 @@
   <Project Path="Unity.Purchasing.SecurityStub.csproj" />
   <Project Path="LitMotion.Animation.Editor.csproj" />
   <Project Path="Unity.CollabProxy.Editor.csproj" />
+  <Project Path="GameMaker.Extension.Runtime.csproj" />
   <Project Path="IAPResolver.csproj" />
   <Project Path="Unity.RenderPipeline.Universal.ShaderLibrary.csproj" />
   <Project Path="UniTask.Editor.csproj" />

@@ -20,8 +20,13 @@ namespace GameMaker.Core.Runtime
             base.OnCreate();
             foreach(var currencyDefinition in CurrencyManager.Instance.GetDefinitions())
             {
-                throw new System.NotImplementedException();
-                //_playerCurrencies.Add(new BasePlayerCurrencyModel(currencyDefinition.GetID(), currencyDefinition.GetName(), currencyDefinition.DefaultValue));
+
+                var playerCurrencyModelType = _playerCurrencyTypeFactory.GetType(currencyDefinition.GetType());
+                var playerCurrency = Activator.CreateInstance(playerCurrencyModelType,
+                                                                currencyDefinition.GetID(),
+                                                                currencyDefinition.GetName(),
+                                                                currencyDefinition.GetDefaultValue()) as BasePlayerCurrencyModel;
+                _playerCurrencies.Add(playerCurrency);
             }
         }
         protected internal override void OnLoad()
@@ -32,8 +37,12 @@ namespace GameMaker.Core.Runtime
             {
                 if (!currencyIds.Contains(currencyDefinition.GetID()))
                 {
-                    throw new System.NotImplementedException();
-                    //_playerCurrencies.Add(new BasePlayerCurrencyModel(currencyDefinition.GetID(), currencyDefinition.GetName(), currencyDefinition.DefaultValue));
+                    var playerCurrencyModelType = _playerCurrencyTypeFactory.GetType(currencyDefinition.GetType());
+                    var playerCurrency = Activator.CreateInstance(playerCurrencyModelType,
+                                                                currencyDefinition.GetID(),
+                                                                currencyDefinition.GetName(),
+                                                                currencyDefinition.GetDefaultValue()) as BasePlayerCurrencyModel;
+                    _playerCurrencies.Add(playerCurrency);
                 }
             }
         }
@@ -77,9 +86,10 @@ namespace GameMaker.Core.Runtime
         }
     }
     [System.Serializable]
+    [TypeCache]
     public abstract class BasePlayerCurrencyModel : PlayerDataModel
     {
-        public BasePlayerCurrencyModel(string id, string name) : base(id, name)
+        public BasePlayerCurrencyModel(string id, string name, object value) : base(id, name)
         {
             base.id = id;
             base.name = name;
@@ -89,17 +99,19 @@ namespace GameMaker.Core.Runtime
 
         public abstract BasePlayerCurrency ToPlayerCurrency();
     }
+    [TypeContain(typeof(LongCurrencyDefinition))]
     public class LongPlayerCurrencyModel : BasePlayerCurrencyModel
     {
+        [JsonProperty("Value")]
         private long _value;
-        public LongPlayerCurrencyModel(string id, string name, long value) : base(id, name)
+        public LongPlayerCurrencyModel(string id, string name, object value) : base(id, name, value)
         {
-            _value = value;
+            _value = (long)value;
         }
 
         public override void AddValue(object value)
         {
-            _value += (long)value;
+            _value += Convert.ToInt64(value);
         }
 
         public override object GetValue()
@@ -113,17 +125,20 @@ namespace GameMaker.Core.Runtime
             return new LongPlayerCurrency(currencyDefinition.GetID(), currencyDefinition, _value);
         }
     }
+    
+    [TypeContain(typeof(BigIntCurrencyDefinition))]
     public class BigIntPlayerCurrencyModel : BasePlayerCurrencyModel
     {
-        private BigInteger _value;
-        public BigIntPlayerCurrencyModel(string id, string name, BigInteger value) : base(id, name)
+        [JsonProperty("Value")]
+        private string _value;
+        public BigIntPlayerCurrencyModel(string id, string name, object value) : base(id, name, value)
         {
-            _value = value;
+            _value = value.ToString();
         }
 
         public override void AddValue(object value)
         {
-            _value += (BigInteger)value;
+            _value = (BigInteger.Parse(_value) + (BigInteger)value).ToString();
         }
 
         public override object GetValue()
@@ -134,7 +149,7 @@ namespace GameMaker.Core.Runtime
         public override BasePlayerCurrency ToPlayerCurrency()
         {
             var currencyDefinition = CurrencyManager.Instance.GetDefinition(id);
-            return new BigIntPlayerCurrency(currencyDefinition.GetID(), currencyDefinition, _value);
+            return new BigIntPlayerCurrency(currencyDefinition.GetID(), currencyDefinition, BigInteger.Parse(_value));
         }
     }
 }

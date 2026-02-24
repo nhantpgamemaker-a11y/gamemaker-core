@@ -1,3 +1,4 @@
+using System;
 using Newtonsoft.Json;
 
 namespace GameMaker.Core.Runtime
@@ -14,7 +15,8 @@ namespace GameMaker.Core.Runtime
 
         public override void AddValue(object value)
         {
-            _value += (long)value;
+            _value += Convert.ToInt64(value);
+            NotifyObserver(this);
         }
 
         public override object Clone()
@@ -22,7 +24,8 @@ namespace GameMaker.Core.Runtime
             return new LongPlayerCurrency(GetID(), definition, _value);
         }
 
-        public long GetValue()
+
+        public override object GetValue()
         {
             return _value;
         }

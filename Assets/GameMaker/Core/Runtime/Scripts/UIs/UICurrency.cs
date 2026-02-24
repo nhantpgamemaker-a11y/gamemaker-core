@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 namespace GameMaker.Core.Runtime
 {
-    public abstract class UICurrency : BaseLifeCycle,IObserver<BasePlayerData>
+    public class UICurrency : BaseLifeCycle,IObserver<BasePlayerData>
     {
         [Header("Config")]
         [UnityEngine.SerializeField] protected CurrencyID currencyID;
@@ -36,8 +36,7 @@ namespace GameMaker.Core.Runtime
         }
         protected virtual void UpdateUI(BasePlayerCurrency playerCurrency)
         {
-            throw new System.NotImplementedException();
-            //txtAmount.text = playerCurrency.Value.ToString();
+            txtAmount.text = playerCurrency.GetValue().ToString();
         }
 
         #region IObserver<BasePlayerData>

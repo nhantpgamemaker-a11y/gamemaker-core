@@ -12,21 +12,9 @@ namespace GameMaker.Core.Runtime
         {
             return CurrencyManager.Instance.GetDefinitions().Where(x=>x.GetType() ==typeof(BigIntCurrencyDefinition)).Cast<IDefinition>().ToList();
         }
-        public async UniTask<bool> AddCurrencyAsync(long amount, IExtendData extendData)
+        public async UniTask<bool> AddCurrencyAsync(BigInteger amount, IExtendData extendData)
         {
             return await CurrencyGateway.Manager.AddPlayerCurrencyAsync(this.ID, amount, extendData);
-        }
-
-        public override UniTask AddCurrencyAsync(object value, IExtendData extendData)
-        {
-            if (value is BigInteger bigIntValue)
-            {
-                return AddCurrencyAsync(bigIntValue, extendData);
-            }
-            else
-            {
-                throw new System.ArgumentException($"Value must be of type BigInteger. Provided value: {value}");
-            }
         }
     }
 }

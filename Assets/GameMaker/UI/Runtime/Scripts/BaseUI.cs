@@ -1,4 +1,5 @@
 
+using System;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 
@@ -9,7 +10,19 @@ namespace GameMaker.UI.Runtime
         [SerializeField] protected RectTransform overlay;
         [SerializeField] protected RectTransform container;
         [SerializeField] private BaseUIAnimation _uiAnimation;
+        private UIController _uIController;
+        public UIController UIController => _uIController;
+
+        public void SetUIController(UIController uIController)
+        {
+            _uIController = uIController;
+        }
         protected object data = null;
+
+        public event Action OnShowAction;
+        public event Action OnHideAction;
+        public event Action OnShownAction;
+        public event Action OnHiddenAction;
         public void SetData(object data)
         {
             this.data = data;
@@ -19,14 +32,18 @@ namespace GameMaker.UI.Runtime
             overlay.gameObject.SetActive(true);
             container.gameObject.SetActive(true);
             OnShow();
+            OnShowAction?.Invoke();
             await _uiAnimation.ShowAsync();
             OnShown();
+            OnShownAction?.Invoke();
         }
         internal virtual async UniTask HideAsync()
         {
             OnHide();
+            OnHideAction?.Invoke();
             await _uiAnimation.HideAsync();
             OnHidden();
+            OnHiddenAction?.Invoke();
             overlay.gameObject.SetActive(false);
             container.gameObject.SetActive(false);
             this.data = null;

@@ -45,11 +45,12 @@ namespace GameMaker.Core.Runtime
             }
         }
 
-        public async UniTask PlayAsync(Sprite sprite, float amount, Vector3 initPosition, Transform target, Action<float> OnCollectAction = null)
+        public async UniTask PlayAsync(Sprite sprite, long amount, Vector3 initPosition, Transform target, Action<long> OnCollectAction = null)
         {
-            float maxAmount = Mathf.Min(maxNumberSpawn, amount);
-            int spawnAmount = Mathf.RoundToInt(maxAmount);
-            float amountPerItem = amount / spawnAmount;
+            int spawnAmount = (int)Mathf.Min(maxNumberSpawn, amount);
+            long baseAmount = amount / spawnAmount;      
+            long remainder = amount % spawnAmount;   
+
             var baseItemCollections = new List<BaseItemCollection>();
             for (int i = 0; i < spawnAmount; i++)
             {
@@ -58,21 +59,27 @@ namespace GameMaker.Core.Runtime
                 baseItemCollection.transform.position = initPosition;
                 baseItemCollections.Add(baseItemCollection);
             }
+            
             await SpawnAnimation(initPosition, baseItemCollections);
 
             var flyTask = new List<UniTask>();
-            foreach (var item in baseItemCollections)
+            for (int i = 0; i < baseItemCollections.Count; i++)
             {
+                long itemAmount = i == baseItemCollections.Count - 1 
+                    ? baseAmount + remainder 
+                    : baseAmount;
+
                 float duration = UnityEngine.Random.Range(durationFlyToTarget.x, durationFlyToTarget.y);
-                flyTask.Add(FlyToTarget(item, target, duration, amountPerItem, OnCollectAction));
+                flyTask.Add(FlyToTarget(baseItemCollections[i], target, duration, itemAmount, OnCollectAction));
             }
+    
             await UniTask.WhenAll(flyTask);
         }
         public virtual async UniTask SpawnAnimation(Vector3 initPosition, List<BaseItemCollection> baseItemCollections)
         {
             await UniTask.CompletedTask;
         }
-        public virtual async UniTask FlyToTarget(BaseItemCollection baseItemCollection, Transform target,float duration,float amountPerItem ,Action<float> OnCollectionAction = null)
+        public virtual async UniTask FlyToTarget(BaseItemCollection baseItemCollection, Transform target,float duration,long amountPerItem ,Action<long> OnCollectionAction = null)
         {
             var firstPosition = baseItemCollection.transform.position;
             await LMotion.Create(0f, 1f, duration).WithEase(flyEase).Bind(t =>

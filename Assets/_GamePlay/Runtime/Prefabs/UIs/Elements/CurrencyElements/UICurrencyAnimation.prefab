@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4307367420649886107}
   - component: {fileID: 1063691166325534267}
   m_Layer: 5
-  m_Name: UICurrencyAnimation-Coin
+  m_Name: UILongCurrencyAnimation-Gem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -60,7 +60,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: GameMaker.Core.Runtime::GameMaker.Core.Runtime.UICurrencyAnimation
   currencyID:
-    _id: Coin
+    _id: Gem
   txtAmount: {fileID: 4520118247310004406}
   imgIcon: {fileID: 195603739043970968}
   _collectionAnimationController: {fileID: 1063691166325534267}

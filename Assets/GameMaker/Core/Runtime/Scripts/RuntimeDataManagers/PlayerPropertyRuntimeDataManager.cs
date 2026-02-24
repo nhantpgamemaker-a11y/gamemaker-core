@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
 
 namespace GameMaker.Core.Runtime
@@ -38,6 +39,6 @@ namespace GameMaker.Core.Runtime
                 RuntimeActionManager.Instance.NotifyAction(PropertyActionData.SET_PROPERTY_ACTION_DEFINITION, new PropertyActionData(id, value, extendData));
             }
             return status;
-        } 
+        }
     }
 }

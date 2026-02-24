@@ -23,10 +23,14 @@ namespace GameMaker.UI.Runtime
             {
                 alert = _poolManager.Get<BaseAlert>(poolingName);
             }
-            alert.gameObject.transform.parent = _canvas.gameObject.transform;
+            alert.gameObject.transform.SetParent(_canvas.gameObject.transform, false);
+            alert.gameObject.transform.SetAsLastSibling();
             alert.gameObject.transform.localPosition = Vector3.zero;
+            alert.gameObject.SetActive(true);
             alert.SetData(text);
             await alert.ShowAsync();
+            alert.gameObject.SetActive(false);
+            await alert.HideAsync();
             _poolManager.Release(alert);
         }
 

@@ -10,6 +10,7 @@ namespace GameMaker.UI.Runtime
         internal protected virtual void OnInit(ViewController viewController)
         {
             this.viewController = viewController;
+            SetUIController(viewController.UIController);
         }
     }
 }

@@ -6,12 +6,12 @@ using UnityEngine.UIElements;
 
 namespace GameMaker.Core.Editor
 {
-    [TypeContain(typeof(CurrencyRewardDefinition))]
-    public class CurrencyRewardDefinitionHolder : BaseRewardDefinitionHolder
+    [TypeContain(typeof(BaseCurrencyRewardDefinition))]
+    public class BaseCurrencyRewardDefinitionHolder : BaseRewardDefinitionHolder
     {
         private DropdownField _currencyDropdownField;
         private FloatField _amountFloatField;
-        public CurrencyRewardDefinitionHolder(VisualElement root) : base(root)
+        public BaseCurrencyRewardDefinitionHolder(VisualElement root) : base(root)
         {
         }
         public override void Bind(SerializedProperty elementProperty)
@@ -25,7 +25,6 @@ namespace GameMaker.Core.Editor
             }
             _currencyDropdownField.value = data.GetName();
 
-            
             _currencyDropdownField.RegisterValueChangedCallback(v =>
             {
                 var data = CurrencyManager.Instance.GetDefinitions().FirstOrDefault(x => x.GetName() == _currencyDropdownField.value);
@@ -49,7 +48,7 @@ namespace GameMaker.Core.Editor
 
         public override VisualTreeAsset GetVisualTreeAsset()
         {
-            return UIToolkitLoaderUtils.LoadUXML("CurrencyRewardDefinitionElement");
+            return UIToolkitLoaderUtils.LoadUXML("BaseCurrencyRewardDefinitionElement");
         }
         public override string GetNameFoldout()
         {

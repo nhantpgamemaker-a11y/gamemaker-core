@@ -25,7 +25,7 @@ MonoBehaviour:
         _id: LifeUnlimitTime
         _name: LifeUnlimitTime
         _title: LifeUnlimitTime
-        _icon: {fileID: 0}
+        _icon: {fileID: 21300000, guid: f6757e31c958a48a8adb8ff74fb31e16, type: 3}
         _description: LifeUnlimitTime
         _metaData: {fileID: 0}
         _defaultValue: 0

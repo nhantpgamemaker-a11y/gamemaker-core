@@ -131,7 +131,7 @@ namespace CatAdventure.GamePlay
             for (int i = 0; i < mapIds.Count; i++)
             {
                 var uiMapController = _poolingManager.Get<UIMapController>(mapIds[i]);
-                uiMapController.transform.parent = _rectContent.transform;
+                uiMapController.transform.SetParent(_rectContent.transform);
                 _mapControllers.Add(uiMapController);
                 var points = uiMapController.Points;
                 foreach (var point in points)
@@ -188,7 +188,7 @@ namespace CatAdventure.GamePlay
                         foreach (var point in points)
                         {
                             var item = _poolingManager.Get<UILevelItemController>(UILevelItemController.POOLING_NAME);
-                            item.transform.parent = point;
+                            item.transform.SetParent(point);
                             item.transform.localPosition = Vector3.zero;
                             item.OnInit(_pointDict[point], viewController.UIController);
                             listItems.Add(item);

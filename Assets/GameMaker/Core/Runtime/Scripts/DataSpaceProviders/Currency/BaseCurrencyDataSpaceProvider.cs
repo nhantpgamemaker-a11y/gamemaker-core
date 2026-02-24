@@ -7,7 +7,7 @@ namespace GameMaker.Core.Runtime
     {
         public abstract UniTask<bool> InitAsync(BaseDataSpaceSetting baseDataSpaceSetting);
     
-        public abstract UniTask<bool> AddCurrencyAsync(string id, string value);
+        public abstract UniTask<bool> AddCurrencyAsync(string id, object value);
 
         public abstract UniTask<(bool status, List<BasePlayerCurrency> playerCurrencies)> GetPlayerCurrenciesAsync();
 

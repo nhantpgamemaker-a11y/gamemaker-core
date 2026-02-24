@@ -6,7 +6,6 @@ namespace GameMaker.Core.Runtime
 {
     public interface IUICollection
     {
-        
     }
     public class UICollectionAnimation : AutomaticMonoSingleton<UICollectionAnimation>
     {

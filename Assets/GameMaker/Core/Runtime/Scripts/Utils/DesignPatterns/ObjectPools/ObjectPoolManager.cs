@@ -133,7 +133,7 @@ namespace GameMaker.Core.Runtime
                 var setting = registrationPoolingObjectSettings.FirstOrDefault(x => x.name == objectPooling.GetName());
                 if (setting == null)
                     return;
-                objectPooling.GetObject().transform.parent = setting.parent;
+                objectPooling.GetObject().transform.SetParent(setting.parent);
             }
         }
         public ObjectPool<IObjectPooling> Register(RegistrationPoolingObjectSetting setting)

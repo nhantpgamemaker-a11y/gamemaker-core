@@ -69,7 +69,7 @@ MonoBehaviour:
         _description: Music_BG_Map
         _metaData: {fileID: 0}
         _clip: {fileID: 8300000, guid: 4bf6f061831f34243ab982369659368d, type: 3}
-        _mixerGroup: MusicGroup
+        _mixerGroup: UIGroup
         _volumeScale: 1
     - rid: 4925655100169126031
       type: {class: SoundDefinition, ns: GameMaker.Sound.Runtime, asm: GameMaker.Sound.Runtime}
@@ -81,5 +81,5 @@ MonoBehaviour:
         _description: SFX_Game_LightSwitch
         _metaData: {fileID: 0}
         _clip: {fileID: 8300000, guid: 15e125c476b108844b1edaf5ba604fa5, type: 3}
-        _mixerGroup: 
+        _mixerGroup: UIGroup
         _volumeScale: 1

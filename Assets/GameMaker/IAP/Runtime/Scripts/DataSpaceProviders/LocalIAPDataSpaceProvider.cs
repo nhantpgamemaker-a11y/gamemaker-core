@@ -151,23 +151,39 @@ namespace GameMaker.IAP.Runtime
         public abstract BaseReceiverProduct Recall(BaseRewardDefinition rewardDefinition);
         public abstract UniTask SaveAsync();
     }
-    [TypeContain(typeof(CurrencyRewardDefinition))]
-    public class CurrencyLocalRecallReward : BaseLocalRecallReward
-    {
-        public override BaseReceiverProduct Recall(BaseRewardDefinition rewardDefinition)
-        {
-            var currency = rewardDefinition as CurrencyRewardDefinition;
-            var localCurrencySaveData = localDataManager.Get<LocalCurrencySaveData>();
-            _ = localCurrencySaveData.AddPlayerCurrency(currency.GetReferenceID(), $"-{currency.Amount}", false);
-            return new CurrencyReceiverProduct(currency.GetReferenceID(), $"-{currency.Amount}");
-        }
 
+    public abstract class CurrencyLocalRecallReward : BaseLocalRecallReward
+    {
         public async override UniTask SaveAsync()
         {
             var localCurrencySaveData = localDataManager.Get<LocalCurrencySaveData>();
             await localCurrencySaveData.SaveAsync();
         }
     }
+    [TypeContain(typeof(BigIntCurrencyDefinition))]
+
+    public class BigIntCurrencyLocalRecallReward : CurrencyLocalRecallReward
+    {
+        public override BaseReceiverProduct Recall(BaseRewardDefinition rewardDefinition)
+        {
+            var currency = rewardDefinition as BaseCurrencyRewardDefinition;
+            var localCurrencySaveData = localDataManager.Get<LocalCurrencySaveData>();
+            _ = localCurrencySaveData.AddPlayerCurrency(currency.GetReferenceID(), currency.GetAmount(), false);
+            return new BigIntCurrencyReceiverProduct(currency.GetReferenceID(), currency.GetAmount());
+        }
+    }
+    [TypeContain(typeof(LongCurrencyDefinition))]
+    public class LongCurrencyLocalRecallReward : CurrencyLocalRecallReward
+    {
+        public override BaseReceiverProduct Recall(BaseRewardDefinition rewardDefinition)
+        {
+            var currency = rewardDefinition as BaseCurrencyRewardDefinition;
+            var localCurrencySaveData = localDataManager.Get<LocalCurrencySaveData>();
+            _ = localCurrencySaveData.AddPlayerCurrency(currency.GetReferenceID(), currency.GetAmount(), false);
+            return new LongCurrencyReceiverProduct(currency.GetReferenceID(), currency.GetAmount());
+        }
+    }
+
     [TypeContain(typeof(StatRewardDefinition))]
     public class StatLocalRecallReward : BaseLocalRecallReward
     {
@@ -190,20 +206,20 @@ namespace GameMaker.IAP.Runtime
     {
         public override BaseReceiverProduct Recall(BaseRewardDefinition rewardDefinition)
         {
-            var localItemSaveData = localDataManager.Get<LocalItemSaveData>();
-            var item = rewardDefinition as ItemRewardDefinition;
-            var itemDetailDefinition = item.GetItemDetailDefinition();
-            var statRefs = itemDetailDefinition.ItemPropertyDefinitionRefs.ToList();
-            var prefix = itemDetailDefinition.GetPrefixID();
-            for (int i = 0; i < item.Amount; i++)
-            {
-                var newId = $"{prefix}_{Guid.NewGuid()}";
-                var propertyDefinitionRef = item.CreateItemTemplate.GetItemPropertyDefinitionRefs(statRefs);
-                var playerItemDetail = new PlayerDetailItem(newId, newId, propertyDefinitionRef, itemDetailDefinition);
-                _ = localItemSaveData.AddPlayerItemDetailAsync(playerItemDetail);
+            // var localItemSaveData = localDataManager.Get<LocalItemSaveData>();
+            // var item = rewardDefinition as ItemRewardDefinition;
+            // var itemDetailDefinition = item.GetItemDetailDefinition();
+            // var statRefs = itemDetailDefinition.ItemPropertyDefinitionRefs.ToList();
+            // var prefix = itemDetailDefinition.GetPrefixID();
+            // for (int i = 0; i < item.Amount; i++)
+            // {
+            //     var newId = $"{prefix}_{Guid.NewGuid()}";
+            //     var propertyDefinitionRef = item.CreateItemTemplate.GetItemPropertyDefinitionRefs(statRefs);
+            //     var playerItemDetail = new PlayerDetailItem(newId, newId, propertyDefinitionRef, itemDetailDefinition);
+            //     _ = localItemSaveData.AddPlayerItemDetailAsync(playerItemDetail);
 
-                return new ItemReceiverProduct(newId, newId, propertyDefinitionRef.Select(x => x.Clone() as ItemPropertyDefinitionRef).ToList(), itemDetailDefinition.GetID());
-            }
+            //     return new ItemReceiverProduct(newId, newId, propertyDefinitionRef.Select(x => x.Clone() as ItemPropertyDefinitionRef).ToList(), itemDetailDefinition.GetID());
+            // }
             return null;
         }
 

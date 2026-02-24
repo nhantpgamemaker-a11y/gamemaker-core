@@ -13,11 +13,10 @@ namespace GameMaker.Core.Editor
 
         public StatDefinitionHolder(VisualElement root) : base(root)
         {
-
+            _defaultValueFloatField = Root.Q<FloatField>("DefaultValueFloatField");
         }
         public override void Bind(SerializedProperty elementProperty)
         {
-            _defaultValueFloatField = Root.Q<FloatField>("DefaultValueFloatField");
             _defaultValueFloatField.BindProperty(elementProperty.FindPropertyRelative("_defaultValue"));
              _defaultValueFloatField.RegisterValueChangedCallback(c =>
             {

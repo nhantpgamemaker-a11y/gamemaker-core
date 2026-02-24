@@ -22,15 +22,19 @@ namespace GameMaker.Core.Runtime
             TimedGateway.Initialize(this);
             return true;
         }
-        public async UniTask<bool> AddPlayerTimed(string refId, long amount, BaseMetaData metaData)
+        public async UniTask<bool> AddPlayerTimedAsync(string refId, long amount, IExtendData extendData)
         {
             var (status, playerTimed) = await _timedDataSpaceProvider.AddTimedAsync(refId, amount);
             if (status)
             {
                 _playerTimedManager.CopyFrom(playerTimed);
-                // ToDo: Add Runtime Action Notify
+                RuntimeActionManager.Instance.NotifyAction(CurrencyActionData.ADD_CURRENCY_ACTION_DEFINITION, new TimedActionData(refId, amount, extendData));
             }
             return true;
+        }
+        public PlayerTimed GetPlayerTimed(string id)
+        {
+            return _playerTimedManager.GetPlayerTimed(id);
         }
     }
 }

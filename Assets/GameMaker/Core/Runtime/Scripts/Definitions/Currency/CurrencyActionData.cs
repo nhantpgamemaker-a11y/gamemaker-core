@@ -8,11 +8,11 @@ namespace GameMaker.Core.Runtime
     {
         public const string ADD_CURRENCY_ACTION_DEFINITION = "ADD_CURRENCY_ACTION_DEFINITION";
         private string _currencyId;
-        private string _value;
+        private object _value;
         public string CurrencyId { get => _currencyId; }
-        public string Value { get => _value; }
+        public object Value { get => _value; }
         public CurrencyActionData():base(){}
-        public CurrencyActionData(string currencyId, string value, IExtendData extendData) : base(extendData)
+        public CurrencyActionData(string currencyId, object value, IExtendData extendData) : base(extendData)
         {
             _currencyId = currencyId;
             _value = value;
@@ -21,7 +21,7 @@ namespace GameMaker.Core.Runtime
         {
             var actionParamManager = new BaseDefinitionManager<BaseActionParamDefinition>();
             actionParamManager.AddDefinition(new CurrencyActionParamDefinition("CurrencyID", "CurrencyID", "_currencyId"));
-            actionParamManager.AddDefinition(new FloatActionParamDefinition("Value", "Value", "_value"));
+            actionParamManager.AddDefinition(new ObjectActionParamDefinition("Value", "Value", "_value"));
             ActionDefinition actionDefinition = new(ADD_CURRENCY_ACTION_DEFINITION, ADD_CURRENCY_ACTION_DEFINITION, actionParamManager);
             return new List<ActionDefinition>() { actionDefinition };
         }

@@ -22,7 +22,7 @@ MonoBehaviour:
     version: 2
     RefIds:
     - rid: 4388470143681036465
-      type: {class: BaseCurrencyDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      type: {class: LongCurrencyDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
       data:
         _id: Coin
         _name: Coin
@@ -31,9 +31,9 @@ MonoBehaviour:
         _description: "Tr\u1EA7n Ph\u01B0\u1EDBc Nh\xE2n"
         _metaData: {fileID: 0}
         _defaultValue: 0
-        _maxValue: 0
+        _maxValue: 9223370036854775807
     - rid: 4388470156526354661
-      type: {class: BaseCurrencyDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      type: {class: LongCurrencyDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
       data:
         _id: Energy
         _name: Energy
@@ -42,9 +42,9 @@ MonoBehaviour:
         _description: 
         _metaData: {fileID: 0}
         _defaultValue: 0
-        _maxValue: 0
+        _maxValue: 9223370036854775807
     - rid: 4925655373323436202
-      type: {class: BaseCurrencyDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      type: {class: LongCurrencyDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
       data:
         _id: Gem
         _name: Gem
@@ -53,15 +53,15 @@ MonoBehaviour:
         _description: 
         _metaData: {fileID: 0}
         _defaultValue: 0
-        _maxValue: 0
+        _maxValue: 9223370036854775807
     - rid: 4925655397300175040
-      type: {class: BaseCurrencyDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      type: {class: LongCurrencyDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
       data:
-        _id: Stat
-        _name: Stat
-        _title: Stat
+        _id: Star
+        _name: Star
+        _title: Star
         _icon: {fileID: 21300000, guid: 00cd9db087fdd4cf09844edff3aaa385, type: 3}
         _description: 
         _metaData: {fileID: 0}
         _defaultValue: 0
-        _maxValue: 0
+        _maxValue: 9223370036854775807

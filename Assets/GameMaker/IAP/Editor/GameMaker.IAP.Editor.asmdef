@@ -1,0 +1,22 @@
+{
+    "name": "GameMaker.IAP.Editor",
+    "rootNamespace": "GameMaker.IAP.Editor",
+    "references": [
+        "GUID:908562e3f0b9fbd4dbcbcfc65c9363b0",
+        "GUID:8949aea9c819c8a4bafd64a2fdace4e3",
+        "GUID:60bfecf5cb232594891bc622f40d6bed",
+        "GUID:4502c81c5dc9cf94c8951a395658dd13",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -13,7 +13,7 @@ namespace GameMaker.Core.Runtime
             _localCurrencySaveData = (baseDataSpaceSetting as LocalDataSpaceSetting).LocalDataManager.Get<LocalCurrencySaveData>();
             return true;
         }
-        public override async UniTask<bool> AddCurrencyAsync(string currencyDefinitionId, string value)
+        public override async UniTask<bool> AddCurrencyAsync(string currencyDefinitionId, object value)
         {
             await _localCurrencySaveData.AddPlayerCurrency(currencyDefinitionId, value);
             return true;

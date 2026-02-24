@@ -25,7 +25,7 @@ namespace GameMaker.Core.Runtime
                             .Select(x => x.GetType())
                             .Select(x => _localConsumeRewardFactory.GetLocalConsumerReward(x))
                             .Distinct();
-                            
+
             foreach (var reward in rewards)
             {
                 var consumer = _localConsumeRewardFactory.GetLocalConsumerReward(reward.GetType());
@@ -99,21 +99,37 @@ namespace GameMaker.Core.Runtime
         public abstract UniTask SaveAsync();
     }
 
-    [TypeContain(typeof(CurrencyRewardDefinition))]
-    public class CurrencyLocalConsumeReward : BaseLocalConsumeReward
+    public abstract class BaseCurrencyLocalConsumeReward : BaseLocalConsumeReward
     {
-        public override BaseReceiverProduct Consume(BaseRewardDefinition rewardDefinition)
-        {
-            var currency = rewardDefinition as CurrencyRewardDefinition;
-            var localCurrencySaveData = localDataManager.Get<LocalCurrencySaveData>();
-            _ = localCurrencySaveData.AddPlayerCurrency(currency.GetReferenceID(), currency.Amount, false);
-            return new CurrencyReceiverProduct(currency.GetReferenceID(), currency.Amount);
-        }
+        public abstract override BaseReceiverProduct Consume(BaseRewardDefinition rewardDefinition);
 
         public override async UniTask SaveAsync()
         {
             var localCurrencySaveData = localDataManager.Get<LocalCurrencySaveData>();
             await localCurrencySaveData.SaveAsync();
+        }
+    }
+    [TypeContain(typeof(BigIntCurrencyDefinition))]
+
+    public class BigIntCurrencyLocalConsumeReward : BaseCurrencyLocalConsumeReward
+    {
+        public override BaseReceiverProduct Consume(BaseRewardDefinition rewardDefinition)
+        {
+            var currency = rewardDefinition as BaseCurrencyRewardDefinition;
+            var localCurrencySaveData = localDataManager.Get<LocalCurrencySaveData>();
+            _ = localCurrencySaveData.AddPlayerCurrency(currency.GetReferenceID(), currency.GetAmount(), false);
+            return new BigIntCurrencyReceiverProduct(currency.GetReferenceID(), currency.GetAmount());
+        }
+    }
+    [TypeContain(typeof(LongCurrencyDefinition))]
+    public class LongCurrencyLocalConsumeReward : BaseCurrencyLocalConsumeReward
+    {
+        public override BaseReceiverProduct Consume(BaseRewardDefinition rewardDefinition)
+        {
+            var currency = rewardDefinition as BaseCurrencyRewardDefinition;
+            var localCurrencySaveData = localDataManager.Get<LocalCurrencySaveData>();
+            _ = localCurrencySaveData.AddPlayerCurrency(currency.GetReferenceID(), currency.GetAmount(), false);
+            return new LongCurrencyReceiverProduct(currency.GetReferenceID(), currency.GetAmount());
         }
     }
 
@@ -134,7 +150,7 @@ namespace GameMaker.Core.Runtime
             await localPropertySaveData.SaveAsync();
         }
     }
-    
+
     [TypeContain(typeof(ItemRewardDefinition))]
     public class ItemLocalConsumeReward : BaseLocalConsumeReward
     {
@@ -161,6 +177,25 @@ namespace GameMaker.Core.Runtime
         {
             var localItemSaveData = localDataManager.Get<LocalItemSaveData>();
             await localItemSaveData.SaveAsync();
+        }
+    }
+
+    [TypeContain(typeof(TimedRewardDefinition))]
+    public class TimedLocalConsumeReward : BaseLocalConsumeReward
+    {
+        public override BaseReceiverProduct Consume(BaseRewardDefinition rewardDefinition)
+        {
+            var localTimedSaveData = localDataManager.Get<LocalTimedSaveData>();
+            var timed = rewardDefinition as TimedRewardDefinition;
+            _ = localTimedSaveData.AddTimedAsync(timed.GetReferenceID(), timed.Amount, false);
+            var playerTimed = localTimedSaveData.GetPlayerTimed(timed.GetID());
+            return new TimedReceiverProduct(playerTimed.GetID(),playerTimed.Remain, playerTimed.StartTime);
+        }
+
+        public async override UniTask SaveAsync()
+        {
+            var localTimedSaveData = localDataManager.Get<LocalTimedSaveData>();
+            await localTimedSaveData.SaveAsync(); 
         }
     }
 }

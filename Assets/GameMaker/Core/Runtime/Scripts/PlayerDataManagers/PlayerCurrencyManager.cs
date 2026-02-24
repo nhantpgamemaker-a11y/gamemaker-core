@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -14,7 +15,7 @@ namespace GameMaker.Core.Runtime
         {
             return basePlayerDatas.Cast<BasePlayerCurrency>().ToList();
         }
-        public void AddPlayerCurrency(string id, string value)
+        public void AddPlayerCurrency(string id, object value)
         {
             var playerCurrency = GetPlayerCurrency(id);
             playerCurrency.AddValue(value);

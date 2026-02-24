@@ -5,6 +5,7 @@ using UnityEngine;
 namespace GameMaker.Core.Runtime
 {
     [System.Serializable]
+    [TypeCache]
     public abstract class BaseRewardDefinition : BaseDefinition, IReferenceDefinition
     {
         [UnityEngine.SerializeField]

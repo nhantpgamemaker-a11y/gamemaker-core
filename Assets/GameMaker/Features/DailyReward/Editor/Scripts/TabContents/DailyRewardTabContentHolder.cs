@@ -13,7 +13,7 @@ namespace GameMaker.Feature.DailyReward.Editor
 
         public override int GetIndex()
         {
-            return 1;
+            return 2;
         }
 
         public override VisualElement GetTabView()

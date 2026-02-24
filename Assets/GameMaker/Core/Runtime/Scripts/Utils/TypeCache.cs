@@ -50,6 +50,7 @@ namespace GameMaker.Core.Runtime
 
             return Array.Empty<Type>();
         }
+        
         public IReadOnlyList<Type> GetAllConcreteDerivedTypes(Type baseType)
         {
             if (baseType == null)

@@ -2680,6 +2680,16 @@ MonoBehaviour:
     _id: Coin
   _soundID:
     _id: Music_BG_Home
+  _iAPGroupID:
+    _id: 
+  _iAPID:
+    _id: Coin_1
+  _timedID:
+    _id: LifeUnlimitTime
+  _propertyID:
+    _id: Level
+  _configID:
+    _id: ContinueLevel
 --- !u!114 &5703004883598343367 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7896222822012154084, guid: 2943e381c0ab7e6419474649a019bd24, type: 3}

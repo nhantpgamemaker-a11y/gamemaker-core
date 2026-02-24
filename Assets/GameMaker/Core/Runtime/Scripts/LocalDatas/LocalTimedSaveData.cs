@@ -39,6 +39,10 @@ namespace GameMaker.Core.Runtime
         {
             return _playerTimeds.Select(x => x.ToPlayerTimed()).ToList();
         }
+        public PlayerTimed GetPlayerTimed(string refID)
+        {
+            return _playerTimeds.FirstOrDefault(x => x.GetID() == refID).ToPlayerTimed();
+        }
         public async UniTask<PlayerTimed> AddTimedAsync(string refId, long amount, bool isSave = true)
         {
             var playerTimed = _playerTimeds.FirstOrDefault(x => x.GetID() == refId);

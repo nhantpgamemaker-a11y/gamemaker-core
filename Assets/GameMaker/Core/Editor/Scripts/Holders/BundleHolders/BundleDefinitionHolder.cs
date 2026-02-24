@@ -28,6 +28,5 @@ namespace GameMaker.Core.Editor
 
             _rewardDefinitionDataManagerHolder.Bind(serializedProperty.FindPropertyRelative("_rewardManager"));
         }
-        
     }
 }

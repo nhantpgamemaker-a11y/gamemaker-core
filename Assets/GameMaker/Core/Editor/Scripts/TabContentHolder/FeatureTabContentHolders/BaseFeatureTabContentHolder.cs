@@ -6,6 +6,7 @@ using UnityEngine.UIElements;
 
 namespace GameMaker.Core.Editor
 {
+    [TypeCache]
     public abstract class BaseFeatureTabContentHolder : BaseTabContentHolder
     {
         protected BaseFeatureTabContentHolder(VisualElement root) : base(root)

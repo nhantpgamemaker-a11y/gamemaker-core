@@ -1,11 +1,11 @@
 using System;
+using GameMaker.Core.Runtime;
 using UnityEditor;
-using UnityEditor.UIElements;
-using UnityEngine;
 using UnityEngine.UIElements;
 
 namespace GameMaker.Core.Editor
 {
+    [TypeCache]
     public abstract class PropertyDefinitionHolder : BaseDefinitionHolder
     {
         private Foldout _propertyFoldout;

@@ -5,25 +5,24 @@ using UnityEngine;
 namespace GameMaker.Core.Runtime
 {
     [System.Serializable]
-    public class BaseCurrencyDefinition : BaseDefinition
+    [TypeCache]
+    public abstract class BaseCurrencyDefinition: BaseDefinition
     {
-        [SerializeField] private string _defaultValue;
-        [SerializeField] private string _maxValue;
-        public string DefaultValue { get => _defaultValue; set => _defaultValue = value; }
-        public string MaxValue { get => _maxValue; set => _maxValue = value; }
-
         public BaseCurrencyDefinition() : base()
         {
             
         }
-        public BaseCurrencyDefinition(string id, string name, string title,string description, Sprite icon,BaseMetaData metaData, string defaultValue) : base(id, name, title,description, icon,metaData)
+        public BaseCurrencyDefinition(
+        string id,
+        string name,
+        string title,
+        string description,
+        Sprite icon,
+        BaseMetaData metaData) : 
+        base(id, name, title,description, icon,metaData)
         {
-            DefaultValue = defaultValue;
         }
-        public override object Clone()
-        {
-            return new BaseCurrencyDefinition(GetID(), GetName(), GetTitle(), GetDescription(), GetIcon(), GetMetaData(), DefaultValue);
-        }
+        
 #if UNITY_EDITOR
         public virtual string GetGenClassCode()
         {

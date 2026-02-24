@@ -8,5 +8,10 @@ namespace GameMaker.Core.Runtime
             var runtimePlayerTimed = GetPlayerData(playerTimed.GetID()) as PlayerTimed;
             runtimePlayerTimed.From(playerTimed);
         }
+        
+        public PlayerTimed GetPlayerTimed(string id)
+        {
+            return GetPlayerData(id) as PlayerTimed;
+        }
     }
 }

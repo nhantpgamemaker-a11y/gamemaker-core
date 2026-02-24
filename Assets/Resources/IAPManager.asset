@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0f8ed14d8ce39848af3420f9c10dc17, type: 3}
+  m_Name: IAPManager
+  m_EditorClassIdentifier: GameMaker.IAP.Runtime::GameMaker.IAP.Runtime.IAPManager
+  dataManager:
+    _definitions:
+    - rid: 4925655408435789944
+    - rid: 4925655412329414954
+  references:
+    version: 2
+    RefIds:
+    - rid: 4925655408435789944
+      type: {class: IAPDefinition, ns: GameMaker.IAP.Runtime, asm: GameMaker.IAP.Runtime}
+      data:
+        _id: Coin_1
+        _name: Coin_1
+        _title: Coin_1
+        _icon: {fileID: 0}
+        _description: 
+        _metaData: {fileID: 0}
+        _reward:
+          _id: 
+          _name: 
+          _title: 
+          _icon: {fileID: 0}
+          _description: 
+          _metaData: {fileID: 0}
+          _rewardManager:
+            _definitions:
+            - rid: 4925655412329414953
+        _productType: 0
+        _productId: 
+        _groupId: 
+    - rid: 4925655412329414953
+      type: {class: CurrencyRewardDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: 
+        _name: 
+        _title: 
+        _icon: {fileID: 0}
+        _description: 
+        _metaData: {fileID: 0}
+        _referenceId: Coin
+        _amount: 
+    - rid: 4925655412329414954
+      type: {class: IAPDefinition, ns: GameMaker.IAP.Runtime, asm: GameMaker.IAP.Runtime}
+      data:
+        _id: Coin_2
+        _name: Coin_2
+        _title: Coin_2
+        _icon: {fileID: 0}
+        _description: 
+        _metaData: {fileID: 0}
+        _reward:
+          _id: 
+          _name: 
+          _title: 
+          _icon: {fileID: 0}
+          _description: 
+          _metaData: {fileID: 0}
+          _rewardManager:
+            _definitions: []
+        _productType: 0
+        _productId: 
+        _groupId: 

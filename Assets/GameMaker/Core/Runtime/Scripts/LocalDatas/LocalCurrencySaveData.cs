@@ -1,5 +1,8 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
+using System.Reflection;
 using Cysharp.Threading.Tasks;
 using Newtonsoft.Json;
 
@@ -11,13 +14,14 @@ namespace GameMaker.Core.Runtime
         [JsonProperty("PlayerCurrencies")]
         [UnityEngine.SerializeReference]
         private List<BasePlayerCurrencyModel> _playerCurrencies = new();
-
+        private PlayerCurrencyTypeFactory _playerCurrencyTypeFactory = new();
         protected internal override void OnCreate()
         {
             base.OnCreate();
             foreach(var currencyDefinition in CurrencyManager.Instance.GetDefinitions())
             {
-                _playerCurrencies.Add(new BasePlayerCurrencyModel(currencyDefinition.GetID(), currencyDefinition.GetName(), currencyDefinition.DefaultValue));
+                throw new System.NotImplementedException();
+                //_playerCurrencies.Add(new BasePlayerCurrencyModel(currencyDefinition.GetID(), currencyDefinition.GetName(), currencyDefinition.DefaultValue));
             }
         }
         protected internal override void OnLoad()
@@ -28,7 +32,8 @@ namespace GameMaker.Core.Runtime
             {
                 if (!currencyIds.Contains(currencyDefinition.GetID()))
                 {
-                    _playerCurrencies.Add(new BasePlayerCurrencyModel(currencyDefinition.GetID(), currencyDefinition.GetName(), currencyDefinition.DefaultValue));
+                    throw new System.NotImplementedException();
+                    //_playerCurrencies.Add(new BasePlayerCurrencyModel(currencyDefinition.GetID(), currencyDefinition.GetName(), currencyDefinition.DefaultValue));
                 }
             }
         }
@@ -40,13 +45,14 @@ namespace GameMaker.Core.Runtime
         {
             return _playerCurrencies.FirstOrDefault(x => x.GetID() == currencyId)?.ToPlayerCurrency();
         }
-        public async UniTask AddPlayerCurrency(string currencyDefinitionId, string value, bool isSave = true)
+        public async UniTask AddPlayerCurrency(string currencyDefinitionId, object value, bool isSave = true)
         {
             var playerCurrency = _playerCurrencies.FirstOrDefault(x => x.GetID() == currencyDefinitionId);
             if (playerCurrency == null)
             {
                 var currencyDefinition = CurrencyManager.Instance.GetDefinition(currencyDefinitionId);
-                _playerCurrencies.Add(new BasePlayerCurrencyModel(currencyDefinitionId, currencyDefinition.GetName(), value));
+                var playerCurrencyType = _playerCurrencyTypeFactory.GetType(currencyDefinition.GetType());
+                _playerCurrencies.Add((BasePlayerCurrencyModel)Activator.CreateInstance(playerCurrencyType, currencyDefinitionId, currencyDefinition.GetName(), value));
             }
             else
             {
@@ -56,32 +62,79 @@ namespace GameMaker.Core.Runtime
                 await SaveAsync();
         }
     }
-    
-    [System.Serializable]
-    public class BasePlayerCurrencyModel : PlayerDataModel
+    public class PlayerCurrencyTypeFactory
     {
-        [JsonProperty("Value")]
-        private string _value;
-        public BasePlayerCurrencyModel(string id, string name, string value):base(id, name)
+        private Dictionary<Type, Type> _caches;
+        public PlayerCurrencyTypeFactory()
+        {
+            _caches = TypeUtils.GetAllDerivedNonAbstractTypes(typeof(BasePlayerCurrencyModel))
+            .Where(x => x.GetCustomAttribute<GameMaker.Core.Runtime.TypeContainAttribute>()!=null)
+            .ToDictionary(x => x.GetCustomAttribute<GameMaker.Core.Runtime.TypeContainAttribute>().Type, x => x);
+        }
+        public Type GetType(Type playerCurrencyDefinitionType)
+        {
+            return _caches[playerCurrencyDefinitionType];
+        }
+    }
+    [System.Serializable]
+    public abstract class BasePlayerCurrencyModel : PlayerDataModel
+    {
+        public BasePlayerCurrencyModel(string id, string name) : base(id, name)
         {
             base.id = id;
             base.name = name;
+        }
+        public abstract void AddValue(object value);
+        public abstract object GetValue();
+
+        public abstract BasePlayerCurrency ToPlayerCurrency();
+    }
+    public class LongPlayerCurrencyModel : BasePlayerCurrencyModel
+    {
+        private long _value;
+        public LongPlayerCurrencyModel(string id, string name, long value) : base(id, name)
+        {
             _value = value;
         }
-        public void AddValue(string value)
+
+        public override void AddValue(object value)
         {
-            _value += value;
+            _value += (long)value;
         }
-        public string GetValue()
+
+        public override object GetValue()
         {
             return _value;
         }
 
-        public BasePlayerCurrency ToPlayerCurrency()
+        public override BasePlayerCurrency ToPlayerCurrency()
         {
-            var currencyDefinition =  CurrencyManager.Instance.GetDefinition(id);
-            return new BasePlayerCurrency(currencyDefinition.GetID(),currencyDefinition,_value);
+            var currencyDefinition = CurrencyManager.Instance.GetDefinition(id);
+            return new LongPlayerCurrency(currencyDefinition.GetID(), currencyDefinition, _value);
         }
     }
+    public class BigIntPlayerCurrencyModel : BasePlayerCurrencyModel
+    {
+        private BigInteger _value;
+        public BigIntPlayerCurrencyModel(string id, string name, BigInteger value) : base(id, name)
+        {
+            _value = value;
+        }
 
+        public override void AddValue(object value)
+        {
+            _value += (BigInteger)value;
+        }
+
+        public override object GetValue()
+        {
+            return _value;
+        }
+
+        public override BasePlayerCurrency ToPlayerCurrency()
+        {
+            var currencyDefinition = CurrencyManager.Instance.GetDefinition(id);
+            return new BigIntPlayerCurrency(currencyDefinition.GetID(), currencyDefinition, _value);
+        }
+    }
 }

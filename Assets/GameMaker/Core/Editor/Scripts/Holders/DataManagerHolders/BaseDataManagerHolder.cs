@@ -203,6 +203,7 @@ namespace GameMaker.Core.Editor
 
                 serializedProperty.serializedObject.ApplyModifiedProperties();
                 MakeItemSource(GetItemSource());
+                itemListView.Rebuild();
                 itemListView.RefreshItems();
             },
             () =>

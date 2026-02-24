@@ -23,10 +23,6 @@ namespace GameMaker.Core.Runtime
         {
             return PropertyManager.Instance.GetDefinition(ID);
         }
-        public PlayerAttribute GetPlayerAttribute()
-        {
-            return GetPlayerProperty() as PlayerAttribute;
-        }
         public async UniTask<bool> SetPropertyAsync(string value, IExtendData extendData)
         {
             return await PropertyGateway.Manager.SetPlayerPropertyAsync(this.ID, value, extendData);

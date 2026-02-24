@@ -84,31 +84,5 @@ namespace GameMaker.Core.Editor
                 return _cache[type];
             }
         }
-        [TypeContain(typeof(StatDefinition))]
-        public class StatDefinitionHolder : PropertyDefinitionHolder
-        {
-            public StatDefinitionHolder(VisualElement root) : base(root)
-            {
-            }
-
-            public override VisualTreeAsset GetVisualTreeAsset()
-            {
-                var asset = Resources.Load<VisualTreeAsset>("StatDefinitionElement");
-                return asset;
-            }
-        }
-        [TypeContain(typeof(StatDefinition))]
-        public class AttributeDefinitionHolder : PropertyDefinitionHolder
-        {
-            public AttributeDefinitionHolder(VisualElement root) : base(root)
-            {
-            }
-
-            public override VisualTreeAsset GetVisualTreeAsset()
-            {
-                var asset = Resources.Load<VisualTreeAsset>("AttributeDefinitionElement");
-                return asset;
-            }
-        }
     }
 }

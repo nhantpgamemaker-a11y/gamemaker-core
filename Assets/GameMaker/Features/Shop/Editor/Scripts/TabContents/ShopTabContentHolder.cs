@@ -12,7 +12,7 @@ namespace GameMaker.Feature.Shop.Editor
 
         public override int GetIndex()
         {
-            return 0;
+            return 1;
         }
 
         public override VisualElement GetTabView()

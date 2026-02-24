@@ -27,7 +27,7 @@ namespace GameMaker.Core.Runtime
             return true;
         }
 
-        public async UniTask<bool> AddPlayerCurrencyAsync(string id, string amount, IExtendData extendData)
+        public async UniTask<bool> AddPlayerCurrencyAsync(string id, object amount, IExtendData extendData)
         {
             bool status = await _currencyDataSpaceProvider.AddCurrencyAsync(id, amount);
             if (status)

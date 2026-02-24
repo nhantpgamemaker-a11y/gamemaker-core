@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Newtonsoft.Json;
 
 namespace GameMaker.Core.Runtime
 {
@@ -50,6 +51,8 @@ namespace GameMaker.Core.Runtime
 
         public void NotifyAction(string actionDefinitionID, BaseActionData baseActionData)
         {
+            var jsonString = JsonConvert.SerializeObject(baseActionData);
+            Logger.Log($"[Runtime Action] Notify From {actionDefinitionID} with data {jsonString}");
             NotifyObserver(baseActionData, actionDefinitionID);
         }
     }

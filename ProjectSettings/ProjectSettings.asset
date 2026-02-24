@@ -835,7 +835,7 @@ PlayerSettings:
   webWasm2023: 0
   webEnableSubmoduleStrippingCompatibility: 0
   scriptingDefineSymbols:
-    Android: KAMGAM_UV_EDITOR
+    Android: KAMGAM_UV_EDITOR;ENABLE_DEBUG_LOG
     EmbeddedLinux: KAMGAM_UV_EDITOR
     GameCoreScarlett: KAMGAM_UV_EDITOR
     GameCoreXboxOne: KAMGAM_UV_EDITOR

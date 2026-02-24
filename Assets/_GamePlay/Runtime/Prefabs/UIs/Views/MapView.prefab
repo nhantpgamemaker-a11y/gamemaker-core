@@ -2675,11 +2675,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6420097950864100306, guid: 0b7cadc54a42990459b43690d5b7374d, type: 3}
       propertyPath: m_Name
-      value: UICurrencyAnimation-Stat
+      value: UICurrencyAnimation-Star
       objectReference: {fileID: 0}
     - target: {fileID: 8557012188340495604, guid: 0b7cadc54a42990459b43690d5b7374d, type: 3}
       propertyPath: currencyID._id
-      value: Stat
+      value: Star
       objectReference: {fileID: 0}
     - target: {fileID: 8557012188340495604, guid: 0b7cadc54a42990459b43690d5b7374d, type: 3}
       propertyPath: _initAnimationRect

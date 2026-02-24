@@ -1,28 +1,42 @@
 using GameMaker.Core.Editor;
 using UnityEditor;
+using UnityEditor.UIElements;
 using UnityEngine.UIElements;
 
 namespace GameMaker.Core.Editor
 {
-    public class CurrencyDefinitionHolder : BaseDefinitionHolder
+    [GameMaker.Core.Runtime.TypeCache]
+    public abstract class CurrencyDefinitionHolder : BaseDefinitionHolder
     {
         private Foldout _currencyFoldout;
         private TextField _nameField;
+        protected TemplateContainer templateContainer;
         public CurrencyDefinitionHolder(VisualElement root) : base(root)
         {
-            _currencyFoldout = root.Q<Foldout>("CurrencyFoldout");
-            _nameField = root.Q<TextField>("NameTextField");
+            var asset = GetVisualTreeAsset();
+            templateContainer = asset.CloneTree();
+            root.Add(templateContainer);
         }
 
         public override void Bind(SerializedProperty elementProperty)
         {
+            _currencyFoldout = Root.Q<Foldout>("CurrencyFoldout");
+            _nameField = Root.Q<TextField>("NameTextField");
             base.Bind(elementProperty);
-            _currencyFoldout.name = serializedProperty.FindPropertyRelative("_name").stringValue;
             _nameField.RegisterValueChangedCallback(value =>
             {
-                _currencyFoldout.text = value.newValue;
+                UpdateCurrencyFoldout();
             });
-            _currencyFoldout.text = serializedProperty.FindPropertyRelative("_name").stringValue;
+            UpdateCurrencyFoldout();
+        }
+        public virtual string GetNameFoldout()
+        {
+            return $"{serializedProperty.FindPropertyRelative("_name").stringValue}";
+        }
+        public abstract VisualTreeAsset GetVisualTreeAsset();
+        public void UpdateCurrencyFoldout()
+        {
+            _currencyFoldout.text = GetNameFoldout();
         }
     }
 }

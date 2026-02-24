@@ -15,31 +15,10 @@ MonoBehaviour:
   dataManager:
     _definitions:
     - rid: 4388470458572341336
-    - rid: 4925655373323436203
-    - rid: 4925655373323436204
-    - rid: 4925655373323436205
   references:
     version: 2
     RefIds:
     - rid: 4388470458572341336
-      type: {class: ConfigDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
-      data:
-        _id: ContinueLevel
-        _name: Continue Level
-        _value: 15
-    - rid: 4925655373323436203
-      type: {class: ConfigDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
-      data:
-        _id: ContinueLevel
-        _name: Continue Level
-        _value: 15
-    - rid: 4925655373323436204
-      type: {class: ConfigDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
-      data:
-        _id: ContinueLevel
-        _name: Continue Level
-        _value: 15
-    - rid: 4925655373323436205
       type: {class: ConfigDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
       data:
         _id: ContinueLevel

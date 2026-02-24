@@ -3,6 +3,7 @@ using UnityEngine.UIElements;
 
 namespace GameMaker.Core.Editor
 {
+    [GameMaker.Core.Runtime.TypeCache]
     public abstract class BaseRewardDefinitionHolder : BaseDefinitionHolder
     {
         private Foldout _rewardFoldout;

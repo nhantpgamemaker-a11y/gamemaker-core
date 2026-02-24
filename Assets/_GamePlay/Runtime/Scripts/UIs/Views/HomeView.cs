@@ -1,6 +1,7 @@
 using System;
 using Cysharp.Threading.Tasks;
 using GameMaker.Core.Runtime;
+using GameMaker.IAP.Runtime;
 using GameMaker.Sound.Runtime;
 using GameMaker.UI.Runtime;
 using UnityEngine;
@@ -15,6 +16,11 @@ namespace CatAdventure.GamePlay
         [SerializeField] private Button _playButton;
         [SerializeField] private CurrencyID _currencyID;
         [SerializeField] private SoundID _soundID;
+        [SerializeField] private IAPGroupDefinitionID _iAPGroupID;
+        [SerializeField] private IAPDefinitionID _iAPID;
+        [SerializeField] private TimedID _timedID;
+        [SerializeField] private PropertyID _propertyID;
+        [SerializeField] private ConfigID _configID;
         protected override void OnShow()
         {
             base.OnShow();
@@ -49,7 +55,7 @@ namespace CatAdventure.GamePlay
         [ContextMenu("Add PlayerCurrency")]
         private void AddPlayerCurrency()
         {
-            _currencyID.AddCurrencyAsync("100",null).Forget();
+            _currencyID.AddCurrencyAsync(100,null).Forget();
         }
     }
 }

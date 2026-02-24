@@ -102,6 +102,7 @@
   <Project Path="Unity.Purchasing.Utilities.csproj" />
   <Project Path="Unity.Settings.Editor.csproj" />
   <Project Path="Unity.InputSystem.TestFramework.csproj" />
+  <Project Path="GameMaker.IAP.Editor.csproj" />
   <Project Path="Unity.ShaderGraph.Utilities.csproj" />
   <Project Path="Unity.VisualScripting.Shared.Editor.csproj" />
   <Project Path="GameMaker.Sound.Runtime.csproj" />

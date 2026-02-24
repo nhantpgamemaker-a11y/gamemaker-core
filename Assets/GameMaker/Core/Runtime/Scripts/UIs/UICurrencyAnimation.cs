@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace GameMaker.Core.Runtime
 {
-    public class UICurrencyAnimation : UICurrency,IUICollection
+    public abstract class UICurrencyAnimation : UICurrency,IUICollection
     {
         [UnityEngine.SerializeField] private BaseCollectionAnimationController _collectionAnimationController;
         [SerializeField] protected RectTransform _initAnimationRect;
@@ -13,7 +13,7 @@ namespace GameMaker.Core.Runtime
         private float _animationCurrencyAmount;
         private float _currentActive = 0;
         public float CurrentActive => _currentActive;
-        public float CurrentAmount { get => _currentAmount;}
+        public float CurrentAmount { get => _currentAmount; }
         public float AnimationCurrencyAmount { get => _animationCurrencyAmount; }
 
         protected override void OnValidate()
@@ -24,7 +24,8 @@ namespace GameMaker.Core.Runtime
         {
             base.Init();
             UICollectionAnimation.Instance.Add(currencyID.ID, this);
-            _currentAmount = float.Parse(playerCurrency.Value);
+            throw new System.NotImplementedException();
+            //_currentAmount = float.Parse(playerCurrency.Value);
             _animationCurrencyAmount = _currentAmount;
             _currentActive = _currentAmount;
             UpdateUI(playerCurrency);
@@ -36,21 +37,22 @@ namespace GameMaker.Core.Runtime
         }
         public async UniTask PlayAnimationAsync(BasePlayerCurrency playerCurrency)
         {
-            float gap = float.Parse(playerCurrency.Value) - _currentAmount;
-            if (gap < 0)
-            {
-                _animationCurrencyAmount -= gap;
-                UpdateUI(playerCurrency);
-            }
-            else
-            {
-                _currentActive++;
-                _currentAmount = float.Parse(playerCurrency.Value);
-                var currencyDefinition = playerCurrency.GetDefinition() as BaseCurrencyDefinition;
-                var task = _collectionAnimationController.PlayAsync(currencyDefinition.GetIcon(), gap, _initAnimationRect.position, _targetAnimationRect, OnCollectionAction);
-                await task;
-                _currentActive--;
-            }
+            throw new System.NotImplementedException();
+            // float gap = float.Parse(playerCurrency.Value) - _currentAmount;
+            // if (gap < 0)
+            // {
+            //     _animationCurrencyAmount -= gap;
+            //     UpdateUI(playerCurrency);
+            // }
+            // else
+            // {
+            //     _currentActive++;
+            //     _currentAmount = float.Parse(playerCurrency.Value);
+            //     var currencyDefinition = playerCurrency.GetDefinition() as BaseCurrencyDefinition;
+            //     var task = _collectionAnimationController.PlayAsync(currencyDefinition.GetIcon(), gap, _initAnimationRect.position, _targetAnimationRect, OnCollectionAction);
+            //     await task;
+            //     _currentActive--;
+            // }
         }
         public void OnCollectionAction(float amount)
         {
@@ -66,8 +68,9 @@ namespace GameMaker.Core.Runtime
         {
             if (!UICollectionAnimation.Instance.IsLast(currencyID.ID, this))
             {
-                txtAmount.text = playerCurrency.Value.ToString();
-                _animationCurrencyAmount = float.Parse(playerCurrency.Value);
+                throw new System.NotImplementedException();
+                // txtAmount.text = playerCurrency.Value.ToString();
+                // _animationCurrencyAmount = float.Parse(playerCurrency.Value);
             }
             else
             {

@@ -1,4 +1,5 @@
 using System;
+using System.Threading;
 using Cysharp.Threading.Tasks;
 
 namespace GameMaker.Core.Runtime
@@ -10,18 +11,34 @@ namespace GameMaker.Core.Runtime
         [UnityEngine.SerializeField]
         private bool _isInitialized;
         [UnityEngine.SerializeField]
-        private  TimeMode _currentMode = TimeMode.Hybrid;
+        private TimeMode _currentMode = TimeMode.Hybrid;
+        private long _addTimeOffsetSeconds = 0;
+        private bool _isPaused = false;
+        public event Action<long> OnTimeTickEventAction;
+        public bool IsInitialized => _isInitialized;
+        public TimeMode CurrentMode => _currentMode;
+        public long AddTimeOffsetSeconds { get => _addTimeOffsetSeconds; }
+        public bool IsPaused { get => _isPaused; set => _isPaused = value; }
+        public  TimeSpan TimeUntilMidnight
+        {
+            get
+            {
+                DateTime now = UTCNow;
+                DateTime nextMidnight = now.Date.AddDays(1);
+                return nextMidnight - now;
+            }
+        }
 
         public  async UniTask<bool> InitializeAsync(TimeMode mode = TimeMode.Hybrid)
         {
             if (_isInitialized)
             {
-                Logger.Log("Already initialized!");
+                Logger.Log("[TimeManager] Already initialized!");
                 return false;
             }
 
             _currentMode = mode;
-            Logger.Log($"Initializing with mode: {mode}");
+            Logger.Log($"[TimeManager] Initializing with mode: {mode}");
 
             try
             {
@@ -29,12 +46,13 @@ namespace GameMaker.Core.Runtime
                 bool status = await _timeStrategy.InitAsync();
                 if (!status) return false;
                 _isInitialized = true;
-                Logger.Log($"✓ Initialized - Source: {TimeSource}");
+                Logger.Log($"[TimeManager] ✓ Initialized - Source: {TimeSource}");
+                StartTick(this.GetCancellationTokenOnDestroy()).Forget();
                 return true;
             }
             catch (Exception ex)
             {
-                Logger.LogError($"✗ Initialization failed: {ex.Message}");
+                Logger.LogError($"[TimeManager] ✗ Initialization failed: {ex.Message}");
                 _timeStrategy = new LocalTimeStrategy();
                 await _timeStrategy.InitAsync();
                 _isInitialized = true;
@@ -64,7 +82,7 @@ namespace GameMaker.Core.Runtime
 
         public  void Shutdown()
         {
-            Logger.Log("Shutting down...");
+            Logger.Log("[TimeManager] Shutting down...");
             _isInitialized = false;
             _timeStrategy = null;
         }
@@ -75,11 +93,11 @@ namespace GameMaker.Core.Runtime
             {
                 if (!_isInitialized)
                 {
-                    Logger.LogWarning("Not initialized, using DateTime.UtcNow");
+                    Logger.LogWarning("[TimeManager] Not initialized, using DateTime.UtcNow");
                     return DateTime.UtcNow;
                 }
 
-                return _timeStrategy.GetCurrentUTCTime();
+                return _timeStrategy.GetCurrentUTCTime() + TimeSpan.FromSeconds(_addTimeOffsetSeconds);
             }
         }
 
@@ -111,22 +129,40 @@ namespace GameMaker.Core.Runtime
         {
             return DateTimeOffset.FromUnixTimeSeconds(timestamp).UtcDateTime;
         }
-        
+
         public bool IsToday(DateTime date)
         {
             return date.Date == UTCNow.Date;
         }
-        
-        public  TimeSpan TimeUntilMidnight
+
+        private async UniTaskVoid StartTick(CancellationToken ct)
         {
-            get
+            while (!ct.IsCancellationRequested)
             {
-                DateTime now = UTCNow;
-                DateTime nextMidnight = now.Date.AddDays(1);
-                return nextMidnight - now;
+                await UniTask.WaitUntil(() => !_isPaused, cancellationToken: ct);
+                await UniTask.Delay(1000, DelayType.Realtime, cancellationToken: ct);
+                try
+                {
+                    Logger.Log($"[TimeManager] Tick - UTCNow: {UTCNow:HH:mm:ss}, LocalNow: {LocalNow:HH:mm:ss}, UnixTimestamp: {UnixTimestamp}");
+                    OnTimeTickEventAction?.Invoke(UnixTimestamp);
+                }
+                catch (Exception ex)
+                {
+                    Logger.LogError($"[TimeManager] Error in time tick event: {ex.Message}");
+                }
             }
         }
 
-        public  bool IsInitialized => _isInitialized;
+        public void AddTimeOffset(long seconds)
+        {
+            _addTimeOffsetSeconds += seconds;
+            Logger.Log($"[TimeManager] Time offset added: {seconds} seconds. Total offset: {_addTimeOffsetSeconds} seconds.");
+        }
+        
+        public void PauseTick(bool status)
+        {
+            _isPaused = status;
+            Logger.Log($"[TimeManager] Time tick paused : {status}.");
+        }
     }
 }

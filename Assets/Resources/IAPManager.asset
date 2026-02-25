@@ -86,7 +86,7 @@ MonoBehaviour:
         _description: 
         _metaData: {fileID: 0}
         _referenceId: Level
-        _amount: 0
+        _amount: 1
     - rid: 4925655419490926685
       type: {class: TimedRewardDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
       data:

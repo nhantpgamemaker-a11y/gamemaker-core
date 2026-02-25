@@ -32,8 +32,11 @@ namespace GameMaker.Feature.Shop.Runtime
         public void OnInit(Action<long> onResetAction = null)
         {
             _onResetAction = onResetAction;
-             StartSchedule();
+            if (RefreshShopDefinition.TimeResetConfig.ResetType == ResetType.None) return;
+            TimeManager.Instance.OnTimeTickEventAction += OnTimeTick;
+            //StartSchedule();
         }
+
         public void PurchaseItem(string shopItemReferenceId, float amount)
         {
             var playerShopItem = _playerShopItems.FirstOrDefault(x => x.GetReferenceID() == shopItemReferenceId);
@@ -53,6 +56,14 @@ namespace GameMaker.Feature.Shop.Runtime
             _playerShopItems = newPlayerShop.PlayerShopItems;
             _lastRefreshUTCTime = newPlayerShop.LastRefreshUTCTime;
             NotifyObserver(this);
+        }
+        private void OnTimeTick(long currentTimeStamp)
+        {
+            var config = RefreshShopDefinition.TimeResetConfig;
+            if (config.IsReset(currentTimeStamp))
+            {
+                OnReset();
+            }
         }
 
         private void StartSchedule()
@@ -86,6 +97,7 @@ namespace GameMaker.Feature.Shop.Runtime
 
         private void OnReset()
         {
+            Logger.Log($"[PlayerShop] Resetting shop {GetID()} at {TimeManager.Instance.UTCNow} UTC, {TimeManager.Instance.LocalNow} Local.");
             _lastRefreshUTCTime = TimeManager.Instance.UTCNow.Ticks;
             _onResetAction?.Invoke(_lastRefreshUTCTime);
         }

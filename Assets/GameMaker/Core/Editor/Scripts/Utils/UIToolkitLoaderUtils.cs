@@ -14,35 +14,49 @@ namespace GameMaker.Core.Editor
             #if UNITY_EDITOR
             if (asset == null)
             {
-                string[] guids = AssetDatabase.FindAssets($"{assetName} t:VisualTreeAsset");
-                if (guids.Length > 0)
-                {
-                    string path = AssetDatabase.GUIDToAssetPath(guids[0]);
-                    asset = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>(path);
-                }
+                asset =  FindVisualTreeAssetByName(assetName);
             }
             #endif
             
             return asset;
         }
-    
+
         public static StyleSheet LoadUSS(string assetName)
         {
             var asset = Resources.Load<StyleSheet>(assetName);
-            
-            #if UNITY_EDITOR
+
+#if UNITY_EDITOR
             if (asset == null)
             {
-                string[] guids = AssetDatabase.FindAssets($"{assetName} t:StyleSheet");
-                if (guids.Length > 0)
-                {
-                    string path = AssetDatabase.GUIDToAssetPath(guids[0]);
-                    asset = AssetDatabase.LoadAssetAtPath<StyleSheet>(path);
-                }
+                asset = FindStyleSheetByName(assetName);
             }
-            #endif
-            
+#endif
+
             return asset;
+        }
+        public static VisualTreeAsset FindVisualTreeAssetByName(string assetName)
+        {
+            string[] guids = AssetDatabase.FindAssets("t:VisualTreeAsset");
+            foreach (string guid in guids)
+            {
+                string path = AssetDatabase.GUIDToAssetPath(guid);
+                VisualTreeAsset asset = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>(path);
+                if (asset.name == assetName)
+                    return asset;
+            }
+            return null;
+        }
+        public static StyleSheet FindStyleSheetByName(string assetName)
+        {
+            string[] guids = AssetDatabase.FindAssets("t:StyleSheet");
+            foreach (string guid in guids)
+            {
+                string path = AssetDatabase.GUIDToAssetPath(guid);
+                StyleSheet asset = AssetDatabase.LoadAssetAtPath<StyleSheet>(path);
+                if (asset.name == assetName)
+                    return asset;
+            }
+            return null;
         }
     }   
 

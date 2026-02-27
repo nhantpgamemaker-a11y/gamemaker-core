@@ -13,7 +13,6 @@ namespace GameMaker.Core.Editor
         protected TextField descriptionTextField;
         
 
-
         protected BaseDefinitionHolder(VisualElement root):base(root)
         {
             

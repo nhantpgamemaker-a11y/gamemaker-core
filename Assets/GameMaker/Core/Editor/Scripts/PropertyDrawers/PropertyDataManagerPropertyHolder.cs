@@ -26,7 +26,6 @@ namespace GameMaker.Core.Editor
     {
         public PropertyDataManagerHolder(VisualElement root) : base(root)
         {
-
         }
         protected override string GetTitle()
         {
@@ -38,6 +37,7 @@ namespace GameMaker.Core.Editor
             var visualElement = new VisualElement();
             return new TypeDefinitionHolder(visualElement);
         }
+
         public class TypeDefinitionHolder : VisualElementHolder
         {
             PropertyDefinitionHolderFactory _propertyDefinitionHolderFactory;

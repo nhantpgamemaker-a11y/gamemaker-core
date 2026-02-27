@@ -41,7 +41,7 @@ MonoBehaviour:
             - rid: 4925655419490926676
             - rid: 4925655419490926685
         _productType: 0
-        _productId: 
+        _productId: com.gamemaker.coin
         _groupId: 
     - rid: 4925655412329414954
       type: {class: IAPDefinition, ns: GameMaker.IAP.Runtime, asm: GameMaker.IAP.Runtime}

@@ -9,16 +9,20 @@ namespace GameMaker.Core.Runtime
 {
     [TypeContain(typeof(BigIntCurrencyRewardDefinition))]
     public class BigIntCurrencyRewardDefinitionHolder : BaseCurrencyRewardDefinitionHolder
-    {
+    {   
+        private DropdownField _currencyDropdownField;
         private const string BIG_INT_FILTERED = @"[^0-9\-]";
         private TextField _amountLongField;
 
         public BigIntCurrencyRewardDefinitionHolder(VisualElement root) : base(root)
         {
-            _amountLongField = root.Q<TextField>("AmountTextField");
+           
+            
         }
         public override void Bind(SerializedProperty elementProperty)
         {
+             _amountLongField = Root.Q<TextField>("AmountTextField");
+            _currencyDropdownField = Root.Q<DropdownField>("CurrencyDropdownField");
             base.Bind(elementProperty);
             _amountLongField.RegisterValueChangedCallback(evt =>
             {
@@ -34,6 +38,30 @@ namespace GameMaker.Core.Runtime
                 serializedProperty.serializedObject.ApplyModifiedProperties();
             });
             _amountLongField.SetValueWithoutNotify(serializedProperty.FindPropertyRelative("_amount").stringValue);
+
+            _currencyDropdownField.choices = CurrencyManager.Instance.GetDefinitions()
+            .Where(x => x.GetType() == typeof(BigIntCurrencyDefinition)).Select(x => x.GetName()).ToList();
+            var data = CurrencyManager.Instance.GetDefinitions().FirstOrDefault(x => x.GetName() == _currencyDropdownField.value);
+            if (data == null)
+            {
+                data = CurrencyManager.Instance.GetDefinitions().FirstOrDefault(x => x.GetType() == typeof(BigIntCurrencyDefinition));
+            }
+            _currencyDropdownField.RegisterValueChangedCallback(v =>
+            {
+                var selectedData = CurrencyManager.Instance.GetDefinitions().FirstOrDefault(x => x.GetName() == _currencyDropdownField.value);
+                if (selectedData == null)
+                {
+                    selectedData = CurrencyManager.Instance.GetDefinitions().FirstOrDefault(x => x.GetType() == typeof(BigIntCurrencyDefinition));
+                }
+                elementProperty.FindPropertyRelative("_referenceId").stringValue = selectedData.GetID();
+                elementProperty.serializedObject.ApplyModifiedProperties();
+                UpdatePropertyFoldout();
+            });
+        }
+        public override string GetNameFoldout()
+        {
+            var baseName = base.GetNameFoldout();
+            return $"<<<BIGINT CURRENCY>>>:{_currencyDropdownField.value}  {baseName} : {_amountLongField.value}";
         }
         public override VisualTreeAsset GetVisualTreeAsset()
         {

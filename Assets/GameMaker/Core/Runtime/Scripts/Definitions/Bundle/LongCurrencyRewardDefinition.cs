@@ -8,6 +8,10 @@ namespace GameMaker.Core.Runtime
     {
         [UnityEngine.SerializeField]
         private long _amount;
+        public LongCurrencyRewardDefinition() : base()
+        {
+            
+        }
         public LongCurrencyRewardDefinition(string id, string name, string title, string description, Sprite icon, BaseMetaData metaData, string referenceId, long amount):
         base(id, name, title, description, icon, metaData, referenceId)
         {

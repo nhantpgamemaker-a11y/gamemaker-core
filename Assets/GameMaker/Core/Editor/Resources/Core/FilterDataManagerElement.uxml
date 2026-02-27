@@ -1,5 +1,5 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
-    <ui:Template name="DataManagerElement" src="project://database/Assets/GameMaker/Core/Editor/Resources/DataManagerElement.uxml?fileID=9197481963319205126&amp;guid=f241fe6e870baf64eadb8c30f20830c3&amp;type=3#DataManagerElement"/>
+    <ui:Template name="DataManagerElement" src="project://database/Assets/GameMaker/Core/Editor/Resources/Core/DataManagerElement.uxml?fileID=9197481963319205126&amp;guid=f241fe6e870baf64eadb8c30f20830c3&amp;type=3#DataManagerElement"/>
     <ui:VisualElement name="FilterElement" style="flex-grow: 0; flex-shrink: 0; flex-wrap: wrap-reverse; align-content: auto; align-items: stretch;">
         <ui:Label text="Filter" style="-unity-font-style: bold; margin-top: 0; margin-bottom: 5px;"/>
         <ui:VisualElement name="FilterContainer" style="flex-grow: 1;"/>

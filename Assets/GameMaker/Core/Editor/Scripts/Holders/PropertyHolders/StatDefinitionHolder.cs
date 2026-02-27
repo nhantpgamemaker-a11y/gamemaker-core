@@ -17,12 +17,15 @@ namespace GameMaker.Core.Editor
         }
         public override void Bind(SerializedProperty elementProperty)
         {
+            
             _defaultValueFloatField.BindProperty(elementProperty.FindPropertyRelative("_defaultValue"));
-             _defaultValueFloatField.RegisterValueChangedCallback(c =>
+            _defaultValueFloatField.RegisterValueChangedCallback(c =>
             {
                 UpdatePropertyFoldout();
             });
+
             base.Bind(elementProperty);
+            UpdatePropertyFoldout();
         }
 
         public override VisualTreeAsset GetVisualTreeAsset()

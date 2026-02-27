@@ -17,6 +17,7 @@ namespace GameMaker.Core.Editor
         }
         public override void Bind(SerializedProperty elementProperty)
         {
+             
             _defaultValueTextField = Root.Q<TextField>("DefaultValueTextField");
             _defaultValueTextField.BindProperty(elementProperty.FindPropertyRelative("_defaultValue"));
              _defaultValueTextField.RegisterValueChangedCallback(c =>
@@ -24,6 +25,7 @@ namespace GameMaker.Core.Editor
                 UpdatePropertyFoldout();
             });
             base.Bind(elementProperty);
+            UpdatePropertyFoldout();
         }
 
         public override VisualTreeAsset GetVisualTreeAsset()

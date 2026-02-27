@@ -69,9 +69,9 @@ MonoBehaviour:
     - rid: 4925655441446797608
       type: {class: BigIntCurrencyDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
       data:
-        _id: 
-        _name: 
-        _title: 
+        _id: BigInt
+        _name: BigInt
+        _title: BigInt
         _icon: {fileID: 0}
         _description: 
         _metaData: {fileID: 0}

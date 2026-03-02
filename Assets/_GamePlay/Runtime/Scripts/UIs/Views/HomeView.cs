@@ -12,7 +12,6 @@ namespace CatAdventure.GamePlay
     public class HomeView : BaseView
     {
         public const string VIEW_NAME = "HomeView";
-        [SerializeField] private UICurrency[] _uiCurrencies;
         [SerializeField] private Button _playButton;
         [SerializeField] private CurrencyID _currencyID;
         [SerializeField] private SoundID _soundID;
@@ -25,10 +24,6 @@ namespace CatAdventure.GamePlay
         protected override void OnShow()
         {
             base.OnShow();
-            foreach (var currency in _uiCurrencies)
-            {
-                currency.Init();
-            }
             _playButton.onClick.AddListener(OnClickPlay);
             SoundRuntimeManager.Instance.PlayLoopFade(_soundID.GetSoundDefinition());
         }
@@ -47,10 +42,6 @@ namespace CatAdventure.GamePlay
         protected override void OnHidden()
         {
             base.OnHidden();
-            foreach (var currency in _uiCurrencies)
-            {
-                currency.Clear();
-            }
         }
 
         [ContextMenu("Add PlayerCurrency")]

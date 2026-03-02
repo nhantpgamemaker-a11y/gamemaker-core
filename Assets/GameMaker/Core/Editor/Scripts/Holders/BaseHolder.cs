@@ -20,5 +20,9 @@ namespace GameMaker.Core.Editor
         {
             Root.Bind(elementProperty.serializedObject);
         }
+        public virtual void OnRefresh()
+        {
+            
+        }
     }
 }

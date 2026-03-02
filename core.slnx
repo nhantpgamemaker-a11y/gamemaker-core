@@ -74,6 +74,7 @@
   <Project Path="GameMaker.Sound.Editor.csproj" />
   <Project Path="Unity.2D.Sprite.Editor.csproj" />
   <Project Path="LitMotion.Animation.csproj" />
+  <Project Path="NuGetForUnity.csproj" />
   <Project Path="Unity.AI.Navigation.Editor.csproj" />
   <Project Path="VFXGraph.OutputEventHandlers.Editor.csproj" />
   <Project Path="Unity.Services.Core.Configuration.Editor.csproj" />

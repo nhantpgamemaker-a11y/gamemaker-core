@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Linq;
 using GameMaker.Core.Editor;
 using UnityEditor;
@@ -9,44 +10,34 @@ namespace GameMaker.Core.Runtime
     [TypeContain(typeof(LongCurrencyRewardDefinition))]
     public class LongCurrencyRewardDefinitionHolder : BaseCurrencyRewardDefinitionHolder
     {
-        private DropdownField _currencyDropdownField;
-
         private LongField _amountLongField;
 
         public LongCurrencyRewardDefinitionHolder(VisualElement root) : base(root)
         {
             _amountLongField = root.Q<LongField>("AmountLongField");
-            _currencyDropdownField = Root.Q<DropdownField>("CurrencyDropdownField");
         }
         public override void Bind(SerializedProperty elementProperty)
         {
             base.Bind(elementProperty);
             _amountLongField.BindProperty(serializedProperty.FindPropertyRelative("_amount"));
-            _currencyDropdownField.choices = CurrencyManager.Instance.GetDefinitions()
-            .Where(x => x.GetType() == typeof(LongCurrencyDefinition)).Select(x => x.GetName()).ToList();
-            var data = CurrencyManager.Instance.GetDefinitions().FirstOrDefault(x => x.GetName() == _currencyDropdownField.value);
-            if (data == null)
+            _amountLongField.RegisterValueChangedCallback(c =>
             {
-                data = CurrencyManager.Instance.GetDefinitions().FirstOrDefault(x => x.GetType() == typeof(LongCurrencyDefinition));
-            }
-            _currencyDropdownField.RegisterValueChangedCallback(v =>
-            {
-                var selectedData = CurrencyManager.Instance.GetDefinitions().FirstOrDefault(x => x.GetName() == _currencyDropdownField.value);
-                if (selectedData == null)
-                {
-                    selectedData = CurrencyManager.Instance.GetDefinitions().FirstOrDefault(x => x.GetType() == typeof(LongCurrencyDefinition));
-                }
-                elementProperty.FindPropertyRelative("_referenceId").stringValue = selectedData.GetID();
-                elementProperty.serializedObject.ApplyModifiedProperties();
                 UpdatePropertyFoldout();
             });
+            UpdatePropertyFoldout();
         }
         
         public override string GetNameFoldout()
         {
             var baseName = base.GetNameFoldout();
-            return $"<<<LONG CURRENCY>>>:{_currencyDropdownField.value}  {baseName} : {_amountLongField.value}";
+            return $"<<<LONG CURRENCY>>>: {baseName} : {_amountLongField.value}";
         }
+
+        public override List<BaseDefinition> GetRewardDefinitions()
+        {
+            return CurrencyManager.Instance.GetDefinitions().Where(x=>x.GetType() ==typeof(LongCurrencyDefinition)).Cast<BaseDefinition>().ToList();
+        }
+
         public override VisualTreeAsset GetVisualTreeAsset()
         {
             return UIToolkitLoaderUtils.LoadUXML("LongCurrencyRewardDefinitionElement");

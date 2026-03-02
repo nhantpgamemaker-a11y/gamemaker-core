@@ -1,3 +1,4 @@
+using GameMaker.UI.Runtime;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -17,6 +18,15 @@ namespace GameMaker.Core.Runtime
         {
             this.gameObject.name = $"UICurrency-{currencyID.GetBaseCurrencyDefinition().GetName()}";
         }
+        protected virtual void OnEnable()
+        {
+            Init();
+        }
+        protected virtual void OnDisable()
+        {
+            Clear();
+        }
+
         public override void Init()
         {
             playerCurrency = currencyID.GetPlayerCurrency();

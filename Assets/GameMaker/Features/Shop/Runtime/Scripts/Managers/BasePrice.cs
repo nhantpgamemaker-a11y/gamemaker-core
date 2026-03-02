@@ -16,7 +16,7 @@ namespace GameMaker.Feature.Shop.Runtime
         public abstract object GetAmount();
         public BasePrice()
         {
-            _currencyReferenceId = CurrencyManager.Instance.GetDefinitions().First().GetID();
+           
         }
         public BasePrice(string currencyId, object amount)
         {

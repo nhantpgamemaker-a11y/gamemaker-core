@@ -10,32 +10,12 @@ namespace GameMaker.Core.Editor
     [TypeCache]
     public abstract class BaseCurrencyRewardDefinitionHolder : BaseRewardDefinitionHolder
     {
-        private DropdownField _currencyDropdownField;
+       
         public BaseCurrencyRewardDefinitionHolder(VisualElement root) : base(root)
         {
         }
         public override void Bind(SerializedProperty elementProperty)
         {
-            _currencyDropdownField = Root.Q<DropdownField>("CurrencyDropdownField");
-            _currencyDropdownField.choices = CurrencyManager.Instance.GetDefinitions().Select(x => x.GetName()).ToList();
-            var data = CurrencyManager.Instance.GetDefinitions().FirstOrDefault(x => x.GetName() == _currencyDropdownField.value);
-            if(data == null)
-            {
-                data = CurrencyManager.Instance.GetDefinitions().First();
-            }
-            _currencyDropdownField.value = data.GetName();
-
-            _currencyDropdownField.RegisterValueChangedCallback(v =>
-            {
-                var data = CurrencyManager.Instance.GetDefinitions().FirstOrDefault(x => x.GetName() == _currencyDropdownField.value);
-                if(data == null)
-                {
-                    data = CurrencyManager.Instance.GetDefinitions().First();
-                }
-                elementProperty.FindPropertyRelative("_referenceId").stringValue = data.GetID();
-                elementProperty.serializedObject.ApplyModifiedProperties();
-                UpdatePropertyFoldout();
-            });
             base.Bind(elementProperty);
         }
         public override VisualTreeAsset GetVisualTreeAsset()

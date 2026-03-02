@@ -4,7 +4,8 @@ using UnityEngine;
 namespace GameMaker.Core.Runtime
 {
     [System.Serializable]
-    public abstract class PropertyDefinition : BaseDefinition
+    [TypeCache]
+    public abstract class PropertyDefinition :  BaseDefinition
     {
         public PropertyDefinition() : base()
         {

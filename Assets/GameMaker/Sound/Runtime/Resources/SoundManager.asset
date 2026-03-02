@@ -81,5 +81,5 @@ MonoBehaviour:
         _description: SFX_Game_LightSwitch
         _metaData: {fileID: 0}
         _clip: {fileID: 8300000, guid: 15e125c476b108844b1edaf5ba604fa5, type: 3}
-        _mixerGroup: UIGroup
+        _mixerGroup: MusicGroup
         _volumeScale: 1

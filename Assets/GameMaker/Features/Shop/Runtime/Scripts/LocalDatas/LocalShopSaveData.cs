@@ -26,10 +26,15 @@ namespace GameMaker.Feature.Shop.Runtime
             base.OnCreate();
             foreach (var shopDefinition in ShopManager.Instance.GetDefinitions())
             {
+                var config = shopDefinition.TimeResetConfig;
+                long nextRefreshTime = string.IsNullOrWhiteSpace(config.CronExpression)
+                    ? 0
+                    : config.GetNextResetUtcTicks(TimeManager.Instance.UnixTimestamp);
+
                 var playerShopModel = new PlayerShopModel(shopDefinition.GetID(),
                 shopDefinition.GetName(),
                 shopDefinition,
-                TimeManager.Instance.UnixTimestamp);
+                nextRefreshTime);
                 _playerShops.Add(playerShopModel);
             }
         }
@@ -47,10 +52,16 @@ namespace GameMaker.Feature.Shop.Runtime
                 var shopId = shopDefinition.GetID();
                 if (existedShopIds.Contains(shopId))
                     continue;
+
+                var config = shopDefinition.TimeResetConfig;
+                long nextRefreshTime = string.IsNullOrWhiteSpace(config.CronExpression)
+                    ? 0
+                    : config.GetNextResetUtcTicks(TimeManager.Instance.UnixTimestamp);
+
                 var playerShopModel = new PlayerShopModel(shopDefinition.GetID(),
                 shopDefinition.GetName(),
                 shopDefinition,
-                TimeManager.Instance.UnixTimestamp);
+                nextRefreshTime);
                 _playerShops.Add(playerShopModel);
             }
 
@@ -67,7 +78,7 @@ namespace GameMaker.Feature.Shop.Runtime
             if (playerShop == null) return null;
             var shopDefinition = playerShop.GetShopDefinition();
             var config = shopDefinition.TimeResetConfig;
-            if (config.ResetType == ResetType.None) return null;
+            if (config.CronExpression == string.Empty) return null;
             playerShop.Refresh(lastRefreshTime);
 
             if (isSave)
@@ -111,6 +122,11 @@ namespace GameMaker.Feature.Shop.Runtime
         public string ShopDefinitionReferenceID => _shopDefinitionReferenceID;
         [JsonIgnore]
         public long LastRefreshUTCTime => _lastRefreshUTCTime;
+        
+        public PlayerShopModel() : base()
+        {
+
+        }
         public PlayerShopModel(string id, string name, ShopDefinition baseShopDefinition, long lastRefreshUTCTime) : base(id, name)
         {
             _lastRefreshUTCTime = lastRefreshUTCTime;
@@ -119,7 +135,7 @@ namespace GameMaker.Feature.Shop.Runtime
             foreach (var shopItem in baseShopDefinition.ShopItems)
             {
                 var shopItemModelType = _playerShopItemTypeFactory.GetType(shopItem.GetType());
-                var shopItemModel = Activator.CreateInstance(shopItemModelType, shopItem.GetID(), shopItem.GetName(), shopItem) as BasePlayerShopItemModel;
+                var shopItemModel = Activator.CreateInstance(shopItemModelType, shopItem.GetID(), shopItem.GetName(), shopItem,true) as BasePlayerShopItemModel;
                 _shopItems.Add(shopItemModel);
             }
         }
@@ -173,8 +189,7 @@ namespace GameMaker.Feature.Shop.Runtime
         {
             var shopDefinition = GetShopDefinition();
             var config = shopDefinition.TimeResetConfig;
-            if (config.ResetType == ResetType.None) return;
-            if (!config.IsReset(lastRefreshTime)) return;
+            if (config.CronExpression == string.Empty) return;
             _lastRefreshUTCTime = lastRefreshTime;
             foreach (var item in _shopItems)
             {
@@ -220,6 +235,8 @@ namespace GameMaker.Feature.Shop.Runtime
         public bool CanPurchase => _canPurchase;
         [JsonIgnore]
         public string ShopItemDefinitionReferenceID => _shopItemDefinitionReferenceID;
+        public BasePlayerShopItemModel(): base()
+        {}
         public BasePlayerShopItemModel(string id, string name, BaseShopItemDefinition baseShopItemDefinition, bool canPurchase) : base(id, name)
         {
             _canPurchase = canPurchase;
@@ -247,22 +264,57 @@ namespace GameMaker.Feature.Shop.Runtime
         }
     }
     [System.Serializable]
-    [TypeContain(typeof(BaseCurrencyShopItemDefinition))]
-    public class CurrencyPlayerShopItemModel : BasePlayerShopItemModel
+    [TypeCache]
+    public abstract class CurrencyPlayerShopItemModel : BasePlayerShopItemModel
     {
-        public CurrencyPlayerShopItemModel(string id, string name,BaseShopItemDefinition baseShopItemDefinition, bool canPurchase) : base(id, name,baseShopItemDefinition,canPurchase)
+        public CurrencyPlayerShopItemModel() : base()
+        {
+
+        }
+        public CurrencyPlayerShopItemModel(string id, string name, BaseShopItemDefinition baseShopItemDefinition, bool canPurchase) 
+        : base(id, name, baseShopItemDefinition, canPurchase)
+        {
+        }
+    }
+    [TypeContain(typeof(BigIntCurrencyShopItemDefinition))]
+    public class BigIntCurrencyPlayerShopItemModel : CurrencyPlayerShopItemModel
+    {
+        public BigIntCurrencyPlayerShopItemModel():base()
+        {
+
+        }
+        public BigIntCurrencyPlayerShopItemModel(string id, string name, BaseShopItemDefinition baseShopItemDefinition, bool canPurchase) : base(id, name, baseShopItemDefinition, canPurchase)
+        {
+        }
+        override public BasePlayerShopItem ToPlayerShopItem()
+        {
+            return new BigIntCurrencyPlayerShopItem(id, name, GetShopItemDefinition() as IDefinition ,CanPurchase);
+        }
+    }
+    [TypeContain(typeof(LongCurrencyShopItemDefinition))]
+    public class LongCurrencyPlayerShopItemModel : CurrencyPlayerShopItemModel
+    {
+        public LongCurrencyPlayerShopItemModel() : base()
+        {
+
+        }
+        public LongCurrencyPlayerShopItemModel(string id, string name, BaseShopItemDefinition baseShopItemDefinition, bool canPurchase) : base(id, name, baseShopItemDefinition, canPurchase)
         {
         }
 
         public override BasePlayerShopItem ToPlayerShopItem()
         {
-            return new CurrencyPlayerShopItem(id, name, GetShopItemDefinition() as IDefinition, CanPurchase);
+            return new LongCurrencyPlayerShopItem(id, name, GetShopItemDefinition() as IDefinition ,CanPurchase);
         }
     }
     [System.Serializable]
     [TypeContain(typeof(ItemShopItemDefinition))]
     public class ItemPlayerShopItemModel : BasePlayerShopItemModel
     {
+        public ItemPlayerShopItemModel() : base()
+        {
+
+        }
         public ItemPlayerShopItemModel(string id, string name, BaseShopItemDefinition baseShopItemDefinition, bool canPurchase) : base(id, name, baseShopItemDefinition, canPurchase)
         {
         }

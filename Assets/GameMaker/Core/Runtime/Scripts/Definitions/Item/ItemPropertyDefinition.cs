@@ -2,7 +2,8 @@
 namespace GameMaker.Core.Runtime
 {
     [System.Serializable]
-    public abstract class ItemPropertyDefinition : Definition
+    [TypeCache]
+    public abstract class ItemPropertyDefinition :  Definition
     {
         public ItemPropertyDefinition():base()
         {

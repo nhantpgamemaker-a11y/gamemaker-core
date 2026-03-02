@@ -7,6 +7,7 @@ using UnityEngine;
 namespace GameMaker.Core.Runtime
 {
     [System.Serializable]
+    [TypeCache]
     public abstract class ItemPropertyDefinitionRef: Definition
     {
         public ItemPropertyDefinitionRef(): base()

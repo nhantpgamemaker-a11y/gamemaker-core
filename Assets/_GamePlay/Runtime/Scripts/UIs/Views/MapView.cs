@@ -13,7 +13,6 @@ namespace CatAdventure.GamePlay
     public class MapView : BaseView
     {
         public const string VIEW_NAME = "MapView";
-        [SerializeField] private UICurrency[] _uiCurrencies;
         [SerializeField] private Button _backButton;
         [SerializeField] private ObjectPoolManager _poolingManager;
         [SerializeField] private ScrollRect _scrollRect;
@@ -40,11 +39,6 @@ namespace CatAdventure.GamePlay
         {
 
             base.OnShow();
-
-            foreach (var currency in _uiCurrencies)
-            {
-                currency.Init();
-            }
             var chapterDefinition = ChapterConfig.Instance.GetChapter((int)_levelID.GetPlayerStat().Value);
             SetChapterAsync(chapterDefinition).Forget();
             _scrollRect.onValueChanged.AddListener(OnScrollValueChanged);
@@ -80,10 +74,6 @@ namespace CatAdventure.GamePlay
         protected override void OnHidden()
         {
             base.OnHidden();
-            foreach (var currency in _uiCurrencies)
-            {
-                currency.Clear();
-            }
 
             foreach (var mapController in _mapControllers)
             {

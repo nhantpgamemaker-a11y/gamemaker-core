@@ -5,6 +5,7 @@ using UnityEngine;
 namespace GameMaker.Feature.Shop.Runtime
 {
     [System.Serializable]
+    [TypeCache]
     public abstract class BaseShopItemDefinition : BaseDefinition, IReferenceDefinition
     {
         [UnityEngine.SerializeField]
@@ -44,5 +45,6 @@ namespace GameMaker.Feature.Shop.Runtime
         }
 
         public abstract string GetStringAmount();
+        
     }
 }

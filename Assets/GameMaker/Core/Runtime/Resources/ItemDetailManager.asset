@@ -43,44 +43,44 @@ MonoBehaviour:
       data:
         _id: HP
         _name: HP
-        _value: 0
+        _value: 5
     - rid: 4388470458572341325
       type: {class: ItemStatDefinitionRef, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
       data:
         _id: MP
         _name: MP
-        _value: 0
+        _value: 10
     - rid: 4388470458572341326
       type: {class: ItemStatDefinitionRef, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
       data:
         _id: ATK
         _name: ATK
-        _value: 0
+        _value: 15
     - rid: 4388470458572341327
       type: {class: ItemStatDefinitionRef, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
       data:
         _id: MATK
         _name: MATK
-        _value: 0
+        _value: 20
     - rid: 4388470458572341328
       type: {class: ItemStatDefinitionRef, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
       data:
         _id: DEF
         _name: DEF
-        _value: 0
+        _value: 25
     - rid: 4388470458572341329
       type: {class: ItemStatDefinitionRef, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
       data:
         _id: MDEF
         _name: MDEF
-        _value: 0
+        _value: 30
     - rid: 4388470458572341332
       type: {class: ItemDetailDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
       data:
         _id: MiniBundle
         _name: Mini Bundle
         _title: Mini Bundle
-        _icon: {fileID: 21300000, guid: f410501d06604f74a811d26a8da9c434, type: 3}
+        _icon: {fileID: 21300000, guid: 4cdbc75cf84cf4bbcbc528af0292568f, type: 3}
         _description: 
         _metaData: {fileID: 0}
         _itemDefinitionId: Bundle
@@ -98,7 +98,7 @@ MonoBehaviour:
         _id: MediumBundle
         _name: Medium Bundle
         _title: Medium Bundle
-        _icon: {fileID: 21300000, guid: 56ed30666258e6d48b6f1446eb306eaa, type: 3}
+        _icon: {fileID: 21300000, guid: 2306ee653fd9f4ca6a1c7a824414971b, type: 3}
         _description: 
         _metaData: {fileID: 0}
         _itemDefinitionId: Bundle
@@ -115,4 +115,4 @@ MonoBehaviour:
       data:
         _id: Speed
         _name: Speed
-        _value: 0
+        _value: 40

@@ -40,7 +40,8 @@ namespace GameMaker.Core.Runtime
             long gap = (long)playerCurrency.GetValue() - _currentAmount;
             if (gap < 0)
             {
-                _animationCurrencyAmount -= gap;
+                _animationCurrencyAmount += gap;
+                _currentAmount += gap;
                 UpdateUI(playerCurrency);
             }
             else

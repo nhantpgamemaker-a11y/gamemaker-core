@@ -18,6 +18,61 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
+    - rid: 1230062171172897505
+      type: {class: LongCurrencyShopItemDefinition, ns: GameMaker.Feature.Shop.Runtime, asm: GameMaker.Feature.Shop.Runtime}
+      data:
+        _id: Gem20
+        _name: 
+        _title: 
+        _icon: {fileID: 0}
+        _description: 
+        _metaData: {fileID: 0}
+        _referenceId: Gem
+        _price:
+          rid: 1230062171172897507
+        _amount: 20
+    - rid: 1230062171172897507
+      type: {class: BigIntPrice, ns: GameMaker.Feature.Shop.Runtime, asm: GameMaker.Feature.Shop.Runtime}
+      data:
+        _currencyReferenceId: BigInt
+        _amount: 1
+    - rid: 1230062171172897698
+      type: {class: BigIntCurrencyShopItemDefinition, ns: GameMaker.Feature.Shop.Runtime, asm: GameMaker.Feature.Shop.Runtime}
+      data:
+        _id: BigInt100
+        _name: 
+        _title: 
+        _icon: {fileID: 0}
+        _description: 
+        _metaData: {fileID: 0}
+        _referenceId: BigInt
+        _price:
+          rid: 1230062171172897700
+        _amount: 100
+    - rid: 1230062171172897700
+      type: {class: LongPrice, ns: GameMaker.Feature.Shop.Runtime, asm: GameMaker.Feature.Shop.Runtime}
+      data:
+        _currencyReferenceId: Coin
+        _amount: 2
+    - rid: 1230062171172897701
+      type: {class: ItemShopItemDefinition, ns: GameMaker.Feature.Shop.Runtime, asm: GameMaker.Feature.Shop.Runtime}
+      data:
+        _id: MediumBundle1
+        _name: 
+        _title: 
+        _icon: {fileID: 0}
+        _description: 
+        _metaData: {fileID: 0}
+        _referenceId: MediumBundle
+        _price:
+          rid: 1230062173700227117
+        _amount: 1
+        _createItemTemplate: {fileID: 0}
+    - rid: 1230062173700227117
+      type: {class: LongPrice, ns: GameMaker.Feature.Shop.Runtime, asm: GameMaker.Feature.Shop.Runtime}
+      data:
+        _currencyReferenceId: Coin
+        _amount: 3
     - rid: 4925655419490927000
       type: {class: ShopDefinition, ns: GameMaker.Feature.Shop.Runtime, asm: GameMaker.Feature.Shop.Runtime}
       data:
@@ -28,11 +83,10 @@ MonoBehaviour:
         _description: ShopCoin
         _metaData: {fileID: 0}
         _timeResetConfig:
-          _resetType: 0
+          _cronExpression: 0 0 0 * * *
           _resetTimeMode: 0
-          _hour: 0
-          _dayOfWeek: 1
-          _dayOfMonth: 1
-          _intervalSeconds: 86400
         _shopItemManager:
-          _definitions: []
+          _definitions:
+          - rid: 1230062171172897505
+          - rid: 1230062171172897698
+          - rid: 1230062171172897701

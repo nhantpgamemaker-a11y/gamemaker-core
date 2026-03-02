@@ -1,11 +1,19 @@
 using System;
 using System.Threading;
 using Cysharp.Threading.Tasks;
+using UnityEngine;
 
 namespace GameMaker.Core.Runtime
 {
     public  class TimeManager : AutomaticMonoSingleton<TimeManager>
     {
+        [UnityEngine.SerializeField] private long _cheatAddTimeSeconds = 0;
+        [ContextMenu("Cheat Add Time")]
+        public void CheatAddTime()
+        {
+            AddTimeOffset(_cheatAddTimeSeconds);
+            Logger.Log($"[TimeManager] Cheat added time: {_cheatAddTimeSeconds} seconds. Total cheat offset: {_cheatAddTimeSeconds} seconds.");
+        }
         [UnityEngine.SerializeReference]
         private BaseTimeStrategy _timeStrategy;
         [UnityEngine.SerializeField]
@@ -152,7 +160,6 @@ namespace GameMaker.Core.Runtime
                 }
             }
         }
-
         public void AddTimeOffset(long seconds)
         {
             _addTimeOffsetSeconds += seconds;

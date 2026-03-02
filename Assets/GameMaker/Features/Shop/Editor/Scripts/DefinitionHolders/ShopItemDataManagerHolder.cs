@@ -26,26 +26,25 @@ namespace GameMaker.Feature.Shop.Editor
         {
             var holder = (ShopItemDefinitionHolder)element.userData;
             var shopItemSerializedProperty = items[index];
-            element.Clear();
-            var shopItemDefinitionHolder = new ShopItemDefinitionHolder(element);
+            var shopItemDefinitionHolder = holder;
             shopItemDefinitionHolder.Bind(shopItemSerializedProperty);
         }
     }
     public class ShopItemDefinitionHolder : VisualElementHolder
     {
         ShopItemDefinitionHolderFactory _shopItemDefinitionHolderFactory;
-            public ShopItemDefinitionHolder(VisualElement root) : base(root)
-            {
-                _shopItemDefinitionHolderFactory = new();
-            }
-            public override void Bind(SerializedProperty elementProperty)
-            {
-                Root.Clear();
-                var type = elementProperty.managedReferenceValue?.GetType();
-                var holderType = _shopItemDefinitionHolderFactory.GetHolderType(type);
-                var holder = Activator.CreateInstance(holderType, Root) as ShopItemDefinitionHolder;
-                holder.Bind(elementProperty);
-            }
+        public ShopItemDefinitionHolder(VisualElement root) : base(root)
+        {
+            _shopItemDefinitionHolderFactory = new();
+        }
+        public override void Bind(SerializedProperty elementProperty)
+        {
+            Root.Clear();
+            var type = elementProperty.managedReferenceValue?.GetType();
+            var holderType = _shopItemDefinitionHolderFactory.GetHolderType(type);
+            var holder = Activator.CreateInstance(holderType, Root) as BaseShopItemDefinitionHolder;
+            holder.Bind(elementProperty);
+        }
     }
     public class ShopItemDefinitionHolderFactory
         {
@@ -58,7 +57,7 @@ namespace GameMaker.Feature.Shop.Editor
             {
                 _cache = new();
                 var itemPropertyDefinitionHolderTypes =
-                TypeUtils.GetAllConcreteDerivedTypes_Editor(typeof(ShopItemDefinitionHolder))
+                TypeUtils.GetAllConcreteAssignableTypes(typeof(BaseShopItemDefinitionHolder))
                 .Where(x =>
                 {
                     return x.GetCustomAttribute<TypeContainAttribute>() != null;

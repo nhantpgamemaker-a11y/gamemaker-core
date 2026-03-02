@@ -33,5 +33,10 @@ namespace GameMaker.Feature.Shop.Runtime
         {
             return _amount.ToString();
         }
+
+        public object GetAmount()
+        {
+            return _amount;
+        }
     }
 }

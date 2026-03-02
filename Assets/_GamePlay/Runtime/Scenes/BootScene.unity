@@ -1283,6 +1283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0027b748d4c5a0a42a278fc7488c90af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: GameMaker.Core.Runtime::GameMaker.Core.Runtime.TimeManager
+  _cheatAddTimeSeconds: 0
   _timeStrategy:
     rid: -2
   _isInitialized: 0

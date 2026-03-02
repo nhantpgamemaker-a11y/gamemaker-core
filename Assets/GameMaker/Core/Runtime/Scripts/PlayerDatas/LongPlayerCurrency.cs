@@ -29,5 +29,10 @@ namespace GameMaker.Core.Runtime
         {
             return _value;
         }
+
+        public override bool IsEnough(object value)
+        {
+            return _value >= Convert.ToInt64(value);
+        }
     }
 }

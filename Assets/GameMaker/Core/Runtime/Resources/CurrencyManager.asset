@@ -31,7 +31,7 @@ MonoBehaviour:
         _icon: {fileID: 21300000, guid: 455b9719b30c13a48a8dc1a1a83239c2, type: 3}
         _description: "Tr\u1EA7n Ph\u01B0\u1EDBc Nh\xE2n"
         _metaData: {fileID: 0}
-        _defaultValue: 0
+        _defaultValue: 1000
         _maxValue: 9223370036854775807
     - rid: 4388470156526354661
       type: {class: LongCurrencyDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
@@ -72,7 +72,7 @@ MonoBehaviour:
         _id: BigInt
         _name: BigInt
         _title: BigInt
-        _icon: {fileID: 0}
+        _icon: {fileID: 21300000, guid: 8fa2b55c3c9e54d06a4a20d6ce0bb1d6, type: 3}
         _description: 
         _metaData: {fileID: 0}
         _defaultValue: 0

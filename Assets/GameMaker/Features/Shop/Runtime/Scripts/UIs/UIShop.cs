@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
 using GameMaker.Core.Runtime;
+using GameMaker.Extension.Runtime;
 using GameMaker.UI.Runtime;
 using TMPro;
 using UnityEngine;
@@ -16,6 +17,7 @@ namespace GameMaker.Feature.Shop.Runtime
         [SerializeField] private TMP_Text _txtShopTitle;
         [SerializeField] private RectTransform _rectContent;
         [SerializeField] private UIShopItem _shopItemPrefab;
+        [SerializeField] private UICountDown _uiCountDown;
 
 
         private PlayerShop _playerShop;
@@ -32,6 +34,7 @@ namespace GameMaker.Feature.Shop.Runtime
 
             _txtShopTitle.text = _shopID.GetShopDefinition().GetTitle();
             _playerShop.AddObserver(this);
+            _uiCountDown.Init(_playerShop.GetNextRefreshUTCTime());
         }
 
         protected virtual void OnDisable()
@@ -68,6 +71,7 @@ namespace GameMaker.Feature.Shop.Runtime
 
         public void OnNotify(ISubject<BasePlayerData> subject, BasePlayerData data)
         {
+            _uiCountDown.Init(_playerShop.GetNextRefreshUTCTime());
         }
     }
 }

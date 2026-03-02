@@ -71,7 +71,6 @@ namespace GameMaker.Core.Runtime
             }
             _localConsumeRewardDict = new();
         }
-
         public Type GetLocalConsumeRewardType(Type type)
         {
             return _cache[type];

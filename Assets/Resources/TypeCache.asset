@@ -108,6 +108,31 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
     - GameMaker.Core.Runtime.LongCurrencyDefinition, GameMaker.Core.Runtime, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  - _baseTypeName: GameMaker.Core.Runtime.ItemPropertyDefinition, GameMaker.Core.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    _derivedTypeNames:
+    - GameMaker.Core.Runtime.ItemAttributeDefinition, GameMaker.Core.Runtime, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    - GameMaker.Core.Runtime.ItemStatDefinition, GameMaker.Core.Runtime, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - _baseTypeName: GameMaker.Core.Runtime.ItemPropertyDefinitionRef, GameMaker.Core.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    _derivedTypeNames:
+    - GameMaker.Core.Runtime.ItemAttributeDefinitionRef, GameMaker.Core.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - GameMaker.Core.Runtime.ItemStatDefinitionRef, GameMaker.Core.Runtime, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - _baseTypeName: GameMaker.Core.Runtime.PropertyDefinition, GameMaker.Core.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    _derivedTypeNames:
+    - CatAdventure.GamePlay.Test1, CatAdventure.GamePlay, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    - CatAdventure.GamePlay.Tes2, CatAdventure.GamePlay, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    - GameMaker.Core.Runtime.AttributeDefinition, GameMaker.Core.Runtime, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    - GameMaker.Core.Runtime.StatDefinition, GameMaker.Core.Runtime, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   - _baseTypeName: GameMaker.Core.Runtime.BaseLocalData, GameMaker.Core.Runtime,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     _derivedTypeNames:
@@ -184,20 +209,76 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
     - GameMaker.Sound.Runtime.SoundRuntimeDataManager, GameMaker.Sound.Runtime, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  - _baseTypeName: GameMaker.Feature.Shop.Editor.BaseCurrencyShopItemDefinitionHolder,
+      GameMaker.Feature.Shop.Editor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    _derivedTypeNames:
+    - GameMaker.Feature.Shop.Editor.BigIntCurrencyShopItemDefinitionHolder, GameMaker.Feature.Shop.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - GameMaker.Feature.Shop.Editor.LongCurrencyShopItemDefinitionHolder, GameMaker.Feature.Shop.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - _baseTypeName: GameMaker.Feature.Shop.Editor.BasePriceHolder, GameMaker.Feature.Shop.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    _derivedTypeNames:
+    - GameMaker.Feature.Shop.Editor.BigIntPriceHolder, GameMaker.Feature.Shop.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - GameMaker.Feature.Shop.Editor.LongPriceHolder, GameMaker.Feature.Shop.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   - _baseTypeName: GameMaker.Feature.Shop.Editor.BaseShopItemDefinitionHolder, GameMaker.Feature.Shop.Editor,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-    _derivedTypeNames: []
+    _derivedTypeNames:
+    - GameMaker.Feature.Shop.Editor.BigIntCurrencyShopItemDefinitionHolder, GameMaker.Feature.Shop.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - GameMaker.Feature.Shop.Editor.LongCurrencyShopItemDefinitionHolder, GameMaker.Feature.Shop.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - GameMaker.Feature.Shop.Editor.ItemShopItemDefinitionHolder, GameMaker.Feature.Shop.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - _baseTypeName: GameMaker.Feature.Shop.Runtime.BaseLocalConsumeShopItem, GameMaker.Feature.Shop.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    _derivedTypeNames:
+    - GameMaker.Feature.Shop.Runtime.BigIntCurrencyLocalConsumeShopItem, GameMaker.Feature.Shop.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - GameMaker.Feature.Shop.Runtime.LongCurrencyLocalConsumeShopItem, GameMaker.Feature.Shop.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - GameMaker.Feature.Shop.Runtime.ItemLocalConsumeShopItem, GameMaker.Feature.Shop.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - _baseTypeName: GameMaker.Feature.Shop.Runtime.BaseCurrencyLocalConsumeShopItem,
+      GameMaker.Feature.Shop.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    _derivedTypeNames:
+    - GameMaker.Feature.Shop.Runtime.BigIntCurrencyLocalConsumeShopItem, GameMaker.Feature.Shop.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - GameMaker.Feature.Shop.Runtime.LongCurrencyLocalConsumeShopItem, GameMaker.Feature.Shop.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   - _baseTypeName: GameMaker.Feature.Shop.Runtime.BaseCurrencyShopItemDefinition,
       GameMaker.Feature.Shop.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     _derivedTypeNames:
+    - GameMaker.Feature.Shop.Runtime.BigIntCurrencyShopItemDefinition, GameMaker.Feature.Shop.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - GameMaker.Feature.Shop.Runtime.LongCurrencyShopItemDefinition, GameMaker.Feature.Shop.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - _baseTypeName: GameMaker.Feature.Shop.Runtime.BaseShopItemDefinition, GameMaker.Feature.Shop.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    _derivedTypeNames:
+    - GameMaker.Feature.Shop.Runtime.BigIntCurrencyShopItemDefinition, GameMaker.Feature.Shop.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - GameMaker.Feature.Shop.Runtime.ItemShopItemDefinition, GameMaker.Feature.Shop.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     - GameMaker.Feature.Shop.Runtime.LongCurrencyShopItemDefinition, GameMaker.Feature.Shop.Runtime,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   - _baseTypeName: GameMaker.Feature.Shop.Runtime.BasePlayerShopItemModel, GameMaker.Feature.Shop.Runtime,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     _derivedTypeNames:
-    - GameMaker.Feature.Shop.Runtime.CurrencyPlayerShopItemModel, GameMaker.Feature.Shop.Runtime,
+    - GameMaker.Feature.Shop.Runtime.BigIntCurrencyPlayerShopItemModel, GameMaker.Feature.Shop.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - GameMaker.Feature.Shop.Runtime.LongCurrencyPlayerShopItemModel, GameMaker.Feature.Shop.Runtime,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     - GameMaker.Feature.Shop.Runtime.ItemPlayerShopItemModel, GameMaker.Feature.Shop.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - _baseTypeName: GameMaker.Feature.Shop.Runtime.CurrencyPlayerShopItemModel, GameMaker.Feature.Shop.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    _derivedTypeNames:
+    - GameMaker.Feature.Shop.Runtime.BigIntCurrencyPlayerShopItemModel, GameMaker.Feature.Shop.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - GameMaker.Feature.Shop.Runtime.LongCurrencyPlayerShopItemModel, GameMaker.Feature.Shop.Runtime,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   - _baseTypeName: GameMaker.Feature.Shop.Runtime.BasePrice, GameMaker.Feature.Shop.Runtime,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
@@ -206,6 +287,13 @@ MonoBehaviour:
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     - GameMaker.Feature.Shop.Runtime.LongPrice, GameMaker.Feature.Shop.Runtime, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  - _baseTypeName: GameMaker.Feature.Shop.Runtime.BaseCurrencyPlayerShopItem, GameMaker.Feature.Shop.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    _derivedTypeNames:
+    - GameMaker.Feature.Shop.Runtime.BigIntCurrencyPlayerShopItem, GameMaker.Feature.Shop.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - GameMaker.Feature.Shop.Runtime.LongCurrencyPlayerShopItem, GameMaker.Feature.Shop.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   - _baseTypeName: GameMaker.IAP.Runtime.BaseLocalRecallReward, GameMaker.IAP.Runtime,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     _derivedTypeNames:
@@ -313,6 +401,31 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
     - GameMaker.Core.Runtime.LongCurrencyDefinition, GameMaker.Core.Runtime, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  - _baseTypeName: GameMaker.Core.Runtime.ItemPropertyDefinition, GameMaker.Core.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    _derivedTypeNames:
+    - GameMaker.Core.Runtime.ItemAttributeDefinition, GameMaker.Core.Runtime, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    - GameMaker.Core.Runtime.ItemStatDefinition, GameMaker.Core.Runtime, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - _baseTypeName: GameMaker.Core.Runtime.ItemPropertyDefinitionRef, GameMaker.Core.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    _derivedTypeNames:
+    - GameMaker.Core.Runtime.ItemAttributeDefinitionRef, GameMaker.Core.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - GameMaker.Core.Runtime.ItemStatDefinitionRef, GameMaker.Core.Runtime, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - _baseTypeName: GameMaker.Core.Runtime.PropertyDefinition, GameMaker.Core.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    _derivedTypeNames:
+    - CatAdventure.GamePlay.Test1, CatAdventure.GamePlay, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    - CatAdventure.GamePlay.Tes2, CatAdventure.GamePlay, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    - GameMaker.Core.Runtime.AttributeDefinition, GameMaker.Core.Runtime, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    - GameMaker.Core.Runtime.StatDefinition, GameMaker.Core.Runtime, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   - _baseTypeName: GameMaker.Core.Runtime.BaseLocalData, GameMaker.Core.Runtime,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     _derivedTypeNames:
@@ -389,20 +502,76 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
     - GameMaker.Sound.Runtime.SoundRuntimeDataManager, GameMaker.Sound.Runtime, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  - _baseTypeName: GameMaker.Feature.Shop.Editor.BaseCurrencyShopItemDefinitionHolder,
+      GameMaker.Feature.Shop.Editor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    _derivedTypeNames:
+    - GameMaker.Feature.Shop.Editor.BigIntCurrencyShopItemDefinitionHolder, GameMaker.Feature.Shop.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - GameMaker.Feature.Shop.Editor.LongCurrencyShopItemDefinitionHolder, GameMaker.Feature.Shop.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - _baseTypeName: GameMaker.Feature.Shop.Editor.BasePriceHolder, GameMaker.Feature.Shop.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    _derivedTypeNames:
+    - GameMaker.Feature.Shop.Editor.BigIntPriceHolder, GameMaker.Feature.Shop.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - GameMaker.Feature.Shop.Editor.LongPriceHolder, GameMaker.Feature.Shop.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   - _baseTypeName: GameMaker.Feature.Shop.Editor.BaseShopItemDefinitionHolder, GameMaker.Feature.Shop.Editor,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-    _derivedTypeNames: []
+    _derivedTypeNames:
+    - GameMaker.Feature.Shop.Editor.BigIntCurrencyShopItemDefinitionHolder, GameMaker.Feature.Shop.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - GameMaker.Feature.Shop.Editor.LongCurrencyShopItemDefinitionHolder, GameMaker.Feature.Shop.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - GameMaker.Feature.Shop.Editor.ItemShopItemDefinitionHolder, GameMaker.Feature.Shop.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - _baseTypeName: GameMaker.Feature.Shop.Runtime.BaseLocalConsumeShopItem, GameMaker.Feature.Shop.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    _derivedTypeNames:
+    - GameMaker.Feature.Shop.Runtime.BigIntCurrencyLocalConsumeShopItem, GameMaker.Feature.Shop.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - GameMaker.Feature.Shop.Runtime.LongCurrencyLocalConsumeShopItem, GameMaker.Feature.Shop.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - GameMaker.Feature.Shop.Runtime.ItemLocalConsumeShopItem, GameMaker.Feature.Shop.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - _baseTypeName: GameMaker.Feature.Shop.Runtime.BaseCurrencyLocalConsumeShopItem,
+      GameMaker.Feature.Shop.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    _derivedTypeNames:
+    - GameMaker.Feature.Shop.Runtime.BigIntCurrencyLocalConsumeShopItem, GameMaker.Feature.Shop.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - GameMaker.Feature.Shop.Runtime.LongCurrencyLocalConsumeShopItem, GameMaker.Feature.Shop.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   - _baseTypeName: GameMaker.Feature.Shop.Runtime.BaseCurrencyShopItemDefinition,
       GameMaker.Feature.Shop.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     _derivedTypeNames:
+    - GameMaker.Feature.Shop.Runtime.BigIntCurrencyShopItemDefinition, GameMaker.Feature.Shop.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - GameMaker.Feature.Shop.Runtime.LongCurrencyShopItemDefinition, GameMaker.Feature.Shop.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - _baseTypeName: GameMaker.Feature.Shop.Runtime.BaseShopItemDefinition, GameMaker.Feature.Shop.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    _derivedTypeNames:
+    - GameMaker.Feature.Shop.Runtime.BigIntCurrencyShopItemDefinition, GameMaker.Feature.Shop.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - GameMaker.Feature.Shop.Runtime.ItemShopItemDefinition, GameMaker.Feature.Shop.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     - GameMaker.Feature.Shop.Runtime.LongCurrencyShopItemDefinition, GameMaker.Feature.Shop.Runtime,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   - _baseTypeName: GameMaker.Feature.Shop.Runtime.BasePlayerShopItemModel, GameMaker.Feature.Shop.Runtime,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     _derivedTypeNames:
-    - GameMaker.Feature.Shop.Runtime.CurrencyPlayerShopItemModel, GameMaker.Feature.Shop.Runtime,
+    - GameMaker.Feature.Shop.Runtime.BigIntCurrencyPlayerShopItemModel, GameMaker.Feature.Shop.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - GameMaker.Feature.Shop.Runtime.LongCurrencyPlayerShopItemModel, GameMaker.Feature.Shop.Runtime,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     - GameMaker.Feature.Shop.Runtime.ItemPlayerShopItemModel, GameMaker.Feature.Shop.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - _baseTypeName: GameMaker.Feature.Shop.Runtime.CurrencyPlayerShopItemModel, GameMaker.Feature.Shop.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    _derivedTypeNames:
+    - GameMaker.Feature.Shop.Runtime.BigIntCurrencyPlayerShopItemModel, GameMaker.Feature.Shop.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - GameMaker.Feature.Shop.Runtime.LongCurrencyPlayerShopItemModel, GameMaker.Feature.Shop.Runtime,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   - _baseTypeName: GameMaker.Feature.Shop.Runtime.BasePrice, GameMaker.Feature.Shop.Runtime,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
@@ -411,6 +580,13 @@ MonoBehaviour:
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     - GameMaker.Feature.Shop.Runtime.LongPrice, GameMaker.Feature.Shop.Runtime, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  - _baseTypeName: GameMaker.Feature.Shop.Runtime.BaseCurrencyPlayerShopItem, GameMaker.Feature.Shop.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    _derivedTypeNames:
+    - GameMaker.Feature.Shop.Runtime.BigIntCurrencyPlayerShopItem, GameMaker.Feature.Shop.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - GameMaker.Feature.Shop.Runtime.LongCurrencyPlayerShopItem, GameMaker.Feature.Shop.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   - _baseTypeName: GameMaker.IAP.Runtime.BaseLocalRecallReward, GameMaker.IAP.Runtime,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     _derivedTypeNames:
@@ -518,6 +694,31 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
     - GameMaker.Core.Runtime.LongCurrencyDefinition, GameMaker.Core.Runtime, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  - _baseTypeName: GameMaker.Core.Runtime.ItemPropertyDefinition, GameMaker.Core.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    _derivedTypeNames:
+    - GameMaker.Core.Runtime.ItemAttributeDefinition, GameMaker.Core.Runtime, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    - GameMaker.Core.Runtime.ItemStatDefinition, GameMaker.Core.Runtime, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - _baseTypeName: GameMaker.Core.Runtime.ItemPropertyDefinitionRef, GameMaker.Core.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    _derivedTypeNames:
+    - GameMaker.Core.Runtime.ItemAttributeDefinitionRef, GameMaker.Core.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - GameMaker.Core.Runtime.ItemStatDefinitionRef, GameMaker.Core.Runtime, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - _baseTypeName: GameMaker.Core.Runtime.PropertyDefinition, GameMaker.Core.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    _derivedTypeNames:
+    - CatAdventure.GamePlay.Test1, CatAdventure.GamePlay, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    - CatAdventure.GamePlay.Tes2, CatAdventure.GamePlay, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    - GameMaker.Core.Runtime.AttributeDefinition, GameMaker.Core.Runtime, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    - GameMaker.Core.Runtime.StatDefinition, GameMaker.Core.Runtime, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   - _baseTypeName: GameMaker.Core.Runtime.BaseLocalData, GameMaker.Core.Runtime,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     _derivedTypeNames:
@@ -594,20 +795,76 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
     - GameMaker.Sound.Runtime.SoundRuntimeDataManager, GameMaker.Sound.Runtime, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  - _baseTypeName: GameMaker.Feature.Shop.Editor.BaseCurrencyShopItemDefinitionHolder,
+      GameMaker.Feature.Shop.Editor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    _derivedTypeNames:
+    - GameMaker.Feature.Shop.Editor.BigIntCurrencyShopItemDefinitionHolder, GameMaker.Feature.Shop.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - GameMaker.Feature.Shop.Editor.LongCurrencyShopItemDefinitionHolder, GameMaker.Feature.Shop.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - _baseTypeName: GameMaker.Feature.Shop.Editor.BasePriceHolder, GameMaker.Feature.Shop.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    _derivedTypeNames:
+    - GameMaker.Feature.Shop.Editor.BigIntPriceHolder, GameMaker.Feature.Shop.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - GameMaker.Feature.Shop.Editor.LongPriceHolder, GameMaker.Feature.Shop.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   - _baseTypeName: GameMaker.Feature.Shop.Editor.BaseShopItemDefinitionHolder, GameMaker.Feature.Shop.Editor,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-    _derivedTypeNames: []
+    _derivedTypeNames:
+    - GameMaker.Feature.Shop.Editor.BigIntCurrencyShopItemDefinitionHolder, GameMaker.Feature.Shop.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - GameMaker.Feature.Shop.Editor.LongCurrencyShopItemDefinitionHolder, GameMaker.Feature.Shop.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - GameMaker.Feature.Shop.Editor.ItemShopItemDefinitionHolder, GameMaker.Feature.Shop.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - _baseTypeName: GameMaker.Feature.Shop.Runtime.BaseLocalConsumeShopItem, GameMaker.Feature.Shop.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    _derivedTypeNames:
+    - GameMaker.Feature.Shop.Runtime.BigIntCurrencyLocalConsumeShopItem, GameMaker.Feature.Shop.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - GameMaker.Feature.Shop.Runtime.LongCurrencyLocalConsumeShopItem, GameMaker.Feature.Shop.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - GameMaker.Feature.Shop.Runtime.ItemLocalConsumeShopItem, GameMaker.Feature.Shop.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - _baseTypeName: GameMaker.Feature.Shop.Runtime.BaseCurrencyLocalConsumeShopItem,
+      GameMaker.Feature.Shop.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    _derivedTypeNames:
+    - GameMaker.Feature.Shop.Runtime.BigIntCurrencyLocalConsumeShopItem, GameMaker.Feature.Shop.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - GameMaker.Feature.Shop.Runtime.LongCurrencyLocalConsumeShopItem, GameMaker.Feature.Shop.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   - _baseTypeName: GameMaker.Feature.Shop.Runtime.BaseCurrencyShopItemDefinition,
       GameMaker.Feature.Shop.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     _derivedTypeNames:
+    - GameMaker.Feature.Shop.Runtime.BigIntCurrencyShopItemDefinition, GameMaker.Feature.Shop.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - GameMaker.Feature.Shop.Runtime.LongCurrencyShopItemDefinition, GameMaker.Feature.Shop.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - _baseTypeName: GameMaker.Feature.Shop.Runtime.BaseShopItemDefinition, GameMaker.Feature.Shop.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    _derivedTypeNames:
+    - GameMaker.Feature.Shop.Runtime.BigIntCurrencyShopItemDefinition, GameMaker.Feature.Shop.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - GameMaker.Feature.Shop.Runtime.ItemShopItemDefinition, GameMaker.Feature.Shop.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     - GameMaker.Feature.Shop.Runtime.LongCurrencyShopItemDefinition, GameMaker.Feature.Shop.Runtime,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   - _baseTypeName: GameMaker.Feature.Shop.Runtime.BasePlayerShopItemModel, GameMaker.Feature.Shop.Runtime,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     _derivedTypeNames:
-    - GameMaker.Feature.Shop.Runtime.CurrencyPlayerShopItemModel, GameMaker.Feature.Shop.Runtime,
+    - GameMaker.Feature.Shop.Runtime.BigIntCurrencyPlayerShopItemModel, GameMaker.Feature.Shop.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - GameMaker.Feature.Shop.Runtime.LongCurrencyPlayerShopItemModel, GameMaker.Feature.Shop.Runtime,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     - GameMaker.Feature.Shop.Runtime.ItemPlayerShopItemModel, GameMaker.Feature.Shop.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - _baseTypeName: GameMaker.Feature.Shop.Runtime.CurrencyPlayerShopItemModel, GameMaker.Feature.Shop.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    _derivedTypeNames:
+    - GameMaker.Feature.Shop.Runtime.BigIntCurrencyPlayerShopItemModel, GameMaker.Feature.Shop.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - GameMaker.Feature.Shop.Runtime.LongCurrencyPlayerShopItemModel, GameMaker.Feature.Shop.Runtime,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   - _baseTypeName: GameMaker.Feature.Shop.Runtime.BasePrice, GameMaker.Feature.Shop.Runtime,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
@@ -616,6 +873,13 @@ MonoBehaviour:
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     - GameMaker.Feature.Shop.Runtime.LongPrice, GameMaker.Feature.Shop.Runtime, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  - _baseTypeName: GameMaker.Feature.Shop.Runtime.BaseCurrencyPlayerShopItem, GameMaker.Feature.Shop.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    _derivedTypeNames:
+    - GameMaker.Feature.Shop.Runtime.BigIntCurrencyPlayerShopItem, GameMaker.Feature.Shop.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - GameMaker.Feature.Shop.Runtime.LongCurrencyPlayerShopItem, GameMaker.Feature.Shop.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   - _baseTypeName: GameMaker.IAP.Runtime.BaseLocalRecallReward, GameMaker.IAP.Runtime,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     _derivedTypeNames:

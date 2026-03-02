@@ -40,6 +40,7 @@ MonoBehaviour:
             - rid: 4925655419490926675
             - rid: 4925655419490926676
             - rid: 4925655419490926685
+            - rid: 4925655488131235842
         _productType: 0
         _productId: com.gamemaker.coin
         _groupId: 
@@ -96,5 +97,16 @@ MonoBehaviour:
         _icon: {fileID: 0}
         _description: 
         _metaData: {fileID: 0}
-        _referenceId: Level
+        _referenceId: LifeUnlimitTime
+        _amount: 122222
+    - rid: 4925655488131235842
+      type: {class: LongCurrencyRewardDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: 
+        _name: 
+        _title: 
+        _icon: {fileID: 0}
+        _description: 
+        _metaData: {fileID: 0}
+        _referenceId: Gem
         _amount: 0

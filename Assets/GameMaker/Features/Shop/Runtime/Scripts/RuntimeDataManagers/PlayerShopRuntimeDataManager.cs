@@ -45,7 +45,7 @@ namespace GameMaker.Feature.Shop.Runtime
             }
             var shopDefinition = ShopManager.Instance.GetDefinition(shopDefinitionId);
             var playerShop = _playerShopManager.GetPlayerShop(shopDefinitionId);
-            playerShop.PurchaseItem(shopItemId, shopDefinition.TimeResetConfig.ResetType == ResetType.None);
+            playerShop.PurchaseItem(shopItemId, shopDefinition.TimeResetConfig.CronExpression == string.Empty);
             RuntimeActionManager.Instance.NotifyAction(CurrencyActionData.ADD_CURRENCY_ACTION_DEFINITION, new CurrencyActionData(price.CurrencyReferenceId,  price.GetAmount(), extendData));
             return true;
         }
@@ -65,7 +65,7 @@ namespace GameMaker.Feature.Shop.Runtime
         {
             var shopDefinition = playerShop.GetDefinition() as ShopDefinition;
             var config = shopDefinition.TimeResetConfig;
-            if (config.ResetType == ResetType.None) return;
+            if (config.CronExpression == string.Empty) return;
             if(playerShop.IsShopResetting) return;
             playerShop.SetIsShopResetting(true);
             bool success = false;

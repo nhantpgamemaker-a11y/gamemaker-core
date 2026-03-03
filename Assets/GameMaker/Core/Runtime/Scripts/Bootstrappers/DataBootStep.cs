@@ -65,7 +65,7 @@ namespace GameMaker.Core.Runtime
         [ContextMenu("SAVE")]
         private void Save()
         {
-            _ = _baseDataSpaceSetting.LocalDataManager.SaveAll();
+            _ = _baseDataSpaceSetting.LocalDataManager.SaveAllAsync();
         }
     }
 }

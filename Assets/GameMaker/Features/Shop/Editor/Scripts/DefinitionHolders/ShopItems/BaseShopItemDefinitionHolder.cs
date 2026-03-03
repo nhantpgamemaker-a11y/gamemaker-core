@@ -55,6 +55,7 @@ namespace GameMaker.Feature.Shop.Editor
             {
                 UpdateShopItemFoldout();
             });
+            UpdateShopItemFoldout();
         }
         public abstract List<BaseDefinition> GetDefinitions();
         public abstract VisualTreeAsset GetVisualTreeAsset();

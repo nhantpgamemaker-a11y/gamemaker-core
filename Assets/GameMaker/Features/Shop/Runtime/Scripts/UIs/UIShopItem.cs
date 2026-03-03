@@ -1,6 +1,7 @@
 using System;
 using Cysharp.Threading.Tasks;
 using GameMaker.Core.Runtime;
+using GameMaker.Extension.Runtime;
 using GameMaker.UI.Runtime;
 using TMPro;
 using UnityEngine;
@@ -20,7 +21,7 @@ namespace GameMaker.Feature.Shop.Runtime
         [SerializeField] private TMP_Text _txtTitle;
         [SerializeField] private TMP_Text _txtDescription;
 
-        [SerializeField] private Button _btnBuy;
+        [SerializeField] private UIButtonAsync _btnBuy;
         private BasePlayerShopItem _playerShopItem;
         private BaseShopItemDefinition _shopItemDefinition;
         protected BasePlayerShopItem playerShopItem => _playerShopItem;
@@ -32,7 +33,7 @@ namespace GameMaker.Feature.Shop.Runtime
         protected Image imgPriceIcon { get => _imgPriceIcon;  }
         protected TMP_Text txtTitle { get => _txtTitle; }
         protected TMP_Text txtDescription { get => _txtDescription; }
-        protected Button btnBuy { get => _btnBuy; }
+        protected UIButtonAsync btnBuy { get => _btnBuy; }
 
         private bool _isBuying = false;
         private Func<string, UniTask<bool>> _onPurchaseFunc;
@@ -41,14 +42,14 @@ namespace GameMaker.Feature.Shop.Runtime
             _playerShopItem = playerShopItem;
             _onPurchaseFunc = OnPurchaseFunc;
             _shopItemDefinition = playerShopItem.GetBaseShopItemDefinition();
-            _btnBuy.onClick.AddListener(OnBuyButtonClick);
+            _btnBuy.AddListenerAsync(OnBuyButtonClickAsync);
             _playerShopItem.AddObserver(this);
             UpdateUI();
         }
         public virtual void OnClear()
         {
             _playerShopItem.RemoveObserver(this);
-            _btnBuy.onClick.RemoveListener(OnBuyButtonClick);
+            _btnBuy.RemoveListenerAsync(OnBuyButtonClickAsync);
             _playerShopItem = null;
         }
 
@@ -75,13 +76,13 @@ namespace GameMaker.Feature.Shop.Runtime
             _deActiveObject.gameObject.SetActive(!playerShopItem.CanPurchase);
         }
 
-        public virtual void OnBuyButtonClick()
+        public virtual async UniTask OnBuyButtonClickAsync()
         {
             if (_isBuying)
                 return;
             if (!playerShopItem.CanPurchase)
                 return;
-            PurchaseAsync().Forget();
+            await PurchaseAsync();
         }
 
         private async UniTask<bool> PurchaseAsync()

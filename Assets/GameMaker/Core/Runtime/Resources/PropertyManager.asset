@@ -28,7 +28,8 @@ MonoBehaviour:
         _icon: {fileID: 21300000, guid: 83f0f24463eb55545b05c04675971a25, type: 3}
         _description: 
         _metaData: {fileID: 0}
-        _defaultValue: 5
+        _localizeMiddleware: {fileID: 0}
+        _defaultValue: 9
     - rid: 4388470460435660814
       type: {class: AttributeDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
       data:
@@ -38,4 +39,5 @@ MonoBehaviour:
         _icon: {fileID: 21300000, guid: a936db3fde30d6b4ab021151e664a4ec, type: 3}
         _description: 
         _metaData: {fileID: 0}
+        _localizeMiddleware: {fileID: 0}
         _defaultValue: User Name

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Cysharp.Threading.Tasks;
 using GameMaker.Core.Runtime;
 using Newtonsoft.Json;
 
@@ -42,7 +43,7 @@ namespace GameMaker.Sound.Runtime
         {
             var playerSoundVolume = _playerSoundVolumes.FirstOrDefault(x => x.GetID() == id);
             playerSoundVolume.Volume = volume;
-            _ = SaveAsync();
+            Save();
         }
     }
     [System.Serializable]

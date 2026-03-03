@@ -27,7 +27,7 @@ namespace GameMaker.IAP.Runtime
 
         public async override UniTask<(bool status, List<PlayerIAP>)> GetPlayerIAPs()
         {
-            return (true, new());
+            return (true, _localIAPSaveData.GetPlayerIAPs());
         }
 
         public async override UniTask<bool> MarkActiveAsync(List<(string productIds, string transactionIds)> confirmedOrders)
@@ -37,6 +37,11 @@ namespace GameMaker.IAP.Runtime
 
         public async override UniTask<(bool, List<BaseReceiverProduct>)> PurchaseAsync(PlayerIAP playerIAP)
         {
+            var playerIAPSave = _localIAPSaveData.GetPlayerIAPByTransactionId(playerIAP.TransactionId);
+            if (playerIAPSave != null)            
+            {
+                return (true, new());
+            }
             var receiverProducts = new List<BaseReceiverProduct>();
             var bundleDefinition = (playerIAP.GetDefinition() as IAPDefinition).Reward;
             var rewards = bundleDefinition.Rewards;
@@ -44,7 +49,7 @@ namespace GameMaker.IAP.Runtime
                             .Select(x => x.GetType())
                             .Select(x => _localConsumeRewardFactory.GetLocalConsumerReward(x))
                             .Distinct();
-                            
+
             foreach (var reward in rewards)
             {
                 var consumer = _localConsumeRewardFactory.GetLocalConsumerReward(reward.GetType());
@@ -55,11 +60,15 @@ namespace GameMaker.IAP.Runtime
                     receiverProducts.Add(data);
                 }
             }
+            playerIAP.SetProducts(receiverProducts);
+            _localIAPSaveData.AddPlayerIAPAsync(new PlayerIAPModel(playerIAP.GetID(), playerIAP.GetDefinition().GetName(),
+            playerIAP.ProductId, playerIAP.TransactionId, playerIAP.Receipt, playerIAP.IsActive, playerIAP.ReceiverProducts.Select(x=>x.Clone() as BaseReceiverProduct).ToList()), false).Forget();
             var tasks = new List<UniTask>();
             foreach (var consumer in consumers)
             {
                 tasks.Add(consumer.SaveAsync());
             }
+            tasks.Add(_localIAPSaveData.SaveAsync());
             await UniTask.WhenAll(tasks);
             return (true, receiverProducts);
         }

@@ -74,6 +74,8 @@ MonoBehaviour:
     _derivedTypeNames:
     - GameMaker.Core.Runtime.LocalBundleDataSpaceProvider, GameMaker.Core.Runtime,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - GameMaker.Core.Runtime.ConfigDataSpaceProvider, GameMaker.Core.Runtime, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
     - GameMaker.Core.Runtime.LocalCurrencyDataSpaceProvider, GameMaker.Core.Runtime,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     - GameMaker.Core.Runtime.LocalItemDataSpaceProvider, GameMaker.Core.Runtime,
@@ -136,6 +138,8 @@ MonoBehaviour:
   - _baseTypeName: GameMaker.Core.Runtime.BaseLocalData, GameMaker.Core.Runtime,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     _derivedTypeNames:
+    - GameMaker.Core.Runtime.LocalConfigSaveData, GameMaker.Core.Runtime, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
     - GameMaker.Core.Runtime.LocalCurrencySaveData, GameMaker.Core.Runtime, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
     - GameMaker.Core.Runtime.LocalItemSaveData, GameMaker.Core.Runtime, Version=0.0.0.0,
@@ -169,6 +173,8 @@ MonoBehaviour:
     _derivedTypeNames:
     - GameMaker.Sound.Runtime.SoundDataManager, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+    - GameMaker.Core.Runtime.PlayerConfigManager, GameMaker.Core.Runtime, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
     - GameMaker.Core.Runtime.PlayerCurrencyManager, GameMaker.Core.Runtime, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
     - GameMaker.Core.Runtime.PlayerItemDetailManager, GameMaker.Core.Runtime, Version=0.0.0.0,
@@ -195,6 +201,8 @@ MonoBehaviour:
     _derivedTypeNames:
     - GameMaker.Core.Runtime.BundleRuntimeDataManager, GameMaker.Core.Runtime, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+    - GameMaker.Core.Runtime.PlayerConfigRuntimeDataManager, GameMaker.Core.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     - GameMaker.Core.Runtime.PlayerCurrencyRuntimeDataManager, GameMaker.Core.Runtime,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     - GameMaker.Core.Runtime.PlayerItemDetailRuntimeDataManager, GameMaker.Core.Runtime,
@@ -367,6 +375,8 @@ MonoBehaviour:
     _derivedTypeNames:
     - GameMaker.Core.Runtime.LocalBundleDataSpaceProvider, GameMaker.Core.Runtime,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - GameMaker.Core.Runtime.ConfigDataSpaceProvider, GameMaker.Core.Runtime, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
     - GameMaker.Core.Runtime.LocalCurrencyDataSpaceProvider, GameMaker.Core.Runtime,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     - GameMaker.Core.Runtime.LocalItemDataSpaceProvider, GameMaker.Core.Runtime,
@@ -429,6 +439,8 @@ MonoBehaviour:
   - _baseTypeName: GameMaker.Core.Runtime.BaseLocalData, GameMaker.Core.Runtime,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     _derivedTypeNames:
+    - GameMaker.Core.Runtime.LocalConfigSaveData, GameMaker.Core.Runtime, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
     - GameMaker.Core.Runtime.LocalCurrencySaveData, GameMaker.Core.Runtime, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
     - GameMaker.Core.Runtime.LocalItemSaveData, GameMaker.Core.Runtime, Version=0.0.0.0,
@@ -462,6 +474,8 @@ MonoBehaviour:
     _derivedTypeNames:
     - GameMaker.Sound.Runtime.SoundDataManager, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+    - GameMaker.Core.Runtime.PlayerConfigManager, GameMaker.Core.Runtime, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
     - GameMaker.Core.Runtime.PlayerCurrencyManager, GameMaker.Core.Runtime, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
     - GameMaker.Core.Runtime.PlayerItemDetailManager, GameMaker.Core.Runtime, Version=0.0.0.0,
@@ -488,6 +502,8 @@ MonoBehaviour:
     _derivedTypeNames:
     - GameMaker.Core.Runtime.BundleRuntimeDataManager, GameMaker.Core.Runtime, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+    - GameMaker.Core.Runtime.PlayerConfigRuntimeDataManager, GameMaker.Core.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     - GameMaker.Core.Runtime.PlayerCurrencyRuntimeDataManager, GameMaker.Core.Runtime,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     - GameMaker.Core.Runtime.PlayerItemDetailRuntimeDataManager, GameMaker.Core.Runtime,
@@ -660,6 +676,8 @@ MonoBehaviour:
     _derivedTypeNames:
     - GameMaker.Core.Runtime.LocalBundleDataSpaceProvider, GameMaker.Core.Runtime,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - GameMaker.Core.Runtime.ConfigDataSpaceProvider, GameMaker.Core.Runtime, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
     - GameMaker.Core.Runtime.LocalCurrencyDataSpaceProvider, GameMaker.Core.Runtime,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     - GameMaker.Core.Runtime.LocalItemDataSpaceProvider, GameMaker.Core.Runtime,
@@ -722,6 +740,8 @@ MonoBehaviour:
   - _baseTypeName: GameMaker.Core.Runtime.BaseLocalData, GameMaker.Core.Runtime,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     _derivedTypeNames:
+    - GameMaker.Core.Runtime.LocalConfigSaveData, GameMaker.Core.Runtime, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
     - GameMaker.Core.Runtime.LocalCurrencySaveData, GameMaker.Core.Runtime, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
     - GameMaker.Core.Runtime.LocalItemSaveData, GameMaker.Core.Runtime, Version=0.0.0.0,
@@ -755,6 +775,8 @@ MonoBehaviour:
     _derivedTypeNames:
     - GameMaker.Sound.Runtime.SoundDataManager, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+    - GameMaker.Core.Runtime.PlayerConfigManager, GameMaker.Core.Runtime, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
     - GameMaker.Core.Runtime.PlayerCurrencyManager, GameMaker.Core.Runtime, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
     - GameMaker.Core.Runtime.PlayerItemDetailManager, GameMaker.Core.Runtime, Version=0.0.0.0,
@@ -781,6 +803,8 @@ MonoBehaviour:
     _derivedTypeNames:
     - GameMaker.Core.Runtime.BundleRuntimeDataManager, GameMaker.Core.Runtime, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+    - GameMaker.Core.Runtime.PlayerConfigRuntimeDataManager, GameMaker.Core.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     - GameMaker.Core.Runtime.PlayerCurrencyRuntimeDataManager, GameMaker.Core.Runtime,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     - GameMaker.Core.Runtime.PlayerItemDetailRuntimeDataManager, GameMaker.Core.Runtime,

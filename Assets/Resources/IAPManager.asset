@@ -15,91 +15,17 @@ MonoBehaviour:
   dataManager:
     _definitions:
     - rid: 4925655408435789944
-    - rid: 4925655412329414954
+    - rid: 1230062202269990997
+    - rid: 1230062202269990999
+    - rid: 1230062202269991001
+    - rid: 1230062202269991440
+    - rid: 1230062202269991442
+    - rid: 1230062202269991444
+    - rid: 1230062202269991446
   references:
     version: 2
     RefIds:
-    - rid: 4925655408435789944
-      type: {class: IAPDefinition, ns: GameMaker.IAP.Runtime, asm: GameMaker.IAP.Runtime}
-      data:
-        _id: Coin_1
-        _name: Coin_1
-        _title: Coin_1
-        _icon: {fileID: 0}
-        _description: 
-        _metaData: {fileID: 0}
-        _reward:
-          _id: 
-          _name: 
-          _title: 
-          _icon: {fileID: 0}
-          _description: 
-          _metaData: {fileID: 0}
-          _rewardManager:
-            _definitions:
-            - rid: 4925655419490926675
-            - rid: 4925655419490926676
-            - rid: 4925655419490926685
-            - rid: 4925655488131235842
-        _productType: 0
-        _productId: com.gamemaker.coin
-        _groupId: 
-    - rid: 4925655412329414954
-      type: {class: IAPDefinition, ns: GameMaker.IAP.Runtime, asm: GameMaker.IAP.Runtime}
-      data:
-        _id: Coin_2
-        _name: Coin_2
-        _title: Coin_2
-        _icon: {fileID: 0}
-        _description: 
-        _metaData: {fileID: 0}
-        _reward:
-          _id: 
-          _name: 
-          _title: 
-          _icon: {fileID: 0}
-          _description: 
-          _metaData: {fileID: 0}
-          _rewardManager:
-            _definitions: []
-        _productType: 0
-        _productId: 
-        _groupId: 
-    - rid: 4925655419490926675
-      type: {class: ItemRewardDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
-      data:
-        _id: 
-        _name: 
-        _title: 
-        _icon: {fileID: 0}
-        _description: 
-        _metaData: {fileID: 0}
-        _referenceId: MediumBundle
-        _amount: 1
-        _createItemTemplate: {fileID: 0}
-    - rid: 4925655419490926676
-      type: {class: StatRewardDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
-      data:
-        _id: 
-        _name: 
-        _title: 
-        _icon: {fileID: 0}
-        _description: 
-        _metaData: {fileID: 0}
-        _referenceId: Level
-        _amount: 1
-    - rid: 4925655419490926685
-      type: {class: TimedRewardDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
-      data:
-        _id: 
-        _name: 
-        _title: 
-        _icon: {fileID: 0}
-        _description: 
-        _metaData: {fileID: 0}
-        _referenceId: LifeUnlimitTime
-        _amount: 122222
-    - rid: 4925655488131235842
+    - rid: 1230062202269990996
       type: {class: LongCurrencyRewardDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
       data:
         _id: 
@@ -108,5 +34,282 @@ MonoBehaviour:
         _icon: {fileID: 0}
         _description: 
         _metaData: {fileID: 0}
-        _referenceId: Gem
-        _amount: 0
+        _localizeMiddleware: {fileID: 0}
+        _referenceId: Coin
+        _amount: 100
+    - rid: 1230062202269990997
+      type: {class: IAPDefinition, ns: GameMaker.IAP.Runtime, asm: GameMaker.IAP.Runtime}
+      data:
+        _id: Coin_200
+        _name: Coin_200
+        _title: 200
+        _icon: {fileID: 21300000, guid: 41637e825aab343b39490220da6fe927, type: 3}
+        _description: 
+        _metaData: {fileID: 0}
+        _localizeMiddleware: {fileID: 0}
+        _reward:
+          _id: 
+          _name: 
+          _title: 
+          _icon: {fileID: 0}
+          _description: 
+          _metaData: {fileID: 0}
+          _localizeMiddleware: {fileID: 0}
+          _rewardManager:
+            _definitions:
+            - rid: 1230062202269990998
+        _productType: 0
+        _productId: com.gamemaker.coin_200
+        _groupId: Coin
+    - rid: 1230062202269990998
+      type: {class: LongCurrencyRewardDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: 
+        _name: 
+        _title: 
+        _icon: {fileID: 0}
+        _description: 
+        _metaData: {fileID: 0}
+        _localizeMiddleware: {fileID: 0}
+        _referenceId: Coin
+        _amount: 200
+    - rid: 1230062202269990999
+      type: {class: IAPDefinition, ns: GameMaker.IAP.Runtime, asm: GameMaker.IAP.Runtime}
+      data:
+        _id: Coin_300
+        _name: Coin_300
+        _title: 300
+        _icon: {fileID: 21300000, guid: 7dc60f97d2de04d7aa6f2904e16c3bb0, type: 3}
+        _description: 
+        _metaData: {fileID: 0}
+        _localizeMiddleware: {fileID: 0}
+        _reward:
+          _id: 
+          _name: 
+          _title: 
+          _icon: {fileID: 0}
+          _description: 
+          _metaData: {fileID: 0}
+          _localizeMiddleware: {fileID: 0}
+          _rewardManager:
+            _definitions:
+            - rid: 1230062202269991000
+        _productType: 0
+        _productId: com.gamemaker.coin_300
+        _groupId: Coin
+    - rid: 1230062202269991000
+      type: {class: LongCurrencyRewardDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: 
+        _name: 
+        _title: 
+        _icon: {fileID: 0}
+        _description: 
+        _metaData: {fileID: 0}
+        _localizeMiddleware: {fileID: 0}
+        _referenceId: Coin
+        _amount: 300
+    - rid: 1230062202269991001
+      type: {class: IAPDefinition, ns: GameMaker.IAP.Runtime, asm: GameMaker.IAP.Runtime}
+      data:
+        _id: Coin_400
+        _name: Coin_400
+        _title: 400
+        _icon: {fileID: 21300000, guid: 4ead335223dba4b7da6c7430151ce933, type: 3}
+        _description: 
+        _metaData: {fileID: 0}
+        _localizeMiddleware: {fileID: 0}
+        _reward:
+          _id: 
+          _name: 
+          _title: 
+          _icon: {fileID: 0}
+          _description: 
+          _metaData: {fileID: 0}
+          _localizeMiddleware: {fileID: 0}
+          _rewardManager:
+            _definitions:
+            - rid: 1230062202269991002
+        _productType: 0
+        _productId: com.gamemaker.coin_400
+        _groupId: Coin
+    - rid: 1230062202269991002
+      type: {class: LongCurrencyRewardDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: 
+        _name: 
+        _title: 
+        _icon: {fileID: 0}
+        _description: 
+        _metaData: {fileID: 0}
+        _localizeMiddleware: {fileID: 0}
+        _referenceId: Coin
+        _amount: 400
+    - rid: 1230062202269991440
+      type: {class: IAPDefinition, ns: GameMaker.IAP.Runtime, asm: GameMaker.IAP.Runtime}
+      data:
+        _id: Coin_500
+        _name: Coin_500
+        _title: 500
+        _icon: {fileID: 21300000, guid: b641f24c584a24503a5bb389ba0d3377, type: 3}
+        _description: 
+        _metaData: {fileID: 0}
+        _localizeMiddleware: {fileID: 0}
+        _reward:
+          _id: 
+          _name: 
+          _title: 
+          _icon: {fileID: 0}
+          _description: 
+          _metaData: {fileID: 0}
+          _localizeMiddleware: {fileID: 0}
+          _rewardManager:
+            _definitions:
+            - rid: 1230062202269991441
+        _productType: 0
+        _productId: com.gamemaker.coin_500
+        _groupId: Coin
+    - rid: 1230062202269991441
+      type: {class: LongCurrencyRewardDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: 
+        _name: 
+        _title: 
+        _icon: {fileID: 0}
+        _description: 
+        _metaData: {fileID: 0}
+        _localizeMiddleware: {fileID: 0}
+        _referenceId: Coin
+        _amount: 500
+    - rid: 1230062202269991442
+      type: {class: IAPDefinition, ns: GameMaker.IAP.Runtime, asm: GameMaker.IAP.Runtime}
+      data:
+        _id: Coin_600
+        _name: Coin_600
+        _title: 600
+        _icon: {fileID: 21300000, guid: b641f24c584a24503a5bb389ba0d3377, type: 3}
+        _description: 
+        _metaData: {fileID: 0}
+        _localizeMiddleware: {fileID: 0}
+        _reward:
+          _id: 
+          _name: 
+          _title: 
+          _icon: {fileID: 0}
+          _description: 
+          _metaData: {fileID: 0}
+          _localizeMiddleware: {fileID: 0}
+          _rewardManager:
+            _definitions:
+            - rid: 1230062202269991443
+        _productType: 0
+        _productId: com.gamemaker.coin_600
+        _groupId: Coin
+    - rid: 1230062202269991443
+      type: {class: LongCurrencyRewardDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: 
+        _name: 
+        _title: 
+        _icon: {fileID: 0}
+        _description: 
+        _metaData: {fileID: 0}
+        _localizeMiddleware: {fileID: 0}
+        _referenceId: Coin
+        _amount: 600
+    - rid: 1230062202269991444
+      type: {class: IAPDefinition, ns: GameMaker.IAP.Runtime, asm: GameMaker.IAP.Runtime}
+      data:
+        _id: Coin_700
+        _name: Coin_700
+        _title: 700
+        _icon: {fileID: 21300000, guid: b641f24c584a24503a5bb389ba0d3377, type: 3}
+        _description: 
+        _metaData: {fileID: 0}
+        _localizeMiddleware: {fileID: 0}
+        _reward:
+          _id: 
+          _name: 
+          _title: 
+          _icon: {fileID: 0}
+          _description: 
+          _metaData: {fileID: 0}
+          _localizeMiddleware: {fileID: 0}
+          _rewardManager:
+            _definitions:
+            - rid: 1230062202269991445
+        _productType: 0
+        _productId: com.gamemaker.coin_700
+        _groupId: Coin
+    - rid: 1230062202269991445
+      type: {class: LongCurrencyRewardDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: 
+        _name: 
+        _title: 
+        _icon: {fileID: 0}
+        _description: 
+        _metaData: {fileID: 0}
+        _localizeMiddleware: {fileID: 0}
+        _referenceId: Coin
+        _amount: 700
+    - rid: 1230062202269991446
+      type: {class: IAPDefinition, ns: GameMaker.IAP.Runtime, asm: GameMaker.IAP.Runtime}
+      data:
+        _id: Coin_800
+        _name: Coin_800
+        _title: 800
+        _icon: {fileID: 21300000, guid: b641f24c584a24503a5bb389ba0d3377, type: 3}
+        _description: 
+        _metaData: {fileID: 0}
+        _localizeMiddleware: {fileID: 0}
+        _reward:
+          _id: 
+          _name: 
+          _title: 
+          _icon: {fileID: 0}
+          _description: 
+          _metaData: {fileID: 0}
+          _localizeMiddleware: {fileID: 0}
+          _rewardManager:
+            _definitions:
+            - rid: 1230062202269991447
+        _productType: 0
+        _productId: com.gamemaker.coin_800
+        _groupId: Coin
+    - rid: 1230062202269991447
+      type: {class: LongCurrencyRewardDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: 
+        _name: 
+        _title: 
+        _icon: {fileID: 0}
+        _description: 
+        _metaData: {fileID: 0}
+        _localizeMiddleware: {fileID: 0}
+        _referenceId: Coin
+        _amount: 800
+    - rid: 4925655408435789944
+      type: {class: IAPDefinition, ns: GameMaker.IAP.Runtime, asm: GameMaker.IAP.Runtime}
+      data:
+        _id: Coin_100
+        _name: Coin_100
+        _title: 100
+        _icon: {fileID: 21300000, guid: 24e0f0c801fef2d4781f7f412ef3253e, type: 3}
+        _description: 
+        _metaData: {fileID: 0}
+        _localizeMiddleware: {fileID: 0}
+        _reward:
+          _id: 
+          _name: 
+          _title: 
+          _icon: {fileID: 0}
+          _description: 
+          _metaData: {fileID: 0}
+          _localizeMiddleware: {fileID: 0}
+          _rewardManager:
+            _definitions:
+            - rid: 1230062202269990996
+        _productType: 0
+        _productId: com.gamemaker.coin_100
+        _groupId: Coin

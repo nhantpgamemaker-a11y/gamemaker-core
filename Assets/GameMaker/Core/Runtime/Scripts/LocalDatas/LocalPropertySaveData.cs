@@ -38,19 +38,21 @@ namespace GameMaker.Core.Runtime
                     playerPropertyModel.SetPropertyDefinition(propertyDefinition);
                     continue;
                 }
-
-                var playerPropertyModelType = _playerPropertyTypeFactory.GetType(propertyDefinition.GetType());
-                var playerProperty = Activator.CreateInstance(playerPropertyModelType,
-                                                                propertyDefinition.GetID(),
-                                                                propertyDefinition.GetName(),
-                                                                propertyDefinition) as PlayerPropertyModel;
-                playerProperty.Set(propertyDefinition.GetStringValue());
-                _playerProperties.Add(playerProperty);
+                else
+                {
+                    var playerPropertyModelType = _playerPropertyTypeFactory.GetType(propertyDefinition.GetType());
+                    var playerProperty = Activator.CreateInstance(playerPropertyModelType,
+                                                                    propertyDefinition.GetID(),
+                                                                    propertyDefinition.GetName(),
+                                                                    propertyDefinition) as PlayerPropertyModel;
+                    playerProperty.Set(propertyDefinition.GetStringValue());
+                    _playerProperties.Add(playerProperty);
+                }
             }
         }
         public List<PlayerProperty> GetPlayerProperties()
         {
-            return _playerProperties.Select(x => x.ToPlayerProperty()).ToList();
+            return _playerProperties.Where(x=>x.GetPropertyDefinition()!=null).Select(x => x.ToPlayerProperty()).ToList();
         }
         public PlayerProperty GetPlayerProperty(string propertyDefinitionId)
         {
@@ -130,6 +132,10 @@ namespace GameMaker.Core.Runtime
         public abstract void Add(string value);
         public abstract void Set(string value);
         public abstract string Get();
+        public PropertyDefinition GetPropertyDefinition()
+        {
+            return _propertyDefinition;
+        }
         public void SetPropertyDefinition(PropertyDefinition propertyDefinition)
         {
             _propertyDefinition = propertyDefinition;

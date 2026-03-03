@@ -73,6 +73,96 @@ MonoBehaviour:
       data:
         _currencyReferenceId: Coin
         _amount: 3
+    - rid: 1230062198448980052
+      type: {class: LongCurrencyShopItemDefinition, ns: GameMaker.Feature.Shop.Runtime, asm: GameMaker.Feature.Shop.Runtime}
+      data:
+        _id: Gem100
+        _name: 
+        _title: 
+        _icon: {fileID: 0}
+        _description: 
+        _metaData: {fileID: 0}
+        _referenceId: Gem
+        _price:
+          rid: 1230062198448980053
+        _amount: 100
+    - rid: 1230062198448980053
+      type: {class: LongPrice, ns: GameMaker.Feature.Shop.Runtime, asm: GameMaker.Feature.Shop.Runtime}
+      data:
+        _currencyReferenceId: Coin
+        _amount: 100
+    - rid: 1230062198448980054
+      type: {class: LongCurrencyShopItemDefinition, ns: GameMaker.Feature.Shop.Runtime, asm: GameMaker.Feature.Shop.Runtime}
+      data:
+        _id: Gem200
+        _name: 
+        _title: 
+        _icon: {fileID: 0}
+        _description: 
+        _metaData: {fileID: 0}
+        _referenceId: Gem
+        _price:
+          rid: 1230062198448980055
+        _amount: 200
+    - rid: 1230062198448980055
+      type: {class: LongPrice, ns: GameMaker.Feature.Shop.Runtime, asm: GameMaker.Feature.Shop.Runtime}
+      data:
+        _currencyReferenceId: Coin
+        _amount: 200
+    - rid: 1230062198448980056
+      type: {class: LongCurrencyShopItemDefinition, ns: GameMaker.Feature.Shop.Runtime, asm: GameMaker.Feature.Shop.Runtime}
+      data:
+        _id: Gem300
+        _name: 
+        _title: 
+        _icon: {fileID: 0}
+        _description: 
+        _metaData: {fileID: 0}
+        _referenceId: Gem
+        _price:
+          rid: 1230062198448980057
+        _amount: 300
+    - rid: 1230062198448980057
+      type: {class: LongPrice, ns: GameMaker.Feature.Shop.Runtime, asm: GameMaker.Feature.Shop.Runtime}
+      data:
+        _currencyReferenceId: Coin
+        _amount: 300
+    - rid: 1230062198448980059
+      type: {class: LongCurrencyShopItemDefinition, ns: GameMaker.Feature.Shop.Runtime, asm: GameMaker.Feature.Shop.Runtime}
+      data:
+        _id: Gem400
+        _name: 
+        _title: 
+        _icon: {fileID: 0}
+        _description: 
+        _metaData: {fileID: 0}
+        _referenceId: Gem
+        _price:
+          rid: 1230062198448980060
+        _amount: 400
+    - rid: 1230062198448980060
+      type: {class: LongPrice, ns: GameMaker.Feature.Shop.Runtime, asm: GameMaker.Feature.Shop.Runtime}
+      data:
+        _currencyReferenceId: Coin
+        _amount: 400
+    - rid: 1230062198448980063
+      type: {class: LongCurrencyShopItemDefinition, ns: GameMaker.Feature.Shop.Runtime, asm: GameMaker.Feature.Shop.Runtime}
+      data:
+        _id: Coin600
+        _name: 
+        _title: 
+        _icon: {fileID: 21300000, guid: 4ead335223dba4b7da6c7430151ce933, type: 3}
+        _description: 
+        _metaData: {fileID: 0}
+        _referenceId: Coin
+        _price:
+          rid: 1230062198448980064
+        _amount: 600
+    - rid: 1230062198448980064
+      type: {class: LongPrice, ns: GameMaker.Feature.Shop.Runtime, asm: GameMaker.Feature.Shop.Runtime}
+      data:
+        _currencyReferenceId: Gem
+        _amount: 600
     - rid: 4925655419490927000
       type: {class: ShopDefinition, ns: GameMaker.Feature.Shop.Runtime, asm: GameMaker.Feature.Shop.Runtime}
       data:
@@ -90,3 +180,8 @@ MonoBehaviour:
           - rid: 1230062171172897505
           - rid: 1230062171172897698
           - rid: 1230062171172897701
+          - rid: 1230062198448980052
+          - rid: 1230062198448980054
+          - rid: 1230062198448980056
+          - rid: 1230062198448980059
+          - rid: 1230062198448980063

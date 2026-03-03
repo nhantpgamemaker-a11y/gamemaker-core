@@ -40,5 +40,10 @@ namespace GameMaker.Core.Runtime
         {
             return PropertyManager.Instance.GetDefinition(GetReferenceID());
         }
+
+        public override object GetAmount()
+        {
+           return _amount;
+        }
     }
 }

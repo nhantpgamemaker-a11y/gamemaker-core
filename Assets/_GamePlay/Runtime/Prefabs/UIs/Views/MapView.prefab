@@ -2546,10 +2546,6 @@ MonoBehaviour:
   overlay: {fileID: 28010246063850040}
   container: {fileID: 1531509795681751792}
   _uiAnimation: {fileID: 5703004883598343367}
-  _uiCurrencies:
-  - {fileID: 4467605845462330893}
-  - {fileID: 4632290572947603018}
-  - {fileID: 6556345159740111207}
   _backButton: {fileID: 4695308338800917109}
   _poolingManager: {fileID: 6777537785270438195}
   _scrollRect: {fileID: 6447701129122893980}
@@ -2690,17 +2686,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b7cadc54a42990459b43690d5b7374d, type: 3}
---- !u!114 &6556345159740111207 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8557012188340495604, guid: 0b7cadc54a42990459b43690d5b7374d, type: 3}
-  m_PrefabInstance: {fileID: 3187506268404194707}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce34f252c2ce1e84bbd0812e41d6f378, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: GameMaker.Core.Runtime::GameMaker.Core.Runtime.UICurrencyAnimation
 --- !u!224 &9138765706365344227 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5976038032090694768, guid: 0b7cadc54a42990459b43690d5b7374d, type: 3}
@@ -2819,17 +2804,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3609f60e799cf44f98bb31285777797, type: 3}
---- !u!114 &4632290572947603018 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8557012188340495604, guid: c3609f60e799cf44f98bb31285777797, type: 3}
-  m_PrefabInstance: {fileID: 3929864032358996670}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce34f252c2ce1e84bbd0812e41d6f378, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: GameMaker.Core.Runtime::GameMaker.Core.Runtime.UICurrencyAnimation
 --- !u!224 &7234619838699282126 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5976038032090694768, guid: c3609f60e799cf44f98bb31285777797, type: 3}
@@ -2937,14 +2911,3 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5976038032090694768, guid: 9a366d8c8d006404998b285730ee0d3e, type: 3}
   m_PrefabInstance: {fileID: 5927720849382163817}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4467605845462330893 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7801186097431866212, guid: 9a366d8c8d006404998b285730ee0d3e, type: 3}
-  m_PrefabInstance: {fileID: 5927720849382163817}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9203cdf07d0e2ae419a316206d10029f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: GameMaker.Core.Runtime::GameMaker.Core.Runtime.UICurrency

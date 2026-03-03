@@ -80,7 +80,8 @@ namespace GameMaker.Core.Runtime
             var localConsumeRewardType = GetLocalConsumeRewardType(type);
             if (!_localConsumeRewardDict.TryGetValue(localConsumeRewardType, out BaseLocalConsumeReward baseLocalConsumeReward))
             {
-                _localConsumeRewardDict[type] = Activator.CreateInstance(localConsumeRewardType) as BaseLocalConsumeReward;
+                baseLocalConsumeReward = Activator.CreateInstance(localConsumeRewardType) as BaseLocalConsumeReward;
+                _localConsumeRewardDict[localConsumeRewardType] = baseLocalConsumeReward;
             }
             return baseLocalConsumeReward;
 
@@ -108,7 +109,7 @@ namespace GameMaker.Core.Runtime
             await localCurrencySaveData.SaveAsync();
         }
     }
-    [TypeContain(typeof(BigIntCurrencyDefinition))]
+    [TypeContain(typeof(BigIntCurrencyRewardDefinition))]
 
     public class BigIntCurrencyLocalConsumeReward : BaseCurrencyLocalConsumeReward
     {
@@ -120,7 +121,7 @@ namespace GameMaker.Core.Runtime
             return new BigIntCurrencyReceiverProduct(currency.GetReferenceID(), currency.GetAmount());
         }
     }
-    [TypeContain(typeof(LongCurrencyDefinition))]
+    [TypeContain(typeof(LongCurrencyRewardDefinition))]
     public class LongCurrencyLocalConsumeReward : BaseCurrencyLocalConsumeReward
     {
         public override BaseReceiverProduct Consume(BaseRewardDefinition rewardDefinition)

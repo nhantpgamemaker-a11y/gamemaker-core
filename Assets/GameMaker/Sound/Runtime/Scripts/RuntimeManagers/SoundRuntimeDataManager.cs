@@ -25,12 +25,13 @@ namespace GameMaker.Sound.Runtime
             var soundVolumes = _soundDataSpaceProvider.GetPlayerSoundVolumes();
             _soundDataManager.Initialize(soundVolumes.Cast<BasePlayerData>().ToList());
             _mixerGroupNames = _coreMixer.FindMatchingGroups(string.Empty).Select(x => x.name).ToList();
-            foreach(var name in _mixerGroupNames)
+            foreach (var name in _mixerGroupNames)
             {
                 var playerVolume = _soundDataManager.GetPlayerSoundVolume(name);
                 float volumeInDb = Mathf.Log10(Mathf.Clamp(playerVolume.Volume, 0.0001f, 1f)) * 20;
                 _coreMixer.SetFloat($"{name}_Volume", volumeInDb);
             }
+            SoundGateway.Initialize(this);
             return true;
         }
 
@@ -38,6 +39,14 @@ namespace GameMaker.Sound.Runtime
         {
             _soundDataSpaceProvider.SetVolume(id, volume);
             _soundDataManager.SetVolume(id, volume);
+            var playerVolume = _soundDataManager.GetPlayerSoundVolume(id);
+            float volumeInDb = Mathf.Log10(Mathf.Clamp(playerVolume.Volume, 0.0001f, 1f)) * 20;
+            _coreMixer.SetFloat($"{playerVolume.GetID()}_Volume", volumeInDb);
+        }
+
+        public PlayerSoundVolume GetPlayerSoundVolume(string id)
+        {
+            return _soundDataManager.GetPlayerSoundVolume(id);
         }
     }
 }

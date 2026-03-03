@@ -10,7 +10,7 @@ namespace GameMaker.Core.Runtime
         {
             return ConditionManager.Instance.GetDefinitions().Cast<IDefinition>().ToList();
         }
-        public ConditionDefinition GetConditionDefinition()
+        public BaseConditionDefinition GetConditionDefinition()
         {
             return ConditionManager.Instance.GetDefinition(ID);
         }
@@ -22,7 +22,20 @@ namespace GameMaker.Core.Runtime
             {
                 return false;
             }
-            return playerStat.Value >= GetConditionDefinition().CompareValue;
+            if (conditionDefinition is ConfigConditionDefinition configConditionDefinition)
+            {
+                var playerConfig = ConfigGateway.Manager.GetPlayerConfig(configConditionDefinition.ConfigCompareDefinitionId) as PlayerConfig;
+                if (playerConfig == null)
+                {
+                    return false;
+                }
+                return playerStat.Value >= playerConfig.GetFloatValue();
+            }
+            if(conditionDefinition is ValueConditionDefinition valueConditionDefinition)
+            {
+                return playerStat.Value >= valueConditionDefinition.CompareValue;
+            }
+            return false;
         }
         
         public PlayerStat GetPlayerStat()

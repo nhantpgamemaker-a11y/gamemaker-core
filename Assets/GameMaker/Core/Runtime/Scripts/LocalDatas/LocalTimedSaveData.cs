@@ -19,25 +19,33 @@ namespace GameMaker.Core.Runtime
             var currentTime = TimeManager.Instance.UnixTimestamp;
             foreach(var timedDefinition in TimedManager.Instance.GetDefinitions())
             {
-                _playerTimeds.Add(new PlayerTimedModel(timedDefinition.GetID(), timedDefinition.GetName(), timedDefinition.DefaultValue, currentTime));
+                var playerTimed = new PlayerTimedModel(timedDefinition.GetID(), timedDefinition.GetName(), timedDefinition.DefaultValue, currentTime);
+                playerTimed.SetTimedDefinition(timedDefinition);
+                _playerTimeds.Add(playerTimed);
             }
         }
         protected internal override void OnLoad()
         {
             base.OnLoad();
-            var timedIds = _playerTimeds.Select(x => x.GetID());
             var currentTime = TimeManager.Instance.UnixTimestamp;
             foreach(var timedDefinition in TimedManager.Instance.GetDefinitions())
             {
-                if (!timedIds.Contains(timedDefinition.GetID()))
+                var playerTimedModel = _playerTimeds.FirstOrDefault(x => x.GetID() == timedDefinition.GetID());
+                if (playerTimedModel != null)                {
+                    playerTimedModel.SetTimedDefinition(timedDefinition);
+                    continue;
+                }
+                else
                 {
-                    _playerTimeds.Add(new PlayerTimedModel(timedDefinition.GetID(), timedDefinition.GetName(), timedDefinition.DefaultValue, currentTime));
+                    var playerTimed = new PlayerTimedModel(timedDefinition.GetID(), timedDefinition.GetName(), timedDefinition.DefaultValue, currentTime);
+                    playerTimed.SetTimedDefinition(timedDefinition);
+                    _playerTimeds.Add(playerTimed);
                 }
             }
         }
         public List<PlayerTimed> GetPlayerTimeds()
         {
-            return _playerTimeds.Select(x => x.ToPlayerTimed()).ToList();
+            return _playerTimeds.Where(x=>x.GetTimedDefinition()!=null).Select(x => x.ToPlayerTimed()).ToList();
         }
         public PlayerTimed GetPlayerTimed(string refID)
         {
@@ -61,6 +69,8 @@ namespace GameMaker.Core.Runtime
         private long _startTime;
         public long Remain { get => _remain; }
         public long StartTime { get => _startTime; }
+        [JsonIgnore]
+        private TimedDefinition _timedDefinition;
         public PlayerTimedModel() : base()
         {
 
@@ -87,6 +97,16 @@ namespace GameMaker.Core.Runtime
         {
              var timedDefinition =  TimedManager.Instance.GetDefinition(id);
             return new PlayerTimed(id, timedDefinition, _remain, _startTime);
+        }
+
+        public void SetTimedDefinition(TimedDefinition timedDefinition)
+        {
+            _timedDefinition = timedDefinition;
+        }
+
+        public TimedDefinition GetTimedDefinition()
+        {
+            return _timedDefinition;
         }
     }
 }

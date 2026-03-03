@@ -34,5 +34,9 @@ namespace GameMaker.Sound.Runtime
             _volume = volume;
             NotifyObserver(this);
         }
+        public override string GetReferenceID()
+        {
+            return GetID();
+        }
     }
 }

@@ -13,12 +13,10 @@ namespace GameMaker.IAP.Runtime
     [CreateAssetMenu(fileName = "IAPManager", menuName = "GameMaker/IAP/IAPManager")]    
     public class IAPManager: BaseScriptableObjectDataManager<IAPManager, IAPDefinition>
     {
-        private List<string> _iapGroups = new List<string>();
-        public IReadOnlyList<string> IAPGroups => _iapGroups;
+        public IReadOnlyList<string> IAPGroups => GetDefinitions().Select(x => x.GroupID).Distinct().ToList();
         protected override void OnLoad()
         {
             base.OnLoad();
-            _iapGroups = GetDefinitions().Select(x => x.GroupID).Distinct().ToList();
         }
         public IAPDefinition GetIAPDefinitionByProductId(string id)
         {
@@ -36,6 +34,5 @@ namespace GameMaker.IAP.Runtime
             AddDefinition(new IAPDefinition());
         }
 #endif
-
     }
 }

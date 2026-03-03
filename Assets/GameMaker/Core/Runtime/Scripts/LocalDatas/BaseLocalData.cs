@@ -23,5 +23,9 @@ namespace GameMaker.Core.Runtime
         {
             await _localDataManger.SaveAsync(this.GetType());
         }
+        public void Save()
+        {
+            _localDataManger.Save(this.GetType());
+        }
     }
 }

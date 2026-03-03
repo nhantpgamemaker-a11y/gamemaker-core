@@ -189,7 +189,7 @@ namespace GameMaker.IAP.Runtime
             bool status = await IAPGateway.Manager.MarkActiveAsync(confirmedOrders);
             return status;
         }
-        
+
         private async UniTask<bool> DetectRefundAsync(Orders orders)
         {
             var confirmedIds = orders.ConfirmedOrders
@@ -214,7 +214,7 @@ namespace GameMaker.IAP.Runtime
         {
             OnPurchasePendingAsync(order).Forget();
         }
-        
+
         private async UniTask OnPurchasePendingAsync(PendingOrder order)
         {
             var product = GetFirstProductInOrder(order);
@@ -259,6 +259,26 @@ namespace GameMaker.IAP.Runtime
             var productId = IAPManager.Instance.GetDefinition(definitionId).ProductID;
             _storeController.PurchaseProduct(productId);
             return _currentPurchaseTcs.Task;
+        }
+
+        public async UniTask<bool> RestorePurchases()
+        {
+            bool status = false;
+            bool restoreStatus = false;
+            _storeController.RestoreTransactions((bool s, string error) =>
+            {
+                restoreStatus = s;
+                status = true;
+                GameMaker.Core.Runtime.Logger.Log($"[IAPRuntimeManager] Restore completed with status: {s}, error: {error}");
+            });
+            await UniTask.WaitUntil(() => !status);
+            return restoreStatus;
+        }
+
+        public Product GetProductByDefinitionID(string definitionId)
+        {
+            var productId = IAPManager.Instance.GetDefinition(definitionId).ProductID;
+            return _products.FirstOrDefault(p => p.definition.id == productId);
         }
     }
 }

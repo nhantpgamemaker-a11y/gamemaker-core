@@ -26,6 +26,7 @@ namespace GameMaker.Core.Runtime
                                                                 currencyDefinition.GetID(),
                                                                 currencyDefinition.GetName(),
                                                                 currencyDefinition.GetDefaultValue()) as BasePlayerCurrencyModel;
+                playerCurrency.SetCurrencyDefinition(currencyDefinition);
                 _playerCurrencies.Add(playerCurrency);
             }
         }
@@ -33,22 +34,30 @@ namespace GameMaker.Core.Runtime
         {
             base.OnLoad();
             var currencyIds = _playerCurrencies.Select(x => x.GetID());
-            foreach(var currencyDefinition in CurrencyManager.Instance.GetDefinitions())
+            foreach (var currencyDefinition in CurrencyManager.Instance.GetDefinitions())
             {
-                if (!currencyIds.Contains(currencyDefinition.GetID()))
+                var playerCUrrencyModel = _playerCurrencies.FirstOrDefault(x => x.GetID() == currencyDefinition.GetID());
+                if (playerCUrrencyModel != null)
+                {
+                    playerCUrrencyModel.SetCurrencyDefinition(currencyDefinition);
+                    continue;
+                }
+                else
                 {
                     var playerCurrencyModelType = _playerCurrencyTypeFactory.GetType(currencyDefinition.GetType());
                     var playerCurrency = Activator.CreateInstance(playerCurrencyModelType,
                                                                 currencyDefinition.GetID(),
                                                                 currencyDefinition.GetName(),
                                                                 currencyDefinition.GetDefaultValue()) as BasePlayerCurrencyModel;
+                    
+                    playerCurrency.SetCurrencyDefinition(currencyDefinition);
                     _playerCurrencies.Add(playerCurrency);
                 }
             }
         }
         public List<BasePlayerCurrency> GetPlayerCurrencies()
         {
-            return _playerCurrencies.Select(x => x.ToPlayerCurrency()).ToList();
+            return _playerCurrencies.Where(x=>x.GetCurrencyDefinition()!=null).Select(x => x.ToPlayerCurrency()).ToList();
         }
         public BasePlayerCurrency GetPlayerCurrency(string currencyId)
         {
@@ -89,6 +98,8 @@ namespace GameMaker.Core.Runtime
     [TypeCache]
     public abstract class BasePlayerCurrencyModel : PlayerDataModel
     {
+        [JsonIgnore]
+        private BaseCurrencyDefinition _currencyDefinition;
         public BasePlayerCurrencyModel(string id, string name, object value) : base(id, name)
         {
             base.id = id;
@@ -98,6 +109,15 @@ namespace GameMaker.Core.Runtime
         public abstract object GetValue();
 
         public abstract BasePlayerCurrency ToPlayerCurrency();
+
+        public BaseCurrencyDefinition GetCurrencyDefinition()
+        {
+            return _currencyDefinition;
+        }
+        public void SetCurrencyDefinition(BaseCurrencyDefinition currencyDefinition)
+        {
+            _currencyDefinition = currencyDefinition;
+        }
     }
     [TypeContain(typeof(LongCurrencyDefinition))]
     public class LongPlayerCurrencyModel : BasePlayerCurrencyModel
@@ -148,7 +168,7 @@ namespace GameMaker.Core.Runtime
 
         public override BasePlayerCurrency ToPlayerCurrency()
         {
-            var currencyDefinition = CurrencyManager.Instance.GetDefinition(id);
+            var currencyDefinition = GetCurrencyDefinition();
             return new BigIntPlayerCurrency(currencyDefinition.GetID(), currencyDefinition, BigInteger.Parse(_value));
         }
     }

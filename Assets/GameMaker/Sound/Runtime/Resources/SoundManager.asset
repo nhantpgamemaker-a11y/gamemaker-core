@@ -19,10 +19,23 @@ MonoBehaviour:
     - rid: 4925655028446789998
     - rid: 4925655100169126031
     - rid: 4925655034076070244
+    - rid: 1230062198448980152
   _audioMixed: {fileID: 24100000, guid: a2e71338db0c20649a51bd2711bce528, type: 2}
   references:
     version: 2
     RefIds:
+    - rid: 1230062198448980152
+      type: {class: SoundDefinition, ns: GameMaker.Sound.Runtime, asm: GameMaker.Sound.Runtime}
+      data:
+        _id: UI_Gem_Collect
+        _name: UI_Gem_Collect
+        _title: UI_Gem_Collect
+        _icon: {fileID: 0}
+        _description: UI_Coin_Collect
+        _metaData: {fileID: 0}
+        _clip: {fileID: 8300000, guid: f62d45be59c25414688ecf5ecffc4a48, type: 3}
+        _mixerGroup: UIGroup
+        _volumeScale: 1
     - rid: 4925655027847266383
       type: {class: SoundDefinition, ns: GameMaker.Sound.Runtime, asm: GameMaker.Sound.Runtime}
       data:

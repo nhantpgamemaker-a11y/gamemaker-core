@@ -27,6 +27,7 @@ namespace GameMaker.Core.Runtime
         protected override void OnLoad()
         {
             base.OnLoad();
+            RebuildCache();
             _allDerivedNonAbstractTypeDict =
                 BuildDict(_allDerivedNonAbstractTypes);
 

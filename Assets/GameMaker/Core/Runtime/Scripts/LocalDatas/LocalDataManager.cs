@@ -46,14 +46,19 @@ namespace GameMaker.Core.Runtime
             var localData = Get<T>();
             await SaveInternalAsync(localData);
         }
-        
+
         public async UniTask SaveAsync(Type type)
         {
             var localData = Get(type);
             await SaveInternalAsync(localData);
         }
+        public void Save(Type type)
+        {
+            var localData = Get(type);
+            SaveInternal(localData);
+        }
 
-        public async UniTask SaveAll()
+        public async UniTask SaveAllAsync()
         {
             List<UniTask> saveTasks = new();
             foreach (var data in _localDataList)
@@ -63,7 +68,14 @@ namespace GameMaker.Core.Runtime
             }
             await UniTask.WhenAll(saveTasks);
         }
-        
+        public void SaveAll()
+        {
+            foreach (var data in _localDataList)
+            {
+                Save(data.GetType());
+            }
+        }
+
         private async UniTask SaveInternalAsync(BaseLocalData baseLocalData)
         {
             var path = Application.persistentDataPath;
@@ -77,6 +89,19 @@ namespace GameMaker.Core.Runtime
             string dataString = JsonConvert.SerializeObject(baseLocalData, jsonSerializerSettings);
             await UniTask.RunOnThreadPool(async () => await File.WriteAllTextAsync(path, dataString));
             await UniTask.SwitchToMainThread();
+        }
+        public void SaveInternal(BaseLocalData baseLocalData)
+        {
+            var path = Application.persistentDataPath;
+            path += $"/{baseLocalData.GetType().Name}.json";
+            var jsonSerializerSettings = new JsonSerializerSettings()
+            {
+                Formatting = Formatting.Indented,
+                ReferenceLoopHandling = ReferenceLoopHandling.Ignore,
+                TypeNameHandling = TypeNameHandling.Auto
+            };
+            string dataString = JsonConvert.SerializeObject(baseLocalData, jsonSerializerSettings);
+            File.WriteAllText(path, dataString);
         }
 
         private async UniTask LoadInternalAsync()

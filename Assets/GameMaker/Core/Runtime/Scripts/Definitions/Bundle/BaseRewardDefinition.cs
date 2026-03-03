@@ -26,9 +26,10 @@ namespace GameMaker.Core.Runtime
         }
         public abstract IDefinition GetDefinition();
 
-        public  string GetReferenceID()
+        public string GetReferenceID()
         {
             return _referenceId;
         }
+        public abstract object GetAmount();
     }
 }

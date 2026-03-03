@@ -49,7 +49,7 @@ namespace GameMaker.Core.Runtime
             return definition.GetID() == other.GetID();
         }
 
-        public string GetReferenceID()
+        public virtual string GetReferenceID()
         {
             return definition.GetID();
         }

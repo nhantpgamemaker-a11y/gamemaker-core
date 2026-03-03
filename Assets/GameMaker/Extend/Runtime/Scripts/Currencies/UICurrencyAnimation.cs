@@ -16,10 +16,7 @@ namespace GameMaker.Core.Runtime
         public long CurrentAmount { get => _currentAmount; }
         public long AnimationCurrencyAmount { get => _animationCurrencyAmount; }
 
-        protected override void OnValidate()
-        {
-            this.gameObject.name = $"UILongCurrencyAnimation-{currencyID.GetBaseCurrencyDefinition().GetName()}";
-        }
+        
         public override void Init()
         {
             base.Init();

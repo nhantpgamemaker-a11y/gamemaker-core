@@ -14,16 +14,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: GameMaker.Core.Runtime::GameMaker.Core.Runtime.ConditionManager
   dataManager:
     _definitions:
-    - rid: 4925655419490927225
+    - rid: 1230062222464254448
+    - rid: 1230062222464254449
   references:
     version: 2
     RefIds:
-    - rid: 4925655419490927225
-      type: {class: ConditionDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+    - rid: 1230062222464254448
+      type: {class: ValueConditionDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
       data:
-        _id: ShopUnlockCondition
-        _name: Shop Unlock Condition
-        _description: Shop unlock at level 5.
+        _id: Level_5
+        _name: Level_5
+        _description: 
         _title: Level 5
         _statCompareDefinitionId: Level
         _compareValue: 5
+    - rid: 1230062222464254449
+      type: {class: ConfigConditionDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: Level_ContinueLevel
+        _name: Level_ContinueLevel
+        _description: 
+        _title: Lock
+        _statCompareDefinitionId: Level
+        _configCompareDefinitionId: ContinueLevel

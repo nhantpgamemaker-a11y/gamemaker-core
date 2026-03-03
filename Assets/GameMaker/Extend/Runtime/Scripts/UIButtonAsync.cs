@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
@@ -43,7 +44,7 @@ namespace GameMaker.Extension.Runtime
             }
             _isPress = true;
             var tasks = new List<UniTask>();
-            foreach (var asyncAction in _asyncActions)
+            foreach (var asyncAction in _asyncActions.ToList())
             {
                 tasks.Add(asyncAction());
             }

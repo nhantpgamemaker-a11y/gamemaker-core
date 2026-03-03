@@ -22,7 +22,13 @@ namespace GameMaker.Core.Runtime
 
         [SerializeField]
         private BaseMetaData _metaData;
+        [SerializeField]
+        private BaseLocalizeMiddleware _localizeMiddleware;
 
+        public BaseLocalizeMiddleware LocalizeMiddleware
+        {
+            get => _localizeMiddleware;
+        }
         protected BaseDefinition() : base()
         {
             _title = "";
@@ -35,21 +41,32 @@ namespace GameMaker.Core.Runtime
             _icon = icon;
             _metaData = metaData;
         }
-        
 
         public virtual string GetTitle()
         {
+            if(_localizeMiddleware != null)
+            {
+                return _localizeMiddleware.LocalizeText(_title);
+            }
             return _title;
         }
 
         public virtual Sprite GetIcon()
-        {
+        {   
+            if(_localizeMiddleware != null)
+            {
+                return _localizeMiddleware.LocalizeIcon(_icon.name);
+            }
             return _icon;
         }
 
 
         public virtual string GetDescription()
         {
+            if(_localizeMiddleware != null)
+            {
+                return _localizeMiddleware.LocalizeText(_description);
+            }
             return _description;
         }
 

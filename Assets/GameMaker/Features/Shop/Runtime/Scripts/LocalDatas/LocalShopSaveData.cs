@@ -43,33 +43,30 @@ namespace GameMaker.Feature.Shop.Runtime
             base.OnLoad();
             var definitions = ShopManager.Instance.GetDefinitions();
 
-            var existedShopIds = _playerShops
-                .Select(x => x.GetID())
-                .ToHashSet();
-
             foreach (var shopDefinition in definitions)
             {
-                var shopId = shopDefinition.GetID();
-                if (existedShopIds.Contains(shopId))
+                var playerShopModel = _playerShops.FirstOrDefault(x => x.GetID() == shopDefinition.GetID());
+                if (playerShopModel != null)
+                {
+                    playerShopModel.SetShopDefinition(shopDefinition);
+                    playerShopModel.OnLoad();
                     continue;
+                }
+                else
+                {
+                    var config = shopDefinition.TimeResetConfig;
+                    long nextRefreshTime = string.IsNullOrWhiteSpace(config.CronExpression)
+                        ? 0
+                        : config.GetNextResetUtcTicks(TimeManager.Instance.UnixTimestamp);
 
-                var config = shopDefinition.TimeResetConfig;
-                long nextRefreshTime = string.IsNullOrWhiteSpace(config.CronExpression)
-                    ? 0
-                    : config.GetNextResetUtcTicks(TimeManager.Instance.UnixTimestamp);
-
-                var playerShopModel = new PlayerShopModel(shopDefinition.GetID(),
-                shopDefinition.GetName(),
-                shopDefinition,
-                nextRefreshTime);
-                _playerShops.Add(playerShopModel);
-            }
-
-            foreach (var shop in _playerShops)
-            {
-                var shopDefinition = ShopManager.Instance.GetDefinition(shop.ShopDefinitionReferenceID);
-                shop.SetShopDefinition(shopDefinition);
-                shop.OnLoad();
+                    playerShopModel = new PlayerShopModel(shopDefinition.GetID(),
+                    shopDefinition.GetName(),
+                    shopDefinition,
+                    nextRefreshTime);
+                    playerShopModel.SetShopDefinition(shopDefinition);
+                    playerShopModel.OnLoad();
+                    _playerShops.Add(playerShopModel);
+                }
             }
         }
         public async UniTask<PlayerShop> RefreshShopAsync(string shopDefinitionId, long lastRefreshTime, bool isSave = true)
@@ -87,7 +84,7 @@ namespace GameMaker.Feature.Shop.Runtime
         }
         public List<PlayerShop> GetPlayerShops()
         {
-            return _playerShops.Select(x => x.ToPlayerShop()).ToList();
+            return _playerShops.Where(x=>x.GetShopDefinition() !=null).Select(x => x.ToPlayerShop()).ToList();
         }
 
         public async UniTask PurchaseAsync(string shopDefinitionId, string shopItemId, bool v, bool isSave = true)
@@ -127,7 +124,7 @@ namespace GameMaker.Feature.Shop.Runtime
         {
 
         }
-        public PlayerShopModel(string id, string name, ShopDefinition baseShopDefinition, long lastRefreshUTCTime) : base(id, name)
+        public  PlayerShopModel(string id, string name, ShopDefinition baseShopDefinition, long lastRefreshUTCTime) : base(id, name)
         {
             _lastRefreshUTCTime = lastRefreshUTCTime;
             _shopDefinitionReferenceID = baseShopDefinition.GetID();
@@ -135,7 +132,11 @@ namespace GameMaker.Feature.Shop.Runtime
             foreach (var shopItem in baseShopDefinition.ShopItems)
             {
                 var shopItemModelType = _playerShopItemTypeFactory.GetType(shopItem.GetType());
-                var shopItemModel = Activator.CreateInstance(shopItemModelType, shopItem.GetID(), shopItem.GetName(), shopItem,true) as BasePlayerShopItemModel;
+                var shopItemModel = Activator.CreateInstance(
+                    shopItemModelType,
+                    shopItem.GetID(),
+                    shopItem.GetName(),
+                    shopItem, true) as BasePlayerShopItemModel;
                 _shopItems.Add(shopItemModel);
             }
         }
@@ -145,7 +146,7 @@ namespace GameMaker.Feature.Shop.Runtime
         }
         public PlayerShop ToPlayerShop()
         {
-            return new PlayerShop(id, _shopDefinition, _shopItems.Select(x => x.ToPlayerShopItem()).ToList(), _lastRefreshUTCTime);
+            return new PlayerShop(id, _shopDefinition, _shopItems.Where(x=>x.GetShopItemDefinition() !=null).Select(x => x.ToPlayerShopItem()).ToList(), _lastRefreshUTCTime);
         }
         public ShopDefinition GetShopDefinition()
         {
@@ -156,32 +157,26 @@ namespace GameMaker.Feature.Shop.Runtime
         {
             var shopDefinition = GetShopDefinition();
             var definitionItems = shopDefinition.ShopItems;
-            var existedItemIds = _shopItems
-                .Select(x => x.GetID())
-                .ToHashSet();
-
             foreach (var shopItem in definitionItems)
             {
-                var itemId = shopItem.GetID();
-
-                if (existedItemIds.Contains(itemId))
+                var playerShopItemModel = _shopItems.FirstOrDefault(x => x.GetID() == shopItem.GetID());
+                if (playerShopItemModel != null)
+                {
+                    playerShopItemModel.SetShopItemDefinition(shopItem);
                     continue;
-
-                var shopItemModelType = _playerShopItemTypeFactory.GetType(shopItem.GetType());
-                var shopItemModel = Activator.CreateInstance(
-                    shopItemModelType,
-                    shopItem.GetID(),
-                    shopItem.GetName(),
-                    shopItem
-                ) as BasePlayerShopItemModel;
-
-                _shopItems.Add(shopItemModel);
-            }
-
-            foreach (var shopItem in _shopItems)
-            {
-                var shopItemDefinition = shopDefinition.GetShopItemDefinition(shopItem.ShopItemDefinitionReferenceID);
-                shopItem.SetShopItemDefinition(shopItemDefinition);
+                }
+                else
+                {
+                    var shopItemModelType = _playerShopItemTypeFactory.GetType(shopItem.GetType());
+                    var shopItemModel = Activator.CreateInstance(
+                        shopItemModelType,
+                        shopItem.GetID(),
+                        shopItem.GetName(),
+                        shopItem,
+                        true) as BasePlayerShopItemModel;
+                    shopItemModel.SetShopItemDefinition(shopItem);
+                    _shopItems.Add(shopItemModel);
+                }
             }
         }
 

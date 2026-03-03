@@ -34,6 +34,10 @@ namespace GameMaker.Core.Runtime
         {
             return GetDefinition() as ItemDetailDefinition;
         }
-        
+
+        public override object GetAmount()
+        {
+            return _amount;
+        }
     }
 }

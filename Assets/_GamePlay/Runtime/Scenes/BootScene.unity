@@ -959,7 +959,8 @@ Transform:
   m_LocalPosition: {x: -0.5081738, y: 1.3174962, z: 2.0541124}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1556251939}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &330585547
@@ -980,6 +981,7 @@ MonoBehaviour:
   m_CameraType: 0
   m_Cameras:
   - {fileID: 2037876485}
+  - {fileID: 1556251942}
   m_RendererIndex: -1
   m_VolumeLayerMask:
     serializedVersion: 2
@@ -1018,7 +1020,9 @@ GameObject:
   - component: {fileID: 345567838}
   - component: {fileID: 345567839}
   - component: {fileID: 345567840}
+  - component: {fileID: 345567843}
   - component: {fileID: 345567841}
+  - component: {fileID: 345567842}
   m_Layer: 0
   m_Name: BootController
   m_TagString: Untagged
@@ -1056,6 +1060,8 @@ MonoBehaviour:
   _bootSteps:
   - {fileID: 345567841}
   - {fileID: 345567840}
+  - {fileID: 345567843}
+  - {fileID: 345567842}
 --- !u!114 &345567840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1088,6 +1094,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d6118cf34e1d6347b1f69308ff29766, type: 3}
   m_Name: 
   m_EditorClassIdentifier: GameMaker.Core.Runtime::GameMaker.Core.Runtime.InternetBootStep
+  _failBootStepData:
+    _title: 
+    _description: 
+--- !u!114 &345567842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 345567837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52c576b3bc416a34da3a06d43afcaebb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: GameMaker.IAP.Runtime::GameMaker.IAP.Runtime.IAPBootStep
+  _failBootStepData:
+    _title: 
+    _description: 
+--- !u!114 &345567843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 345567837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8eeb8b38a64c704b9b3fb9f1d8e3a82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: GameMaker.Core.Runtime::GameMaker.Core.Runtime.UnityServiceBootStep
   _failBootStepData:
     _title: 
     _description: 
@@ -1525,6 +1561,134 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ce03352184871945a3db61a655ab43e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: GameMaker.Sound.Runtime::GameMaker.Sound.Runtime.SoundRuntimeManager
+--- !u!1 &1556251938
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1556251939}
+  - component: {fileID: 1556251942}
+  - component: {fileID: 1556251940}
+  m_Layer: 0
+  m_Name: SubCamera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1556251939
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556251938}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 330585546}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1556251940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556251938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 0
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 1
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 0
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_TaaSettings:
+    m_Quality: 3
+    m_FrameInfluence: 0.1
+    m_JitterScale: 1
+    m_MipBias: 0
+    m_VarianceClampScale: 0.9
+    m_ContrastAdaptiveSharpening: 0
+  m_Version: 2
+--- !u!20 &1556251942
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556251938}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 4
+  m_BackGroundColor: {r: 0.43710685, g: 0.77798223, b: 1, a: 1}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_Iso: 200
+  m_ShutterSpeed: 0.005
+  m_Aperture: 16
+  m_FocusDistance: 10
+  m_FocalLength: 50
+  m_BladeCount: 5
+  m_Curvature: {x: 2, y: 11}
+  m_BarrelClipping: 0.25
+  m_Anamorphism: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 15
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 2147483648
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
 --- !u!224 &1582036686 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7934755486539232382, guid: 9719b3123a185ea4ba71a334b91e02ec, type: 3}

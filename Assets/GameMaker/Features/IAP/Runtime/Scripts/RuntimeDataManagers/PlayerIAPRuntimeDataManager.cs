@@ -15,7 +15,8 @@ namespace GameMaker.IAP.Runtime
         private BaseIAPDataSpaceProvider _iapDataSpaceProvider;
         private PlayerIAPManager _playerIAPManager;
         private PlayerDataManager[] _playerDataManager;
-        public async override UniTask<bool> InitializeAsync(IDataSpaceProvider[] dataSpaceProviders, PlayerDataManager[] playerDataManagers)
+        public async override UniTask<bool> InitializeAsync(IDataSpaceProvider[] dataSpaceProviders,
+        PlayerDataManager[] playerDataManagers)
         {
             _playerDataManager = playerDataManagers;
             _playerIAPManager = playerDataManagers.FirstOrDefault(x => x.GetType() == typeof(PlayerIAPManager)) as PlayerIAPManager;

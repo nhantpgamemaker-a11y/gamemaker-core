@@ -12,12 +12,16 @@ namespace GameMaker.IAP.Runtime
         [UnityEngine.SerializeField]
         private BundleDefinition _reward = new();
         [UnityEngine.SerializeField]
+        private BundleDefinition _restoreReward = new();
+
+        [UnityEngine.SerializeField]
         private ProductType _productType;
         [UnityEngine.SerializeField]
         private string _productId;
         [UnityEngine.SerializeField]
         private string _groupId;
         public BundleDefinition Reward => _reward;
+        public BundleDefinition RestoreReward => _restoreReward;
         public ProductType ProductType => _productType;
         public string ProductID => _productId;
         public string GroupID => _groupId;

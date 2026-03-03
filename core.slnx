@@ -68,6 +68,7 @@
   <Project Path="Unity.Purchasing.AppleMacosStub.csproj" />
   <Project Path="Unity.AI.Navigation.Updater.csproj" />
   <Project Path="Unity.Purchasing.Codeless.csproj" />
+  <Project Path="GameMaker.IAP.Runtime.csproj" />
   <Project Path="Coffee.UIEffect.Editor.csproj" />
   <Project Path="UnityEditor.UI.csproj" />
   <Project Path="Unity.RenderPipelines.Universal.2D.Editor.Overrides.csproj" />
@@ -101,7 +102,6 @@
   <Project Path="Unity.Services.Core.Threading.csproj" />
   <Project Path="Coffee.UIParticle.Editor.csproj" />
   <Project Path="VFXGraph.OutputEventHandlers.csproj" />
-  <Project Path="GameMaker.IAP.Runtime.csproj" />
   <Project Path="Unity.Purchasing.Utilities.csproj" />
   <Project Path="Unity.Settings.Editor.csproj" />
   <Project Path="Unity.InputSystem.TestFramework.csproj" />
@@ -115,10 +115,10 @@
   <Project Path="LitMotion.Editor.csproj" />
   <Project Path="Unity.RenderPipelines.Core.Samples.Editor.csproj" />
   <Project Path="Unity.Purchasing.AppleStub.csproj" />
+  <Project Path="GameMaker.Extension.Runtime.csproj" />
   <Project Path="Unity.Purchasing.SecurityStub.csproj" />
   <Project Path="LitMotion.Animation.Editor.csproj" />
   <Project Path="Unity.CollabProxy.Editor.csproj" />
-  <Project Path="GameMaker.Extension.Runtime.csproj" />
   <Project Path="IAPResolver.csproj" />
   <Project Path="Unity.RenderPipeline.Universal.ShaderLibrary.csproj" />
   <Project Path="UniTask.Editor.csproj" />

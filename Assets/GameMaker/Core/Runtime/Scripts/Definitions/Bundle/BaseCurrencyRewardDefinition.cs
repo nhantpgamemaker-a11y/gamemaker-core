@@ -25,5 +25,6 @@ namespace GameMaker.Core.Runtime
         {
             return CurrencyManager.Instance.GetDefinition(GetReferenceID());
         }
+        public abstract object GetNegativeAmount();
     }
 }

@@ -57,9 +57,6 @@ namespace GameMaker.IAP.Runtime
 
             var (fetchPurchaseStatus, orders) = await FetchPurchasesAsync();
             if (fetchPurchaseStatus == false) return false;
-
-            await HandleRestoreAsync(orders);
-
             await DetectRefundAsync(orders);
 
             _isInit = true;
@@ -156,38 +153,6 @@ namespace GameMaker.IAP.Runtime
             _storeController.FetchPurchases();
 
             return tcs.Task;
-        }
-
-        private async UniTask<bool> HandleRestoreAsync(Orders orders)
-        {
-            List<(string productIds, string transactionIds)> confirmedOrders = new();
-            foreach (var order in orders.ConfirmedOrders)
-            {
-                var product = order.CartOrdered.Items().FirstOrDefault()?.Product;
-                if (product == null) continue;
-
-                var productId = product.definition.id;
-
-                var def = IAPManager.Instance
-                    .GetDefinitions()
-                    .FirstOrDefault(x => x.ProductID == productId);
-
-                if (def == null) continue;
-
-                if (def.ProductType == ProductType.Consumable)
-                    continue;
-
-                confirmedOrders.Add((productId, order.Info.TransactionID));
-            }
-            var status = await MarkActiveAsync(confirmedOrders);
-
-            return status;
-        }
-
-        private async UniTask<bool> MarkActiveAsync(List<(string productIds, string transactionIds)> confirmedOrders)
-        {
-            bool status = await IAPGateway.Manager.MarkActiveAsync(confirmedOrders);
-            return status;
         }
 
         private async UniTask<bool> DetectRefundAsync(Orders orders)

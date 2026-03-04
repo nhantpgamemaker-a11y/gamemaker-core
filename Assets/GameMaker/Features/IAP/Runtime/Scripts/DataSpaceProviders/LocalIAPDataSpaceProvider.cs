@@ -30,11 +30,6 @@ namespace GameMaker.IAP.Runtime
             return (true, _localIAPSaveData.GetPlayerIAPs());
         }
 
-        public async override UniTask<bool> MarkActiveAsync(List<(string productIds, string transactionIds)> confirmedOrders)
-        {
-            return true;
-        }
-
         public async override UniTask<(bool, List<BaseReceiverProduct>)> PurchaseAsync(PlayerIAP playerIAP)
         {
             var playerIAPSave = _localIAPSaveData.GetPlayerIAPByTransactionId(playerIAP.TransactionId);
@@ -79,17 +74,17 @@ namespace GameMaker.IAP.Runtime
             foreach (var transactionId in transactionIds)
             {
                 var playerIAP = _localIAPSaveData.GetPlayerIAPByTransactionId(transactionId);
-
+                _localIAPSaveData.UpdatePlayerIAPActiveStatusAsync(transactionId,false, false).Forget();
                 var bundleDefinition = (playerIAP.GetDefinition() as IAPDefinition).Reward;
                 var rewards = bundleDefinition.Rewards;
                 var consumers = rewards
                                 .Select(x => x.GetType())
-                                .Select(x => _localRecallRewardFactory.GetLocalConsumerReward(x))
+                                .Select(x => _localRecallRewardFactory.GetLocalRecallerReward(x))
                                 .Distinct();
 
                 foreach (var reward in rewards)
                 {
-                    var consumer = _localRecallRewardFactory.GetLocalConsumerReward(reward.GetType());
+                    var consumer = _localRecallRewardFactory.GetLocalRecallerReward(reward.GetType());
                     consumer.InitLocalDataManager(_localDataManager);
                     var data = consumer.Recall(reward);
                     if (data != null)
@@ -98,6 +93,7 @@ namespace GameMaker.IAP.Runtime
                     }
                 }
                 var tasks = new List<UniTask>();
+                tasks.Add(_localIAPSaveData.SaveAsync());
                 foreach (var consumer in consumers)
                 {
                     tasks.Add(consumer.SaveAsync());
@@ -105,7 +101,6 @@ namespace GameMaker.IAP.Runtime
                 await UniTask.WhenAll(tasks);
             }
             return (true, receiverProducts);
-            
         }
     }
     public class LocalRecallRewardFactory
@@ -139,7 +134,7 @@ namespace GameMaker.IAP.Runtime
         {
             return _cache[type];
         }
-        public BaseLocalRecallReward GetLocalConsumerReward(Type type)
+        public BaseLocalRecallReward GetLocalRecallerReward(Type type)
         {
             var localRecallRewardType = GetLocalConsumeRewardType(type);
             if (!_localRecallRewardDict.TryGetValue(localRecallRewardType, out BaseLocalRecallReward baseLocalConsumeReward))
@@ -169,7 +164,7 @@ namespace GameMaker.IAP.Runtime
             await localCurrencySaveData.SaveAsync();
         }
     }
-    [TypeContain(typeof(BigIntCurrencyDefinition))]
+    [TypeContain(typeof(BigIntCurrencyRewardDefinition))]
 
     public class BigIntCurrencyLocalRecallReward : CurrencyLocalRecallReward
     {
@@ -177,22 +172,21 @@ namespace GameMaker.IAP.Runtime
         {
             var currency = rewardDefinition as BaseCurrencyRewardDefinition;
             var localCurrencySaveData = localDataManager.Get<LocalCurrencySaveData>();
-            _ = localCurrencySaveData.AddPlayerCurrency(currency.GetReferenceID(), currency.GetAmount(), false);
-            return new BigIntCurrencyReceiverProduct(currency.GetReferenceID(), currency.GetAmount());
+            _ = localCurrencySaveData.AddPlayerCurrency(currency.GetReferenceID(), currency.GetNegativeAmount(), false);
+            return new BigIntCurrencyReceiverProduct(currency.GetReferenceID(), currency.GetNegativeAmount());
         }
     }
-    [TypeContain(typeof(LongCurrencyDefinition))]
+    [TypeContain(typeof(LongCurrencyRewardDefinition))]
     public class LongCurrencyLocalRecallReward : CurrencyLocalRecallReward
     {
         public override BaseReceiverProduct Recall(BaseRewardDefinition rewardDefinition)
         {
             var currency = rewardDefinition as BaseCurrencyRewardDefinition;
             var localCurrencySaveData = localDataManager.Get<LocalCurrencySaveData>();
-            _ = localCurrencySaveData.AddPlayerCurrency(currency.GetReferenceID(), currency.GetAmount(), false);
-            return new LongCurrencyReceiverProduct(currency.GetReferenceID(), currency.GetAmount());
+            _ = localCurrencySaveData.AddPlayerCurrency(currency.GetReferenceID(), currency.GetNegativeAmount(), false);
+            return new LongCurrencyReceiverProduct(currency.GetReferenceID(), currency.GetNegativeAmount());
         }
     }
-
     [TypeContain(typeof(StatRewardDefinition))]
     public class StatLocalRecallReward : BaseLocalRecallReward
     {
@@ -215,27 +209,13 @@ namespace GameMaker.IAP.Runtime
     {
         public override BaseReceiverProduct Recall(BaseRewardDefinition rewardDefinition)
         {
-            // var localItemSaveData = localDataManager.Get<LocalItemSaveData>();
-            // var item = rewardDefinition as ItemRewardDefinition;
-            // var itemDetailDefinition = item.GetItemDetailDefinition();
-            // var statRefs = itemDetailDefinition.ItemPropertyDefinitionRefs.ToList();
-            // var prefix = itemDetailDefinition.GetPrefixID();
-            // for (int i = 0; i < item.Amount; i++)
-            // {
-            //     var newId = $"{prefix}_{Guid.NewGuid()}";
-            //     var propertyDefinitionRef = item.CreateItemTemplate.GetItemPropertyDefinitionRefs(statRefs);
-            //     var playerItemDetail = new PlayerDetailItem(newId, newId, propertyDefinitionRef, itemDetailDefinition);
-            //     _ = localItemSaveData.AddPlayerItemDetailAsync(playerItemDetail);
-
-            //     return new ItemReceiverProduct(newId, newId, propertyDefinitionRef.Select(x => x.Clone() as ItemPropertyDefinitionRef).ToList(), itemDetailDefinition.GetID());
-            // }
             return null;
         }
 
         public override async UniTask SaveAsync()
         {
-            var localItemSaveData = localDataManager.Get<LocalItemSaveData>();
-            await localItemSaveData.SaveAsync();
+            //var localItemSaveData = localDataManager.Get<LocalItemSaveData>();
+            //await localItemSaveData.SaveAsync();
         }
     }
 }

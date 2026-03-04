@@ -41,6 +41,17 @@ namespace GameMaker.IAP.Runtime
         {
             return _playerIAPModels.Find(x => x.TransactionId == transactionId)?.ToPlayerIAP();
         }
+
+        public async UniTask UpdatePlayerIAPActiveStatusAsync(string transactionIds,bool status, bool isSave = true)
+        {
+            var playerIAPModel = _playerIAPModels.FirstOrDefault(x => x.TransactionId == transactionIds);
+            if (playerIAPModel != null)
+            {
+                playerIAPModel.SetStatus(status);
+            }
+            if (isSave)
+                await SaveAsync();
+        }
     }
     [System.Serializable]
     public class PlayerIAPModel : PlayerDataModel
@@ -89,6 +100,11 @@ namespace GameMaker.IAP.Runtime
         public IAPDefinition GetDefinition()
         {
             return _definition;
+        }
+
+        public void SetStatus(bool status)
+        {
+            _isActive = status;
         }
     }
 }

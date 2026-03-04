@@ -49,12 +49,6 @@ namespace GameMaker.IAP.Runtime
             return true;
         }
 
-        public async UniTask<bool> MarkActiveAsync(List<(string productIds, string transactionIds)> confirmedOrders)
-        {
-            bool status = await _iapDataSpaceProvider.MarkActiveAsync(confirmedOrders);
-            return status;
-        }
-
         public async UniTask<(bool, List<BaseReceiverProduct>)> PurchaseAsync(PlayerIAP playerIAP)
         {
             var (status, receiverProducts) = await _iapDataSpaceProvider.PurchaseAsync(playerIAP);

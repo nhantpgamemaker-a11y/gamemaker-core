@@ -26,5 +26,10 @@ namespace GameMaker.Core.Runtime
         {
             return _amount;
         }
+
+        public override object GetNegativeAmount()
+        {
+            return _amount * -1;
+        }
     }
 }

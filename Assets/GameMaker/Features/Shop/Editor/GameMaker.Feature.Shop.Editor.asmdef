@@ -1,0 +1,20 @@
+{
+    "name": "GameMaker.Feature.Shop.Editor",
+    "rootNamespace": "GameMaker.Feature.Shop.Editor",
+    "references": [
+        "GUID:8949aea9c819c8a4bafd64a2fdace4e3",
+        "GUID:908562e3f0b9fbd4dbcbcfc65c9363b0",
+        "GUID:7841f1f1cbd50df4783206d00341b453"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,173 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd442a23af7675f438bc107e86713b4b, type: 3}
+  m_Name: ActionManager
+  m_EditorClassIdentifier: GameMaker.Core.Runtime::GameMaker.Core.Runtime.ActionManager
+  dataManager:
+    _definitions:
+    - rid: 4925655009404911896
+    - rid: 4925655009404911897
+    - rid: 4925655009404911898
+    - rid: 4925655009404911899
+    - rid: 4925655009404911900
+    - rid: 4925655009404911901
+    - rid: 4925655009404911902
+  references:
+    version: 2
+    RefIds:
+    - rid: 4925655009404911896
+      type: {class: ActionDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: SET_PROPERTY_ACTION_DEFINITION
+        _name: SET_PROPERTY_ACTION_DEFINITION
+        _actionParamManager:
+          _definitions:
+          - rid: 4925655009404911903
+          - rid: 4925655009404911904
+    - rid: 4925655009404911897
+      type: {class: ActionDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: ADD_PROPERTY_ACTION_DEFINITION
+        _name: ADD_PROPERTY_ACTION_DEFINITION
+        _actionParamManager:
+          _definitions:
+          - rid: 4925655009404911905
+          - rid: 4925655009404911906
+    - rid: 4925655009404911898
+      type: {class: ActionDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: REMOVE_ITEM_DETAIL_ACTION_DEFINITION
+        _name: REMOVE_ITEM_DETAIL_ACTION_DEFINITION
+        _actionParamManager:
+          _definitions:
+          - rid: 4925655009404911907
+          - rid: 4925655009404911908
+    - rid: 4925655009404911899
+      type: {class: ActionDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: ADD_ITEM_DETAIL_ACTION_DEFINITION
+        _name: ADD_ITEM_DETAIL_ACTION_DEFINITION
+        _actionParamManager:
+          _definitions:
+          - rid: 4925655009404911909
+          - rid: 4925655009404911910
+    - rid: 4925655009404911900
+      type: {class: ActionDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: REMOVE_ITEM_ACTION_DEFINITION
+        _name: REMOVE_ITEM_ACTION_DEFINITION
+        _actionParamManager:
+          _definitions:
+          - rid: 4925655009404911911
+          - rid: 4925655009404911912
+    - rid: 4925655009404911901
+      type: {class: ActionDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: ADD_ITEM_ACTION_DEFINITION
+        _name: ADD_ITEM_ACTION_DEFINITION
+        _actionParamManager:
+          _definitions:
+          - rid: 4925655009404911913
+          - rid: 4925655009404911914
+    - rid: 4925655009404911902
+      type: {class: ActionDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: ADD_CURRENCY_ACTION_DEFINITION
+        _name: ADD_CURRENCY_ACTION_DEFINITION
+        _actionParamManager:
+          _definitions:
+          - rid: 4925655009404911915
+          - rid: 4925655009404911916
+    - rid: 4925655009404911903
+      type: {class: StatActionParamDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: PropertyID
+        _name: PropertyID
+        _bindingName: _propertyId
+    - rid: 4925655009404911904
+      type: {class: FloatActionParamDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: Value
+        _name: Value
+        _bindingName: _value
+    - rid: 4925655009404911905
+      type: {class: StatActionParamDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: PropertyID
+        _name: PropertyID
+        _bindingName: _propertyId
+    - rid: 4925655009404911906
+      type: {class: FloatActionParamDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: Value
+        _name: Value
+        _bindingName: _value
+    - rid: 4925655009404911907
+      type: {class: ItemActionParamDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: ItemDetailID
+        _name: ItemDetailID
+        _bindingName: _itemDetailId
+    - rid: 4925655009404911908
+      type: {class: FloatActionParamDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: Amount
+        _name: Amount
+        _bindingName: _amount
+    - rid: 4925655009404911909
+      type: {class: ItemActionParamDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: ItemDetailID
+        _name: ItemDetailID
+        _bindingName: _itemDetailId
+    - rid: 4925655009404911910
+      type: {class: FloatActionParamDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: Amount
+        _name: Amount
+        _bindingName: _amount
+    - rid: 4925655009404911911
+      type: {class: ItemActionParamDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: ItemID
+        _name: ItemID
+        _bindingName: _itemId
+    - rid: 4925655009404911912
+      type: {class: FloatActionParamDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: Amount
+        _name: Amount
+        _bindingName: _amount
+    - rid: 4925655009404911913
+      type: {class: ItemActionParamDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: ItemID
+        _name: ItemID
+        _bindingName: _itemId
+    - rid: 4925655009404911914
+      type: {class: FloatActionParamDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: Amount
+        _name: Amount
+        _bindingName: _amount
+    - rid: 4925655009404911915
+      type: {class: CurrencyActionParamDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: CurrencyID
+        _name: CurrencyID
+        _bindingName: _currencyId
+    - rid: 4925655009404911916
+      type: {class: FloatActionParamDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: Value
+        _name: Value
+        _bindingName: _value

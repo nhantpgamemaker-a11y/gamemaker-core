@@ -1,0 +1,229 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b87ff70c4c733b40951431537521791, type: 3}
+  m_Name: BundleManager
+  m_EditorClassIdentifier: GameMaker.Core.Runtime::GameMaker.Core.Runtime.BundleManager
+  dataManager:
+    _definitions:
+    - rid: 4925655479054500150
+    - rid: 1230062247092945077
+  references:
+    version: 2
+    RefIds:
+    - rid: 1230062247092945077
+      type: {class: BundleDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: MediumBundle
+        _name: MediumBundle
+        _title: MediumBundle
+        _icon: {fileID: 21300000, guid: cbd45506fefdb4dd6a1740c7277bd1e1, type: 3}
+        _description: 
+        _metaData: {fileID: 0}
+        _localizeMiddleware: {fileID: 0}
+        _rewardManager:
+          _definitions:
+          - rid: 1230062247092945078
+          - rid: 1230062247092945079
+          - rid: 1230062247092945080
+          - rid: 1230062247092945081
+          - rid: 1230062247092945082
+          - rid: 1230062247092945083
+          - rid: 1230062247092945084
+    - rid: 1230062247092945078
+      type: {class: TimedRewardDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: 
+        _name: 
+        _title: 
+        _icon: {fileID: 0}
+        _description: 
+        _metaData: {fileID: 0}
+        _localizeMiddleware: {fileID: 0}
+        _referenceId: LifeUnlimitTime
+        _amount: 10
+    - rid: 1230062247092945079
+      type: {class: LongCurrencyRewardDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: 
+        _name: 
+        _title: 
+        _icon: {fileID: 0}
+        _description: 
+        _metaData: {fileID: 0}
+        _localizeMiddleware: {fileID: 0}
+        _referenceId: Gem
+        _amount: 5
+    - rid: 1230062247092945080
+      type: {class: StatRewardDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: 
+        _name: 
+        _title: 
+        _icon: {fileID: 0}
+        _description: 
+        _metaData: {fileID: 0}
+        _localizeMiddleware: {fileID: 0}
+        _referenceId: Level
+        _amount: 10
+    - rid: 1230062247092945081
+      type: {class: BigIntCurrencyRewardDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: 
+        _name: 
+        _title: 
+        _icon: {fileID: 0}
+        _description: 
+        _metaData: {fileID: 0}
+        _localizeMiddleware: {fileID: 0}
+        _referenceId: BigInt
+        _amount: 2
+    - rid: 1230062247092945082
+      type: {class: ItemRewardDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: 
+        _name: 
+        _title: 
+        _icon: {fileID: 0}
+        _description: 
+        _metaData: {fileID: 0}
+        _localizeMiddleware: {fileID: 0}
+        _referenceId: MediumBundle
+        _amount: 1
+        _createItemTemplate: {fileID: 11400000, guid: 9404aa3091c28b64bb6caf8e9e12b37c, type: 2}
+    - rid: 1230062247092945083
+      type: {class: BigIntCurrencyRewardDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: 
+        _name: 
+        _title: 
+        _icon: {fileID: 0}
+        _description: 
+        _metaData: {fileID: 0}
+        _localizeMiddleware: {fileID: 0}
+        _referenceId: BigInt
+        _amount: 2
+    - rid: 1230062247092945084
+      type: {class: BigIntCurrencyRewardDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: 
+        _name: 
+        _title: 
+        _icon: {fileID: 0}
+        _description: 
+        _metaData: {fileID: 0}
+        _localizeMiddleware: {fileID: 0}
+        _referenceId: BigInt
+        _amount: 
+    - rid: 4925655479054500150
+      type: {class: BundleDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: MiniBundle
+        _name: Mini Bundle
+        _title: Mini Bundle
+        _icon: {fileID: 0}
+        _description: 
+        _metaData: {fileID: 0}
+        _localizeMiddleware: {fileID: 0}
+        _rewardManager:
+          _definitions:
+          - rid: 4925655479054500156
+          - rid: 4925655479054500154
+          - rid: 4925655479054500155
+          - rid: 4925655485786095616
+          - rid: 4925655479054500152
+          - rid: 4925655479054500157
+          - rid: 4925655485786096002
+    - rid: 4925655479054500152
+      type: {class: ItemRewardDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: 
+        _name: 
+        _title: 
+        _icon: {fileID: 0}
+        _description: 
+        _metaData: {fileID: 0}
+        _localizeMiddleware: {fileID: 0}
+        _referenceId: MediumBundle
+        _amount: 1
+        _createItemTemplate: {fileID: 11400000, guid: 9404aa3091c28b64bb6caf8e9e12b37c, type: 2}
+    - rid: 4925655479054500154
+      type: {class: LongCurrencyRewardDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: 
+        _name: 
+        _title: 
+        _icon: {fileID: 0}
+        _description: 
+        _metaData: {fileID: 0}
+        _localizeMiddleware: {fileID: 0}
+        _referenceId: Gem
+        _amount: 5
+    - rid: 4925655479054500155
+      type: {class: StatRewardDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: 
+        _name: 
+        _title: 
+        _icon: {fileID: 0}
+        _description: 
+        _metaData: {fileID: 0}
+        _localizeMiddleware: {fileID: 0}
+        _referenceId: Level
+        _amount: 10
+    - rid: 4925655479054500156
+      type: {class: TimedRewardDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: 
+        _name: 
+        _title: 
+        _icon: {fileID: 0}
+        _description: 
+        _metaData: {fileID: 0}
+        _localizeMiddleware: {fileID: 0}
+        _referenceId: LifeUnlimitTime
+        _amount: 10
+    - rid: 4925655479054500157
+      type: {class: BigIntCurrencyRewardDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: 
+        _name: 
+        _title: 
+        _icon: {fileID: 0}
+        _description: 
+        _metaData: {fileID: 0}
+        _localizeMiddleware: {fileID: 0}
+        _referenceId: BigInt
+        _amount: 2
+    - rid: 4925655485786095616
+      type: {class: BigIntCurrencyRewardDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: 
+        _name: 
+        _title: 
+        _icon: {fileID: 0}
+        _description: 
+        _metaData: {fileID: 0}
+        _localizeMiddleware: {fileID: 0}
+        _referenceId: BigInt
+        _amount: 2
+    - rid: 4925655485786096002
+      type: {class: BigIntCurrencyRewardDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: 
+        _name: 
+        _title: 
+        _icon: {fileID: 0}
+        _description: 
+        _metaData: {fileID: 0}
+        _localizeMiddleware: {fileID: 0}
+        _referenceId: BigInt
+        _amount: 

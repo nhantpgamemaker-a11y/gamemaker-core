@@ -1,0 +1,12 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:Template name="BaseDefinitionElement" src="project://database/Assets/GameMaker/Core/Editor/Resources/Core/BaseDefinitionElement.uxml?fileID=9197481963319205126&amp;guid=32b9b66db99884d4cb0c5281bdeb8616&amp;type=3#BaseDefinitionElement"/>
+    <ui:Foldout text="Foldout" binding-path="" name="PropertyFoldout">
+        <ui:Instance template="BaseDefinitionElement" name="TemplateContainer" style="background-color: rgba(0, 0, 0, 0);">
+            <AttributeOverrides element-name="IDTextField" readonly="true"/>
+            <AttributeOverrides element-name="DefinitionFoldout" value="false"/>
+        </ui:Instance>
+        <ui:GroupBox text="" name="ExtendElement" enabled="true" style="align-items: stretch; align-self: stretch; -unity-font-style: bold; border-top-width: 1px; border-left-width: 1px; border-bottom-width: 1px; border-right-width: 1px; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; padding-right: 3px; margin-bottom: 5px; background-color: rgb(58, 58, 58); display: flex;">
+            <ui:TextField label="Default Value" placeholder-text="" name="DefaultValueTextField"/>
+        </ui:GroupBox>
+    </ui:Foldout>
+</ui:UXML>

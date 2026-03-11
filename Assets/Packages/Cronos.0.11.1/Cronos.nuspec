@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>Cronos</id>
+    <version>0.11.1</version>
+    <title>Cronos</title>
+    <authors>Andrey Dorokhov, Sergey Odinokov</authors>
+    <owners>HangfireIO</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <icon>icon.png</icon>
+    <readme>README.md</readme>
+    <projectUrl>https://github.com/HangfireIO/Cronos</projectUrl>
+    <description>A fully-featured .NET library for parsing cron expressions and calculating next occurrences that was designed with time zones in mind and correctly handles daylight saving time transitions.</description>
+    <releaseNotes>https://github.com/HangfireIO/Cronos/releases</releaseNotes>
+    <copyright>Copyright © 2016–2025 Hangfire OÜ.</copyright>
+    <tags>Cronos Cron Recurring</tags>
+    <repository type="git" url="https://github.com/HangfireIO/Cronos.git" commit="b2050abdf910bf5c3b7262d1a09d2c04c0f56f58" />
+    <dependencies>
+      <group targetFramework=".NETFramework4.0" />
+      <group targetFramework=".NETFramework4.5" />
+      <group targetFramework=".NETStandard1.0">
+        <dependency id="NETStandard.Library" version="1.6.1" />
+      </group>
+      <group targetFramework=".NETStandard2.0" />
+      <group targetFramework="net6.0" />
+    </dependencies>
+  </metadata>
+</package>

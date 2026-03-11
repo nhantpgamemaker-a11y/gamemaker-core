@@ -1,0 +1,7 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:VisualElement name="PriceElement" style="flex-grow: 0; flex-shrink: 0; flex-direction: row; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-left-color: rgba(0, 0, 0, 0.5); border-right-color: rgba(0, 0, 0, 0.5); border-top-color: rgba(0, 0, 0, 0.5); border-bottom-color: rgba(0, 0, 0, 0.5); border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; margin-top: 1px; margin-bottom: 1px; padding-top: 2px; padding-bottom: 2px;">
+        <ui:Label text="Price" style="flex-grow: 2; right: 0; bottom: 0; left: 0; -unity-text-align: middle-left; margin-left: 5px;"/>
+        <ui:DropdownField label="" name="CurrencyDropdownField" style="flex-grow: 1;"/>
+        <ui:FloatField label="" value="42.2" name="AmountFloatField" style="flex-grow: 1;"/>
+    </ui:VisualElement>
+</ui:UXML>

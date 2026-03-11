@@ -1,0 +1,11 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:Template name="DefinitionElement" src="project://database/Assets/GameMaker/Core/Editor/Resources/Core/DefinitionElement.uxml?fileID=9197481963319205126&amp;guid=efda37ffd841f7d49a6672f007ebb1e3&amp;type=3#DefinitionElement"/>
+    <ui:Foldout text="Foldout" binding-path="" name="ItemPropertyFoldout" value="true">
+        <ui:VisualElement name="ContainerVisualElement" style="flex-grow: 1; flex-direction: row;">
+            <ui:Instance template="DefinitionElement" style="flex-grow: 1; width: 50%;">
+                <AttributeOverrides element-name="DefinitionFoldout" value="true"/>
+                <AttributeOverrides element-name="BaseDefinitionElement" enabled="true"/>
+            </ui:Instance>
+        </ui:VisualElement>
+    </ui:Foldout>
+</ui:UXML>

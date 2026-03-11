@@ -1,0 +1,10 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:GroupBox name="ContainerGroupBox" style="border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; border-left-color: rgba(0, 0, 0, 0.25); border-right-color: rgba(0, 0, 0, 0.25); border-top-color: rgba(0, 0, 0, 0.25); border-bottom-color: rgba(0, 0, 0, 0.25); border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;">
+        <ui:Label text="Title" name="TitleLabel" style="-unity-font-style: bold; -unity-text-align: middle-center; border-bottom-width: 1px; border-left-color: rgba(0, 0, 0, 0.25); border-right-color: rgba(0, 0, 0, 0.25); border-top-color: rgba(0, 0, 0, 0.25); border-bottom-color: rgba(0, 0, 0, 0.25);"/>
+        <ui:Label text="Description" name="DescriptionLabel" style="-unity-font-style: normal; -unity-text-align: middle-center; border-bottom-width: 1px; border-left-color: rgba(0, 0, 0, 0.25); border-right-color: rgba(0, 0, 0, 0.25); border-top-color: rgba(0, 0, 0, 0.25); border-bottom-color: rgba(0, 0, 0, 0.25); min-height: 50px;"/>
+        <ui:GroupBox name="ButtonGroupBox" style="flex-direction: row; justify-content: space-around; margin-left: 0; margin-right: 0; padding-left: 0; margin-top: 0;">
+            <ui:Button text="Confirm" name="ConfirmButton" style="width: 50%; background-color: rgb(0, 100, 0);"/>
+            <ui:Button text="Cancel" name="CancelButton" style="width: 50%; background-color: rgb(139, 0, 0);"/>
+        </ui:GroupBox>
+    </ui:GroupBox>
+</ui:UXML>

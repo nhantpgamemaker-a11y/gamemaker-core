@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed79bb79d9d70ec458d3846251ec1d6b, type: 3}
+  m_Name: ItemManager
+  m_EditorClassIdentifier: GameMaker.Item.Runtime::GameMaker.Item.Runtime.ItemManager
+  dataManager:
+    _definitions:
+    - rid: 4388470458572341330
+    - rid: 4388470189476020954
+  references:
+    version: 2
+    RefIds:
+    - rid: 4388470189476020954
+      type: {class: ItemDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: Weapon
+        _name: Weapon
+        _title: Weapon
+        _icon: {fileID: 21300000, guid: 6ac34e487cb4b4b5b99ce89f1400f51b, type: 3}
+        _description: Weapon
+        _metaData: {fileID: 0}
+        _itemPropertyManager:
+          _definitions:
+          - rid: 4388470432851296385
+          - rid: 4388470457424937190
+          - rid: 4388470457424937191
+          - rid: 4388470457424937192
+          - rid: 4388470457424937193
+          - rid: 4388470457424937194
+          - rid: 4388470458572341412
+    - rid: 4388470432851296385
+      type: {class: ItemStatDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: HP
+        _name: HP
+        _defaultValue: 0
+    - rid: 4388470457424937190
+      type: {class: ItemStatDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: MP
+        _name: MP
+        _defaultValue: 0
+    - rid: 4388470457424937191
+      type: {class: ItemStatDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: ATK
+        _name: ATK
+        _defaultValue: 0
+    - rid: 4388470457424937192
+      type: {class: ItemStatDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: MATK
+        _name: MATK
+        _defaultValue: 0
+    - rid: 4388470457424937193
+      type: {class: ItemStatDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: DEF
+        _name: DEF
+        _defaultValue: 0
+    - rid: 4388470457424937194
+      type: {class: ItemStatDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: MDEF
+        _name: MDEF
+        _defaultValue: 0
+    - rid: 4388470458572341330
+      type: {class: ItemDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: Bundle
+        _name: Bundle
+        _title: Bundle
+        _icon: {fileID: 0}
+        _description: 
+        _metaData: {fileID: 0}
+        _itemPropertyManager:
+          _definitions:
+          - rid: 4388470458572341331
+    - rid: 4388470458572341331
+      type: {class: ItemAttributeDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: BundleDefinitionID
+        _name: BundleDefinitionID
+        _defaultValue: '-'
+    - rid: 4388470458572341412
+      type: {class: ItemStatDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: Speed
+        _name: Speed
+        _defaultValue: 0

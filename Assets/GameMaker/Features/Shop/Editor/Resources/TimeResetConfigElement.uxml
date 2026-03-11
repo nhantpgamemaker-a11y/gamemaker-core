@@ -1,0 +1,8 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:Foldout text="Time Reset Config" name="TimeResetConfigFoldout" value="true" toggle-on-label-click="true" style="border-top-width: 0; border-left-width: 0; border-bottom-width: 0; border-right-width: 0; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;">
+        <ui:VisualElement style="flex-grow: 1; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; margin-left: 3px; margin-right: 3px; margin-bottom: 3px; margin-top: 3px; padding-top: 2px; padding-bottom: 2px; padding-left: 0; padding-right: 5px;">
+            <ui:EnumField label="Reset Time Mode" value="Center" type="GameMaker.Core.Runtime.ResetTimeMode, GameMaker.Core.Runtime" name="ResetTimeModeEnumField" style="margin-right: 5px;"/>
+            <ui:TextField label="Cron Expression" placeholder-text="" name="CronExpressionTextField"/>
+        </ui:VisualElement>
+    </ui:Foldout>
+</ui:UXML>

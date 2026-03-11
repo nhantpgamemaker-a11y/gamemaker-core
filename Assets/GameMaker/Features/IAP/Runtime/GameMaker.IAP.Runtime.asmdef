@@ -1,0 +1,21 @@
+{
+    "name": "GameMaker.IAP.Runtime",
+    "rootNamespace": "GameMaker.IAP.Runtime",
+    "references": [
+        "GUID:908562e3f0b9fbd4dbcbcfc65c9363b0",
+        "GUID:60bfecf5cb232594891bc622f40d6bed",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:2f55fc1d59cbd1f4082879c614f2fb2d",
+        "GUID:4c717c19ddaf39749985a587fc57138c",
+        "GUID:6055be8ebefd69e48b49212b09b47b2f"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,19 @@
+{
+    "name": "GameMaker.Feature.DailyReward.Editor",
+    "rootNamespace": "GameMaker.Feature.DailyReward.Editor",
+    "references": [
+        "GUID:8949aea9c819c8a4bafd64a2fdace4e3",
+        "GUID:908562e3f0b9fbd4dbcbcfc65c9363b0"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

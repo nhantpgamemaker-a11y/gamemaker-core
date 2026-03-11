@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cfbccb516b69f5438425ae5c65274bd, type: 3}
+  m_Name: CurrencyManager
+  m_EditorClassIdentifier: GameMaker.Core.Runtime::GameMaker.Core.Runtime.CurrencyDataManager
+  dataManager:
+    _definitions:
+    - rid: 4925655373323436202
+    - rid: 4388470143681036465
+    - rid: 4388470156526354661
+    - rid: 4925655397300175040
+    - rid: 4925655441446797608
+  references:
+    version: 2
+    RefIds:
+    - rid: 4388470143681036465
+      type: {class: LongCurrencyDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: Coin
+        _name: Coin
+        _title: Coin
+        _icon: {fileID: 21300000, guid: 455b9719b30c13a48a8dc1a1a83239c2, type: 3}
+        _description: "Tr\u1EA7n Ph\u01B0\u1EDBc Nh\xE2n"
+        _metaData: {fileID: 0}
+        _localizeMiddleware: {fileID: 0}
+        _defaultValue: 1000
+        _maxValue: 9223370036854775807
+    - rid: 4388470156526354661
+      type: {class: LongCurrencyDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: Energy
+        _name: Energy
+        _title: Energy
+        _icon: {fileID: 21300000, guid: beb83cf1434ef7a4784f9420e74c45ae, type: 3}
+        _description: 
+        _metaData: {fileID: 0}
+        _localizeMiddleware: {fileID: 0}
+        _defaultValue: 0
+        _maxValue: 9223370036854775807
+    - rid: 4925655373323436202
+      type: {class: LongCurrencyDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: Gem
+        _name: Gem
+        _title: Gem
+        _icon: {fileID: 21300000, guid: 981509b39d6ad6e428db05a47c8dec05, type: 3}
+        _description: 
+        _metaData: {fileID: 0}
+        _localizeMiddleware: {fileID: 0}
+        _defaultValue: 0
+        _maxValue: 9223370036854775807
+    - rid: 4925655397300175040
+      type: {class: LongCurrencyDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: Star
+        _name: Star
+        _title: Star
+        _icon: {fileID: 21300000, guid: 00cd9db087fdd4cf09844edff3aaa385, type: 3}
+        _description: 
+        _metaData: {fileID: 0}
+        _localizeMiddleware: {fileID: 0}
+        _defaultValue: 0
+        _maxValue: 9223370036854775807
+    - rid: 4925655441446797608
+      type: {class: BigIntCurrencyDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: BigInt
+        _name: BigInt
+        _title: BigInt
+        _icon: {fileID: 21300000, guid: 455b9719b30c13a48a8dc1a1a83239c2, type: 3}
+        _description: 
+        _metaData: {fileID: 0}
+        _localizeMiddleware: {fileID: 0}
+        _defaultValue: 9999999999999999999999999999999999
+        _maxValue: 9999999999999999999999999999999999

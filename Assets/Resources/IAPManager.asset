@@ -13,7 +13,54 @@ MonoBehaviour:
   m_Name: IAPManager
   m_EditorClassIdentifier: GameMaker.IAP.Runtime::GameMaker.IAP.Runtime.IAPManager
   dataManager:
-    _definitions: []
+    _definitions:
+    - rid: 1230062402192277716
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 1230062402192277716
+      type: {class: IAPDefinition, ns: GameMaker.IAP.Runtime, asm: GameMaker.IAP.Runtime}
+      data:
+        _id: 
+        _name: 
+        _title: 
+        _icon: {fileID: 0}
+        _description: 
+        _metaData: {fileID: 0}
+        _localizeMiddleware: {fileID: 0}
+        _reward:
+          _id: 
+          _name: 
+          _title: 
+          _icon: {fileID: 0}
+          _description: 
+          _metaData: {fileID: 0}
+          _localizeMiddleware: {fileID: 0}
+          _rewardManager:
+            _definitions:
+            - rid: 1230062402192277717
+        _restoreReward:
+          _id: 
+          _name: 
+          _title: 
+          _icon: {fileID: 0}
+          _description: 
+          _metaData: {fileID: 0}
+          _localizeMiddleware: {fileID: 0}
+          _rewardManager:
+            _definitions: []
+        _productType: 0
+        _productId: 
+        _groupId: 
+    - rid: 1230062402192277717
+      type: {class: BigIntCurrencyRewardDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: 
+        _name: 
+        _title: 
+        _icon: {fileID: 0}
+        _description: 
+        _metaData: {fileID: 0}
+        _localizeMiddleware: {fileID: 0}
+        _referenceId: BigInt
+        _amount: 

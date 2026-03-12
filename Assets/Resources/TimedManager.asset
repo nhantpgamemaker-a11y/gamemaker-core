@@ -13,7 +13,19 @@ MonoBehaviour:
   m_Name: TimedManager
   m_EditorClassIdentifier: GameMaker.Core.Runtime::GameMaker.Core.Runtime.TimedManager
   dataManager:
-    _definitions: []
+    _definitions:
+    - rid: 1230062402192277715
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 1230062402192277715
+      type: {class: TimedDefinition, ns: GameMaker.Core.Runtime, asm: GameMaker.Core.Runtime}
+      data:
+        _id: 
+        _name: 
+        _title: 
+        _icon: {fileID: 0}
+        _description: 
+        _metaData: {fileID: 0}
+        _localizeMiddleware: {fileID: 0}
+        _defaultValue: 0

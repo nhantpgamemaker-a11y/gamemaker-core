@@ -8,7 +8,7 @@ This project is built on Unity with Universal Render Pipeline (URP) and includes
 
 **Project Name:** GameMakerCore  
 **Company:** GameMaker  
-**Unity Version:** 6000.x+  
+**Unity Version:** 6000.3.10f1 (Unity 6 LTS)  
 **Render Pipeline:** Universal Render Pipeline (URP) 17.3.0
 
 ### Overview Screenshots
@@ -44,7 +44,7 @@ This project is built on Unity with Universal Render Pipeline (URP) and includes
 - **Shop System** - In-game store functionality
 - **IAP Integration** - In-App Purchase support with Unity Purchasing
 - **Daily Rewards** - Time-based reward systems
-- **Sound Management** - Audio system powered by BroAudio
+- **Sound Management** - Audio system integrated with runtime managers
 - **UI Framework** - Custom UI toolkit components
 
 ### Third-Party Integrations
@@ -53,10 +53,11 @@ This project is built on Unity with Universal Render Pipeline (URP) and includes
 - **LitMotion** - Modern animation library
 - **UI Effects** - Advanced UI visual effects (Coffee.UIEffect)
 - **Particle Effects for UGUI** - Particle system for UI
-- **Cinemachine** - Advanced camera system
 - **Unity Input System** - Modern input handling
 - **Addressables** - Asset management system
 - **AI Navigation** - NavMesh and pathfinding
+- **Unity UI Extensions** - Extended UI components
+- **NuGetForUnity** - NuGet package integration for Unity
 
 ## 🏗️ Project Structure
 
@@ -274,27 +275,29 @@ var untilMidnight = TimeManager.Instance.TimeUntilMidnight;
 ## 📦 Dependencies
 
 ### Core Unity Packages
-- Addressables 2.8.1
+- Addressables 2.9.1
 - Universal Render Pipeline 17.3.0
 - Input System 1.18.0
-- Cinemachine 3.1.5
 - Timeline 1.8.10
-- Visual Effect Graph 17.3.0
 - AI Navigation 2.0.10
 - Unity Purchasing 5.1.2
+- Unity Test Framework 1.6.0
+- Visual Scripting 1.9.9
+- UGUI 2.0.0
+- Multiplayer Center 1.0.1
 
 ### Third-Party Libraries
 - **UniTask** - Async/await utilities
 - **LitMotion** - Performance-focused animation
-- **BroAudio** - Audio management
 - **Coffee.UIEffect** - UI visual effects
 - **UIParticle** - Particle system for UI
 - **Unity UI Extensions** - Extended UI components
+- **NuGetForUnity** - NuGet integration inside Unity
 
 ## 🚀 Getting Started
 
 ### Prerequisites
-- Unity 2023.x or later
+- Unity 6000.3.10f1 (Unity 6 LTS)
 - Git with LFS support (for large assets)
 - Visual Studio 2022 or Rider (recommended)
 
@@ -324,6 +327,12 @@ var untilMidnight = TimeManager.Instance.TimeUntilMidnight;
 The project uses custom editor tools for the GameMaker Framework. Access them via:
 - **Window → GameMaker → [Feature Name]**
 - Custom inspectors will appear when selecting framework assets
+
+## 📁 Repository Notes
+
+- Git LFS is required for native plugins tracked by .gitattributes.
+- Unity-generated folders (Library, Temp, Logs) are not meant for version control and can be deleted to force a clean reimport.
+- Package sources are defined in Packages/manifest.json; git-based dependencies require network access when first resolved.
 
 ## 🛠️ Development
 
@@ -523,6 +532,56 @@ public class SaveSystem
 - **LocalTimedSaveData** - Timed data (cooldowns, timestamps)
 - **LocalSoundSaveData** - Sound/audio settings
 - **Custom save data** - Extend `BaseLocalData`
+
+#### Using BaseLocalData (Save Data)
+
+Create your own save data class by inheriting from `BaseLocalData`. Use `OnCreate` to set defaults and `OnLoad` to validate or migrate after deserialization.
+
+```csharp
+using GameMaker.Core.Runtime;
+
+[System.Serializable]
+public class LocalPlayerSaveData : BaseLocalData
+{
+    public int Level;
+    public int Experience;
+
+    protected internal override void OnCreate()
+    {
+        Level = 1;
+        Experience = 0;
+    }
+
+    protected internal override void OnLoad()
+    {
+        if (Level < 1) Level = 1;
+    }
+}
+```
+
+Access and persist it through `LocalDataManager`:
+
+```csharp
+using GameMaker.Core.Runtime;
+using Cysharp.Threading.Tasks;
+
+public class PlayerSaveService
+{
+    private readonly LocalDataManager _localDataManager = new LocalDataManager();
+
+    public async UniTask InitAsync()
+    {
+        await _localDataManager.InitAsync();
+    }
+
+    public async UniTask AddExpAsync(int amount)
+    {
+        var data = _localDataManager.Get<LocalPlayerSaveData>();
+        data.Experience += amount;
+        await data.SaveAsync();
+    }
+}
+```
 
 #### LocalData Storage Location
 
@@ -1038,8 +1097,8 @@ The framework includes extensive custom editor tooling:
 
 Game-specific implementation resides in:
 - `Assets/_GamePlay/` - Main gameplay code
-- `Assets/CatAdventure.GamePlay.csproj` - Game assembly
-- `Assets/NekoLegends.SharedAssets.csproj` - Shared assets
+- `Assets/_GamePlay/Runtime/` - Runtime gameplay systems
+- `Assets/_GamePlay/Editor/` - Editor-only tooling
 
 ## 📝 Code Generation
 
@@ -1047,6 +1106,7 @@ The framework includes code generation utilities:
 - Property code generation for typed access
 - Auto-generation of definition factories
 - Type caching for performance optimization
+- Generated outputs live in `Assets/_Gen/` and should not be edited manually
 
 ## 🧪 Testing
 
@@ -1081,4 +1141,4 @@ When contributing to this project:
 
 ---
 
-**Last Updated:** February 26, 2026
+**Last Updated:** March 12, 2026
